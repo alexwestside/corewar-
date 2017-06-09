@@ -1,3 +1,0 @@
-/nfs/2016/o/orizhiy/ClionProjects/corewar_orizhiy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/nfs/2016/o/orizhiy/ClionProjects/corewar_orizhiy/cmake-build-debug/CMakeFiles/edit_cache.dir
-/nfs/2016/o/orizhiy/ClionProjects/corewar_orizhiy/cmake-build-debug/CMakeFiles/corewar_orizhiy.dir

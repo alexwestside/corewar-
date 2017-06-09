@@ -1,11 +1,11 @@
 # Clion
 .idea/
 cmake-build-debug/
-cmake-build-debug/*
+CMakeLists.txt
 
-# Macos
-.DS_Store
-._.DS_Store
+# MacOS
+**/.DS_Store/
+**/._.DS_Store/
 
 
  # Vim buffer file
