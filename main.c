@@ -17,6 +17,7 @@ void init_bot(t_bot **bot)
 {
 	(*bot) = (t_bot*)malloc(sizeof(t_bot));
 	(*bot)->info = (char **)malloc(sizeof(char *)/* * 2*/);
+	(*bot)->info[0] = NULL;
 //	(*bot)->info[0] = NULL;
 //	(*bot)->info[1] = NULL;
 }
@@ -31,13 +32,19 @@ void read_bot_info(t_bot **bot)
 		if ((*bot)->info[i][0])
 		{
 //			(*bot)->info = ft_realloc(&(*bot)->info, two_dem_strlen((*bot)->info));
-			(*bot)->info = (char **)realloc((*bot)->info, i + 1);
+			(*bot)->info = (char **)realloc((*bot)->info, sizeof(char *) * (i + 2));
 			i++;
 		}
 	}
 	(*bot)->info[i] = NULL;
 }
 
+void valid_bot(t_bot *bot)
+{
+
+
+
+}
 
 int main(void)
 {
@@ -45,6 +52,7 @@ int main(void)
 
 	init_bot(&bot);
 	read_bot_info(&bot);
+	valid_bot(bot);
 
 
 }
