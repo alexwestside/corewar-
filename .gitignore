@@ -7,6 +7,7 @@ CMakeLists.txt
 **/.DS_Store/
 **/._.DS_Store/
 **/._*.*
+**/._*
 
 
  # Vim buffer file
