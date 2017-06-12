@@ -1,52 +1,40 @@
 # Clion
-
 .idea/
 cmake-build-debug/
 CMakeLists.txt
 
-
 # MacOS
-
-*/.DS_Store/
-*/..DS_Store/
+**/.DS_Store/
+**/._.DS_Store/
 **/._*.*
 
-# Vim buffer file
-*.swp
 
+ # Vim buffer file
+ *.swp
 
-#Object files
-
+# Object files
 *.o
 *.ko
 *.obj
 *.elf
 
-
-#Precompiled Headers
-
+# Precompiled Headers
 *.gch
 *.pch
 
-
-#Libraries
-
+# Libraries
 *.lib
 *.a
 *.la
 *.lo
 
-
-#Shared objects (inc. Windows DLLs)
-
+# Shared objects (inc. Windows DLLs)
 *.dll
 *.so
-*.so.
+*.so.*
 *.dylib
 
-
-#Executables
-
+# Executables
 *.exe
 *.out
 *.app
@@ -54,8 +42,6 @@ CMakeLists.txt
 *.x86_64
 *.hex
 
-
-#Debug files
-
+# Debug files
 *.dSYM/
 *.su
