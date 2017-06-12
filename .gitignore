@@ -10,8 +10,8 @@ CMakeLists.txt
 **/._*
 
 
- # Vim buffer file
- *.swp
+# Vim buffer file
+*.swp
 
 # Object files
 *.o
