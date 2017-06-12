@@ -24,7 +24,7 @@ void init_bot(t_bot **bot)
 
 void read_bot_info(t_bot **bot)
 {
-	int fd = open("/nfs/2016/o/orizhiy/ClionProjects/corewar/resources/corewar/champs/examples/zork.s", O_RDONLY);
+	int fd = open("/nfs/2016/o/orizhiy/ClionProjects/machine/resources/machine/champs/examples/zork.s", O_RDONLY);
 	size_t i = 0;
 
 	while (get_next_line(fd, &(*bot)->info[i]))
