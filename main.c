@@ -2,6 +2,11 @@
 #include "op.h"
 #include "corewar.h"
 
+
+
+
+
+
 size_t	two_dem_strlen(char **s)
 {
 	char	**p;
@@ -39,8 +44,22 @@ void read_bot_info(t_bot **bot)
 	(*bot)->info[i] = NULL;
 }
 
-void valid_bot(t_bot *bot)
+//void valid_bot(t_bot *bot)
+//{
+//}
+
+void make_asm(t_bot **bot)
 {
+
+
+
+
+}
+
+void inti_bot(t_bot *bot)
+{
+
+
 
 
 
@@ -52,7 +71,7 @@ int main(void)
 
 	init_bot(&bot);
 	read_bot_info(&bot);
-	valid_bot(bot);
-
-
+//	valid_bot(bot);
+	inti_bot(bot);
+	make_asm(&bot);
 }

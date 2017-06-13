@@ -6,19 +6,34 @@
 # include "libft/get_next_line.h"
 # include "libft/ft_printf.h"
 
-typedef struct	s_hash_table
+typedef struct			s_args
 {
+	char 				*arg_type;
+	int					data;
 
+	struct s_args		*next;
+}						t_args;
 
-}				t_s_hash_table;
-
-typedef struct	s_bot
+typedef struct			s_comand
 {
-	char		**info;
-}				t_bot;
+	char				*comand_name;
 
+	struct s_comand		*next;
+}						t_comand;
 
+typedef struct			s_hash_table
+{
+	int					key;
+	t_comand			*comand;
+}						t_hash_table;
 
+typedef struct			s_bot
+{
+	char				**info;
+	char				*name;
+	char 				*comment;
+	t_hash_table 		**hash_table;
+}						t_bot;
 
 void read_bot_info(t_bot **bot);
 
