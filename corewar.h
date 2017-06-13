@@ -9,15 +9,14 @@
 typedef struct			s_args
 {
 	char 				*arg_type;
-	int					data;
-
+	char				*data;
 	struct s_args		*next;
 }						t_args;
 
 typedef struct			s_comand
 {
 	char				*comand_name;
-
+	t_args				*args;
 	struct s_comand		*next;
 }						t_comand;
 
