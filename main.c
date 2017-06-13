@@ -17,14 +17,14 @@ size_t	two_dem_strlen(char **s)
 	return ((p - s) + 1);
 }
 
-
-void init_bot(t_bot **bot)
+void init_corewar(t_corewar **corewar)
 {
-	(*bot) = (t_bot*)malloc(sizeof(t_bot));
-	(*bot)->info = (char **)malloc(sizeof(char *)/* * 2*/);
-	(*bot)->info[0] = NULL;
-//	(*bot)->info[0] = NULL;
-//	(*bot)->info[1] = NULL;
+	*corewar = (t_corewar *)malloc(sizeof(t_corewar));
+	(*corewar)->bot = (t_bot*)malloc(sizeof(t_bot));
+	(*corewar)->bot->info = (char **)malloc(sizeof(char *));
+	(*corewar)->bot->info[0] = NULL;
+	(*corewar)->table = (char *)malloc(sizeof(char) * 4096);
+	(*corewar)->bot->hash_table = (t_hash_table **)malloc(sizeof())
 }
 
 void read_bot_info(t_bot **bot)
@@ -36,7 +36,6 @@ void read_bot_info(t_bot **bot)
 	{
 		if ((*bot)->info[i][0])
 		{
-//			(*bot)->info = ft_realloc(&(*bot)->info, two_dem_strlen((*bot)->info));
 			(*bot)->info = (char **)realloc((*bot)->info, sizeof(char *) * (i + 2));
 			i++;
 		}
@@ -44,11 +43,7 @@ void read_bot_info(t_bot **bot)
 	(*bot)->info[i] = NULL;
 }
 
-//void valid_bot(t_bot *bot)
-//{
-//}
-
-void make_asm(t_bot **bot)
+void init_hash(t_corewar **corewar)
 {
 
 
@@ -56,22 +51,14 @@ void make_asm(t_bot **bot)
 
 }
 
-void inti_bot(t_bot *bot)
-{
-
-
-
-
-
-}
 
 int main(void)
 {
-	t_bot *bot;
+	t_corewar *corewar;
 
-	init_bot(&bot);
-	read_bot_info(&bot);
+	init_corewar(&corewar);
+	read_bot_info(&corewar->bot);
 //	valid_bot(bot);
-	inti_bot(bot);
-	make_asm(&bot);
+	init_hash(&corewar);
+//	make_asm(&bot);
 }

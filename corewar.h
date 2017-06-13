@@ -21,10 +21,16 @@ typedef struct			s_comand
 	struct s_comand		*next;
 }						t_comand;
 
+typedef struct			s_method
+{
+	char				*method_name;
+	t_comand			*comand;
+}						t_method;
+
 typedef struct			s_hash_table
 {
 	int					key;
-	t_comand			*comand;
+	t_method			*method;
 }						t_hash_table;
 
 typedef struct			s_bot
@@ -35,12 +41,20 @@ typedef struct			s_bot
 	t_hash_table 		**hash_table;
 }						t_bot;
 
-void read_bot_info(t_bot **bot);
+typedef struct			s_corewar
+{
+	char				*table;
+	t_bot				*bot;
+	int					registrs[16];
+}						t_corewar;
+
+
+
 
 
 
 /*init*/
-void init_bot(t_bot **bot);
+
 
 
 /*sub*/
