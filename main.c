@@ -71,7 +71,6 @@ void hex(int n, int fd)
 		hex(n % 16, fd);
 	}
 	else
-
 		ft_putchar_fd(HEX_BASE[n], fd);
 }
 
@@ -125,6 +124,20 @@ void print_hex_magic(char *str, int fd)
 	}
 }
 
+unsigned int reverse_magic(unsigned int magic)
+{
+	unsigned int res = 0;
+	unsigned int i = 0;
+
+	while (i < 4)
+	{
+		const unsigned int byte = (magic >> 8 * i) & 0xff;
+		res |= byte << (24 - 8 * i);
+		i++;
+	}
+	return res;
+}
+
 void asm_to_binary(t_corewar *corewar)
 {
 	header_t *header = (header_t *)malloc(sizeof(header_t));
@@ -138,16 +151,13 @@ void asm_to_binary(t_corewar *corewar)
 	ft_memcpy(header->comment, comment, ft_strlen(comment));
 
 	char *file_path = ft_strjoin("../", ft_strjoin(header->prog_name, ".cor"));
-	int fd = open(file_path, O_CREAT | O_WRONLY | O_TRUNC);
+	int fd = open(file_path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 
-	size_t i = 0;
-	char *str = (char *)malloc(sizeof(char));
-	hex_magic(header->magic, fd, str, &i);
-	print_hex_magic(str, fd);
+	unsigned int magic = reverse_magic(COREWAR_EXEC_MAGIC);
+	write(fd, &magic, sizeof(magic));
+	write(fd, header->prog_name, sizeof(char) * PROG_NAME_LENGTH + 1);
+	write(fd, header->comment, sizeof(char) * COMMENT_LENGTH + 1);
 
-
-	str_to_hex(header->prog_name, fd, PROG_NAME_LENGTH);
-	str_to_hex(header->comment, fd, COMMENT_LENGTH);
 	close(fd);
 }
 
