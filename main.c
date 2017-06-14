@@ -2,7 +2,7 @@
 #include "op.h"
 #include "corewar.h"
 
-
+#define HEX_BASE "0123456789abcdef"
 
 
 
@@ -59,11 +59,97 @@ void init_hash(t_corewar **corewar)
 	(*corewar)->bot->hash_table[0]->method->method_name = ft_strdup((ft_strsplit((*corewar)->bot->info[2], '\t'))[0]);
 	(*corewar)->bot->hash_table[0]->method->comand->comand_name = ft_strdup((ft_strsplit((*corewar)->bot->info[2], ' '))[1]);
 	(*corewar)->bot->hash_table[0]->method->comand->args->arg_type = "T_REG";
-	(*corewar)->bot->hash_table[0]->method->comand->args->ne
+//	(*corewar)->bot->hash_table[0]->method->comand->args->ne
 
 
 }
+void hex(int n, int fd)
+{
+	if (n >= 16)
+	{
+		hex(n / 16, fd);
+		hex(n % 16, fd);
+	}
+	else
 
+		ft_putchar_fd(HEX_BASE[n], fd);
+}
+
+void hex_magic(int n, int fd, char *str, size_t *i)
+{
+	if (n >= 16)
+	{
+		hex_magic(n / 16, fd, str, i);
+		hex_magic(n % 16, fd, str, i);
+	}
+	else
+	{
+		str[*i] = HEX_BASE[n];
+		(*i)++;
+		str = realloc(str, *i + 1);
+	}
+}
+
+void str_to_hex(char *str, int fd, int len)
+{
+
+	while (len--)
+	{
+//		if (*str)
+//		{
+			hex(*str, fd);
+			str++;
+//		}
+//		else
+//			ft_putstr_fd("00", fd);
+	}
+}
+
+void print_hex_magic(char *str, int fd)
+{
+	int i = 0;
+	char *p = str;
+
+	while (*str)
+	{
+		if (ft_strlen(p) + i < 8)
+		{
+			ft_putchar_fd((char)'/0', fd);
+			i++;
+		}
+		else
+		{
+			ft_putchar_fd(*str, fd);
+			str++;
+		}
+	}
+}
+
+void asm_to_binary(t_corewar *corewar)
+{
+	header_t *header = (header_t *)malloc(sizeof(header_t));
+	header->magic = COREWAR_EXEC_MAGIC;
+	bzero(header->prog_name, header->prog_size + 1);
+	bzero(header->comment, header->prog_size + 1);
+	char *name = ft_strsplit(ft_strsplit(corewar->bot->info[0], ' ')[1], '"')[0];
+	char *comment = ft_strjoin(ft_strjoin(ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[1], '"')[0], " "), ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[2], '"')[0]);
+
+	ft_memcpy(header->prog_name, name, ft_strlen(name));
+	ft_memcpy(header->comment, comment, ft_strlen(comment));
+
+	char *file_path = ft_strjoin("../", ft_strjoin(header->prog_name, ".cor"));
+	int fd = open(file_path, O_CREAT | O_WRONLY | O_TRUNC);
+
+	size_t i = 0;
+	char *str = (char *)malloc(sizeof(char));
+	hex_magic(header->magic, fd, str, &i);
+	print_hex_magic(str, fd);
+
+
+	str_to_hex(header->prog_name, fd, PROG_NAME_LENGTH);
+	str_to_hex(header->comment, fd, COMMENT_LENGTH);
+	close(fd);
+}
 
 int main(void)
 {
@@ -72,6 +158,9 @@ int main(void)
 	init_corewar(&corewar);
 	read_bot_info(&corewar->bot);
 //	valid_bot(bot);
+
+	asm_to_binary(corewar);
+
 	init_hash(&corewar);
 //	make_asm(&bot);
 }
