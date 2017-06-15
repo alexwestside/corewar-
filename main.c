@@ -18,12 +18,12 @@ size_t	two_dem_strlen(char **s)
 
 void init_corewar(t_corewar **corewar)
 {
-//	*corewar = (t_corewar *)malloc(sizeof(t_corewar));
-//	ft_bzero(&(*corewar)->registrs, sizeof(int) * 16);
-//	(*corewar)->bot = (t_bot*)malloc(sizeof(t_bot));
-//	(*corewar)->bot->info = (char **)malloc(sizeof(char *));
-//	(*corewar)->bot->info[0] = NULL;
-//	(*corewar)->table = (char *)malloc(sizeof(char) * 4096);
+	*corewar = (t_corewar *)malloc(sizeof(t_corewar));
+	ft_bzero(&(*corewar)->registrs, sizeof(int) * 16);
+	(*corewar)->bot = (t_bot*)malloc(sizeof(t_bot));
+	(*corewar)->bot->info = (char **)malloc(sizeof(char *));
+	(*corewar)->bot->info[0] = NULL;
+	(*corewar)->table = (char *)malloc(sizeof(char) * 4096);
 //	(*corewar)->bot->hash_table = (t_hash_table **)malloc(sizeof(t_hash_table*) * 2);
 //	(*corewar)->bot->hash_table[0] = (t_hash_table *)malloc(sizeof(t_hash_table));
 //	(*corewar)->bot->hash_table[0]->method = (t_method *)malloc(sizeof(t_method));
@@ -144,87 +144,25 @@ void bot_code_to_binary(t_op *op, t_corewar *corewar)
 			corewar->bot->info,
 			ft_strsplit(ft_strsplit(corewar->bot->info[0], ' ')[1], '"')[0],
 			ft_strjoin(ft_strjoin(ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[1], '"')[0], " "), ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[2], '"')[0]),
-			{
-					{
-							"l2",
-							{
-									{
-											"sti",
-											{
-													{
-															"r1",
-															"1"
-													},
-													{
-															"%:live",
-															"2"
-													},
-													{
-															"%1",
-															"3"
-													}
-
-											}
-									},
-									{
-											"and",
-											{
-													{
-															"r1",
-															"1"
-													},
-													{
-															"%0"
-															"2"
-													},
-													{
-															"r1",
-															"3"
-													}
-
-											}
-									}
-							}
-					},
-					{
-							"live",
-							{
-									{
-											"live",
-											{
-													{
-															"%1",
-															"1"
-													},
-													NULL,
-													NULL
-											}
-									},
-									{
-											"zjmp",
-											{
-													{
-															"%:live",
-															"2"
-													},
-													NULL,
-													NULL
-											}
-									}
-							}
-					}
-			},
-
+			{{/*"l2"*/ft_strsplit(corewar->bot->info[2], LABEL_CHAR)[0],
+			{{/*"sti"*/ft_strsplit(ft_strsplit(corewar->bot->info[2], ' ')[0], '\t')[1],
+			{{/*"r1"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[0], ' ')[1], "1"},
+			{/*"%:live"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[1], ' ')[0], "2"},
+			{/*"%1"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[2], ' ')[0], "3"}}},
+			{/*"and"*/ft_strsplit(ft_strsplit(corewar->bot->info[3], ' ')[0], '\t')[0],
+			{{/*"r1"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[0], ' ')[1], "1" },
+			{/*"%0"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[1], ' ')[0], "2" },
+			{/*"r1"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[2], ' ')[0], "3" }}}}},
+			{/*"live"*/ft_strsplit(corewar->bot->info[4], LABEL_CHAR)[0],
+			{{/*"live"*/ft_strsplit(ft_strsplit(corewar->bot->info[4], '\t')[1], ' ')[0],
+			{{/*"%1"*/ft_strsplit(ft_strsplit(corewar->bot->info[4], '\t')[1], ' ')[1],	"1"},
+			{NULL},
+			{NULL}}},
+			{/*"zjmp"*/ft_strsplit(ft_strsplit(corewar->bot->info[5], '\t')[0], ' ')[0],
+			{{/*"%:live"*/ft_strsplit(ft_strsplit(corewar->bot->info[5], '\t')[0], ' ')[1], "2"},
+			{NULL},
+			{NULL}}}}}},
 	};
-
-
-
-//	int i = 0;
-//	char *command = ft_strsplit(ft_strsplit(info[2], ' ')[0], '\t')[1];
-//	char *arg1 = ft_strsplit(ft_strsplit(info[2], ',')[0], ' ')[1];
-//	char *agr2 = ft_strsplit(ft_strsplit(info[2], ',')[1], ':')[1];
-//	char *arg3 = ft_strsplit(ft_strsplit(info[2], ',')[2], '%')[1];
-//	int code_bite = find_code_bite(choose_type(arg1), choose_type(agr2), choose_type(arg3));
 
 
 }
