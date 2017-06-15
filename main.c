@@ -6,7 +6,6 @@
 
 
 
-
 size_t	two_dem_strlen(char **s)
 {
 	char	**p;
@@ -19,21 +18,21 @@ size_t	two_dem_strlen(char **s)
 
 void init_corewar(t_corewar **corewar)
 {
-	*corewar = (t_corewar *)malloc(sizeof(t_corewar));
-	ft_bzero(&(*corewar)->registrs, sizeof(int) * 16);
-	(*corewar)->bot = (t_bot*)malloc(sizeof(t_bot));
-	(*corewar)->bot->info = (char **)malloc(sizeof(char *));
-	(*corewar)->bot->info[0] = NULL;
-	(*corewar)->table = (char *)malloc(sizeof(char) * 4096);
-	(*corewar)->bot->hash_table = (t_hash_table **)malloc(sizeof(t_hash_table*) * 2);
-	(*corewar)->bot->hash_table[0] = (t_hash_table *)malloc(sizeof(t_hash_table));
-	(*corewar)->bot->hash_table[0]->method = (t_method *)malloc(sizeof(t_method));
-	(*corewar)->bot->hash_table[0]->method->comand = (t_comand *)malloc(sizeof(t_comand));
-	(*corewar)->bot->hash_table[0]->method->comand->args = (t_args *)malloc(sizeof(t_args));
-	(*corewar)->bot->hash_table[1] = (t_hash_table *)malloc(sizeof(t_hash_table));
-	(*corewar)->bot->hash_table[1]->method = (t_method *)malloc(sizeof(t_method));
-	(*corewar)->bot->hash_table[1]->method->comand = (t_comand *)malloc(sizeof(t_comand));
-	(*corewar)->bot->hash_table[1]->method->comand->args = (t_args *)malloc(sizeof(t_args));
+//	*corewar = (t_corewar *)malloc(sizeof(t_corewar));
+//	ft_bzero(&(*corewar)->registrs, sizeof(int) * 16);
+//	(*corewar)->bot = (t_bot*)malloc(sizeof(t_bot));
+//	(*corewar)->bot->info = (char **)malloc(sizeof(char *));
+//	(*corewar)->bot->info[0] = NULL;
+//	(*corewar)->table = (char *)malloc(sizeof(char) * 4096);
+//	(*corewar)->bot->hash_table = (t_hash_table **)malloc(sizeof(t_hash_table*) * 2);
+//	(*corewar)->bot->hash_table[0] = (t_hash_table *)malloc(sizeof(t_hash_table));
+//	(*corewar)->bot->hash_table[0]->method = (t_method *)malloc(sizeof(t_method));
+//	(*corewar)->bot->hash_table[0]->method->comand = (t_comand *)malloc(sizeof(t_comand));
+//	(*corewar)->bot->hash_table[0]->method->comand->args = (t_args *)malloc(sizeof(t_args));
+//	(*corewar)->bot->hash_table[1] = (t_hash_table *)malloc(sizeof(t_hash_table));
+//	(*corewar)->bot->hash_table[1]->method = (t_method *)malloc(sizeof(t_method));
+//	(*corewar)->bot->hash_table[1]->method->comand = (t_comand *)malloc(sizeof(t_comand));
+//	(*corewar)->bot->hash_table[1]->method->comand->args = (t_args *)malloc(sizeof(t_args));
 }
 
 void read_bot_info(t_bot **bot)
@@ -54,11 +53,11 @@ void read_bot_info(t_bot **bot)
 
 void init_hash(t_corewar **corewar)
 {
-	(*corewar)->bot->name = ft_strdup((ft_strsplit((*corewar)->bot->info[0], ' '))[1]);
-	(*corewar)->bot->comment = ft_strjoin(ft_strdup((ft_strsplit((*corewar)->bot->info[1], ' '))[1]), ft_strdup((ft_strsplit((*corewar)->bot->info[1], ' '))[2]));
-	(*corewar)->bot->hash_table[0]->method->method_name = ft_strdup((ft_strsplit((*corewar)->bot->info[2], '\t'))[0]);
-	(*corewar)->bot->hash_table[0]->method->comand->comand_name = ft_strdup((ft_strsplit((*corewar)->bot->info[2], ' '))[1]);
-	(*corewar)->bot->hash_table[0]->method->comand->args->arg_type = "T_REG";
+//	(*corewar)->bot->name = ft_strdup((ft_strsplit((*corewar)->bot->info[0], ' '))[1]);
+//	(*corewar)->bot->comment = ft_strjoin(ft_strdup((ft_strsplit((*corewar)->bot->info[1], ' '))[1]), ft_strdup((ft_strsplit((*corewar)->bot->info[1], ' '))[2]));
+//	(*corewar)->bot->hash_table[0]->method->method_name = ft_strdup((ft_strsplit((*corewar)->bot->info[2], '\t'))[0]);
+//	(*corewar)->bot->hash_table[0]->method->comand->comand_name = ft_strdup((ft_strsplit((*corewar)->bot->info[2], ' '))[1]);
+//	(*corewar)->bot->hash_table[0]->method->comand->args->arg_type = "T_REG";
 //	(*corewar)->bot->hash_table[0]->method->comand->args->ne
 
 
@@ -138,6 +137,98 @@ unsigned int reverse_magic(unsigned int magic)
 	return res;
 }
 
+void bot_code_to_binary(t_op *op, t_corewar *corewar)
+{
+	t_bot bot =
+	{
+			corewar->bot->info,
+			ft_strsplit(ft_strsplit(corewar->bot->info[0], ' ')[1], '"')[0],
+			ft_strjoin(ft_strjoin(ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[1], '"')[0], " "), ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[2], '"')[0]),
+			{
+					{
+							"l2",
+							{
+									{
+											"sti",
+											{
+													{
+															"r1",
+															"1"
+													},
+													{
+															"%:live",
+															"2"
+													},
+													{
+															"%1",
+															"3"
+													}
+
+											}
+									},
+									{
+											"and",
+											{
+													{
+															"r1",
+															"1"
+													},
+													{
+															"%0"
+															"2"
+													},
+													{
+															"r1",
+															"3"
+													}
+
+											}
+									}
+							}
+					},
+					{
+							"live",
+							{
+									{
+											"live",
+											{
+													{
+															"%1",
+															"1"
+													},
+													NULL,
+													NULL
+											}
+									},
+									{
+											"zjmp",
+											{
+													{
+															"%:live",
+															"2"
+													},
+													NULL,
+													NULL
+											}
+									}
+							}
+					}
+			},
+
+	};
+
+
+
+//	int i = 0;
+//	char *command = ft_strsplit(ft_strsplit(info[2], ' ')[0], '\t')[1];
+//	char *arg1 = ft_strsplit(ft_strsplit(info[2], ',')[0], ' ')[1];
+//	char *agr2 = ft_strsplit(ft_strsplit(info[2], ',')[1], ':')[1];
+//	char *arg3 = ft_strsplit(ft_strsplit(info[2], ',')[2], '%')[1];
+//	int code_bite = find_code_bite(choose_type(arg1), choose_type(agr2), choose_type(arg3));
+
+
+}
+
 void asm_to_binary(t_corewar *corewar)
 {
 	header_t *header = (header_t *)malloc(sizeof(header_t));
@@ -159,6 +250,10 @@ void asm_to_binary(t_corewar *corewar)
 	write(fd, header->prog_name, (sizeof(*header->prog_name) * (PROG_NAME_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->prog_name))));
 	write(fd, &header->prog_size, (sizeof(header->prog_size) + sizeof(unsigned int) - sizeof(header->prog_size)));
 	write(fd, header->comment, sizeof(*header->comment) * COMMENT_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->comment));
+
+//	t_op *op = (t_op *)malloc(sizeof(t_op));
+	t_op *op = init_op();
+	bot_code_to_binary(op, corewar);
 
 	close(fd);
 

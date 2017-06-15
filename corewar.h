@@ -10,26 +10,26 @@ typedef struct			s_args
 {
 	char 				*arg_type;
 	char				*data;
-	struct s_args		*next;
+//	struct s_args		*next;
 }						t_args;
 
 typedef struct			s_comand
 {
 	char				*comand_name;
-	t_args				*args;
-	struct s_comand		*next;
+	t_args				args[3];
+//	struct s_comand		*next;
 }						t_comand;
 
 typedef struct			s_method
 {
 	char				*method_name;
-	t_comand			*comand;
+	t_comand			comand[2];
 }						t_method;
 
 typedef struct			s_hash_table
 {
-	int					key;
-	t_method			*method;
+//	int					key;
+	t_method			method;
 }						t_hash_table;
 
 typedef struct			s_bot
@@ -37,7 +37,7 @@ typedef struct			s_bot
 	char				**info;
 	char				*name;
 	char 				*comment;
-	t_hash_table 		**hash_table;
+	t_hash_table 		hash_table[2];
 }						t_bot;
 
 typedef struct			s_corewar
