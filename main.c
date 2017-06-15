@@ -142,8 +142,8 @@ void asm_to_binary(t_corewar *corewar)
 {
 	header_t *header = (header_t *)malloc(sizeof(header_t));
 	header->magic = COREWAR_EXEC_MAGIC;
-	bzero(header->prog_name, header->prog_size + 1);
-	bzero(header->comment, header->prog_size + 1);
+	bzero(header->prog_name, header->prog_size);
+	bzero(header->comment, header->prog_size);
 	char *name = ft_strsplit(ft_strsplit(corewar->bot->info[0], ' ')[1], '"')[0];
 	char *comment = ft_strjoin(ft_strjoin(ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[1], '"')[0], " "), ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[2], '"')[0]);
 
@@ -153,12 +153,17 @@ void asm_to_binary(t_corewar *corewar)
 	char *file_path = ft_strjoin("../", ft_strjoin(header->prog_name, ".cor"));
 	int fd = open(file_path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 
+
 	unsigned int magic = reverse_magic(COREWAR_EXEC_MAGIC);
-	write(fd, &magic, sizeof(magic));
-	write(fd, header->prog_name, sizeof(char) * PROG_NAME_LENGTH + 1);
-	write(fd, header->comment, sizeof(char) * COMMENT_LENGTH + 1);
+	write(fd, &magic, sizeof(magic) + sizeof(unsigned int) - sizeof(magic));
+	write(fd, header->prog_name, (sizeof(*header->prog_name) * (PROG_NAME_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->prog_name))));
+	write(fd, &header->prog_size, (sizeof(header->prog_size) + sizeof(unsigned int) - sizeof(header->prog_size)));
+	write(fd, header->comment, sizeof(*header->comment) * COMMENT_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->comment));
 
 	close(fd);
+
+//	int d;
+//	for (register d; )
 }
 
 int main(void)
