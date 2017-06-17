@@ -38,10 +38,12 @@ typedef struct			s_bot
 	char				*name;
 	char 				*comment;
 	t_hash_table 		hash_table[2];
+	struct s_bot		*next;
 }						t_bot;
 
 typedef struct			s_corewar
 {
+	t_op				*op;
 	char				*table;
 	t_bot				*bot;
 	int					registrs[16];

@@ -79,7 +79,7 @@ typedef struct s_op
 {
 	char	*command_name;
 	int		count_args;
-	int		*args[3];
+	int		args[3];
 	int		opcode;
 	int		cycles;
 	char	*description;
@@ -87,4 +87,9 @@ typedef struct s_op
 	int		cod_octal;
 }				t_op;
 
+extern t_op op_tab[17];
+
 t_op *init_op();
+
+
+//t_op init_op(t_op *op);

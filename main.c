@@ -5,10 +5,9 @@
 #define HEX_BASE "0123456789abcdef"
 
 
-
-size_t	two_dem_strlen(char **s)
+size_t two_dem_strlen(char **s)
 {
-	char	**p;
+	char **p;
 
 	p = s;
 	while (*p)
@@ -18,12 +17,12 @@ size_t	two_dem_strlen(char **s)
 
 void init_corewar(t_corewar **corewar)
 {
-	*corewar = (t_corewar *)malloc(sizeof(t_corewar));
+	*corewar = (t_corewar *) malloc(sizeof(t_corewar));
 	ft_bzero(&(*corewar)->registrs, sizeof(int) * 16);
-	(*corewar)->bot = (t_bot*)malloc(sizeof(t_bot));
-	(*corewar)->bot->info = (char **)malloc(sizeof(char *));
+	(*corewar)->bot = (t_bot *) malloc(sizeof(t_bot));
+	(*corewar)->bot->info = (char **) malloc(sizeof(char *));
 	(*corewar)->bot->info[0] = NULL;
-	(*corewar)->table = (char *)malloc(sizeof(char) * 4096);
+	(*corewar)->table = NULL;
 //	(*corewar)->bot->hash_table = (t_hash_table **)malloc(sizeof(t_hash_table*) * 2);
 //	(*corewar)->bot->hash_table[0] = (t_hash_table *)malloc(sizeof(t_hash_table));
 //	(*corewar)->bot->hash_table[0]->method = (t_method *)malloc(sizeof(t_method));
@@ -35,20 +34,20 @@ void init_corewar(t_corewar **corewar)
 //	(*corewar)->bot->hash_table[1]->method->comand->args = (t_args *)malloc(sizeof(t_args));
 }
 
-void read_bot_info(t_bot **bot)
+void read_bot_info(t_bot *bot)
 {
 	int fd = open("/nfs/2016/o/orizhiy/ClionProjects/corewar/resources/corewar/champs/examples/zork.s", O_RDONLY);
 	size_t i = 0;
 
-	while (get_next_line(fd, &(*bot)->info[i]))
+	while (get_next_line(fd, &(bot)->info[i]))
 	{
-		if ((*bot)->info[i][0])
+		if ((bot)->info[i][0])
 		{
-			(*bot)->info = (char **)realloc((*bot)->info, sizeof(char *) * (i + 2));
+			(bot)->info = (char **) realloc((bot)->info, sizeof(char *) * (i + 2));
 			i++;
 		}
 	}
-	(*bot)->info[i] = NULL;
+	(bot)->info[i] = NULL;
 }
 
 void init_hash(t_corewar **corewar)
@@ -62,6 +61,7 @@ void init_hash(t_corewar **corewar)
 
 
 }
+
 void hex(int n, int fd)
 {
 	if (n >= 16)
@@ -95,8 +95,8 @@ void str_to_hex(char *str, int fd, int len)
 	{
 //		if (*str)
 //		{
-			hex(*str, fd);
-			str++;
+		hex(*str, fd);
+		str++;
 //		}
 //		else
 //			ft_putstr_fd("00", fd);
@@ -112,7 +112,7 @@ void print_hex_magic(char *str, int fd)
 	{
 		if (ft_strlen(p) + i < 8)
 		{
-			ft_putchar_fd((char)'/0', fd);
+			ft_putchar_fd((char) '/0', fd);
 			i++;
 		}
 		else
@@ -137,39 +137,81 @@ unsigned int reverse_magic(unsigned int magic)
 	return res;
 }
 
-void bot_code_to_binary(t_op *op, t_corewar *corewar)
+t_bot hell_init(t_corewar *corewar)
 {
 	t_bot bot =
+			{
+					corewar->bot->info,
+					/*"zork"*/ft_strdup(ft_strsplit(ft_strsplit(corewar->bot->info[0], ' ')[1], '"')[0]),
+					/*"I'M ALIIIIVE"*/ft_strdup(ft_strjoin(ft_strjoin(ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[1], '"')[0], " "), ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[2], '"')[0])),
+					{{/*"l2"*/ft_strdup(ft_strsplit(corewar->bot->info[2], LABEL_CHAR)[0]),
+							  {{/*"sti"*/ft_strdup(ft_strsplit(ft_strsplit(corewar->bot->info[2], ' ')[0], '\t')[1]),
+										 {{/*"r1"*/ft_strdup(ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[0], ' ')[1]), "1"},
+										  {/*"%:live"*/ft_strdup(ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[1], ' ')[0]), "2"},
+										  {/*"%1"*/ft_strdup(ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[2], ' ')[0]), "3"}}},
+							   {/*"and"*/ft_strdup(ft_strsplit(ft_strsplit(corewar->bot->info[3], ' ')[0], '\t')[0]),
+										 {{/*"r1"*/ft_strdup(ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[0], ' ')[1]), "1"},
+										  {/*"%0"*/ft_strdup(ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[1], ' ')[0]), "2"},
+										  {/*"r1"*/ft_strdup(ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[2], ' ')[0]), "3"}}}}},
+					 {/*"live"*/ft_strdup(ft_strsplit(corewar->bot->info[4], LABEL_CHAR)[0]),
+								{{/*"live"*/ft_strdup(ft_strsplit(ft_strsplit(corewar->bot->info[4], '\t')[1], ' ')[0]),
+											{{/*"%1"*/ft_strdup(ft_strsplit(ft_strsplit(corewar->bot->info[4], '\t')[1], ' ')[1]), "1"},
+											 {NULL},
+											 {NULL}}},
+								 {/*"zjmp"*/ft_strdup(ft_strsplit(ft_strsplit(corewar->bot->info[5], '\t')[0], ' ')[0]),
+											{{/*"%:live"*/ft_strdup(ft_strsplit(ft_strsplit(corewar->bot->info[5], '\t')[0], ' ')[1]),  "2"},
+											 {NULL},
+											 {NULL}}}}}},
+			};
+	return (bot);
+}
+
+
+int type_comand(char *str, int fd)
+{
+	int opcode = 0;
+	int i = 0;
+
+	while (i < REG_NUMBER)
 	{
-			corewar->bot->info,
-			ft_strsplit(ft_strsplit(corewar->bot->info[0], ' ')[1], '"')[0],
-			ft_strjoin(ft_strjoin(ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[1], '"')[0], " "), ft_strsplit(ft_strsplit(corewar->bot->info[1], ' ')[2], '"')[0]),
-			{{/*"l2"*/ft_strsplit(corewar->bot->info[2], LABEL_CHAR)[0],
-			{{/*"sti"*/ft_strsplit(ft_strsplit(corewar->bot->info[2], ' ')[0], '\t')[1],
-			{{/*"r1"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[0], ' ')[1], "1"},
-			{/*"%:live"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[1], ' ')[0], "2"},
-			{/*"%1"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[2], '\t')[1], SEPARATOR_CHAR)[2], ' ')[0], "3"}}},
-			{/*"and"*/ft_strsplit(ft_strsplit(corewar->bot->info[3], ' ')[0], '\t')[0],
-			{{/*"r1"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[0], ' ')[1], "1" },
-			{/*"%0"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[1], ' ')[0], "2" },
-			{/*"r1"*/ft_strsplit(ft_strsplit(ft_strsplit(corewar->bot->info[3], '\t')[0], SEPARATOR_CHAR)[2], ' ')[0], "3" }}}}},
-			{/*"live"*/ft_strsplit(corewar->bot->info[4], LABEL_CHAR)[0],
-			{{/*"live"*/ft_strsplit(ft_strsplit(corewar->bot->info[4], '\t')[1], ' ')[0],
-			{{/*"%1"*/ft_strsplit(ft_strsplit(corewar->bot->info[4], '\t')[1], ' ')[1],	"1"},
-			{NULL},
-			{NULL}}},
-			{/*"zjmp"*/ft_strsplit(ft_strsplit(corewar->bot->info[5], '\t')[0], ' ')[0],
-			{{/*"%:live"*/ft_strsplit(ft_strsplit(corewar->bot->info[5], '\t')[0], ' ')[1], "2"},
-			{NULL},
-			{NULL}}}}}},
-	};
+		if (!ft_strcmp(str, op_tab[i].command_name))
+			break;
+		i++;
+	}
+	return (op_tab[i].opcode);
+}
+
+void bot_code_to_binary(t_corewar *corewar, int fd)
+{
+	int hash = 0;
+	int comm;
+	int arg;
+	int opcode;
+
+	while (hash < 2)
+	{
+		comm = 0;
+		while (comm < 2)
+		{
+			opcode = type_comand(corewar->bot->hash_table[hash].method.comand[comm].comand_name, fd);
+			write(fd, &opcode, sizeof(char));
+			arg = 0;
+			while (arg < 3)
+			{
+
+				arg++;
+			}
+			comm++;
+		}
+		hash++;
+	}
 
 
 }
 
 void asm_to_binary(t_corewar *corewar)
 {
-	header_t *header = (header_t *)malloc(sizeof(header_t));
+	header_t *header = (header_t *) malloc(sizeof(header_t));
 	header->magic = COREWAR_EXEC_MAGIC;
 	bzero(header->prog_name, header->prog_size);
 	bzero(header->comment, header->prog_size);
@@ -182,17 +224,17 @@ void asm_to_binary(t_corewar *corewar)
 	char *file_path = ft_strjoin("../", ft_strjoin(header->prog_name, ".cor"));
 	int fd = open(file_path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 
-
+//	unsigned int magic = COREWAR_EXEC_MAGIC;
 	unsigned int magic = reverse_magic(COREWAR_EXEC_MAGIC);
 	write(fd, &magic, sizeof(magic) + sizeof(unsigned int) - sizeof(magic));
 	write(fd, header->prog_name, (sizeof(*header->prog_name) * (PROG_NAME_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->prog_name))));
 	write(fd, &header->prog_size, (sizeof(header->prog_size) + sizeof(unsigned int) - sizeof(header->prog_size)));
 	write(fd, header->comment, sizeof(*header->comment) * COMMENT_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->comment));
 
-//	t_op *op = (t_op *)malloc(sizeof(t_op));
-	t_op *op = init_op();
-	bot_code_to_binary(op, corewar);
-
+//	corewar->op = init_op();
+//	t_bot bot = hell_init(corewar);
+	corewar->bot[0] = hell_init(corewar);
+	bot_code_to_binary(corewar, fd);
 	close(fd);
 
 //	int d;
@@ -204,7 +246,7 @@ int main(void)
 	t_corewar *corewar;
 
 	init_corewar(&corewar);
-	read_bot_info(&corewar->bot);
+	read_bot_info(corewar->bot);
 //	valid_bot(bot);
 
 	asm_to_binary(corewar);

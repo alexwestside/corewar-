@@ -36,8 +36,6 @@ t_op    op_tab[17] =
 
 #include "op.h"
 
-t_op *init_op()
-{
 	t_op op_tab[17] =
 			{
 					{"live",  1, {0},       1,  10,   "alive",                                0, 0},
@@ -57,6 +55,4 @@ t_op *init_op()
 					{"aff",   1, {0},       16, 2,    "aff",                                  1, 0},
 					{0,       0, {0},       0,  0,    0,                                      0, 0}
 			};
-	return (op_tab);
-}
 
