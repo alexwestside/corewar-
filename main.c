@@ -181,12 +181,55 @@ int type_comand(char *str, int fd)
 	return (op_tab[i].opcode);
 }
 
+int ft_isdigit_str(char *s)
+{
+	char *p;
+
+	p = s;
+	while(*p)
+	{
+		if (!ft_isdigit(*p))
+			return (0);
+		p++;
+	}
+	return (1);
+}
+
+int type_args(char *str)
+{
+	char *s;
+
+	s = str;
+	if (*s == 'r')
+		return (T_REG);
+	if (*s == '%' && *(s + 1) == LABEL_CHAR)
+		return (T_DIR);
+	if (*s == '%' && ft_isdigit_str(ft_strndup(s + 1, ft_strlen(s) - 1)))
+		return (T_DIR);
+	return (0);
+}
+
+int by_type_args(int i, int arg)
+{
+	int res;
+
+	res = 0;
+	if (arg == T_REG)
+		res = REG_CODE << (6 - (i != 2 ? i * 2 : 4));
+	if (arg == T_DIR)
+		res = DIR_CODE << (6 - (i != 2 ? i * 2 : 4));;
+	if (arg == T_IND)
+		res = IND_CODE << (6 - (i != 2 ? i * 2 : 4));;
+	return (res);
+}
+
 void bot_code_to_binary(t_corewar *corewar, int fd)
 {
 	int hash = 0;
 	int comm;
 	int arg;
 	int opcode;
+	int args = 0;
 
 	while (hash < 2)
 	{
@@ -198,9 +241,10 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 			arg = 0;
 			while (arg < 3)
 			{
-
+				args += by_type_args(arg, type_args(corewar->bot->hash_table[hash].method.comand[comm].args[arg].arg_type));
 				arg++;
 			}
+			write(fd, &args, sizeof(char));
 			comm++;
 		}
 		hash++;
