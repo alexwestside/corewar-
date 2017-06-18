@@ -16,36 +16,37 @@
 # include "../libft/ft_printf.h"
 # include "../op.h"
 
-typedef struct	s_fork
+typedef struct		s_fork
 {
-	int			carry : 1; 			// carry flag
-	int 		live : 1;			// process worker
-	size_t		pc;           	 	// position in char elements
-	int			reg[REG_NUMBER];	// registers of the processor
-}				t_fork;
+	int				carry : 1; 			// carry flag
+	int 			live : 1;			// process worker
+	size_t			pc;           	 	// position in char elements
+	int				reg[REG_NUMBER];	// registers of the processor
+}					t_fork;
 
-typedef struct s_list_forks
+typedef struct		s_list_forks
 {
-	t_fork		fork;
-	t_fork		*prev;
-	t_fork		*next;
-}				t_list_forks;
+	t_fork			fork;
+	t_fork			*prev;
+	t_fork			*next;
+}					t_list_forks;
 
-typedef struct	s_query
+typedef struct		s_tasks
 {
-	t_fork		*p_process;
-	int			time_cycle;
+	t_fork			*p_fork;
+	struct s_query	*prev;
+	struct s_query	*next;
+	unsigned		time_cycle;
+}					t_tasks;
 
-}				t_query;
-
-typedef	struct	s_machine
+typedef	struct		s_machine
 {
-	t_fork		*head;
-	t_fork		*tail;
-	unsigned	count_live;
-	t_query		*top;
-	t_query		*buttom;
-	header_t	*player;
-}				t_machine;
+	t_list_forks	head;
+	t_list_forks	tail;
+	unsigned		count_live;
+	t_tasks			top;
+	t_tasks			buttom;
+	header_t		*player;
+}					t_machine;
 
 #endif
