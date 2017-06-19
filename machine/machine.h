@@ -44,8 +44,10 @@ typedef	struct		s_machine
 	t_list_forks	head;
 	t_list_forks	tail;
 	unsigned		count_live;
-	t_tasks			top;
-	t_tasks			buttom;
+	t_tasks			*top;
+	t_tasks			*buttom;
+	t_tasks			*top_zombi;
+	t_tasks			*buttom_zombi;
 	header_t		*player;
 }					t_machine;
 
