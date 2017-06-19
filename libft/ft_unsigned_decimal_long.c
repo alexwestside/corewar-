@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_unsigned_decimal_long.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2017/02/09 19:35:43 by orizhiy           #+#    #+#             */
+/*   Updated: 2017/02/09 19:36:53 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "ft_printf.h"
 
-char	*create_vm(void)
+ssize_t		ft_unsigned_decimal_long(va_list *arg_p, t_flag *flags)
 {
-	char *vm;
+	ssize_t		res;
+	uintmax_t	num;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	flags->f_size = l;
+	num = unsingned_size(arg_p, flags);
+	res = ft_unsigned(num, flags, DEC_BASE, NULL);
+	return (res);
 }
-
-

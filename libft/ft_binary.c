@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_binary.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2017/02/09 19:53:01 by orizhiy           #+#    #+#             */
+/*   Updated: 2017/02/09 19:55:23 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "ft_printf.h"
 
-char	*create_vm(void)
+ssize_t		ft_binary(va_list *arg_p, t_flag *flags)
 {
-	char *vm;
+	ssize_t		res;
+	uintmax_t	num;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	num = unsingned_size(arg_p, flags);
+	res = ft_unsigned(num, flags, BIN_BASE, "0b");
+	return (res);
 }
-
-

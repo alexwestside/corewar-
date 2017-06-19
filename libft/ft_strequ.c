@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/28 01:46:55 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/02 14:12:23 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+int		ft_strequ(char const *s1, char const *s2)
 {
-	char *vm;
-
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	if (s1 && s2)
+		return (ft_strcmp(s1, s2) ? 0 : 1);
+	return (0);
 }
-
-

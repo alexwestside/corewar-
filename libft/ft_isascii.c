@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/26 12:18:40 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/11/28 00:36:34 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+int		ft_isascii(int c)
 {
-	char *vm;
-
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
-
-

@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/12/04 17:15:27 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/04 19:58:41 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	char *vm;
-
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	if (alst && del)
+	{
+		del((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = NULL;
+		return ;
+	}
 }
-
-

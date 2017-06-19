@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/26 13:56:35 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/01 20:33:14 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+char	*ft_strnew(size_t size)
 {
-	char *vm;
+	char *p;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	p = (char *)malloc(size + 1);
+	if (p == NULL)
+		return (NULL);
+	ft_bzero(p, (size + 1));
+	return (p);
 }
-
-

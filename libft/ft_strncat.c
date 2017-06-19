@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/23 18:13:22 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/05 12:42:35 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char *vm;
+	char *p;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	p = (char *)s1;
+	while (*p)
+		p++;
+	while (n > 0 && *s2)
+	{
+		*p++ = *s2++;
+		n--;
+	}
+	*p++ = '\0';
+	return (s1);
 }
-
-

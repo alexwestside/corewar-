@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_width_padd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2017/02/09 16:15:12 by orizhiy           #+#    #+#             */
+/*   Updated: 2017/02/09 16:38:49 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "ft_printf.h"
 
-char	*create_vm(void)
+void	ft_width_padd(size_t num_len, unsigned int width, char width_padd)
 {
-	char *vm;
-
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	while (num_len < width)
+	{
+		ft_putchar(width_padd);
+		num_len++;
+	}
 }
-
-

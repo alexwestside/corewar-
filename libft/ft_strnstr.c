@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/25 18:00:55 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/05 20:09:44 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char *vm;
+	char *b;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	b = ft_strstr(big, little);
+	if ((b - big) + ft_strlen(little) > len)
+		return (0);
+	return (b);
 }
-
-

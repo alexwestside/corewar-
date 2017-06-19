@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_strnlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2017/02/09 16:59:01 by orizhiy           #+#    #+#             */
+/*   Updated: 2017/02/09 16:59:53 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "ft_printf.h"
 
-char	*create_vm(void)
+size_t	ft_strnlen(char *str, size_t strlen)
 {
-	char *vm;
+	size_t	i;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	i = 0;
+	while (*str && strlen--)
+	{
+		i++;
+		str++;
+	}
+	return (i);
 }
-
-

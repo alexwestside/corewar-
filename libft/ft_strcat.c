@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   strcat.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/23 17:23:38 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/05 12:38:00 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+char		*ft_strcat(char *s1, const char *s2)
 {
-	char *vm;
+	char	*p;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	p = s1;
+	while (*p)
+		p++;
+	while ((*p++ = *s2++))
+		;
+	return (s1);
 }
-
-

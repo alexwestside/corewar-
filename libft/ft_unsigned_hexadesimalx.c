@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_unsigned_hexadesimalx.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2017/02/09 19:30:00 by orizhiy           #+#    #+#             */
+/*   Updated: 2017/02/10 18:21:42 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "ft_printf.h"
 
-char	*create_vm(void)
+ssize_t		ft_unsigned_hexadesimalx(va_list *arg_p, t_flag *flags)
 {
-	char *vm;
+	uintmax_t	num;
+	ssize_t		res;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	num = unsingned_size(arg_p, flags);
+	res = ft_unsigned(num, flags, HEX_BASE, "0x");
+	return (res);
 }
-
-

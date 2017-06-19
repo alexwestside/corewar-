@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy_rev.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/30 21:10:33 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/05 12:34:33 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+void		*ft_memcpy_rev(void *dest, const void *sorc, size_t n)
 {
-	char *vm;
+	char *s;
+	char *d;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	s = (char *)sorc;
+	d = (char *)dest;
+	while (n--)
+		d[n] = s[n];
+	return (dest);
 }
-
-

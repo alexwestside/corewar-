@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/23 12:05:22 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/12 13:01:16 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+char	*ft_strdup(const char *s1)
 {
-	char *vm;
+	char	*dup;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	dup = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	return (dup ? ft_strcpy(dup, s1) : NULL);
 }
-
-

@@ -13,14 +13,14 @@
 #include "machine.h"
 
 
-int		check_machine_key(char *data_read)
-{
-	if (!ft_memcmp(COREWAR_EXEC_MAGIC, data_read, sizeof(COREWAR_EXEC_MAGIC)))
-		return (0);
-	return (1);
-}
+//int		check_machine_key(char *data_read)
+//{
+//	if (!ft_memcmp(COREWAR_EXEC_MAGIC, data_read, sizeof(COREWAR_EXEC_MAGIC)))
+//		return (0);
+//	return (1);
+//}
 
-int		check_count_players(int count_strs, char **strs)
+int		count_players(int count_strs, char **strs)
 {
 	unsigned	count;
 	int			fd;
@@ -28,10 +28,11 @@ int		check_count_players(int count_strs, char **strs)
 	count = 0;
 	if (count_strs == 0 || strs == NULL)
 		return (2);
-	while (--count_strs != -1)
+	while (--count_strs)
 	{
-		fd = open(strs[count_strs], O_RONLY);
+		fd = open(strs[count_strs], O_RDONLY);
 		count += fd != -1 ? 1 : 0;
+		close(fd);
 	}
-	return (count <= MAX_PLAYERS ? 0 : 1);
+	return (count <= MAX_PLAYERS ? count : 0);
 }

@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_len_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/12/02 17:18:04 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/02 20:46:22 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+int		ft_len_int(int n)
 {
-	char *vm;
+	int len;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
 }
-
-

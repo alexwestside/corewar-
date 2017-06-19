@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_signed_int_decimal_long.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2017/02/09 21:08:44 by orizhiy           #+#    #+#             */
+/*   Updated: 2017/02/09 21:09:25 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "ft_printf.h"
 
-char	*create_vm(void)
+ssize_t		ft_signed_int_decimal_long(va_list *arg_p, t_flag *flags)
 {
-	char *vm;
+	ssize_t res;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	flags->f_size = l;
+	res = ft_signed_int_decimal(arg_p, flags);
+	return (res);
 }
-
-

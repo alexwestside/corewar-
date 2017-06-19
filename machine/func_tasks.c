@@ -12,11 +12,11 @@
 
 #include "machine.h"
 
-t_query		*create_task(t_fork *fork, int cycle_op, unsigned cycle_now)
+t_tasks		*create_task(t_fork *fork, int cycle_op, unsigned cycle_now)
 {
-	t_query *p;
+	t_tasks *p;
 
-	p = (t_query*)malloc(sizeof(t_query));
+	p = (t_tasks*)malloc(sizeof(t_tasks));
 	if (p == NULL || fork == NULL)
 	{
 		free(p);
@@ -37,9 +37,9 @@ void 		add_top(t_tasks **top, t_tasks **bottom, t_tasks *new_task)
 		*bottom = new_task;
 		return ;
 	}
-	*top->prev = new_task;
-	new_task->next = *top->p_fork;
-	*top->p_fork = new_task;
+	(*top)->prev = new_task;
+	new_task->next = *top;
+	*top = new_task;
 }
 
 void 		add_bottom(t_tasks **top, t_tasks **bottom, t_tasks *new_task)
@@ -50,9 +50,9 @@ void 		add_bottom(t_tasks **top, t_tasks **bottom, t_tasks *new_task)
 		*bottom = new_task;
 		return ;
 	}
-	*bottom->next = new_task;
-	new_task->prev = *bottom->p_fork;
-	*bottom->p_fork = new_task;
+	(*bottom)->next = new_task;
+	new_task->prev = *bottom;
+	*bottom = new_task;
 }
 
 int			push_before(t_tasks **iter_node, t_tasks *new_task)
@@ -79,15 +79,15 @@ void 		push(t_tasks **top, t_tasks **bottom, t_tasks *new_task)
 		add_bottom(top, bottom, new_task);
 	else if (p_bottom && p_bottom->time_cycle > new_task->time_cycle)
 		add_bottom(top, bottom, new_task);
-	else if (p->top && p_top->time_cycle < new_task->time_cycle)
+	else if (p_top && p_top->time_cycle < new_task->time_cycle)
 		add_top(top, bottom, new_task);
 	else
 		while (p_top != p_bottom && f)
 		{
 			if (p_top->time_cycle > new_task->time_cycle)
-				f = push_before(p_top, new_task);
+				f = push_before(&p_top, new_task);
 			else if (p_bottom->time_cycle <= new_task->time_cycle)
-				f = push_before(p_bottom, new_task);
+				f = push_before(&p_bottom, new_task);
 			p_top = p_top->next;
 			p_bottom = p_bottom->prev;
 		}
@@ -101,6 +101,6 @@ t_tasks		*pop(t_tasks **bottom)
 	if (p_bottom == NULL)
 		return (NULL);
 	*bottom = p_bottom->prev;
-	*bottom->next = NULL;
+	(*bottom)->next = NULL;
 	return (p_bottom);
 }

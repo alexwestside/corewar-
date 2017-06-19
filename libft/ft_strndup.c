@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2017/02/09 16:53:19 by orizhiy           #+#    #+#             */
+/*   Updated: 2017/02/09 16:56:05 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "ft_printf.h"
 
-char	*create_vm(void)
+char	*ft_strndup(char *sorc, size_t n)
 {
-	char *vm;
+	char	*dup;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	if (!(dup = (char *)malloc(sizeof(char) * n + 1)))
+		return (NULL);
+	dup = ft_strncpy(dup, sorc, n);
+	dup[n] = '\0';
+	return (dup);
 }
-
-

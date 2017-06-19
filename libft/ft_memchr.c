@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2016/11/22 15:10:30 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/05 12:33:33 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "libft.h"
 
-char	*create_vm(void)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char *vm;
+	unsigned char *p;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	p = (unsigned char*)s;
+	while (n--)
+		if (*p != (unsigned char)c)
+			p++;
+		else
+			return (p);
+	return (0);
 }
-
-

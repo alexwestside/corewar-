@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_vm.c                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 23:24:14 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 23:24:17 by ayatsyny         ###   ########.fr       */
+/*   Created: 2017/02/10 13:00:43 by orizhiy           #+#    #+#             */
+/*   Updated: 2017/02/10 16:30:35 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "machine.h"
+#include "ft_printf.h"
 
-char	*create_vm(void)
+int		ft_printf(const char *format, ...)
 {
-	char *vm;
+	va_list	arg_p;
+	size_t	res;
 
-	vm = ft_strnew(MEM_SIZE);
-	return (vm);
+	res = 0;
+	va_start(arg_p, format);
+	res = ft_finder(format, &arg_p, res);
+	va_end(arg_p);
+	return (int)(res);
 }
-
-
