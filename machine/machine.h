@@ -24,13 +24,6 @@ typedef struct		s_fork
 	int				reg[REG_NUMBER];	// registers of the processor
 }					t_fork;
 
-typedef struct		s_list_forks
-{
-	t_fork			fork;
-	t_fork			*prev;
-	t_fork			*next;
-}					t_list_forks;
-
 typedef struct		s_tasks
 {
 	t_fork			*p_fork;
@@ -41,8 +34,6 @@ typedef struct		s_tasks
 
 typedef	struct		s_machine
 {
-	t_list_forks	head;
-	t_list_forks	tail;
 	unsigned		count_live;
 	t_tasks			*top;
 	t_tasks			*buttom;

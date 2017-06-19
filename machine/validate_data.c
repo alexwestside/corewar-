@@ -31,7 +31,7 @@ int		check_count_players(int count_strs, char **strs)
 	while (--count_strs != -1)
 	{
 		fd = open(strs[count_strs], O_RONLY);
-		count += fd == -1 ? 1 : 0;
+		count += fd != -1 ? 1 : 0;
 	}
 	return (count <= MAX_PLAYERS ? 0 : 1);
 }
