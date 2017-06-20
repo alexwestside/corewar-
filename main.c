@@ -283,10 +283,16 @@ void asm_to_binary(t_corewar *corewar)
 
 //	int d;
 //	for (register d; )
+	/*//*/
+	/*//*/
+	/*//*/
+
 }
 
 int main(void)
 {
+
+	char *s = malloc(0);
 	t_corewar *corewar;
 
 	init_corewar(&corewar);
