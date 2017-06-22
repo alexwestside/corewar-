@@ -18,6 +18,31 @@
 
 int		main(int argc, char **argv)
 {
+	int fd;
+	char name[PROG_NAME_LENGTH];
+
+	printf("path %s\n", argv[1]);
+	fd = open(argv[1], O_RDONLY);
+	if (fd == -1)
+		printf("error open file \n");
+	int r;
+	r = (int)read(fd, name, PROG_NAME_LENGTH);
+	if (r == -1)
+		printf("error read data \n");
+//	lseek(fd, 4, 0);
+	int i = 0;
+	while (i < PROG_NAME_LENGTH)
+	{
+		if (name[i])
+			printf("%02x ", (unsigned char)name[i]);
+		i++;
+	}
+	lseek(fd, 4, 0);
+	printf("\n");
+	printf("%s\n", name);
+	close(fd);
+
+
 	t_machine	vm;
 	int			debug;
 
@@ -26,6 +51,7 @@ int		main(int argc, char **argv)
 		// todo help use
 	else if ((vm.count_players = (unsigned)count_players(argc, argv)) == 0)
 		return (2);
+
 	vm = (t_machine){0, 0, 0, ft_strnew(MEM_SIZE), NULL, NULL, NULL, NULL, NULL,  vm.count_players, create_players(vm.count_players), create_code_player(vm.count_players)};
 	debug = multi_parsing_files(&vm, argv);
 	debug == -1 ? ft_printf("Error \n") : 0;

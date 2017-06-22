@@ -1,5 +1,6 @@
 
 #include "machine.h"
+#include <stdio.h>
 
 void	switch_data(t_machine *vm, char *data, int index_player, int i)
 {
@@ -15,23 +16,23 @@ void	switch_data(t_machine *vm, char *data, int index_player, int i)
 	else if (i == 3)
 	{
 		vm->players[index_player].prog_size = (unsigned)size;
-		ft_strncpy(vm->code_players[index_player], data, size);
+//		strncpy(vm->code_players[index_player], data, size);
 	}
 }
 
 int 	multi_parsing_files(t_machine *vm, char **strs)
 {
+	int 	i;
 	int		fd;
 	int		err;
 	int		index;
-	char	*p;
 
-	p = *strs;
+	i = 0;
 	err = 0;
 	index = 0;
-	while (p)
+	while (strs[++i])
 	{
-		err += (fd = open(p, O_RDONLY)) != -1 ? 1 : 0;
+		err += (fd = open(strs[i], O_RDONLY)) != -1 ? 1 : 0;
 		if (err > vm->count_players)
 		{
 			fd != -1 ? close(fd) : 0;
@@ -40,7 +41,6 @@ int 	multi_parsing_files(t_machine *vm, char **strs)
 		read_data(vm, fd, index);
 		fd != -1 ? close(fd) : 0;
 		index++;
-		p++;
 	}
 	return (0);
 }
@@ -49,7 +49,7 @@ int 	read_data(t_machine *vm, int fd, int i)
 {
 	int		j;
 	char 	*buf;
-	static	size_t buff[MAX_ARGS_NUMBER] = {sizeof(COREWAR_EXEC_MAGIC), PROG_NAME_LENGTH + 1, COMMENT_LENGTH + 1, CHAMP_MAX_SIZE + 1};
+	size_t buff[] = {sizeof(COREWAR_EXEC_MAGIC), PROG_NAME_LENGTH, COMMENT_LENGTH, CHAMP_MAX_SIZE + 1};
 
 	j = -1;
 	while (++j < MAX_ARGS_NUMBER) // count buff
@@ -66,46 +66,54 @@ int 	read_data(t_machine *vm, int fd, int i)
 	return (0);
 }
 
-unsigned reverse_magic(unsigned magic)
+void printbincharpad(char c)
 {
-	unsigned res = 0;
-	unsigned i = 0;
-
-	while (i < 4)
+	for (int i = 7; i >= 0; --i)
 	{
-		const unsigned byte = (magic >> 8 * i) & 0xff;
-		res |= byte << (24 - 8 * i);
+		putchar( (c & (1 << i)) ? '1' : '0' );
+	}
+	putchar(' ');
+}
+
+char	*reverse_magic2(char *str, size_t size)
+{
+	size_t i;
+	char	tmp;
+
+	i = 0;
+	while (i < size / 2)
+	{
+		tmp = str[size - i - 1];
+		str[size - i - 1] = str[i];
+		str[i] = tmp;
 		i++;
 	}
-	return res;
+	i = 0;
+	printf("\n\nres reverse code byte \n");
+	while (i < size)
+	{
+//		ft_printf(" ");
+//		ft_printf("%02x:%c", (unsigned char)str[i], (unsigned char)str[i]);
+		printbincharpad(str[i]);
+		i++;
+	}
+	putchar('\n');
+	return (str);
 }
-//
-//unsigned char reverse(unsigned char b) {
-//	b = (b & 0xF0) >> 4 | (b & 0x0F) << 4;
-//	b = (b & 0xCC) >> 2 | (b & 0x33) << 2;
-//	b = (b & 0xAA) >> 1 | (b & 0x55) << 1;
-//	return b;
-//}
-
 
 int 	custom_read(int fd, char *buff, size_t size_buff, int check)
 {
 	int			data;
-	unsigned int	magic_key = COREWAR_EXEC_MAGIC;
 
 	data = (int)read(fd, buff, size_buff);
 	if (data != -1 && check == 0)
-	{
-//		int i = -1;
-//		while (++i < size_buff)
-//		{
-//				printf(" ");
-//				printf("%.2x", (unsigned char)buff[i]);
-//		}
-//		write(1, buff, sizeof(buff));
-		return (magic_key != reverse_magic((unsigned)buff) ? -1 : data);
-//		return (data);
-	}
+		if (COREWAR_EXEC_MAGIC != *(unsigned *)reverse_magic2(buff, size_buff))
+		{
+			printf("res work \n");
+			return (-1);
+		}
+	else
+		return (data);
 	else if (data != -1 && (check == 1 || check == 2))
 		buff[size_buff] = '\0';
 	else if (data != -1 && check == 3 && data > CHAMP_MAX_SIZE)
