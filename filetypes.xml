@@ -1,6 +1,8 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <removed_mapping ext="md" type="Markdown" />
+      <mapping pattern="README.md" type="PLAIN_TEXT" />
       <mapping ext="md" type="YouTrack" />
     </extensionMap>
   </component>
