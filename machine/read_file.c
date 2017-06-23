@@ -1,24 +1,5 @@
 
 #include "machine.h"
-#include <stdio.h>
-
-void	switch_data(t_machine *vm, char *data, int index_player, int i)
-{
-	size_t size;
-
-	size = sizeof(data);
-	if (i == 0)
-		vm->players[index_player].magic = (unsigned)size;
-	else if (i == 1)
-		ft_strncpy(vm->players[index_player].prog_name, data, size);
-	else if (i == 2)
-		ft_strncpy(vm->players[index_player].comment, data, size);
-	else if (i == 3)
-	{
-		vm->players[index_player].prog_size = (unsigned)size;
-//		strncpy(vm->code_players[index_player], data, size);
-	}
-}
 
 int 	multi_parsing_files(t_machine *vm, char **strs)
 {
@@ -41,27 +22,6 @@ int 	multi_parsing_files(t_machine *vm, char **strs)
 		read_data(vm, fd, index);
 		fd != -1 ? close(fd) : 0;
 		index++;
-	}
-	return (0);
-}
-
-int 	read_data(t_machine *vm, int fd, int i)
-{
-	int		j;
-	char 	*buf;
-	size_t buff[] = {sizeof(COREWAR_EXEC_MAGIC), PROG_NAME_LENGTH, COMMENT_LENGTH, CHAMP_MAX_SIZE + 1};
-
-	j = -1;
-	while (++j < MAX_ARGS_NUMBER) // count buff
-	{
-		if (!(buf = ft_strnew(buff[j])) || custom_read(fd, buf, buff[j], j) == -1)
-//		if (!(buf =(unsigned char *)malloc(si)) || custom_read(fd, buf, buff[j], j) == -1)
-		{
-			free(buf);
-			return (-1);
-		}
-		switch_data(vm, buf, i, j);
-		free(buf);
 	}
 	return (0);
 }
@@ -101,22 +61,37 @@ char	*reverse_magic2(char *str, size_t size)
 	return (str);
 }
 
-int 	custom_read(int fd, char *buff, size_t size_buff, int check)
+int 	read_data(t_machine *vm, int fd, int index_player)
 {
-	int			data;
+	int		j;
+	char 	*buf;
+	int 	rd;
+	size_t buff[] = {sizeof(COREWAR_EXEC_MAGIC), PROG_NAME_LENGTH, COMMENT_LENGTH, CHAMP_MAX_SIZE + 1};
 
-	data = (int)read(fd, buff, size_buff);
-	if (data != -1 && check == 0)
-		if (COREWAR_EXEC_MAGIC != *(unsigned *)reverse_magic2(buff, size_buff))
+	j = -1;
+	rd = 0;
+	while (++j < MAX_ARGS_NUMBER && rd != -1) // count buff
+	{
+		buf = (char *)malloc(buff[j]);
+		rd = (int)read(fd, buf, buff[j]);
+		if (rd != -1 && j == 0)
+			vm->players[index_player].magic = *(unsigned*)reverse_magic2(buf, buff[j]);
+		else if (rd != -1 && j == 1)
+			ft_memcpy(vm->players[index_player].prog_name, buf, (size_t)rd);
+		else if (rd != -1 && j == 2)
+			ft_memcpy(vm->players[index_player].comment, buf, (size_t)rd);
+			//todo skip n byte and read code player
+		else if (rd != -1 && j == 3)
 		{
-			printf("res work \n");
-			return (-1);
+//			ft_putchar('\n');
+			vm->players[index_player].prog_size = (unsigned)rd;
+//			ft_memcpy(vm->code_players[index_player], buf, (size_t)rd);
+//			for (int i = 0; i < rd + 1; i++)
+//				ft_printf("%02x ", (unsigned char)buf[i]);
+//			write(1, buf, (size_t)rd);
+//			ft_putchar('\n');
 		}
-	else
-		return (data);
-	else if (data != -1 && (check == 1 || check == 2))
-		buff[size_buff] = '\0';
-	else if (data != -1 && check == 3 && data > CHAMP_MAX_SIZE)
-		return (-1);
-	return (data);
+		free(buf);
+	}
+	return (0);
 }
