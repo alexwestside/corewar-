@@ -12,16 +12,6 @@
 
 #ifndef MACHINE_H
 # define MACHINE_H
-#define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
-#define BYTE_TO_BINARY(byte)  \
-  (byte & 0x80 ? '1' : '0'), \
-  (byte & 0x40 ? '1' : '0'), \
-  (byte & 0x20 ? '1' : '0'), \
-  (byte & 0x10 ? '1' : '0'), \
-  (byte & 0x08 ? '1' : '0'), \
-  (byte & 0x04 ? '1' : '0'), \
-  (byte & 0x02 ? '1' : '0'), \
-  (byte & 0x01 ? '1' : '0')
 # include <fcntl.h>
 # include "../libft/libft.h"
 # include "../libft/ft_printf.h"
@@ -51,7 +41,7 @@ typedef	struct		s_machine
 	unsigned		count_life;				// all life forks
 	unsigned		cycle_to_die_now;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
 	unsigned		cycle_to_die_next_iter;	// next iter to go cycle_to_die_now
-	char 	*arena;					//
+	char 			*arena;					//
 	t_tasks			*top;					// activity tasks (having operation comand) top
 	t_tasks			*buttom;				// activity tasks (having operation comand) buttom
 	t_tasks			*top_zombi;				// no activity tasks (zombi e.m. fork stay in 00 byte) top
@@ -59,7 +49,7 @@ typedef	struct		s_machine
 	t_fork			*won_player;			// last say "I am life" player
 	unsigned		count_players;			// count players
 	header_t		*players;				// vector players
-	char	**code_players;			// code players
+	char			**code_players;			// code players
 }					t_machine;
 
 #endif
