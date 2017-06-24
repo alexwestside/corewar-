@@ -12,6 +12,7 @@
 
 #ifndef MACHINE_H
 # define MACHINE_H
+# define SIZE_BUFF 1000
 # include <fcntl.h>
 # include "../libft/libft.h"
 # include "../libft/ft_printf.h"
@@ -85,7 +86,8 @@ t_tasks		*pop(t_tasks **bottom);
 
 int 	multi_parsing_files(t_machine *vm, char **strs);
 void	switch_data(t_machine *vm, char *data, int index_player, int i);
-int 	read_data(t_machine *vm, int fd, int index_player);
+int 	read_data(t_machine *vm, int fd, int i);
+int		read_code_player(t_machine *vm, int fd, int index);
 int 	custom_read(int fd, char *buff, size_t size_buff, int ckeck);
 
 /*

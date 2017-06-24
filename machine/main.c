@@ -45,6 +45,9 @@ int		main(int argc, char **argv)
 
 	t_machine	vm;
 	int			debug;
+	header_t	tes;
+
+	ft_printf("all struct [%zu] magic [%zu] program_name [%zu], prog_size [%zu] comment [%zu]", sizeof(tes), sizeof(tes.magic), sizeof(tes.prog_name), sizeof(tes.prog_size), sizeof(tes.comment));
 
 	if (argc == 1)
 		return (1);

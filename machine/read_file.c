@@ -20,6 +20,7 @@ int 	multi_parsing_files(t_machine *vm, char **strs)
 			return (-1);
 		}
 		read_data(vm, fd, index);
+		read_code_player(vm, fd, index);
 		fd != -1 ? close(fd) : 0;
 		index++;
 	}
@@ -35,7 +36,7 @@ void printbincharpad(char c)
 	putchar(' ');
 }
 
-char	*reverse_magic2(char *str, size_t size)
+char	*reverse(char *str, size_t size)
 {
 	size_t i;
 	char	tmp;
@@ -61,37 +62,48 @@ char	*reverse_magic2(char *str, size_t size)
 	return (str);
 }
 
-int 	read_data(t_machine *vm, int fd, int index_player)
+int 	read_data(t_machine *vm, int fd, int i)
 {
 	int		j;
 	char 	*buf;
 	int 	rd;
-	size_t buff[] = {sizeof(COREWAR_EXEC_MAGIC), PROG_NAME_LENGTH, COMMENT_LENGTH, CHAMP_MAX_SIZE + 1};
+	static size_t st[] = {sizeof(COREWAR_EXEC_MAGIC), PROG_NAME_LENGTH, 4,
+						  sizeof(vm->players[i].prog_size), COMMENT_LENGTH};
 
 	j = -1;
 	rd = 0;
-	while (++j < MAX_ARGS_NUMBER && rd != -1) // count buff
+	while (++j <= MAX_ARGS_NUMBER && rd != -1)
 	{
-		buf = (char *)malloc(buff[j]);
-		rd = (int)read(fd, buf, buff[j]);
-		if (rd != -1 && j == 0)
-			vm->players[index_player].magic = *(unsigned*)reverse_magic2(buf, buff[j]);
-		else if (rd != -1 && j == 1)
-			ft_memcpy(vm->players[index_player].prog_name, buf, (size_t)rd);
-		else if (rd != -1 && j == 2)
-			ft_memcpy(vm->players[index_player].comment, buf, (size_t)rd);
-			//todo skip n byte and read code player
-		else if (rd != -1 && j == 3)
-		{
-//			ft_putchar('\n');
-			vm->players[index_player].prog_size = (unsigned)rd;
-//			ft_memcpy(vm->code_players[index_player], buf, (size_t)rd);
-//			for (int i = 0; i < rd + 1; i++)
-//				ft_printf("%02x ", (unsigned char)buf[i]);
-//			write(1, buf, (size_t)rd);
-//			ft_putchar('\n');
-		}
+		buf = (char *)malloc(st[j]);
+		if ((rd = (int)read(fd, buf, st[j])) == -1)
+			break ;
+		j == 0 ? vm->players[i].magic = *(unsigned*)reverse(buf, st[j]) : 0;
+		j == 1 ? ft_memcpy(vm->players[i].prog_name, buf, (size_t)rd) : 0;
+		j == 2 && rd != st[j] ? rd = -1 : 0;
+		j == 3 ? vm->players[i].prog_size = *(unsigned*)reverse(buf, st[j]) : 0;
+		j == 4 ? ft_memcpy(vm->players[i].comment, buf, (size_t)rd) : 0;
 		free(buf);
 	}
 	return (0);
+}
+
+int		read_code_player(t_machine *vm, int fd, int index)
+{
+	ssize_t rd;
+	char 	buff[SIZE_BUFF];
+	char 	*tmp;
+	size_t 	sum;
+
+	sum = 0;
+	tmp = NULL;
+	while ((rd = read(fd, buff, SIZE_BUFF)) > 0)
+	{
+		sum += rd;
+		tmp = realloc(tmp, (size_t)rd);
+		ft_memcpy(tmp, buff, (size_t)rd);
+	}
+	// todo fix vm->code_players[index]
+	vm->code_players[index] = (char *)malloc(sum);
+	ft_memcpy(vm->code_players[index], tmp, sum);
+	return (sum > 0 ? (int)sum : -1);
 }

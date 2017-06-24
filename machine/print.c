@@ -27,16 +27,9 @@ char		*cust_strtrim(char const *s, size_t size)
 
 void	format_player(char *fmt_st, char *fmt_end, const char *str, size_t size)
 {
-	size_t	i;
-	char 	*s;
-
-	i = -1;
 	ft_putstr(fmt_st);
-	s = cust_strtrim(str, size);
-	while (++i < size + 1)
-		str[i] ? ft_putchar(str[i]) : 0;
+	ft_putstr(str);
 	ft_putstr(fmt_end);
-	free(s);
 }
 
 void	head_print(t_machine vm)
