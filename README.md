@@ -1,0 +1,5 @@
+# Corewar
+
+## Technologies:
+- C
+- nCurses
