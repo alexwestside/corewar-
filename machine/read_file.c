@@ -75,7 +75,7 @@ int 	read_data(t_machine *vm, int fd, int i)
 	while (++j <= MAX_ARGS_NUMBER && rd != -1)
 	{
 		buf = (char *)malloc(st[j]);
-		if ((rd = (int)read(fd, buf, st[j])) == -1)
+		if (!buf || ((rd = (int)read(fd, buf, st[j])) == -1))
 			break ;
 		j == 0 ? vm->players[i].magic = *(unsigned*)reverse(buf, st[j]) : 0;
 		j == 1 ? ft_memcpy(vm->players[i].prog_name, buf, (size_t)rd) : 0;
