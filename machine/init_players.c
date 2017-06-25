@@ -9,13 +9,13 @@ header_t	*create_players(int count)
 	return (players ? players : NULL);
 }
 
-char 	**create_code_player(int count)
+unsigned char 	**create_code_player(int count)
 {
 	int i;
-	char **str;
+	unsigned char **str;
 
 	i = -1;
-	*str = (char *)malloc((count + 1) * sizeof(char*));
+	*str = (unsigned char *)malloc((count + 1) * sizeof(unsigned char*));
 	if (*str == NULL)
 		return (NULL);
 	while (++i <= count)

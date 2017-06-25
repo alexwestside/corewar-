@@ -54,9 +54,11 @@ int		main(int argc, char **argv)
 		// todo help use
 	else if ((vm.count_players = (unsigned)count_players(argc, argv)) == 0)
 		return (2);
-	vm = (t_machine){0, 0, 0, ft_strnew(MEM_SIZE), NULL, NULL, NULL, NULL, NULL,  vm.count_players, create_players(vm.count_players), create_code_player(vm.count_players)};
+	vm = (t_machine){0, 0, 0, (unsigned char *)ft_strnew(MEM_SIZE), NULL, NULL, NULL, NULL, NULL,  vm.count_players, create_players(vm.count_players), create_code_player(vm.count_players)};
 	debug = multi_parsing_files(&vm, argv);
-	debug == -1 ? ft_printf("Error \n") : 0;
+	vm.arena = (unsigned char *)ft_strnew(MEM_SIZE);
 	head_print(vm);
+	console_print_arena(vm);
+	debug == -1 ? ft_printf("Error \n") : 0;
 	return (0);
 }

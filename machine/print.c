@@ -47,3 +47,18 @@ void	head_print(t_machine vm)
 		ft_putstr(" !\n");
 	}
 }
+
+
+void	console_print_arena(t_machine vm)
+{
+	int i;
+
+	i = -1;
+	while (++i < MEM_SIZE)
+	{
+		if ((i % PR_SIZE_ARENA) == 0)
+			ft_printf("\n0x%04x :", i);
+		ft_printf(" %02x", vm.arena[i]);
+	}
+	ft_putchar('\n');
+}

@@ -103,7 +103,7 @@ int		read_code_player(t_machine *vm, int fd, int index)
 		ft_memcpy(tmp, buff, (size_t)rd);
 	}
 	// todo fix vm->code_players[index]
-	vm->code_players[index] = (char *)malloc(sum);
+	vm->code_players[index] = (unsigned char *)malloc(sum);
 	ft_memcpy(vm->code_players[index], tmp, sum);
 	return (sum > 0 ? (int)sum : -1);
 }

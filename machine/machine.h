@@ -13,6 +13,7 @@
 #ifndef MACHINE_H
 # define MACHINE_H
 # define SIZE_BUFF 1000
+# define PR_SIZE_ARENA 0x0040
 # include <fcntl.h>
 # include "../libft/libft.h"
 # include "../libft/ft_printf.h"
@@ -42,7 +43,7 @@ typedef	struct		s_machine
 	unsigned		count_life;				// all life forks
 	unsigned		cycle_to_die_now;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
 	unsigned		cycle_to_die_next_iter;	// next iter to go cycle_to_die_now
-	char 			*arena;					//
+	unsigned char 	*arena;					//
 	t_tasks			*top;					// activity tasks (having operation comand) top
 	t_tasks			*buttom;				// activity tasks (having operation comand) buttom
 	t_tasks			*top_zombi;				// no activity tasks (zombi e.m. fork stay in 00 byte) top
@@ -50,7 +51,7 @@ typedef	struct		s_machine
 	t_fork			*won_player;			// last say "I am life" player
 	unsigned		count_players;			// count players
 	header_t		*players;				// vector players
-	char			**code_players;			// code players
+	unsigned char	**code_players;			// code players
 }					t_machine;
 
 #endif
@@ -66,8 +67,8 @@ int		count_players(int count_strs, char **strs);
 ** func init_players
 */
 
-header_t	*create_players(int count);
-char		**create_code_player(int count);
+header_t		*create_players(int count);
+unsigned char	**create_code_player(int count);
 
 /*
 ** func func_tasks
@@ -95,3 +96,4 @@ int 	custom_read(int fd, char *buff, size_t size_buff, int ckeck);
 */
 
 void	head_print(t_machine vm);
+void	console_print_arena(t_machine vm);
