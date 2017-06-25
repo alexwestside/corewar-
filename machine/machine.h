@@ -36,13 +36,11 @@ typedef struct		s_tasks
 	unsigned		time_cycle;
 }					t_tasks;
 
-//todo change val 'arena' into unsigned char
-//todo change val 'code_players' into unsigned char
 typedef	struct		s_machine
 {
 	unsigned		count_life;				// all life forks
 	unsigned		cycle_to_die_now;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
-	unsigned		cycle_to_die_next_iter;	// next iter to go cycle_to_die_now
+	unsigned		cycle_to_die;			// next iter to go cycle_to_die_now
 	unsigned char 	*arena;					//
 	t_tasks			*top;					// activity tasks (having operation comand) top
 	t_tasks			*buttom;				// activity tasks (having operation comand) buttom
@@ -52,6 +50,9 @@ typedef	struct		s_machine
 	unsigned		count_players;			// count players
 	header_t		*players;				// vector players
 	unsigned char	**code_players;			// code players
+	size_t			*size_code_players;		// size code read file
+	unsigned		*life_players_cicle;
+	unsigned		*life_number_cicle;
 }					t_machine;
 
 #endif
@@ -69,6 +70,13 @@ int		count_players(int count_strs, char **strs);
 
 header_t		*create_players(int count);
 unsigned char	**create_code_player(int count);
+
+
+/*
+** func func_forks
+*/
+
+t_fork		*create_fork(int id, int pc);
 
 /*
 ** func func_tasks
