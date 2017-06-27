@@ -12,7 +12,7 @@
 
 #include "machine.h"
 
-t_tasks		*create_task(t_fork *fork, int cycle_op, unsigned cycle_now)
+t_tasks		*create_task(t_forks *fork, int cycle_op, unsigned cycle_now)
 {
 	t_tasks *p;
 
