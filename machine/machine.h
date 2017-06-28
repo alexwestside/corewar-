@@ -31,17 +31,10 @@ typedef struct		s_fork
 typedef struct		s_forks
 {
 	t_fork			node;
-	int 			status;
+	int 			mod;
+	unsigned		time_cycle;
 	t_fork			*next;
 }					t_forks;
-
-typedef struct		s_tasks
-{
-	t_forks			*p_fork;
-	struct s_tasks	*prev;
-	struct s_tasks	*next;
-	unsigned		time_cycle;
-}					t_tasks;
 
 typedef	struct		s_machine
 {
@@ -50,19 +43,43 @@ typedef	struct		s_machine
 	unsigned		cycle_to_die_now;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
 	unsigned		cycle_to_die;			// next iter to go cycle_to_die_now
 	unsigned char 	*arena;					//
-	t_tasks			*top;					// activity tasks (having operation comand) top
-	t_tasks			*buttom;				// activity tasks (having operation comand) buttom
-	t_tasks			*top_zombi;				// no activity tasks (zombi e.m. fork stay in 00 byte) top
-	t_tasks			*buttom_zombi;			// no activity tasks (zombi e.m. fork stay in 00 byte) buttom
 	t_forks			*won_player;			// last say "I am life" player
 	unsigned		count_players;			// count players
 	int 			*id_players;			// number players
 	header_t		*players;				// vector players
 	unsigned char	**code_players;			// code players
 	size_t			*size_code_players;		// size code read file
-	unsigned		*life_players_cicle;
-	unsigned		*life_number_cicle;
 }					t_machine;
+
+
+//typedef struct		s_tasks
+//{
+//	t_forks			*p_fork;
+//	struct s_tasks	*prev;
+//	struct s_tasks	*next;
+//	unsigned		time_cycle;
+//}					t_tasks;
+
+//typedef	struct		s_machine
+//{
+//	t_forks			*head_lst;				// all forks
+//	unsigned		count_life;				// all life forks
+//	unsigned		cycle_to_die_now;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
+//	unsigned		cycle_to_die;			// next iter to go cycle_to_die_now
+//	unsigned char 	*arena;					//
+//	t_tasks			*top;					// activity tasks (having operation comand) top
+//	t_tasks			*buttom;				// activity tasks (having operation comand) buttom
+//	t_tasks			*top_zombi;				// no activity tasks (zombi e.m. fork stay in 00 byte) top
+//	t_tasks			*buttom_zombi;			// no activity tasks (zombi e.m. fork stay in 00 byte) buttom
+//	t_forks			*won_player;			// last say "I am life" player
+//	unsigned		count_players;			// count players
+//	int 			*id_players;			// number players
+//	header_t		*players;				// vector players
+//	unsigned char	**code_players;			// code players
+//	size_t			*size_code_players;		// size code read file
+//	unsigned		*life_players_cicle;
+//	unsigned		*life_number_cicle;
+//}					t_machine;
 
 #endif
 
@@ -91,12 +108,12 @@ t_fork		*create_fork(int id, int pc);
 ** func func_tasks
 */
 
-t_tasks		*create_task(t_forks *fork, int cycle_op, unsigned cycle_now);
-void 		add_top(t_tasks **top, t_tasks **bottom, t_tasks *new_task);
-void 		add_bottom(t_tasks **top, t_tasks **bottom, t_tasks *new_task);
-int			push_before(t_tasks **iter_node, t_tasks *new_task);
-void 		push(t_tasks **top, t_tasks **bottom, t_tasks *new_task);
-t_tasks		*pop(t_tasks **bottom);
+//t_tasks		*create_task(t_forks *fork, int cycle_op, unsigned cycle_now);
+//void 		add_top(t_tasks **top, t_tasks **bottom, t_tasks *new_task);
+//void 		add_bottom(t_tasks **top, t_tasks **bottom, t_tasks *new_task);
+//int			push_before(t_tasks **iter_node, t_tasks *new_task);
+//void 		push(t_tasks **top, t_tasks **bottom, t_tasks *new_task);
+//t_tasks		*pop(t_tasks **bottom);
 
 /*
 ** func read_file

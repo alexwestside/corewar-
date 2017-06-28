@@ -16,6 +16,22 @@
 // 2 error print
 // 0
 
+void	init_vm(t_machine *vm, int argc, char **argv)
+{
+	vm->head_lst = NULL;
+	vm->count_life = 0;
+	vm->cycle_to_die_now = 0;
+	vm->cycle_to_die = 0;
+	vm->arena = (unsigned char *)ft_strnew(MEM_SIZE);
+	vm->won_player = NULL;
+	vm->count_players = (unsigned)count_players(argc, argv);
+	vm->id_players = NULL;
+	vm->players = create_players(vm->count_players);
+	vm->code_players = create_code_player(vm->count_players);
+	vm->size_code_players = (size_t*)malloc(vm->count_players);
+
+}
+
 int		main(int argc, char **argv)
 {
 	int fd;
@@ -54,9 +70,8 @@ int		main(int argc, char **argv)
 		// todo help use
 	else if ((vm.count_players = (unsigned)count_players(argc, argv)) == 0)
 		return (2);
-	vm = (t_machine){0, 0, 0, (unsigned char *)ft_strnew(MEM_SIZE), NULL, NULL, NULL, NULL, NULL,  vm.count_players, create_players(vm.count_players), create_code_player(vm.count_players)};
+	init_vm(&vm, argc, argv);
 	debug = multi_parsing_files(&vm, argv);
-	vm.arena = (unsigned char *)ft_strnew(MEM_SIZE);
 	head_print(vm);
 	console_print_arena(vm);
 	debug == -1 ? ft_printf("Error \n") : 0;

@@ -82,12 +82,44 @@ int		respodile_task(t_machine vm, unsigned cycle)
 //	p_zombi = vm.
 //}
 
-
-
-void	swap_tasks(t_machine vm, int mod)
+void	init_forks(t_machine vm, unsigned cycle)
 {
+	t_forks			*iter;
+	unsigned char	tmp;
 
+	min = MAX_INT;
+	iter = vm.head_lst;
+	while (iter)
+	{
+		tmp = *(vm.arena + iter->node.pc);
+		if (tmp < 17 && tmp.mod == 0)
+		{
+			iter->time_cycle = op[tmp][5] + cycle;
+			iter->mod = 1;
+		}
+		else
+			tmp.mod = -1;
+		iter = iter->next;
+	}
 }
+
+
+void	working_forks(t_machine vm, unsigned cycle)
+{
+	t_forks *iter;
+
+	iter = vm.head_lst;
+	while (iter)
+	{
+		if (iter->mod == -1)
+			iter->node.pc = cycle % MEM_SIZE;
+		else if (iter->mod == 1 && iter->time_cycle == cycle)
+			//todo working operation
+		iter = iter->next;
+	}
+}
+
+
 
 void	run_vm(t_machine vm)
 {
@@ -95,22 +127,22 @@ void	run_vm(t_machine vm)
 	int			j;
 	t_tasks		*node;
 
-	i = -1;
+	i = 0;
 	j = -1;
 	init_arena_vm(&vm);
-	init_zombi_tasks(&vm);
+	init_forks(&vm, 0);
 	while (vm.cycle_to_die_now > 0)
 	{
 		while (++i <= vm.cycle_to_die_now || j < MAX_CHECKS)
 		{
-			//todo check task_zombi to fork in operation and move to task
-			//todo init forks in working tasks after first check cicle to when run operation comand
+			init_forks(&vm, i);
+			working_forks(&vm, i);
 			//todo remember when forks save life for player and vm.count_life += 1
 			//todo check task is faled operation or byte '00' move to task_zombi
 		}
 		//todo check life forks
 		//todo del forks ho dont life
-		if (vm.buttom == NULL && vm.buttom_zombi == NULL)
+		if (vm.head_lst == NULL)
 			break ;
 		vm.count_life >= NBR_LIVE || j == MAX_CHECKS ? vm.cycle_to_die_now += (vm.cycle_to_die -= CYCLE_DELTA) : j++;
 		vm.count_life >= NBR_LIVE || j == MAX_CHECKS ? j = 0 : 0;

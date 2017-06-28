@@ -21,7 +21,7 @@ t_forks		*create_containe(t_fork *node)
 	new_container = (t_forks*)malloc(sizeof(t_forks));
 	if (new_container == NULL)
 		return (NULL);
-	new_container = (t_forks){node, 0, NULL};
+	new_container = (t_forks){node, 0, 0, NULL};
 	return (new_container);
 }
 
@@ -39,3 +39,5 @@ void		add_forks(t_forks **alts, t_fork *node)
 		new->next = p->next;
 	p = new;
 }
+
+void	delete(t)
