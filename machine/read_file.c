@@ -102,9 +102,9 @@ int		read_code_player(t_machine *vm, int fd, int index)
 		tmp = realloc(tmp, (size_t)rd);
 		ft_memcpy(tmp, buff, (size_t)rd);
 	}
-	// todo fix vm->code_players[index]
-	vm->code_players[index] = (unsigned char *)malloc(sum);
-	vm->size_code_players[index] = sum;
+	vm->code_players[index] = (unsigned char *)malloc(sum * sizeof(unsigned char));
+//	vm->size_code_players[index] = sum;
 	ft_memcpy(vm->code_players[index], tmp, sum);
+	free(tmp);
 	return (sum > 0 ? (int)sum : -1);
 }

@@ -15,7 +15,7 @@ unsigned char 	**create_code_player(int count)
 	unsigned char **str;
 
 	i = -1;
-	*str = (unsigned char *)malloc((count + 1) * sizeof(unsigned char*));
+	str = (unsigned char **)malloc((count + 1) * sizeof(unsigned char*));
 	if (*str == NULL)
 		return (NULL);
 	while (++i <= count)
