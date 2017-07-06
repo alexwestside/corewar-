@@ -40,4 +40,20 @@ void		add_forks(t_forks **alts, t_fork *node)
 	p = new;
 }
 
-void	delete(t)
+void		delete(t_forks **alts, t_forks *node)
+{
+	t_forks *p;
+
+	p = *alts;
+	if (p == node)
+	{
+		p = node->next;
+		free(node);
+		return ;
+	}
+	else
+		while (p && p != node)
+			p = p->next;
+	p != NULL ? p->next = node->next : 0;
+	free(node);
+}

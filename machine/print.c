@@ -48,6 +48,26 @@ void	head_print(t_machine vm)
 	}
 }
 
+void	test_print_code_player(t_machine vm)
+{
+	size_t  i;
+	int j;
+
+	i = -1;
+	j = -1;
+	while (++j < vm.count_players)
+	{
+		i = -1;
+		ft_printf("\n\n size code player [%u]\n", vm.size_code_players[j]);
+		ft_printf("\n\n byte code player [%d]\n", j);
+		while (++i < vm.size_code_players[j])
+		{
+			ft_printf(" %02x", vm.code_players[j][i]);
+		}
+		ft_putchar('\n');
+	}
+}
+
 
 void	console_print_arena(t_machine vm)
 {

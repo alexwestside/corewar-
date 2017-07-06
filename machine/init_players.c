@@ -18,8 +18,8 @@ unsigned char 	**create_code_player(int count)
 	str = (unsigned char **)malloc((count + 1) * sizeof(unsigned char*));
 	if (*str == NULL)
 		return (NULL);
-	while (++i <= count)
-		str[i] = NULL;
+//	while (++i <= count)
+//		str[i] = NULL;
 //		if ((str[i] = ft_strnew(count)) == NULL)
 //			return (NULL);
 //	str[i] = NULL;

@@ -12,9 +12,11 @@
 
 #ifndef MACHINE_H
 # define MACHINE_H
-# define SIZE_BUFF 1000
-# define PR_SIZE_ARENA 0x0040
+# define MAX_T 3						//	count byte code (T_REG, T_DIR, T_IND)
+# define SIZE_BUFF 1000					// 	read data in code player (after code)
+# define PR_SIZE_ARENA 0x0040			//	variable start when print with flag (d, ...)
 # include <fcntl.h>
+# include <ncurses.h>
 # include "../libft/libft.h"
 # include "../libft/ft_printf.h"
 # include "../op.h"
@@ -131,3 +133,10 @@ int 	custom_read(int fd, char *buff, size_t size_buff, int ckeck);
 
 void	head_print(t_machine vm);
 void	console_print_arena(t_machine vm);
+
+
+/*
+**	debug function
+*/
+
+void	test_print_code_player(t_machine vm);

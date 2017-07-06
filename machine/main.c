@@ -27,9 +27,34 @@ void	init_vm(t_machine *vm, int argc, char **argv)
 	vm->count_players = (unsigned)count_players(argc, argv);
 	vm->id_players = NULL;
 	vm->players = create_players(vm->count_players);
-	vm->code_players = create_code_player(vm->count_players);
+	vm->code_players = NULL;
+//	vm->code_players = create_code_player(vm->count_players);
 	vm->size_code_players = (size_t*)malloc(vm->count_players);
+}
 
+void	test_code_octal(t_machine *vm, unsigned char code)
+{
+	int i;
+	int mov;
+	unsigned char bytecode[MAX_T];
+
+	ft_printf("\n\nhex [%x], bin [%b]\n", vm->code_players[0][1], vm->code_players[0][1]);
+	//todo in "big endian" junior byte skeep this op
+	i = MAX_T; // max unsigned char it's 0xff => 0b11111111 when need to split argument xx xx xx 00
+	mov = 2;
+	code = vm->code_players[0][1];
+	while (--i != -1)
+	{
+		if (i < MAX_T)
+			bytecode[i] = (unsigned char)(code >> mov & 0x03);
+		mov += 2;
+	}
+	// test
+	i = -1;
+	ft_printf("\n\n test code octal\n");
+	while (++i < MAX_T)
+		ft_printf(" %02x", bytecode[i]);
+	ft_putchar('\n');
 }
 
 int		main(int argc, char **argv)
@@ -75,5 +100,7 @@ int		main(int argc, char **argv)
 	head_print(vm);
 	console_print_arena(vm);
 	debug == -1 ? ft_printf("Error \n") : 0;
+	test_print_code_player(vm);
+	test_code_octal(&vm, '\0');
 	return (0);
 }

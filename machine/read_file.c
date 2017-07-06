@@ -68,18 +68,19 @@ int 	read_data(t_machine *vm, int fd, int i)
 	char 	*buf;
 	int 	rd;
 	static size_t st[] = {sizeof(COREWAR_EXEC_MAGIC), PROG_NAME_LENGTH, 4,
-						  sizeof(vm->players[i].prog_size), COMMENT_LENGTH};
+						  sizeof(vm->players[i].prog_size), COMMENT_LENGTH, 4};
+	static	int size_st = 6;
 
 	j = -1;
 	rd = 0;
-	while (++j <= MAX_ARGS_NUMBER && rd != -1)
+	while (++j < size_st && rd != -1)
 	{
 		buf = (char *)malloc(st[j]);
 		if (!buf || ((rd = (int)read(fd, buf, st[j])) == -1))
 			break ;
 		j == 0 ? vm->players[i].magic = *(unsigned*)reverse(buf, st[j]) : 0;
 		j == 1 ? ft_memcpy(vm->players[i].prog_name, buf, (size_t)rd) : 0;
-		j == 2 && rd != st[j] ? rd = -1 : 0;
+		(j == 2 || j == 5) && rd != st[j] ? rd = -1 : 0;
 		j == 3 ? vm->players[i].prog_size = *(unsigned*)reverse(buf, st[j]) : 0;
 		j == 4 ? ft_memcpy(vm->players[i].comment, buf, (size_t)rd) : 0;
 		free(buf);
@@ -102,8 +103,12 @@ int		read_code_player(t_machine *vm, int fd, int index)
 		tmp = realloc(tmp, (size_t)rd);
 		ft_memcpy(tmp, buff, (size_t)rd);
 	}
+	if (vm->code_players == NULL)
+		vm->code_players = (unsigned char **)malloc(vm->count_players * sizeof(unsigned char*));
+	if (vm->code_players == NULL)
+		return (-1);
 	vm->code_players[index] = (unsigned char *)malloc(sum * sizeof(unsigned char));
-//	vm->size_code_players[index] = sum;
+	vm->size_code_players[index] = sum;
 	ft_memcpy(vm->code_players[index], tmp, sum);
 	free(tmp);
 	return (sum > 0 ? (int)sum : -1);
