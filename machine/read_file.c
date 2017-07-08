@@ -1,44 +1,32 @@
 
 #include "machine.h"
 
-int 	multi_parsing_files(t_machine *vm, char **strs)
+int 	multi_parsing_files(t_machine *vm, char **path_files)
 {
-	int 	i;
-	int		fd;
-	int		err;
-	int		index;
+	int	i;
+	int	fd;
+	int	err;
 
-	i = 0;
+	i = -1;
+	fd = 0;
 	err = 0;
-	index = 0;
-	while (strs[++i])
+	if (path_files == NULL)
+		return (-1);
+	while (path_files[++i])
 	{
-		err += (fd = open(strs[i], O_RDONLY)) != -1 ? 1 : 0;
-		if (err > vm->count_players)
-		{
-			fd != -1 ? close(fd) : 0;
-			return (-1);
-		}
-		read_data(vm, fd, index);
-		read_code_player(vm, fd, index);
-		fd != -1 ? close(fd) : 0;
-		index++;
+		if (err == -1 || (fd = open(path_files[i], O_RDONLY)) == -1)
+			break ;
+		read_data(vm, fd, i);
+		read_code_player(vm, fd, i);
+		err = check_corect_data_read(*vm, i);
+		close(fd);
 	}
-	return (0);
-}
-
-void printbincharpad(char c)
-{
-	for (int i = 7; i >= 0; --i)
-	{
-		putchar( (c & (1 << i)) ? '1' : '0' );
-	}
-	putchar(' ');
+	return (err == -1 || fd == -1 ? -1 : 0);
 }
 
 char	*reverse(char *str, size_t size)
 {
-	size_t i;
+	size_t	i;
 	char	tmp;
 
 	i = 0;
@@ -49,16 +37,6 @@ char	*reverse(char *str, size_t size)
 		str[i] = tmp;
 		i++;
 	}
-	i = 0;
-	printf("\n\nres reverse code byte \n");
-	while (i < size)
-	{
-//		ft_printf(" ");
-//		ft_printf("%02x:%c", (unsigned char)str[i], (unsigned char)str[i]);
-		printbincharpad(str[i]);
-		i++;
-	}
-	putchar('\n');
 	return (str);
 }
 

@@ -1,6 +1,30 @@
 
 #include "machine.h"
 
+void	test_code_octal(t_machine *vm, unsigned char code)
+{
+	int i;
+	int mov;
+	unsigned char bytecode[MAX_T];
+
+	ft_printf("\n\nhex [%x], bin [%b]\n", vm->code_players[0][1], vm->code_players[0][1]);
+	//todo in "big endian" junior byte skeep this op
+	i = MAX_T; // max unsigned char it's 0xff => 0b11111111 when need to split argument xx xx xx 00
+	mov = 2;
+	code = vm->code_players[0][1];
+	while (--i != -1)
+	{
+		if (i < MAX_T)
+			bytecode[i] = (unsigned char)(code >> mov & 0x03);
+		mov += 2;
+	}
+	// test
+	i = -1;
+	ft_printf("\n\n test code octal\n");
+	while (++i < MAX_T)
+		ft_printf(" %02x", bytecode[i]);
+	ft_putchar('\n');
+}
 
 int 	*code_octal(int code)
 {

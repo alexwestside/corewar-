@@ -1,31 +1,7 @@
 
 #include "machine.h"
 
-
-char		*cust_strtrim(char const *s, size_t size)
-{
-	char	*f;
-	char	*new;
-	char	*copy_s;
-
-	new = (char *)ft_memalloc(size);
-	if (!s || !new)
-		return (NULL);
-	ft_memcpy(new, s, size);
-	f = new;
-	s = new;
-	f += size;
-	while (ft_isspace(*s) || (*s == '\0'))
-		s++;
-	while (ft_isspace(*f) || (*f == '\0'))
-		f--;
-	*++f = '\0';
-	copy_s = ft_strdup(s);
-	free(new);
-	return (copy_s);
-}
-
-void	format_player(char *fmt_st, char *fmt_end, const char *str, size_t size)
+void	format_player(char *fmt_st, char *fmt_end, const char *str)
 {
 	ft_putstr(fmt_st);
 	ft_putstr(str);
@@ -41,9 +17,9 @@ void	head_print(t_machine vm)
 	while (++i < vm.count_players)
 	{
 		ft_printf("%c Player %u, weighing %u bytes, ", '*', i + 1, vm.players[i].prog_size);
-		format_player("\"", "\"", vm.players[i].prog_name, PROG_NAME_LENGTH);
+		format_player("\"", "\"", vm.players[i].prog_name);
 		ft_putchar(' ');
-		format_player("(\"", "\")", vm.players[i].comment, COMMENT_LENGTH);
+		format_player("(\"", "\")", vm.players[i].comment);
 		ft_putstr(" !\n");
 	}
 }
@@ -67,7 +43,6 @@ void	test_print_code_player(t_machine vm)
 		ft_putchar('\n');
 	}
 }
-
 
 void	console_print_arena(t_machine vm)
 {

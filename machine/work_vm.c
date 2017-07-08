@@ -23,36 +23,36 @@ void	init_arena_vm(t_machine vm)
 }
 
 
-int 	init_zombi_tasks(t_machine vm)
-{
-	unsigned char tmp;
-	t_forks *p;
-
-	p = vm.head_lst;
-	while (p)
-	{
-		add_top(vm.top_zombi, vm.buttom_zombi, p);
-		p = p->next;
-	}
-	return (0);
-}
-
-t_tasks	*get_task(t_tasks *node)
-{
-	t_tasks *tmp;
-
-	if (node->next == NULL)
-	{
-		tm
-	}
-		tmp = node;
-
-	tmp->next = node->next->next;
-	tmp->prev = node->prev;
-	node->prev = NULL;
-	node->next = NULL;
-	return (node);
-}
+//int 	init_zombi_tasks(t_machine vm)
+//{
+//	unsigned char tmp;
+//	t_forks *p;
+//
+//	p = vm.head_lst;
+//	while (p)
+//	{
+//		add_top(vm.top_zombi, vm.buttom_zombi, p);
+//		p = p->next;
+//	}
+//	return (0);
+//}
+//
+//t_tasks	*get_task(t_tasks *node)
+//{
+//	t_tasks *tmp;
+//
+//	if (node->next == NULL)
+//	{
+//		tm
+//	}
+//		tmp = node;
+//
+//	tmp->next = node->next->next;
+//	tmp->prev = node->prev;
+//	node->prev = NULL;
+//	node->next = NULL;
+//	return (node);
+//}
 
 
 int		respodile_task(t_machine vm, unsigned cycle)
@@ -73,14 +73,6 @@ int		respodile_task(t_machine vm, unsigned cycle)
 		p_zombi = p_zombi->next;
 	}
 }
-
-//int 	move_task(t_machine vm)
-//{
-//	t_tasks *p_zombi;
-//	unsigned char tmp;
-//
-//	p_zombi = vm.
-//}
 
 void	init_forks(t_machine vm, unsigned cycle)
 {

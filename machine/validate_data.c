@@ -13,26 +13,11 @@
 #include "machine.h"
 
 
-//int		check_machine_key(char *data_read)
-//{
-//	if (!ft_memcmp(COREWAR_EXEC_MAGIC, data_read, sizeof(COREWAR_EXEC_MAGIC)))
-//		return (0);
-//	return (1);
-//}
-
-int		count_players(int count_strs, char **strs)
+int 	check_corect_data_read(t_machine vm, int index_player)
 {
-	unsigned	count;
-	int			fd;
-
-	count = 0;
-	if (count_strs == 0 || strs == NULL)
-		return (2);
-	while (--count_strs)
-	{
-		fd = open(strs[count_strs], O_RDONLY);
-		count += fd != -1 ? 1 : 0;
-		close(fd);
-	}
-	return (count <= MAX_PLAYERS ? count : 0);
+	if (vm.players[index_player].magic != COREWAR_EXEC_MAGIC)
+		return (-1);
+	if (vm.size_code_players[index_player] != vm.players[index_player].prog_size)
+		return (-1);
+	return (0);
 }
