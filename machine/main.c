@@ -36,6 +36,7 @@ int		main(int argc, char **argv)
 	t_machine	vm;
 	char		*path_files[MAX_ARGS_NUMBER];
 
+	init_op();
 	if (argc == 1)
 		return (1);
 		// todo help use

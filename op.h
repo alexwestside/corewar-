@@ -87,4 +87,6 @@ typedef struct s_op
 	int		cod_octal;
 }				t_op;
 
-void op();
+
+t_op	op_tab[17];
+void	init_op(void);

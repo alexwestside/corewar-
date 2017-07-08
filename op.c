@@ -36,7 +36,7 @@ t_op    op_tab[17] =
 
 #include "op.h"
 
-void op()
+void	init_op(void)
 {
 	t_op op_tab[17] =
 			{

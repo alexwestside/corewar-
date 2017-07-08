@@ -77,11 +77,11 @@ void	sti(t_machine *vm, t_forks *fork)
 
 	i = 0;
 	p_pc = fork->node.pc;
-	if (op[p_pc][6])
+	if (op_tab[p_pc].carry)
 		bytecode = test_code_octal(vm, vm->arena[(p_pc + 1) % MEM_SIZE]);
 	// todo create func to check correctly bytecode and run func when have bytecode
 	sum = 0;
-	while (++i < op[p_pc][1])
+	while (++i < op_tab[p_pc].count_args)
 	{
 		sum += bytecode[i] == REG_CODE ? (int)vm->arena[(p_pc + 2) % MEM_SIZE] : 0;
 		sum += bytecode[i] == DIR_CODE ? (int)vm->arena[(p_pc + 4) % MEM_SIZE]: 0; // {"sti", 3, {0, 0, 0}, 11, 25, "store index", 1, 1},
