@@ -19,5 +19,7 @@ int 	check_corect_data_read(t_machine vm, int index_player)
 		return (-1);
 	if (vm.size_code_players[index_player] != vm.players[index_player].prog_size)
 		return (-1);
+	if (vm.players[index_player].prog_size > CHAMP_MAX_SIZE)
+		return (-1);
 	return (0);
 }

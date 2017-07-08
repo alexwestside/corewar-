@@ -91,7 +91,7 @@ int 	custom_read(int fd, char *buff, size_t size_buff, int ckeck);
 ** 	func op (operation)
 */
 
-void	test_code_octal(t_machine *vm, unsigned char code);
+unsigned char	*test_code_octal(t_machine *vm, unsigned char code);
 
 /*
 **  func print

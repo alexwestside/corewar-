@@ -34,7 +34,6 @@ void	init_vm(t_machine *vm, int count_player)
 int		main(int argc, char **argv)
 {
 	t_machine	vm;
-	int			debug;
 	char		*path_files[MAX_ARGS_NUMBER];
 
 	if (argc == 1)
@@ -43,12 +42,14 @@ int		main(int argc, char **argv)
 	init_vm(&vm, create_point_path(argc - 1, argv + 1, path_files));
 	if (vm.count_players == 0)
 		return (2);
-	if ((debug = multi_parsing_files(&vm, path_files)))
+	if (multi_parsing_files(&vm, path_files))
 		return (3);
-	debug == -1 ? ft_printf("Error \n") : 0;
 	head_print(vm);
 	console_print_arena(vm);
 	test_print_code_player(vm);
 	test_code_octal(&vm, '\0');
+
+	int tet = -1;
+	ft_printf("\n\n test %02x \n\n", (unsigned)tet);
 	return (0);
 }
