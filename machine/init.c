@@ -25,5 +25,5 @@ int 	create_point_path(int argc, char **argv, char **paths)
 		close(fd);
 	}
 	paths[i] = NULL;
-	return (count <= MAX_PLAYERS && err == 0 ? count : 0);
+	return (count <= MAX_ARGS_NUMBER && err == 0 ? count : 0);
 }
