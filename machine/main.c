@@ -45,6 +45,7 @@ int		main(int argc, char **argv)
 		usage(2, argv[1]);
 	if (multi_parsing_files(&vm, path_files))
 		usage(3, NULL);
+	work_with_flags();
 	head_print(vm);
 	console_print_arena(vm);
 	test_print_code_player(vm);

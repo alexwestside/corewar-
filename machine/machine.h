@@ -67,7 +67,8 @@ typedef struct		s_flags
 
 int 	check_corect_data_read(t_machine vm, int index_player);
 void	usage(int count, char *s);
-
+void	work_with_flags(char **argv, int argc, t_flags *flags);
+int 	is_number(char *s);
 
 /*
 ** func init_players

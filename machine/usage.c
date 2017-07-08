@@ -1,6 +1,6 @@
 #include "machine.h"
 
-void usage(int count, char *s)
+void	usage(int count, char *s)
 {
 	if (count == 1)
 	{
@@ -16,4 +16,43 @@ void usage(int count, char *s)
 	}
 	else
 		exit(0);
+}
+
+int 	is_number(char *s)
+{
+	int 	i;
+
+	i = -1;
+	if (!s)
+		return (0);
+	while (s[++i])
+	{
+		if (!ft_isdigit(s[i]))
+			return (0);
+	}
+	return (1);
+}
+
+void	work_with_flags(char **argv, int argc, t_flags *flags)
+{
+	int 	i;
+
+	i = -1;
+	while (++i < argc)
+	{
+		if (!ft_strcmp(argv[i], "-d"))
+		{
+			if (i == 1)
+				flags->flag = 'd';
+			else
+				usage(1, NULL);
+		}
+		if (!ft_strcmp(argv[i], "-n"))
+		{
+			if (i != argc - 1 && is_number(argv[i + 1]))
+				flags->number = ft_atoi(argv[i + 1]);
+			else
+				usage(1, NULL);
+		}
+	}
 }
