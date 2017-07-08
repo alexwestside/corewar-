@@ -53,6 +53,12 @@ typedef	struct		s_machine
 	size_t			*size_code_players;		// size code read file
 }					t_machine;
 
+typedef struct		s_flags
+{
+	char 			flag;
+	int 			number;
+}					t_flags;
+
 #endif
 
 /*
@@ -60,6 +66,7 @@ typedef	struct		s_machine
 */
 
 int 	check_corect_data_read(t_machine vm, int index_player);
+void	usage(int count, char *s);
 
 
 /*

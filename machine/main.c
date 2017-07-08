@@ -38,13 +38,13 @@ int		main(int argc, char **argv)
 
 	init_op();
 	if (argc == 1)
-		return (1);
+		usage(1, NULL);
 		// todo help use
 	init_vm(&vm, create_point_path(argc - 1, argv + 1, path_files));
 	if (vm.count_players == 0)
-		return (2);
+		usage(2, argv[1]);
 	if (multi_parsing_files(&vm, path_files))
-		return (3);
+		usage(3, NULL);
 	head_print(vm);
 	console_print_arena(vm);
 	test_print_code_player(vm);
