@@ -70,4 +70,6 @@ unsigned int			hash_key(char *str);
 void		error(char *str);
 int 		collision(unsigned int *keys, unsigned int key);
 
+void _asm(t_corewar corewar);
+
 #endif
