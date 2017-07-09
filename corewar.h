@@ -1,7 +1,6 @@
-
 #ifndef COREWAR_H
 # define COREWAR_H
-
+# define HASH_TABLE_SIZE sizeof(t_has_table)
 # include "libft/libft.h"
 # include "libft/get_next_line.h"
 # include "libft/ft_printf.h"
@@ -10,56 +9,65 @@ typedef struct			s_args
 {
 	char 				*arg_type;
 	char				*data;
-//	struct s_args		*next;
+	struct s_args		*next;
 }						t_args;
 
-typedef struct			s_comand
+typedef struct			s_command
 {
-	char				*comand_name;
-	t_args				args[3];
-//	struct s_comand		*next;
-}						t_comand;
-
-typedef struct			s_method
-{
-	char				*method_name;
-	t_comand			comand[2];
-}						t_method;
+	char				*method;
+	char 				*command_name;
+	char 				*arg1;
+	char 				*arg2;
+	char 				*arg3;
+	struct s_command	*next;
+}						t_command;
 
 typedef struct			s_hash_table
 {
-//	int					key;
-	t_method			method;
+	char 				*lable;
+	t_command			*command;
+	struct s_hash_table	*collision;
 }						t_hash_table;
 
 typedef struct			s_bot
 {
-	char				**info;
-	char				*name;
+	char 				*name;
 	char 				*comment;
-	t_hash_table 		hash_table[2];
-	struct s_bot		*next;
+	t_hash_table 		**hash_table;
+	unsigned int		*keys;
+	t_command			*command;
 }						t_bot;
 
 typedef struct			s_corewar
 {
-	t_op				*op;
-	char				*table;
-	t_bot				*bot;
+	t_bot				bot;
 	int					registrs[16];
 }						t_corewar;
 
+//typedef struct s_op
+//{
+//	char	*command_name;
+//	int		count_args;
+//	int		*args[3];
+//	int		opcode;
+//	int		cycles;
+//	char	*description;
+//	int		carry;
+//	int		cod_octal;
+//}				t_op;
 
-
-
-
+int			op(char *str);
 
 /*init*/
-
-
-
 /*sub*/
+void		valid(char **text, t_corewar *corewar);
 char					**ft_realloc(char ***std_in, unsigned long int len);
 unsigned long int		two_dem_strlen(char **s);
+char					**open_read(char *av);
+t_bot					ft_command(char **text);
+void 					ft_name_comment(char **name, char **comment, char ***text);
+unsigned int			hash_key(char *str);
+void		error(char *str);
+int 		collision(unsigned int *keys, unsigned int key);
 
 #endif

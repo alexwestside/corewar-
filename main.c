@@ -91,6 +91,8 @@ void hex_magic(int n, int fd, char *str, size_t *i)
 void str_to_hex(char *str, int fd, int len)
 {
 
+
+
 	while (len--)
 	{
 //		if (*str)
