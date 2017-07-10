@@ -32,8 +32,9 @@ int 		main(int ac, char **av)
 {
 	char 	**text;
 	t_corewar	corewar;
+	char *fp = "/nfs/2016/o/orizhiy/ClionProjects/corewar2/resources/corewar/champs/examples/zork.s";
 
-	text = open_read(av[1]);
+	text = open_read(/*av[1]*/fp);
 	valid(text, &corewar);
 	_asm(corewar);
 }

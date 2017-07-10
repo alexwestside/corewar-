@@ -26,12 +26,17 @@ void				get_method(char ***a, t_command **method)
 		tmp->command_name = ft_strdup(*(s++));
 		if (s[0])
 		{
-			tmp->arg1 = ft_strdup(s[0]);
+			tmp->arg[0].data = ft_strdup(s[0]);
+			tmp->arg[0].arg_type = ft_arg_type(s[0]);
 			if (s[1])
 			{
-				tmp->arg2 = ft_strdup(s[1]);
+				tmp->arg[1].data = ft_strdup(s[1]);
+				tmp->arg[1].arg_type = ft_arg_type(s[1]);
 				if (s[2])
-					tmp->arg3 = ft_strdup(s[2]);
+				{
+					tmp->arg[2].data = ft_strdup(s[2]);
+					tmp->arg[2].arg_type = ft_arg_type(s[2]);
+				}
 			}
 		}
 		if (*method == NULL)
@@ -68,6 +73,15 @@ int 				is_method(char *str)
 	return (0);
 }
 
+int 				ft_arg_type(char *str)
+{
+	if (*str == DIRECT_CHAR)
+		return (T_DIR);
+	if (*str == 'r')
+		return (T_REG);
+	return (T_DIR);
+}
+
 void				add_command(t_command **command, char **a, int flag)
 {
 	t_command		*tmp;
@@ -80,9 +94,6 @@ void				add_command(t_command **command, char **a, int flag)
 	tmp = (t_command *)malloc(sizeof(t_command));
 	tmp->next = NULL;
 	tmp->method = NULL;
-	tmp->arg1 = NULL;
-	tmp->arg2 = NULL;
-	tmp->arg3 = NULL;
 	tmp->command_name = NULL;
 	if (flag == 1)
 	{
@@ -96,9 +107,21 @@ void				add_command(t_command **command, char **a, int flag)
 		while (a[++i] != NULL)
 		{
 			i == 0 ? tmp->command_name = ft_strdup(a[0]) : 0;
-			i == 1 ? tmp->arg1 = ft_strdup(a[1]) : 0;
-			i == 2 ? tmp->arg2 = ft_strdup(a[2]) : 0;
-			i == 3 ? tmp->arg3 = ft_strdup(a[3]) : 0;
+			if (i == 1)
+			{
+				tmp->arg[0].data = ft_strdup(a[1]);
+				tmp->arg[0].arg_type = ft_arg_type(a[1]);
+			}
+			if (i == 2)
+			{
+				tmp->arg[1].data = ft_strdup(a[2]);
+				tmp->arg[1].arg_type = ft_arg_type(a[2]);
+			}
+			if (i == 3)
+			{
+				tmp->arg[2].data = ft_strdup(a[3]);
+				tmp->arg[2].arg_type = ft_arg_type(a[3]);
+			}
 		}
 	if (*command == NULL)
 		*command = tmp;
