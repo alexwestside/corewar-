@@ -201,7 +201,6 @@ void asm_to_binary(t_corewar *corewar)
 	char *file_path = ft_strjoin("../", ft_strjoin(header->prog_name, ".cor"));
 	int fd = open(file_path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 
-//	unsigned int magic = COREWAR_EXEC_MAGIC;
 	unsigned int magic = reverse_magic(COREWAR_EXEC_MAGIC);
 	write(fd, &magic, sizeof(magic) + sizeof(unsigned int) - sizeof(magic));
 	write(fd, header->prog_name,
@@ -210,17 +209,8 @@ void asm_to_binary(t_corewar *corewar)
 	write(fd, header->comment,
 		  sizeof(*header->comment) * COMMENT_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->comment));
 
-//	corewar->op = init_op();
-//	t_bot bot = hell_init(corewar);
-//	corewar->bot[0] = hell_init(corewar);
 	bot_code_to_binary(corewar, fd);
 	close(fd);
-
-//	int d;
-//	for (register d; )
-	/*//*/
-	/*//*/
-	/*//*/
 
 }
 
