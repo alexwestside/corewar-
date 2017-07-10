@@ -137,7 +137,7 @@ void type_command(t_bot bot, t_command *command, int fd)
 	write(fd, &op_tab[i].opcode, sizeof(char));
 }
 
-int get_code_byte(t_command *_command)
+void get_code_byte(t_command *_command, int fd)
 {
 	int code_byte;
 	int i;
@@ -155,7 +155,8 @@ int get_code_byte(t_command *_command)
 		if (_command->arg[i].arg_type == T_IND)
 			code_byte += IND_CODE << (6 - (i != 2 ? i * 2 : 4));;
 	}
-	return (code_byte);
+	write(fd, &code_byte, sizeof(char));
+//	return (code_byte);
 }
 
 void bot_code_to_binary(t_corewar *corewar, int fd)
@@ -166,7 +167,7 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 
 	command = corewar->bot.command;
 	int arg;
-	int code_byte;
+//	int code_byte;
 
 	while (command)
 	{
@@ -176,16 +177,80 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 		{
 			type_command(corewar->bot, _command, fd);
 			arg = count_arg(_command);
-			code_byte = 0;
+//			code_byte = 0;
+//			op_tab->
 			if (arg > 1 || !ft_strcmp(_command->command_name, "aff"))
-			{
-				code_byte = get_code_byte(_command);
-				write(fd, &code_byte, sizeof(char));
-			}
+				get_code_byte(_command, fd);
+			_command = _command->next;
+		}
+
+		command = command->next;
+	}
+}
+
+int get_t_dir_size(char *command_name)
+{
+	int size = 0;
+	int i = -1;
+
+	while (++i < REG_NUMBER)
+	{
+		if (!ft_strcmp(command_name, op_tab[i].command_name))
+			break;
+		i++;
+	}
+	size = op_tab[i].cod_octal ? 4 : 2;
+//	return (op_tab[i].cod_octal ? 4 : 2);
+	return (size);
+}
+
+int get_size_args(t_command *command)
+{
+	int size = 0;
+	int i = -1;
+
+	while (++i < 3)
+	{
+		if (command->arg[i].arg_type == DIR_CODE)
+			size += get_t_dir_size(command->command_name);
+		if (command->arg[i].arg_type == IND_CODE)
+			size += 2;
+		if (command->arg[i].arg_type == REG_CODE)
+			size += 1;
+	}
+	return (size);
+}
+
+void get_prog_size(header_t *header, t_corewar *corewar, int fd)
+{
+	unsigned size = 0;
+	t_command *command;
+	t_hash_table *hash;
+	t_command *_command;
+
+	command = corewar->bot.command;
+	while (command)
+	{
+		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
+		_command = hash->command;
+		size++;
+		if (ft_strcmp(_command->command_name, "aff"))
+			size++;
+		while (_command)
+		{
+			size += get_size_args(_command);
 			_command = _command->next;
 		}
 		command = command->next;
 	}
+	header->prog_size = size;
+	int n = sizeof(header->prog_size);
+	int n1 = MEM_SIZE / 16;
+	size_t n2 = (size / 256) + 1;
+//	write(fd, &header->prog_size, (sizeof(header->prog_size) + sizeof(unsigned int) - sizeof(header->prog_size)));
+	int a = 0;
+	write(fd, &a, sizeof(header->prog_size) - n2);
+	write(fd, &header->prog_size, n2);
 }
 
 void asm_to_binary(t_corewar *corewar)
@@ -194,6 +259,7 @@ void asm_to_binary(t_corewar *corewar)
 	header->magic = COREWAR_EXEC_MAGIC;
 	bzero(header->prog_name, header->prog_size);
 	bzero(header->comment, header->prog_size);
+//	header->magic = COREWAR_EXEC_MAGIC;
 
 	ft_memcpy(header->prog_name, corewar->bot.name, ft_strlen(corewar->bot.name));
 	ft_memcpy(header->comment, corewar->bot.comment, ft_strlen(corewar->bot.comment));
@@ -201,13 +267,11 @@ void asm_to_binary(t_corewar *corewar)
 	char *file_path = ft_strjoin("../", ft_strjoin(header->prog_name, ".cor"));
 	int fd = open(file_path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 
-	unsigned int magic = reverse_magic(COREWAR_EXEC_MAGIC);
+	unsigned int magic = reverse_magic(header->magic);
 	write(fd, &magic, sizeof(magic) + sizeof(unsigned int) - sizeof(magic));
-	write(fd, header->prog_name,
-		  (sizeof(*header->prog_name) * (PROG_NAME_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->prog_name))));
-	write(fd, &header->prog_size, (sizeof(header->prog_size) + sizeof(unsigned int) - sizeof(header->prog_size)));
-	write(fd, header->comment,
-		  sizeof(*header->comment) * COMMENT_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->comment));
+	write(fd, header->prog_name, (sizeof(*header->prog_name) * (PROG_NAME_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->prog_name))));
+	get_prog_size(header, corewar, fd);
+	write(fd, header->comment, sizeof(*header->comment) * COMMENT_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->comment));
 
 	bot_code_to_binary(corewar, fd);
 	close(fd);
