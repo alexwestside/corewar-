@@ -159,6 +159,63 @@ void get_code_byte(t_command *_command, int fd)
 //	return (code_byte);
 }
 
+int get_t_dir_size(char *command_name)
+{
+	int size = 0;
+	int i = -1;
+
+	while (++i < REG_NUMBER)
+	{
+		if (!ft_strcmp(command_name, op_tab[i].command_name))
+			break;
+		i++;
+	}
+	size = op_tab[i].cod_octal ? 4 : 2;
+//	return (op_tab[i].cod_octal ? 4 : 2);
+	return (size);
+}
+
+void t_IND_to_byte(char *command_name, char *command_data, int fd)
+{
+	size_t size = 2;
+
+
+
+
+}
+
+void t_DIR_to_byte(char *command_name, char *command_data, int fd)
+{
+	int size = get_t_dir_size(command_name);
+
+
+
+
+}
+
+void t_REG_to_byte(char *command_name, char *command_data, int fd)
+{
+	size_t size = 1;
+	int num_reg = ft_atoi(ft_strsplit(command_data, 'r')[0]);
+	write(fd, &num_reg, size);
+}
+
+void args_to_bytes(t_command *command, int fd)
+{
+	int i = 0;
+
+	while (i < 3)
+	{
+		if (command->arg[i].arg_type == REG_CODE)
+			t_REG_to_byte(command->command_name, command->arg[i].data, fd);
+		if (command->arg[i].arg_type == DIR_CODE)
+			t_DIR_to_byte(command->command_name, command->arg[i].data, fd);
+		if (command->arg[i].arg_type == IND_CODE)
+			t_IND_to_byte(command->command_name, command->arg[i].data, fd);
+		i++;
+	}
+}
+
 void bot_code_to_binary(t_corewar *corewar, int fd)
 {
 	t_command *command;
@@ -181,6 +238,7 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 //			op_tab->
 			if (arg > 1 || !ft_strcmp(_command->command_name, "aff"))
 				get_code_byte(_command, fd);
+			args_to_bytes(_command, fd);
 			_command = _command->next;
 		}
 
@@ -188,21 +246,6 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 	}
 }
 
-int get_t_dir_size(char *command_name)
-{
-	int size = 0;
-	int i = -1;
-
-	while (++i < REG_NUMBER)
-	{
-		if (!ft_strcmp(command_name, op_tab[i].command_name))
-			break;
-		i++;
-	}
-	size = op_tab[i].cod_octal ? 4 : 2;
-//	return (op_tab[i].cod_octal ? 4 : 2);
-	return (size);
-}
 
 int get_size_args(t_command *command)
 {
@@ -244,13 +287,8 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 		command = command->next;
 	}
 	header->prog_size = size;
-	int n = sizeof(header->prog_size);
-	int n1 = MEM_SIZE / 16;
-	size_t n2 = (size / 256) + 1;
-//	write(fd, &header->prog_size, (sizeof(header->prog_size) + sizeof(unsigned int) - sizeof(header->prog_size)));
-	int a = 0;
-	write(fd, &a, sizeof(header->prog_size) - n2);
-	write(fd, &header->prog_size, n2);
+	write(fd, "\0", sizeof(header->prog_size) - ((size / (MEM_SIZE >> 4)) + 1));
+	write(fd, &header->prog_size, (size / (MEM_SIZE >> 4)) + 1);
 }
 
 void asm_to_binary(t_corewar *corewar)
@@ -281,16 +319,6 @@ void asm_to_binary(t_corewar *corewar)
 void _asm(t_corewar corewar)
 {
 
-//	char *s = malloc(0);
-//	t_corewar *corewar;
-//
-//	init_corewar(&corewar);
-//	read_bot_info(corewar->bot);
-//	valid_bot(bot);
-
 	asm_to_binary(&corewar);
-
-//	init_hash(&corewar);
-//	make_asm(&bot);
 
 }
