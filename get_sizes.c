@@ -39,6 +39,7 @@ size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_core
 	size_t distance = 0;
 	t_command *command;
 	t_hash_table *hash;
+	t_command *hash_command;
 
 	command = corewar->bot.command;
 	while (command)
@@ -48,11 +49,18 @@ size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_core
 		if (!command->command_name)
 		{
 			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-			while (hash->command)
+			hash_command = hash->command;
+			while (hash_command)
 			{
-				distance += !ft_strcmp(hash->command->command_name, "aff") ? 1 : 2;
-				distance += get_size_args(hash->command);
-				hash->command = hash->command->next;
+				if(!strcmp(hash_command->command_name, command_name))
+					return (distance);
+//				distance += !ft_strcmp(hash_command->command_name, "aff") ? 1 : 2;
+				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
+					distance += 2;
+				else
+					distance += 1;
+				distance += get_size_args(hash_command);
+				hash_command = hash_command->next;
 			}
 		}
 		command = command->next;
@@ -87,3 +95,41 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 	write(fd, &header->prog_size, (size / (MEM_SIZE >> 4)) + 1);
 }
 
+//unsigned int swap_bytes(unsigned int n)
+//{
+//	unsigned int b2 = (0x0000FF00 & n);
+//	unsigned int b4 = (0xFF000000 & n);
+//	n ^= b2 | b4;                 // Clear the second and fourth bytes
+//	n |= (b2 << 16) | (b4 >> 16); // Swap and write them.
+//	return n;
+//}
+
+void swap_bytes(int n, int fd)
+{
+
+
+}
+
+void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar *corewar)
+{
+	t_command *command;
+	t_hash_table *hash;
+	t_command *hash_command;
+	size_t dist_to_zjmp = 0;
+	size_t dist_to_method = 0;
+	int zjmp_distance = 0;
+
+	size_t size = get_t_dir_size(command_name);
+
+	dist_to_zjmp = get_distance_to_method(command_name, corewar);
+	dist_to_method = get_distance_to_method(ft_strsplit(command_data, ':')[1], corewar);
+//	int z = (int) (MEM_SIZE * 8 * size);
+//	zjmp_distance = (int) (z + (dist_to_method - dist_to_zjmp));
+	zjmp_distance = (int)(dist_to_method - dist_to_zjmp);
+	int z1 = zjmp_distance >> 8 & zjmp_distance << 8;
+
+//	zjmp_distance = swap_bytes(zjmp_distance);
+	write(fd, &z1, 1);
+//	swap_bytes(zjmp_distance, fd);
+
+}

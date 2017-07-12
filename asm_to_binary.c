@@ -1,8 +1,6 @@
 
 #include "asm.h"
 
-#define HEX_BASE "0123456789abcdef"
-
 void type_command(t_bot bot, t_command *command, int fd)
 {
 	int i = 0;
@@ -61,6 +59,8 @@ void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table 
 
 	while (++i < REG_NUMBER)
 	{
+		if (!ft_strcmp(command_name, "zjmp"))
+			return (get_zjmp_distance(command_name, command_data, fd, corewar));
 		if (ft_strstr(command_data, op_tab[i].command_name))
 		{
 			t_dir = op_tab[i].command_name;
@@ -70,9 +70,7 @@ void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table 
 			return ;
 		}
 	}
-	size_t t_dir_size = get_t_dir_size(command_name);
 	int dir_num = ft_atoi(ft_strsplit(command_data, '%')[0]);
-//	write(fd, &dir_num, size);
 	write(fd, "\0", size - ((size / (MEM_SIZE >> 4)) + 1));
 	write(fd, &dir_num, (size / (MEM_SIZE >> 4)) + 1);
 }
@@ -116,8 +114,8 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 		while (_command)
 		{
 			type_command(corewar->bot, _command, fd);
-			arg = count_arg(_command);
-			if (arg > 1 || !ft_strcmp(_command->command_name, "aff"))
+//			arg = count_arg(_command);
+			if (_command->count_args > 1 || !ft_strcmp(_command->command_name, "aff"))
 				get_code_byte(_command, fd);
 			args_to_bytes(_command, fd, hash, corewar);
 			_command = _command->next;
@@ -132,7 +130,6 @@ void asm_to_binary(t_corewar *corewar)
 	header->magic = COREWAR_EXEC_MAGIC;
 	bzero(header->prog_name, header->prog_size);
 	bzero(header->comment, header->prog_size);
-//	header->magic = COREWAR_EXEC_MAGIC;
 
 	ft_memcpy(header->prog_name, corewar->bot.name, ft_strlen(corewar->bot.name));
 	ft_memcpy(header->comment, corewar->bot.comment, ft_strlen(corewar->bot.comment));

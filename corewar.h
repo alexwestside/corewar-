@@ -43,18 +43,6 @@ typedef struct			s_corewar
 	int					registrs[16];
 }						t_corewar;
 
-//typedef struct s_op
-//{
-//	char	*command_name;
-//	int		count_args;
-//	int		*args[3];
-//	int		opcode;
-//	int		cycles;
-//	char	*description;
-//	int		carry;
-//	int		cod_octal;
-//}				t_op;
-
 int			op(char *str);
 
 /*init*/

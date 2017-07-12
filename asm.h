@@ -1,11 +1,9 @@
 #ifndef ASM_H_H
 #define ASM_H_H
 
-# include "libft/libft.h"
-# include "libft/get_next_line.h"
-# include "libft/ft_printf.h"
-#include "op.h"
 #include "corewar.h"
+
+#define HEX_BASE "0123456789abcdef"
 
 void _asm(t_corewar corewar);
 void asm_to_binary(t_corewar *corewar);
@@ -21,6 +19,7 @@ size_t get_t_dir_size(char *command_name);
 void get_code_byte(t_command *_command, int fd);
 void type_command(t_bot bot, t_command *command, int fd);
 int count_arg(t_command *_command);
+void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar *corwar);
 
 
 void hex(int n, int fd);
