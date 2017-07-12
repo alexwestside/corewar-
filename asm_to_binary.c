@@ -1,123 +1,7 @@
 
-#include "corewar.h"
+#include "asm.h"
 
 #define HEX_BASE "0123456789abcdef"
-
-void hex(int n, int fd)
-{
-	if (n >= 16)
-	{
-		hex(n / 16, fd);
-		hex(n % 16, fd);
-	}
-	else
-		ft_putchar_fd(HEX_BASE[n], fd);
-}
-
-void hex_magic(int n, int fd, char *str, size_t *i)
-{
-	if (n >= 16)
-	{
-		hex_magic(n / 16, fd, str, i);
-		hex_magic(n % 16, fd, str, i);
-	}
-	else
-	{
-		str[*i] = HEX_BASE[n];
-		(*i)++;
-		str = realloc(str, *i + 1);
-	}
-}
-
-void str_to_hex(char *str, int fd, int len)
-{
-
-
-	while (len--)
-	{
-//		if (*str)
-//		{
-		hex(*str, fd);
-		str++;
-//		}
-//		else
-//			ft_putstr_fd("00", fd);
-	}
-}
-
-void print_hex_magic(char *str, int fd)
-{
-	int i = 0;
-	char *p = str;
-
-	while (*str)
-	{
-		if (ft_strlen(p) + i < 8)
-		{
-			ft_putchar_fd(0, fd);
-			i++;
-		}
-		else
-		{
-			ft_putchar_fd(*str, fd);
-			str++;
-		}
-	}
-}
-
-unsigned int reverse_magic(unsigned int magic)
-{
-	unsigned int res = 0;
-	unsigned int i = 0;
-
-	while (i < 4)
-	{
-		const unsigned int byte = (magic >> 8 * i) & 0xff;
-		res |= byte << (24 - 8 * i);
-		i++;
-	}
-	return res;
-}
-
-
-
-int ft_isdigit_str(char *s)
-{
-	char *p;
-
-	p = s;
-	while (*p)
-	{
-		if (!ft_isdigit(*p))
-			return (0);
-		p++;
-	}
-	return (1);
-}
-
-int binary_type_args(int i, int arg)
-{
-	int res;
-
-	res = 0;
-	if (arg == T_REG)
-		res = REG_CODE << (6 - (i != 2 ? i * 2 : 4));
-	if (arg == T_DIR)
-		res = DIR_CODE << (6 - (i != 2 ? i * 2 : 4));;
-	if (arg == T_IND)
-		res = IND_CODE << (6 - (i != 2 ? i * 2 : 4));;
-	return (res);
-}
-
-int count_arg(t_command *_command)
-{
-	int count_arg = 0;
-
-	_command->arg[0].data ? count_arg += 1 : 0;
-	_command->arg[1].data ? count_arg += 1 : 0;
-	_command->arg[2].data ? count_arg += 1 : 0;
-	return (count_arg);
-}
 
 void type_command(t_bot bot, t_command *command, int fd)
 {
@@ -159,22 +43,6 @@ void get_code_byte(t_command *_command, int fd)
 //	return (code_byte);
 }
 
-size_t get_t_dir_size(char *command_name)
-{
-	size_t size = 0;
-	int i = -1;
-
-	while (++i < REG_NUMBER)
-	{
-		if (!ft_strcmp(command_name, op_tab[i].command_name))
-			break;
-		i++;
-	}
-	size = op_tab[i].cod_octal ? 2 : 4;
-//	return (op_tab[i].cod_octal ? 4 : 2);
-	return (size);
-}
-
 void t_IND_to_byte(char *command_name, char *command_data, int fd)
 {
 	size_t size = 2;
@@ -182,49 +50,6 @@ void t_IND_to_byte(char *command_name, char *command_data, int fd)
 
 
 
-}
-
-int get_size_args(t_command *command)
-{
-	int size = 0;
-	int i = -1;
-
-	while (++i < 3)
-	{
-		if (command->arg[i].arg_type == DIR_CODE)
-			size += get_t_dir_size(command->command_name);
-		if (command->arg[i].arg_type == IND_CODE)
-			size += 2;
-		if (command->arg[i].arg_type == REG_CODE)
-			size += 1;
-	}
-	return (size);
-}
-
-size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_corewar * corewar)
-{
-	size_t distance = 0;
-	t_command *command;
-	t_hash_table *hash;
-
-	command = corewar->bot.command;
-	while (command)
-	{
-		if (command_name && !ft_strcmp(command->method, command_name))
-			break ;
-		if (!command->command_name)
-		{
-			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-			while (hash->command)
-			{
-				distance += !ft_strcmp(hash->command->command_name, "aff") ? 1 : 2;
-				distance += get_size_args(hash->command);
-				hash->command = hash->command->next;
-			}
-		}
-		command = command->next;
-	}
-	return (distance);
 }
 
 void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table *hash, t_corewar *corewar)
@@ -263,7 +88,7 @@ void args_to_bytes(t_command *command, int fd, t_hash_table *hash, t_corewar *co
 {
 	int i = 0;
 
-	while (i < 3)
+	while (i < command->count_args)
 	{
 		if (command->arg[i].arg_type == REG_CODE)
 			t_REG_to_byte(command->command_name, command->arg[i].data, fd);
@@ -299,35 +124,6 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 		}
 		command = command->next;
 	}
-}
-
-
-
-void get_prog_size(header_t *header, t_corewar *corewar, int fd)
-{
-	unsigned size = 0;
-	t_command *command;
-	t_hash_table *hash;
-	t_command *_command;
-
-	command = corewar->bot.command;
-	while (command)
-	{
-		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-		_command = hash->command;
-		size++;
-		if (ft_strcmp(_command->command_name, "aff"))
-			size++;
-		while (_command)
-		{
-			size += get_size_args(_command);
-			_command = _command->next;
-		}
-		command = command->next;
-	}
-	header->prog_size = size;
-	write(fd, "\0", sizeof(header->prog_size) - ((size / (MEM_SIZE >> 4)) + 1));
-	write(fd, &header->prog_size, (size / (MEM_SIZE >> 4)) + 1);
 }
 
 void asm_to_binary(t_corewar *corewar)
