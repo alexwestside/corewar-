@@ -4,7 +4,7 @@
 # include "libft/libft.h"
 # include "libft/get_next_line.h"
 # include "libft/ft_printf.h"
-# include "op.h"
+#include "op.h"
 
 typedef struct			s_args
 {
@@ -17,6 +17,7 @@ typedef struct			s_command
 	char				*method;
 	char 				*command_name;
 	t_args				arg[3];
+	int					count_args;
 	struct s_command	*next;
 }						t_command;
 
@@ -69,8 +70,10 @@ void		error(char *str);
 int 		collision(unsigned int *keys, unsigned int key);
 
 void _asm(t_corewar corewar);
+int 				ft_arg_type(char *str);
+char		**ft_strsplit_2args(char const *s, char c1, char c2);
+size_t				ft_strclen(char *str, char c);
 char	*get_command_name(t_hash_table **hash_table, unsigned int *keys, char *method);
 t_hash_table	*get_table(t_hash_table **hash_table, unsigned int *keys, char *method);
-int 				ft_arg_type(char *str);
 
 #endif

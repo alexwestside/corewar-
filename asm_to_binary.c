@@ -159,9 +159,9 @@ void get_code_byte(t_command *_command, int fd)
 //	return (code_byte);
 }
 
-int get_t_dir_size(char *command_name)
+size_t get_t_dir_size(char *command_name)
 {
-	int size = 0;
+	size_t size = 0;
 	int i = -1;
 
 	while (++i < REG_NUMBER)
@@ -170,7 +170,7 @@ int get_t_dir_size(char *command_name)
 			break;
 		i++;
 	}
-	size = op_tab[i].cod_octal ? 4 : 2;
+	size = op_tab[i].cod_octal ? 2 : 4;
 //	return (op_tab[i].cod_octal ? 4 : 2);
 	return (size);
 }
@@ -183,69 +183,6 @@ void t_IND_to_byte(char *command_name, char *command_data, int fd)
 
 
 }
-
-void t_DIR_to_byte(char *command_name, char *command_data, int fd)
-{
-	int size = get_t_dir_size(command_name);
-
-
-
-
-}
-
-void t_REG_to_byte(char *command_name, char *command_data, int fd)
-{
-	size_t size = 1;
-	int num_reg = ft_atoi(ft_strsplit(command_data, 'r')[0]);
-	write(fd, &num_reg, size);
-}
-
-void args_to_bytes(t_command *command, int fd)
-{
-	int i = 0;
-
-	while (i < 3)
-	{
-		if (command->arg[i].arg_type == REG_CODE)
-			t_REG_to_byte(command->command_name, command->arg[i].data, fd);
-		if (command->arg[i].arg_type == DIR_CODE)
-			t_DIR_to_byte(command->command_name, command->arg[i].data, fd);
-		if (command->arg[i].arg_type == IND_CODE)
-			t_IND_to_byte(command->command_name, command->arg[i].data, fd);
-		i++;
-	}
-}
-
-void bot_code_to_binary(t_corewar *corewar, int fd)
-{
-	t_command *command;
-	t_hash_table *hash;
-	t_command *_command;
-
-	command = corewar->bot.command;
-	int arg;
-//	int code_byte;
-
-	while (command)
-	{
-		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-		_command = hash->command;
-		while (_command)
-		{
-			type_command(corewar->bot, _command, fd);
-			arg = count_arg(_command);
-//			code_byte = 0;
-//			op_tab->
-			if (arg > 1 || !ft_strcmp(_command->command_name, "aff"))
-				get_code_byte(_command, fd);
-			args_to_bytes(_command, fd);
-			_command = _command->next;
-		}
-
-		command = command->next;
-	}
-}
-
 
 int get_size_args(t_command *command)
 {
@@ -263,6 +200,108 @@ int get_size_args(t_command *command)
 	}
 	return (size);
 }
+
+size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_corewar * corewar)
+{
+	size_t distance = 0;
+	t_command *command;
+	t_hash_table *hash;
+
+	command = corewar->bot.command;
+	while (command)
+	{
+		if (command_name && !ft_strcmp(command->method, command_name))
+			break ;
+		if (!command->command_name)
+		{
+			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
+			while (hash->command)
+			{
+				distance += !ft_strcmp(hash->command->command_name, "aff") ? 1 : 2;
+				distance += get_size_args(hash->command);
+				hash->command = hash->command->next;
+			}
+		}
+		command = command->next;
+	}
+	return (distance);
+}
+
+void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table *hash, t_corewar *corewar)
+{
+	size_t size = get_t_dir_size(command_name);
+	char *t_dir = NULL;
+	size_t distance = 0;
+	int i = -1;
+
+	while (++i < REG_NUMBER)
+	{
+		if (ft_strstr(command_data, op_tab[i].command_name))
+		{
+			t_dir = op_tab[i].command_name;
+			distance = get_distance_to_method(t_dir, /*hash, */corewar);
+			write(fd, "\0", size - ((size / (MEM_SIZE >> 4)) + 1));
+			write(fd, &distance, (size / (MEM_SIZE >> 4)) + 1);
+			return ;
+		}
+	}
+	size_t t_dir_size = get_t_dir_size(command_name);
+	int dir_num = ft_atoi(ft_strsplit(command_data, '%')[0]);
+//	write(fd, &dir_num, size);
+	write(fd, "\0", size - ((size / (MEM_SIZE >> 4)) + 1));
+	write(fd, &dir_num, (size / (MEM_SIZE >> 4)) + 1);
+}
+
+void t_REG_to_byte(char *command_name, char *command_data, int fd)
+{
+	size_t size = 1;
+	int num_reg = ft_atoi(ft_strsplit(command_data, 'r')[0]);
+	write(fd, &num_reg, size);
+}
+
+void args_to_bytes(t_command *command, int fd, t_hash_table *hash, t_corewar *corewar)
+{
+	int i = 0;
+
+	while (i < 3)
+	{
+		if (command->arg[i].arg_type == REG_CODE)
+			t_REG_to_byte(command->command_name, command->arg[i].data, fd);
+		if (command->arg[i].arg_type == DIR_CODE)
+			t_DIR_to_byte(command->command_name, command->arg[i].data, fd, hash, corewar);
+		if (command->arg[i].arg_type == IND_CODE)
+			t_IND_to_byte(command->command_name, command->arg[i].data, fd);
+		i++;
+	}
+}
+
+void bot_code_to_binary(t_corewar *corewar, int fd)
+{
+	t_command *command;
+	t_hash_table *hash;
+	t_command *_command;
+
+	command = corewar->bot.command;
+	int arg;
+
+	while (command)
+	{
+		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
+		_command = hash->command;
+		while (_command)
+		{
+			type_command(corewar->bot, _command, fd);
+			arg = count_arg(_command);
+			if (arg > 1 || !ft_strcmp(_command->command_name, "aff"))
+				get_code_byte(_command, fd);
+			args_to_bytes(_command, fd, hash, corewar);
+			_command = _command->next;
+		}
+		command = command->next;
+	}
+}
+
+
 
 void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 {
