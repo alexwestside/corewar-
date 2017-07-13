@@ -104,32 +104,30 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 //	return n;
 //}
 
-void swap_bytes(int n, int fd)
+int swap_bytes(char *s, size_t size)
 {
+	int i = -1;
+	char tmp;
 
-
+	while(++i < size - 1)
+	{
+		tmp = s[i];
+		s[i] = s[i + 1];
+		s[i + 1] = tmp;
+	}
+	return ((int)s);
 }
 
 void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar *corewar)
 {
-	t_command *command;
-	t_hash_table *hash;
-	t_command *hash_command;
 	size_t dist_to_zjmp = 0;
 	size_t dist_to_method = 0;
 	int zjmp_distance = 0;
 
 	size_t size = get_t_dir_size(command_name);
-
 	dist_to_zjmp = get_distance_to_method(command_name, corewar);
 	dist_to_method = get_distance_to_method(ft_strsplit(command_data, ':')[1], corewar);
-//	int z = (int) (MEM_SIZE * 8 * size);
-//	zjmp_distance = (int) (z + (dist_to_method - dist_to_zjmp));
 	zjmp_distance = (int)(dist_to_method - dist_to_zjmp);
-	int z1 = zjmp_distance >> 8 & zjmp_distance << 8;
-
-//	zjmp_distance = swap_bytes(zjmp_distance);
-	write(fd, &z1, 1);
-//	swap_bytes(zjmp_distance, fd);
-
+	swap_bytes((char *)&zjmp_distance, size);
+	write(fd, &zjmp_distance, size);
 }
