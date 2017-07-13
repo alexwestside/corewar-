@@ -12,7 +12,7 @@ size_t get_t_dir_size(char *command_name)
 			break;
 		i++;
 	}
-	size = op_tab[i].cod_octal ? 2 : 4;
+	size = op_tab[i].cod_octal? 2 : 4;
 //	return (op_tab[i].cod_octal ? 4 : 2);
 	return (size);
 }
@@ -25,7 +25,11 @@ int get_size_args(t_command *command)
 	while (++i < 3)
 	{
 		if (command->arg[i].arg_type == DIR_CODE)
+		{
 			size += get_t_dir_size(command->command_name);
+//			if (!ft_strchr(command->arg[i].data, LABEL_CHAR))
+//				size += 2;
+		}
 		if (command->arg[i].arg_type == IND_CODE)
 			size += 2;
 		if (command->arg[i].arg_type == REG_CODE)
@@ -80,11 +84,11 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 	{
 		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
 		_command = hash->command;
-		size++;
-		if (ft_strcmp(_command->command_name, "aff"))
-			size++;
 		while (_command)
 		{
+			size++;
+			if (_command->count_args > 1 && ft_strcmp(_command->command_name, "aff"))
+				size++;
 			size += get_size_args(_command);
 			_command = _command->next;
 		}
