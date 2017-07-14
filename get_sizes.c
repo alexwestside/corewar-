@@ -13,7 +13,6 @@ size_t get_t_dir_size(char *command_name)
 		i++;
 	}
 	size = op_tab[i].cod_octal? 2 : 4;
-//	return (op_tab[i].cod_octal ? 4 : 2);
 	return (size);
 }
 
@@ -25,11 +24,7 @@ int get_size_args(t_command *command)
 	while (++i < command->count_args)
 	{
 		if (command->arg[i].arg_type == T_DIR)
-		{
 			size += get_t_dir_size(command->command_name);
-//			if (!ft_strchr(command->arg[i].data, LABEL_CHAR))
-//				size += 2;
-		}
 		if (command->arg[i].arg_type == T_IND)
 			size += 2;
 		if (command->arg[i].arg_type == T_REG)
@@ -86,7 +81,7 @@ size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_core
 //			{
 //				if(!strcmp(hash_command->command_name, command_name))
 //					return (distance);
-////				distance += !ft_strcmp(hash_command->command_name, "aff") ? 1 : 2;
+//				distance += !ft_strcmp(hash_command->command_name, "aff") ? 1 : 2;
 //				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
 //					distance += 2;
 //				else
