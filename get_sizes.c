@@ -63,8 +63,6 @@ size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_core
 		}
 		else
 		{
-//			if(!strcmp(command->command_name, command_name))
-//				return (distance);
 			if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
 				distance += 2;
 			else
@@ -152,8 +150,6 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 	write(fd, "\0", sizeof(header->prog_size) - ((size / (MEM_SIZE >> 4)) + 1));
 	(size / (MEM_SIZE >> 4) + 1) >= 2 ? swap_bytes((char*)&header->prog_size, sizeof(header->prog_size)) : 0;
 	write(fd, &header->prog_size, (size / (MEM_SIZE >> 4)) + 1);
-//	swap_bytes((char*)&header->prog_size, sizeof(header->prog_size));
-//	write(fd, &header->prog_size, sizeof(header->prog_size));
 }
 
 void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar *corewar)
