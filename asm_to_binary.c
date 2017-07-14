@@ -27,8 +27,8 @@ void get_code_byte(t_command *_command, int fd)
 
 	i = -1;
 	code_byte = 0;
-	arg = count_arg(_command);
-	while (++i < MAX_ARGS_NUMBER)
+//	arg = count_arg(_command);
+	while (++i < _command->count_args)
 	{
 		if (_command->arg[i].arg_type == T_REG)
 			code_byte += REG_CODE << (6 - (i != 2 ? i * 2 : 4));
@@ -44,10 +44,9 @@ void get_code_byte(t_command *_command, int fd)
 void t_IND_to_byte(char *command_name, char *command_data, int fd)
 {
 	size_t size = 2;
-
-
-
-
+	int num = ft_atoi(command_data);
+	swap_bytes((char *)&num, 2);
+	write(fd, &num, size);
 }
 
 void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table *hash, t_corewar *corewar)
@@ -88,11 +87,11 @@ void args_to_bytes(t_command *command, int fd, t_hash_table *hash, t_corewar *co
 
 	while (i < command->count_args)
 	{
-		if (command->arg[i].arg_type == REG_CODE)
+		if (command->arg[i].arg_type == T_REG)
 			t_REG_to_byte(command->command_name, command->arg[i].data, fd);
-		if (command->arg[i].arg_type == DIR_CODE)
+		if (command->arg[i].arg_type == T_DIR)
 			t_DIR_to_byte(command->command_name, command->arg[i].data, fd, hash, corewar);
-		if (command->arg[i].arg_type == IND_CODE)
+		if (command->arg[i].arg_type == T_IND)
 			t_IND_to_byte(command->command_name, command->arg[i].data, fd);
 		i++;
 	}
@@ -103,23 +102,52 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 	t_command *command;
 	t_hash_table *hash;
 	t_command *_command;
+//	int i = 0;
 
 	command = corewar->bot.command;
-	int arg;
+//	int arg;
 
 	while (command)
 	{
-		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-		_command = hash->command;
-		while (_command)
+		if (command->method)
 		{
-			type_command(corewar->bot, _command, fd);
+			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
+			_command = hash->command;
+			while (_command)
+			{
+//				if (!_command->command_name)
+//					break ;
+				type_command(corewar->bot, _command, fd);
 //			arg = count_arg(_command);
-			if (_command->count_args > 1 || !ft_strcmp(_command->command_name, "aff"))
-				get_code_byte(_command, fd);
-			args_to_bytes(_command, fd, hash, corewar);
-			_command = _command->next;
+				if (_command->count_args > 1 || !ft_strcmp(_command->command_name, "aff"))
+					get_code_byte(_command, fd);
+				args_to_bytes(_command, fd, hash, corewar);
+				_command = _command->next;
+//				i++;
+			}
 		}
+		else
+		{
+			type_command(corewar->bot, command, fd);
+//			arg = count_arg(_command);
+			if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
+				get_code_byte(command, fd);
+			args_to_bytes(command, fd, NULL, corewar);
+//			i++;
+		}
+//		if (i == 42)
+//			write(1, "1", 1);
+//		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
+//		_command = hash->command;
+//		while (_command)
+//		{
+//			type_command(corewar->bot, _command, fd);
+////			arg = count_arg(_command);
+//			if (_command->count_args > 1 || !ft_strcmp(_command->command_name, "aff"))
+//				get_code_byte(_command, fd);
+//			args_to_bytes(_command, fd, hash, corewar);
+//			_command = _command->next;
+//		}
 		command = command->next;
 	}
 }
