@@ -25,6 +25,7 @@ void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar
 void hex(int n, int fd);
 void hex_magic(int n, int fd, char *str, size_t *i);
 unsigned int reverse_magic(unsigned int magic);
+int swap_bytes(char *s, size_t size);
 
 
 

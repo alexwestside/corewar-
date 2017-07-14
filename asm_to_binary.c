@@ -139,7 +139,7 @@ void asm_to_binary(t_corewar *corewar)
 
 	unsigned int magic = reverse_magic(header->magic);
 	write(fd, &magic, sizeof(magic) + sizeof(unsigned int) - sizeof(magic));
-	write(fd, header->prog_name, (sizeof(*header->prog_name) * (PROG_NAME_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->prog_name))));
+	write(fd, header->prog_name, (sizeof(*header->prog_name) * PROG_NAME_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->prog_name)));
 	get_prog_size(header, corewar, fd);
 	write(fd, header->comment, sizeof(*header->comment) * COMMENT_LENGTH + 1 + sizeof(unsigned int) - sizeof(*header->comment));
 

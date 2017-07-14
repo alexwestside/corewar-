@@ -118,3 +118,21 @@ int count_arg(t_command *_command)
 	return (count_arg);
 }
 
+
+int swap_bytes(char *s, size_t size)
+{
+	int i = -1;
+	char tmp;
+
+////	while(++i < size - 1)
+//	while (++i < 2)
+//	{
+//		tmp = s[i];
+//		s[i] = s[i + 1];
+//		s[i + 1] = tmp;
+//	}
+	tmp = s[0];
+	s[0] = s[1];
+	s[1] = tmp;
+	return ((int)s);
+}

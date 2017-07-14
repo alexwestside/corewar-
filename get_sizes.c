@@ -22,17 +22,17 @@ int get_size_args(t_command *command)
 	int size = 0;
 	int i = -1;
 
-	while (++i < 3)
+	while (++i < command->count_args)
 	{
-		if (command->arg[i].arg_type == DIR_CODE)
+		if (command->arg[i].arg_type == T_DIR)
 		{
 			size += get_t_dir_size(command->command_name);
 //			if (!ft_strchr(command->arg[i].data, LABEL_CHAR))
 //				size += 2;
 		}
-		if (command->arg[i].arg_type == IND_CODE)
+		if (command->arg[i].arg_type == T_IND)
 			size += 2;
-		if (command->arg[i].arg_type == REG_CODE)
+		if (command->arg[i].arg_type == T_REG)
 			size += 1;
 	}
 	return (size);
@@ -82,21 +82,55 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 	command = corewar->bot.command;
 	while (command)
 	{
-		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-		_command = hash->command;
-		while (_command)
+		if (!command->command_name)
 		{
-			size++;
-			if (_command->count_args > 1 && ft_strcmp(_command->command_name, "aff"))
+			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
+			_command = hash->command;
+			while (_command)
+			{
+				if (!_command->command_name)
+					break ;
 				size++;
-			size += get_size_args(_command);
-			_command = _command->next;
+				if (_command->count_args > 1 && ft_strcmp(_command->command_name, "aff"))
+					size++;
+				size += get_size_args(_command);
+				_command = _command->next;
+			}
 		}
+		else
+		{
+			if (!command->command_name)
+				break ;
+			size++;
+			if (command->count_args > 1 && ft_strcmp(command->command_name, "aff"))
+				size++;
+			size += get_size_args(command);
+		}
+//		if (!command->method)
+//			_command = command;
+//		else
+//		{
+//			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
+//			_command = hash->command;
+//		}
+//		while (_command)
+//		{
+//			if (!_command->command_name)
+//				break ;
+//			size++;
+//			if (_command->count_args > 1 && ft_strcmp(_command->command_name, "aff"))
+//				size++;
+//			size += get_size_args(_command);
+//			_command = _command->next;
+//		}
 		command = command->next;
 	}
 	header->prog_size = size;
 	write(fd, "\0", sizeof(header->prog_size) - ((size / (MEM_SIZE >> 4)) + 1));
+	swap_bytes((char*)&header->prog_size, sizeof(header->prog_size));
 	write(fd, &header->prog_size, (size / (MEM_SIZE >> 4)) + 1);
+//	swap_bytes((char*)&header->prog_size, sizeof(header->prog_size));
+//	write(fd, &header->prog_size, sizeof(header->prog_size));
 }
 
 //unsigned int swap_bytes(unsigned int n)
@@ -108,19 +142,6 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 //	return n;
 //}
 
-int swap_bytes(char *s, size_t size)
-{
-	int i = -1;
-	char tmp;
-
-	while(++i < size - 1)
-	{
-		tmp = s[i];
-		s[i] = s[i + 1];
-		s[i + 1] = tmp;
-	}
-	return ((int)s);
-}
 
 void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar *corewar)
 {
