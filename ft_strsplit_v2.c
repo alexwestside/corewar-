@@ -1,6 +1,18 @@
-#include "corewar.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit_v2.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maksenov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/12/03 18:10:00 by orizhiy           #+#    #+#             */
+/*   Updated: 2016/12/05 14:07:44 by orizhiy          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_len_char_2args(char const *s, char c1, char c2)
+#include "corewar_valid.h"
+
+size_t		ft_len_char_2args(char const *s, char c1, char c2)
 {
 	char *p;
 

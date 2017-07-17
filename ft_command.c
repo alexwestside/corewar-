@@ -1,4 +1,4 @@
-#include "corewar.h"
+#include "corewar_valid.h"
 
 int 	len_char(char **a)
 {
@@ -75,18 +75,18 @@ int 				is_method(char *str)
 	i = 0;
 	while (*s != '\0')
 	{
-		if (*s == '%')
+		if (*s == DIRECT_CHAR)
 			i = 1;
-		if (*s == ':')
+		if (*s == LABEL_CHAR)
 			return (i == 0 ? 1 : 0);
 		s++;
 	}
 	return (0);
 }
 
-int 				ft_arg_type(char *str)
+int            ft_arg_type(char *str)
 {
-	if (*str == '%')
+	if (*str == DIRECT_CHAR)
 		return (T_DIR);
 	if (*str == 'r')
 		return (T_REG);
@@ -115,7 +115,7 @@ void				ft_add_command(t_command **command, char *name, char **a)
 	tmp->method = NULL;
 	tmp->command_name = NULL;
 	if (name != NULL)
-		tmp->method = ft_strndup(name, ft_strclen(name, ':'));
+		tmp->method = ft_strndup(name, ft_strclen(name, LABEL_CHAR));
 	else
 		while (a[++i] != NULL)
 		{
@@ -123,17 +123,17 @@ void				ft_add_command(t_command **command, char *name, char **a)
 			i == 0 ? tmp->command_name = ft_strdup(a[0]) : 0;
 			if (i == 1)
 			{
-				tmp->arg[0].data = ft_strndup(a[1], ft_strclen(a[1], ','));
+				tmp->arg[0].data = ft_strndup(a[1], ft_strclen(a[1], SEPARATOR_CHAR));
 				tmp->arg[0].arg_type = ft_arg_type(a[1]);
 			}
 			if (i == 2)
 			{
-				tmp->arg[1].data = ft_strndup(a[2], ft_strclen(a[2], ','));
+				tmp->arg[1].data = ft_strndup(a[2], ft_strclen(a[2], SEPARATOR_CHAR));
 				tmp->arg[1].arg_type = ft_arg_type(a[2]);
 			}
 			if (i == 3)
 			{
-				tmp->arg[2].data = ft_strndup(a[3], ft_strclen(a[3], ','));
+				tmp->arg[2].data = ft_strndup(a[3], ft_strclen(a[3], SEPARATOR_CHAR));
 				tmp->arg[2].arg_type = ft_arg_type(a[3]);
 			}
 		}
@@ -168,17 +168,18 @@ void				ft_get_method(char ***text, t_hash_table ***hash_table, unsigned int **k
 	t_hash_table	*head;
 
 	tmp = (t_hash_table*)malloc(sizeof(t_hash_table));
-	tmp->lable = ft_strndup(**text, ft_strclen(**text, ':'));
+	tmp->lable = ft_strndup(**text, ft_strclen(**text, LABEL_CHAR));
 	tmp->command = NULL;
 	tmp->collision = NULL;
 	**text = ft_strchr(**text, ':');
 	(**text)++;
 	while (**text != NULL && is_method(**text) != 1)
 	{
-		if (***text != '\0' && ***text != '#' && ***text != '\n')
+		if (***text != '\0' && ***text != COMMENT_CHAR && ***text != '\n')
 		{
 			a = ft_strsplit_2args(**text, ' ', '\t');
-			ft_add_command(&tmp->command, NULL, a);
+			if (*a[0] != COMMENT_CHAR)
+				ft_add_command(&tmp->command, NULL, a);
 		}
 		(*text)++;
 	}
@@ -215,7 +216,7 @@ t_bot				ft_command(char **text)
 	key = (unsigned int *)malloc(sizeof(unsigned int));
 	while (*text != NULL)
 	{
-		if (**text == '#' || **text == '\0')
+		if (**text == COMMENT_CHAR || **text == '\0')
 			text++;
 		else
 		{
@@ -232,6 +233,7 @@ t_bot				ft_command(char **text)
 			}
 		}
 	}
+	ft_valid_command(bot.command, hash_table, key);
 	bot.hash_table = hash_table;
 	bot.keys = key;
 	return (bot);

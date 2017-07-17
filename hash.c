@@ -1,4 +1,5 @@
-#include "corewar.h"
+
+#include "corewar_valid.h"
 
 unsigned int		hash_key(char *str)
 {

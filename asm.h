@@ -2,6 +2,7 @@
 #define ASM_H_H
 
 #include "corewar.h"
+#include "corewar_valid.h"
 
 #define HEX_BASE "0123456789abcdef"
 
@@ -20,7 +21,6 @@ void get_code_byte(t_command *_command, int fd);
 void type_command(t_bot bot, t_command *command, int fd);
 int count_arg(t_command *_command);
 void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar *corwar);
-
 
 void hex(int n, int fd);
 void hex_magic(int n, int fd, char *str, size_t *i);

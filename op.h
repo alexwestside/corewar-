@@ -88,6 +88,3 @@ typedef struct s_op
 }				t_op;
 
 extern t_op op_tab[17];
-
-//t_op *init_op();
-//t_op init_op(t_op *op);

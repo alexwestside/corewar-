@@ -106,7 +106,7 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 		if (!command->command_name)
 		{
 			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-			_command = hash->command;
+ 			_command = hash->command;
 			while (_command)
 			{
 				if (!_command->command_name)
@@ -164,4 +164,6 @@ void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar
 	zjmp_distance = (int)(dist_to_method - dist_to_zjmp);
 	swap_bytes((char *)&zjmp_distance, size);
 	write(fd, &zjmp_distance, size);
+
+    djhgdfkshjgkdfhgdkhjfg
 }
