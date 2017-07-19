@@ -233,7 +233,7 @@ t_bot				ft_command(char **text)
 			}
 		}
 	}
-	ft_valid_command(bot.command, hash_table, key);
+//	ft_valid_command(bot.command, hash_table, key);
 	bot.hash_table = hash_table;
 	bot.keys = key;
 	return (bot);

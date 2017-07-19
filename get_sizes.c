@@ -164,6 +164,4 @@ void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar
 	zjmp_distance = (int)(dist_to_method - dist_to_zjmp);
 	swap_bytes((char *)&zjmp_distance, size);
 	write(fd, &zjmp_distance, size);
-
-    djhgdfkshjgkdfhgdkhjfg
 }
