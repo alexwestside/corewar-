@@ -37,4 +37,5 @@ int 		main(int ac, char **av)
 	text = open_read(/*av[1]*/fp);
 	valid(text, &corewar);
 	_asm(corewar);
+
 }
