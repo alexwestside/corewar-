@@ -24,5 +24,5 @@ t_hash_table	*get_table(t_hash_table **hash_table, unsigned int *keys, char *met
 void		valid(char **text, t_corewar *corewar);
 void			ft_valid_command(t_command *command, t_hash_table **hash_table, unsigned int *keys);
 char	*get_command_name(t_hash_table **hash_table, unsigned int *keys, char *method);
-
+t_command	*get_table_command(t_hash_table **hash_table, unsigned int *keys, char *method);
 #endif

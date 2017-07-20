@@ -97,10 +97,10 @@ int 				ft_len_two_arr(char **a)
 {
 	int 			i;
 
-	i = 0;
-	while (a[i] != NULL)
+	i = 1;
+	while (a[i] != NULL && ft_strchr(a[i], SEPARATOR_CHAR))
 		i++;
-	return (i);
+	return (i + 1);
 }
 
 void				ft_add_command(t_command **command, char *name, char **a)
@@ -175,10 +175,10 @@ void				ft_get_method(char ***text, t_hash_table ***hash_table, unsigned int **k
 	(**text)++;
 	while (**text != NULL && is_method(**text) != 1)
 	{
-		if (***text != '\0' && ***text != COMMENT_CHAR && ***text != '\n')
+		if (***text != '\0' && ***text != COMMENT_CHAR && ***text != COMMENT_CHAR2 && ***text != '\n')
 		{
 			a = ft_strsplit_2args(**text, ' ', '\t');
-			if (*a[0] != COMMENT_CHAR)
+			if (*a[0] != COMMENT_CHAR && *a[0] != COMMENT_CHAR2)
 				ft_add_command(&tmp->command, NULL, a);
 		}
 		(*text)++;
@@ -216,7 +216,7 @@ t_bot				ft_command(char **text)
 	key = (unsigned int *)malloc(sizeof(unsigned int));
 	while (*text != NULL)
 	{
-		if (**text == COMMENT_CHAR || **text == '\0')
+		if (**text == COMMENT_CHAR || **text == COMMENT_CHAR2 || !*text)
 			text++;
 		else
 		{
@@ -233,7 +233,7 @@ t_bot				ft_command(char **text)
 			}
 		}
 	}
-//	ft_valid_command(bot.command, hash_table, key);
+	ft_valid_command(bot.command, hash_table, key);
 	bot.hash_table = hash_table;
 	bot.keys = key;
 	return (bot);

@@ -14,7 +14,6 @@
 ** Toutes les tailles sont en octets.
 ** On part du principe qu'un int fait 32 bits. Est-ce vrai chez vous ?
 */
-
 #define IND_SIZE 2
 #define REG_SIZE 4
 #define DIR_SIZE REG_SIZE
@@ -32,6 +31,7 @@
 #define CHAMP_MAX_SIZE 682 /*(MEM_SIZE / 6)*/
 
 #define COMMENT_CHAR '#'
+#define COMMENT_CHAR2 ';'
 #define LABEL_CHAR ':'
 #define DIRECT_CHAR '%'
 #define SEPARATOR_CHAR ','
@@ -69,22 +69,27 @@ typedef char t_arg_type;
 
 typedef struct 		header_s
 {
-	unsigned int	magic;
-	char 			prog_name[PROG_NAME_LENGTH + 1];
-	unsigned int 	prog_size;
-	char 			comment[COMMENT_LENGTH + 1];
+    unsigned int	magic;
+    char 			prog_name[PROG_NAME_LENGTH + 1];
+    unsigned int 	prog_size;
+    char 			comment[COMMENT_LENGTH + 1];
 }					header_t;
 
 typedef struct s_op
 {
-	char	*command_name;
-	int		count_args;
-	int		args[3];
-	int		opcode;
-	int		cycles;
-	char	*description;
-	int		carry;
-	int		cod_octal;
+    char	*command_name;
+    int		count_args;
+    int		args[3][3];
+    int		opcode;
+    int		cycles;
+    char	*description;
+    int		carry;
+    int		cod_octal;
 }				t_op;
 
 extern t_op op_tab[17];
+
+t_op *init_op();
+
+
+//t_op init_op(t_op *op);
