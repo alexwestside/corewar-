@@ -66,6 +66,8 @@ void			check_dir(char *str, t_hash_table **hash_table, unsigned int *keys)
 		}
 		else
 		{
+			if (*str && *str == '-')
+				str++;
 			if (!ft_isdigit(*str))
 				error("Lexical error");
 			while (*str)

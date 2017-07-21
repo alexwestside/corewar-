@@ -10,7 +10,7 @@ size_t get_t_dir_size(char *command_name)
 	{
 		if (!ft_strcmp(command_name, op_tab[i].command_name))
 			break;
-		i++;
+//		i++;
 	}
 	size = op_tab[i].cod_octal? 2 : 4;
 	return (size);
@@ -51,8 +51,10 @@ size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_core
 			hash_command = hash->command;
 			while (hash_command)
 			{
-				if(!strcmp(hash_command->command_name, command_name))
-					return (distance);
+                /***21.07.17****/
+//				if(!strcmp(hash_command->command_name, command_name))
+//					return (distance);
+                /***21.07.17****/
 				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
 					distance += 2;
 				else
@@ -69,25 +71,6 @@ size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_core
 				distance += 1;
 			distance += get_size_args(command);
 		}
-//		if (command_name && !ft_strcmp(command->method, command_name))
-//			break ;
-//		if (!command->command_name)
-//		{
-//			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-//			hash_command = hash->command;
-//			while (hash_command)
-//			{
-//				if(!strcmp(hash_command->command_name, command_name))
-//					return (distance);
-//				distance += !ft_strcmp(hash_command->command_name, "aff") ? 1 : 2;
-//				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
-//					distance += 2;
-//				else
-//					distance += 1;
-//				distance += get_size_args(hash_command);
-//				hash_command = hash_command->next;
-//			}
-//		}
 		command = command->next;
 	}
 	return (distance);
@@ -127,23 +110,6 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd)
 				size++;
 			size += get_size_args(command);
 		}
-//		if (!command->method)
-//			_command = command;
-//		else
-//		{
-//			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-//			_command = hash->command;
-//		}
-//		while (_command)
-//		{
-//			if (!_command->command_name)
-//				break ;
-//			size++;
-//			if (_command->count_args > 1 && ft_strcmp(_command->command_name, "aff"))
-//				size++;
-//			size += get_size_args(_command);
-//			_command = _command->next;
-//		}
 		command = command->next;
 	}
 	header->prog_size = size;

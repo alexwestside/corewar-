@@ -3,18 +3,17 @@
 
 void type_command(t_bot bot, t_command *command, int fd)
 {
-	int i = 0;
+	int i = -1;
 	char *command_name;
 
 	if (!command->command_name)
 		command_name = get_command_name(bot.hash_table, bot.keys, command->method);
 	else
 		command_name = command->command_name;
-	while (i < REG_NUMBER)
+	while (++i < REG_NUMBER)
 	{
 		if (!ft_strcmp(command_name, op_tab[i].command_name))
 			break;
-		i++;
 	}
 	write(fd, &op_tab[i].opcode, sizeof(char));
 }
@@ -27,7 +26,6 @@ void get_code_byte(t_command *_command, int fd)
 
 	i = -1;
 	code_byte = 0;
-//	arg = count_arg(_command);
 	while (++i < _command->count_args)
 	{
 		if (_command->arg[i].arg_type == T_REG)
@@ -38,7 +36,6 @@ void get_code_byte(t_command *_command, int fd)
 			code_byte += IND_CODE << (6 - (i != 2 ? i * 2 : 4));;
 	}
 	write(fd, &code_byte, sizeof(char));
-//	return (code_byte);
 }
 
 void t_IND_to_byte(char *command_name, char *command_data, int fd)
@@ -56,19 +53,32 @@ void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table 
 	size_t distance = 0;
 	int i = -1;
 
-	while (++i < REG_NUMBER)
-	{
-		if (!ft_strcmp(command_name, "zjmp"))
-			return (get_zjmp_distance(command_name, command_data, fd, corewar));
-		if (ft_strstr(command_data, op_tab[i].command_name))
-		{
-			t_dir = op_tab[i].command_name;
-			distance = get_distance_to_method(t_dir, /*hash, */corewar);
-			write(fd, "\0", size - ((size / (MEM_SIZE >> 4)) + 1));
-			write(fd, &distance, (size / (MEM_SIZE >> 4)) + 1);
-			return ;
-		}
-	}
+//#define LABEL_CHAR ':'
+//#define DIRECT_CHAR '%'
+
+    if (!ft_strcmp(command_name, "zjmp"))
+        return (get_zjmp_distance(command_name, command_data, fd, corewar));
+    if (ft_strchr(command_data, ':'))
+    {
+        t_dir = ft_strndup((ft_strchr(command_data, ':') + 1), ft_strlen(command_data) - 2);
+        distance = get_distance_to_method(t_dir, corewar);
+        write(fd, "\0", size - ((size / (MEM_SIZE >> 4)) + 1));
+        write(fd, &distance, (size / (MEM_SIZE >> 4)) + 1);
+        return ;
+    }
+//	while (++i < REG_NUMBER)
+//	{
+//		if (!ft_strcmp(command_name, "zjmp"))
+//			return (get_zjmp_distance(command_name, command_data, fd, corewar));
+//		if (ft_strstr(command_data, op_tab[i].command_name))
+//		{
+//			t_dir = op_tab[i].command_name;
+//			distance = get_distance_to_method(t_dir, /*hash, */corewar);
+//			write(fd, "\0", size - ((size / (MEM_SIZE >> 4)) + 1));
+//			write(fd, &distance, (size / (MEM_SIZE >> 4)) + 1);
+//			return ;
+//		}
+//	}
 	int dir_num = ft_atoi(ft_strsplit(command_data, '%')[0]);
 	write(fd, "\0", size - ((size / (MEM_SIZE >> 4)) + 1));
 	write(fd, &dir_num, (size / (MEM_SIZE >> 4)) + 1);
@@ -102,11 +112,8 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 	t_command *command;
 	t_hash_table *hash;
 	t_command *_command;
-//	int i = 0;
 
 	command = corewar->bot.command;
-//	int arg;
-
 	while (command)
 	{
 		if (command->method)
@@ -115,39 +122,20 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 			_command = hash->command;
 			while (_command)
 			{
-//				if (!_command->command_name)
-//					break ;
 				type_command(corewar->bot, _command, fd);
-//			arg = count_arg(_command);
 				if (_command->count_args > 1 || !ft_strcmp(_command->command_name, "aff"))
 					get_code_byte(_command, fd);
 				args_to_bytes(_command, fd, hash, corewar);
 				_command = _command->next;
-//				i++;
 			}
 		}
 		else
 		{
 			type_command(corewar->bot, command, fd);
-//			arg = count_arg(_command);
 			if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
 				get_code_byte(command, fd);
 			args_to_bytes(command, fd, NULL, corewar);
-//			i++;
 		}
-//		if (i == 42)
-//			write(1, "1", 1);
-//		hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-//		_command = hash->command;
-//		while (_command)
-//		{
-//			type_command(corewar->bot, _command, fd);
-////			arg = count_arg(_command);
-//			if (_command->count_args > 1 || !ft_strcmp(_command->command_name, "aff"))
-//				get_code_byte(_command, fd);
-//			args_to_bytes(_command, fd, hash, corewar);
-//			_command = _command->next;
-//		}
 		command = command->next;
 	}
 }
