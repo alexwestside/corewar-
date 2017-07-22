@@ -39,7 +39,12 @@ size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_core
 	t_command *command;
 	t_hash_table *hash;
 	t_command *hash_command;
+    int current_line = 0;
 
+//    if (!ft_strcmp(command_name, "zjmp") || !ft_strcmp(command_name, "fork"))
+//        current_line = 1;
+//    else
+//        current_line = 0;
 	command = corewar->bot.command;
 	while (command)
 	{
@@ -51,25 +56,29 @@ size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_core
 			hash_command = hash->command;
 			while (hash_command)
 			{
-                /***21.07.17****/
+                if (/*!ft_strcmp(command_name, "zjmp") || */current_line_check(hash_command, command_name))
+                    current_line = 1;
 //				if(!strcmp(hash_command->command_name, command_name))
-//					return (distance);
-                /***21.07.17****/
+//                    break ;
+                if(!strcmp(hash->lable, command_name))
+					return (distance);
 				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
-					distance += 2;
+					current_line ? distance += 2 : 0;
 				else
-					distance += 1;
-				distance += get_size_args(hash_command);
+                    current_line ? distance += 1 : 0;
+                current_line ? distance += get_size_args(hash_command) : 0;
 				hash_command = hash_command->next;
 			}
 		}
 		else
 		{
+            if (/*!ft_strcmp(command_name, "zjmp") || */current_line_check(command, command_name))
+                current_line = 1;
 			if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
-				distance += 2;
+                current_line ? distance += 2 : 0;
 			else
-				distance += 1;
-			distance += get_size_args(command);
+                current_line ? distance += 1 : 0;
+            current_line ? distance += get_size_args(command) : 0;
 		}
 		command = command->next;
 	}

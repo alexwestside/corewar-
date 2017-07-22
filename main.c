@@ -32,8 +32,8 @@ int 		main(int ac, char **av)
 {
 	char 	**text;
 	t_corewar	corewar;
-//    char * fp = "../resources/corewar/champs/examples/zork.s";
-    char * fp = "../resources/corewar/champs/examples/bigzork.s";
+    char * fp = "../resources/corewar/champs/examples/zork.s";
+//    char * fp = "../resources/corewar/champs/examples/bigzork.s";
 //    char * fp = "../resources/corewar/champs/examples/bee_gees.s";
 //    char * fp = "../resources/corewar/champs/examples/fluttershy.s";
 //    char * fp = "../resources/corewar/champs/examples/helltrain.s";

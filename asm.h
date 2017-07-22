@@ -27,6 +27,7 @@ void hex_magic(int n, int fd, char *str, size_t *i);
 unsigned int reverse_magic(unsigned int magic);
 int swap_bytes(char *s, size_t size);
 
+int current_line_check(t_command *command, char *command_name);
 
 
 int binary_type_args(int i, int arg);

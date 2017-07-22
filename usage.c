@@ -136,3 +136,12 @@ int swap_bytes(char *s, size_t size)
 	s[1] = tmp;
 	return ((int)s);
 }
+
+int current_line_check(t_command *command, char *command_name)
+{
+    int i = -1;
+    while (++i < command->count_args)
+        if (ft_strstr(command->arg[i].data, command_name))
+            return (1);
+    return (0);
+}

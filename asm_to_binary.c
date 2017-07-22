@@ -56,7 +56,7 @@ void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table 
 //#define LABEL_CHAR ':'
 //#define DIRECT_CHAR '%'
 
-    if (!ft_strcmp(command_name, "zjmp"))
+    if (!ft_strcmp(command_name, "zjmp") || !ft_strcmp(command_name, "fork"))
         return (get_zjmp_distance(command_name, command_data, fd, corewar));
     if (ft_strchr(command_data, ':'))
     {
@@ -112,6 +112,7 @@ void bot_code_to_binary(t_corewar *corewar, int fd)
 	t_command *command;
 	t_hash_table *hash;
 	t_command *_command;
+    int current_line_distens = 0;
 
 	command = corewar->bot.command;
 	while (command)
