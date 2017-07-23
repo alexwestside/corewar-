@@ -34,10 +34,10 @@ int 		main(int ac, char **av)
 	t_corewar	corewar;
 //    char * fp = "../resources/corewar/champs/examples/zork.s";
 //    char * fp = "../resources/corewar/champs/examples/bigzork.s";
-    char * fp = "../resources/corewar/champs/examples/bee_gees.s";
+//    char * fp = "../resources/corewar/champs/examples/bee_gees.s";
 //    char * fp = "../resources/corewar/champs/examples/fluttershy.s";
 //    char * fp = "../resources/corewar/champs/examples/helltrain.s";
-//    char * fp = "../resources/corewar/champs/examples/turtle.s";
+    char * fp = "../resources/corewar/champs/examples/turtle.s";
 
 	text = open_read(/*av[1]*/fp);
 	valid(text, &corewar);

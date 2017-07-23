@@ -46,6 +46,18 @@ void t_IND_to_byte(char *command_data, int fd)
 	write(fd, &num, size);
 }
 
+size_t get_byte_num(int dir_num)
+{
+	size_t byte_num = 0;
+
+	while (dir_num > 0)
+	{
+		dir_num /= 256;
+		byte_num++;
+	}
+	return (byte_num);
+}
+
 void t_DIR_to_byte(char *command_name, char *command_method, int fd, t_hash_table *hash, t_corewar *corewar, int current_line)
 {
     char *t_dir = NULL;
@@ -56,8 +68,8 @@ void t_DIR_to_byte(char *command_name, char *command_method, int fd, t_hash_tabl
 
     if (ft_strchr(command_method, ':'))
     {
-//		if (!ft_strcmp("zjmp", command_name))
-//			write(1, "1", 1);
+		if (!ft_strcmp("ld", command_name))
+			write(1, "1", 1);
         t_dir = ft_strndup((ft_strchr(command_method, LABEL_CHAR) + 1), ft_strlen(command_method) - 2);
         dist_to_command = get_distance_to_command(command_name, corewar, current_line);
 	    dist_to_method = get_distance_to_method(t_dir, corewar, current_line);
@@ -67,6 +79,9 @@ void t_DIR_to_byte(char *command_name, char *command_method, int fd, t_hash_tabl
         return ;
     }
     int dir_num = ft_atoi(ft_strsplit(command_method, '%')[0]);
+	if (dir_num == 439025904)
+		write(1, "1", 1);
+	size_t size2 = get_byte_num(dir_num);
 	write(fd, "\0", size - ((size / (MEM_SIZE >> 4)) + 1));
 	write(fd, &dir_num, (size / (MEM_SIZE >> 4)) + 1);
 }
