@@ -30,12 +30,42 @@ int get_size_args(t_command *command) {
 
 size_t get_distance_to_command(char *command_name, t_corewar *corewar, int current_line)
 {
+	size_t distance = 0;
+	t_command *command;
+	t_hash_table *hash;
+	t_command *hash_command;
 
-
-
-
-
-
+	command = corewar->bot.command;
+	while (command)
+	{
+		--current_line;
+		if (command->method)
+		{
+			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
+			hash_command = hash->command;
+			while (hash_command)
+			{
+				if (!current_line)
+					return (distance);
+				distance += 1;
+				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
+					distance += 1;
+				distance += get_size_args(hash_command);
+				hash_command = hash_command->next;
+			}
+		}
+		else
+		{
+			if (!current_line)
+				return (distance);
+			distance += 1;
+			if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
+				distance += 1;
+			distance += get_size_args(command);
+		}
+		command = command->next;
+	}
+	return (distance);
 }
 
 size_t get_distance_to_method(char *command_name, t_corewar *corewar, int current_line)
@@ -48,34 +78,30 @@ size_t get_distance_to_method(char *command_name, t_corewar *corewar, int curren
 	command = corewar->bot.command;
 	while (command)
 	{
-		--current_line;
 		if (command->method) {
 			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
 			hash_command = hash->command;
 			while (hash_command)
 			{
-				if (current_line <= 0 && (distance += 1))
-				{
-//					distance += 1;
-					if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
-						distance += 1;
-					distance += get_size_args(hash_command);
-				}
+				if (!ft_strcmp(command_name, hash->lable))
+					return (distance);
+				distance += 1;
+				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
+					distance += 1;
+				distance += get_size_args(hash_command);
 				hash_command = hash_command->next;
 			}
 		}
 		else
 		{
-			if (current_line <= 0 && (distance += 1))
-			{
-//				distance += 1;
-				if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
-					distance += 1;
-				distance += get_size_args(command);
-			}
+			distance += 1;
+			if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
+				distance += 1;
+			distance += get_size_args(command);
 		}
 		command = command->next;
 	}
+	return (distance);
 }
 
 //size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_corewar * corewar)
