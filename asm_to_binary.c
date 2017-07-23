@@ -56,8 +56,8 @@ void t_DIR_to_byte(char *command_name, char *command_method, int fd, t_hash_tabl
 
     if (ft_strchr(command_method, ':'))
     {
-		if (!ft_strcmp("zjmp", command_name))
-			write(1, "1", 1);
+//		if (!ft_strcmp("zjmp", command_name))
+//			write(1, "1", 1);
         t_dir = ft_strndup((ft_strchr(command_method, LABEL_CHAR) + 1), ft_strlen(command_method) - 2);
         dist_to_command = get_distance_to_command(command_name, corewar, current_line);
 	    dist_to_method = get_distance_to_method(t_dir, corewar, current_line);
