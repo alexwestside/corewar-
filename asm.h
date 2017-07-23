@@ -10,12 +10,15 @@ void _asm(t_corewar corewar);
 void asm_to_binary(t_corewar *corewar);
 void get_prog_size(header_t *header, t_corewar *corewar, int fd);
 void bot_code_to_binary(t_corewar *corewar, int fd);
-void args_to_bytes(t_command *command, int fd, t_hash_table *hash, t_corewar *corewar);
+void args_to_bytes(t_command *command, int fd, t_hash_table *hash, t_corewar *corewar, int current_line);
 void t_REG_to_byte(char *command_name, char *command_data, int fd);
-void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table *hash, t_corewar *corewar);
-void t_IND_to_byte(char *command_name, char *command_data, int fd);
-size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_corewar * corewar);
-int get_size_args(t_command *command);
+void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table *hash, t_corewar *corewar, int current_line);
+void t_IND_to_byte(char *command_data, int fd);
+
+size_t get_distance_to_method(char *command_name, t_corewar * corewar, int current_line);
+size_t get_distance_to_command(char *command_name, t_corewar *corewar, int current_line);
+
+		int get_size_args(t_command *command);
 size_t get_t_dir_size(char *command_name);
 void get_code_byte(t_command *_command, int fd);
 void type_command(t_bot bot, t_command *command, int fd);
