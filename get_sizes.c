@@ -38,30 +38,31 @@ size_t get_distance_to_command(char *command_name, t_corewar *corewar, int curre
 	command = corewar->bot.command;
 	while (command)
 	{
-		--current_line;
 		if (command->method)
 		{
 			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
 			hash_command = hash->command;
 			while (hash_command)
 			{
-				if (!current_line)
+				if (!(current_line - 1) || !current_line)
 					return (distance);
 				distance += 1;
 				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
 					distance += 1;
 				distance += get_size_args(hash_command);
 				hash_command = hash_command->next;
+				current_line--;
 			}
 		}
 		else
 		{
-			if (!current_line)
+			if (!(current_line - 1) || !current_line)
 				return (distance);
 			distance += 1;
 			if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
 				distance += 1;
 			distance += get_size_args(command);
+			current_line--;
 		}
 		command = command->next;
 	}

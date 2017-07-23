@@ -11,7 +11,7 @@ void asm_to_binary(t_corewar *corewar);
 void get_prog_size(header_t *header, t_corewar *corewar, int fd);
 void bot_code_to_binary(t_corewar *corewar, int fd);
 void args_to_bytes(t_command *command, int fd, t_hash_table *hash, t_corewar *corewar, int current_line);
-void t_REG_to_byte(char *command_name, char *command_data, int fd);
+void t_REG_to_byte(char *command_data, int fd);
 void t_DIR_to_byte(char *command_name, char *command_data, int fd, t_hash_table *hash, t_corewar *corewar, int current_line);
 void t_IND_to_byte(char *command_data, int fd);
 
