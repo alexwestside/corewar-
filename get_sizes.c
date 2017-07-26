@@ -92,6 +92,8 @@ size_t get_distance_to_method(char *command_name, t_corewar *corewar, int curren
 				distance += get_size_args(hash_command);
 				hash_command = hash_command->next;
 			}
+			if (!ft_strcmp(command_name, hash->lable))
+				return (distance);
 		}
 		else
 		{
@@ -104,58 +106,6 @@ size_t get_distance_to_method(char *command_name, t_corewar *corewar, int curren
 	}
 	return (distance);
 }
-
-//size_t get_distance_to_method(char *command_name, /*t_hash_table *hash, */t_corewar * corewar)
-//{
-//	size_t distance = 0;
-//	t_command *command;
-//	t_hash_table *hash;
-//	t_command *hash_command;
-//    int current_line = 0;
-//
-////    if (!ft_strcmp(command_name, "zjmp") || !ft_strcmp(command_name, "fork"))
-////        current_line = 1;
-////    else
-////        current_line = 0;
-//	command = corewar->bot.command;
-//	while (command)
-//	{
-//		if (command->method && !ft_strcmp(command->method, command_name))
-//			break ;
-//		if (command->method)
-//		{
-//			hash = get_table(corewar->bot.hash_table, corewar->bot.keys, command->method);
-//			hash_command = hash->command;
-//			while (hash_command)
-//			{
-//                if (!ft_strcmp(command_name, "zjmp") || current_line_check(hash_command, command_name))
-//                    current_line = 1;
-////				if(!strcmp(hash_command->command_name, command_name))
-////                    break ;
-//                if(!strcmp(hash->lable, command_name))
-//					return (distance);
-//				if (hash_command->count_args > 1 || !ft_strcmp(hash_command->command_name, "aff"))
-//					current_line ? distance += 2 : 0;
-//				else
-//                    current_line ? distance += 1 : 0;
-//                current_line ? distance += get_size_args(hash_command) : 0;
-//				hash_command = hash_command->next;
-//			}
-//		}
-//		else
-//		{
-//            if (!ft_strcmp(command_name, "zjmp") || current_line_check(command, command_name))
-//                current_line = 1;
-//			if (command->count_args > 1 || !ft_strcmp(command->command_name, "aff"))
-//                current_line ? distance += 2 : 0;
-//			else
-//                current_line ? distance += 1 : 0;
-//            current_line ? distance += get_size_args(command) : 0;
-//		}
-//		command = command->next;
-//	}
-//	return (distance);
-//}
 
 void get_prog_size(header_t *header, t_corewar *corewar, int fd) {
 	unsigned size = 0;
@@ -189,9 +139,12 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd) {
 		command = command->next;
 	}
 	header->prog_size = size;
-	write(fd, "\0", sizeof(header->prog_size) - ((size / (MEM_SIZE >> 4)) + 1));
-	(size / (MEM_SIZE >> 4) + 1) >= 2 ? swap_bytes((char *) &header->prog_size, sizeof(header->prog_size)) : 0;
-	write(fd, &header->prog_size, (size / (MEM_SIZE >> 4)) + 1);
+
+	swap_bytes((char *)&header->prog_size, sizeof(header->prog_size));
+	write(fd, &header->prog_size, sizeof(header->prog_size));
+//	write(fd, "\0", sizeof(header->prog_size) - ((size / (MEM_SIZE >> 4)) + 1));
+//	(size / (MEM_SIZE >> 4) + 1) >= 2 ? swap_bytes((char *) &header->prog_size, sizeof(header->prog_size)) : 0;
+//	write(fd, &header->prog_size, (size / (MEM_SIZE >> 4)) + 1);
 }
 
 //void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar *corewar)
