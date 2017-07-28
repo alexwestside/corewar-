@@ -29,17 +29,10 @@ void hex_magic(int n, int fd, char *str, size_t *i)
 
 void str_to_hex(char *str, int fd, int len)
 {
-
-
 	while (len--)
 	{
-//		if (*str)
-//		{
 		hex(*str, fd);
 		str++;
-//		}
-//		else
-//			ft_putstr_fd("00", fd);
 	}
 }
 
@@ -124,14 +117,6 @@ int swap_bytes(char *s, size_t size)
 	int i = -1;
 	int j;
 	char tmp;
-
-////	while(++i < size - 1)
-//	while (++i < 2)
-//	{
-//		tmp = s[i];
-//		s[i] = s[i + 1];
-//		s[i + 1] = tmp;
-//	}
 	while(++i < size - 1)
 	{
 		j = -1;
@@ -142,11 +127,6 @@ int swap_bytes(char *s, size_t size)
 			s[j + 1] = tmp;
 		}
 	}
-
-
-//	tmp = s[0];
-//	s[0] = s[1];
-//	s[1] = tmp;
 	return ((int)s);
 }
 
@@ -157,4 +137,17 @@ int current_line_check(t_command *command, char *command_name)
         if (ft_strstr(command->arg[i].data, command_name))
             return (1);
     return (0);
+}
+
+
+size_t get_byte_num(int dir_num)
+{
+	size_t byte_num = 0;
+
+	while (dir_num > 0)
+	{
+		dir_num /= 256;
+		byte_num++;
+	}
+	return (byte_num);
 }

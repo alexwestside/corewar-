@@ -7,7 +7,6 @@ size_t get_t_dir_size(char *command_name) {
 	while (++i < REG_NUMBER) {
 		if (!ft_strcmp(command_name, op_tab[i].command_name))
 			break;
-		//		i++;
 	}
 	size = op_tab[i].cod_octal ? 2 : 4;
 	return (size);
@@ -28,7 +27,7 @@ int get_size_args(t_command *command) {
 	return (size);
 }
 
-size_t get_distance_to_command(char *command_name, t_corewar *corewar, int current_line)
+size_t get_distance_to_command(t_corewar *corewar, int current_line)
 {
 	size_t distance = 0;
 	t_command *command;
@@ -142,21 +141,4 @@ void get_prog_size(header_t *header, t_corewar *corewar, int fd) {
 
 	swap_bytes((char *)&header->prog_size, sizeof(header->prog_size));
 	write(fd, &header->prog_size, sizeof(header->prog_size));
-//	write(fd, "\0", sizeof(header->prog_size) - ((size / (MEM_SIZE >> 4)) + 1));
-//	(size / (MEM_SIZE >> 4) + 1) >= 2 ? swap_bytes((char *) &header->prog_size, sizeof(header->prog_size)) : 0;
-//	write(fd, &header->prog_size, (size / (MEM_SIZE >> 4)) + 1);
 }
-
-//void get_zjmp_distance(char *command_name, char *command_data, int fd, t_corewar *corewar)
-//{
-//	size_t dist_to_zjmp = 0;
-//	size_t dist_to_method = 0;
-//	int zjmp_distance = 0;
-//
-//	size_t size = get_t_dir_size(command_name);
-//	dist_to_zjmp = get_distance_to_method(command_name, corewar);
-//	dist_to_method = get_distance_to_method(ft_strsplit(command_data, ':')[1], corewar);
-//	zjmp_distance = (int)(dist_to_method - dist_to_zjmp);
-//	swap_bytes((char *)&zjmp_distance, size);
-//	write(fd, &zjmp_distance, size);
-//}
