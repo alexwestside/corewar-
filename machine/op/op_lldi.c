@@ -3,7 +3,7 @@
 #include "../machine.h"
 
 
-void    op_lldi(int args[MAX_ARGS_NUMBER], t_machine *vm, t_forks *forks)
+void    op_lldi(int args[MAX_ARGS_NUMBER], t_forks *forks, t_machine *vm)
 {
     int f_arg;
     int s_arg;

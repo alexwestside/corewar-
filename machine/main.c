@@ -36,7 +36,7 @@ int		main(int argc, char **argv)
 	t_machine	vm;
 	char		*path_files[MAX_ARGS_NUMBER];
 
-	init_op();
+//	init_op();
 	if (argc == 1)
 		usage(1, NULL);
 		// todo help use
@@ -45,7 +45,7 @@ int		main(int argc, char **argv)
 		usage(2, argv[1]);
 	if (multi_parsing_files(&vm, path_files))
 		usage(3, NULL);
-	work_with_flags();
+//	work_with_flags();
 	head_print(vm);
 	console_print_arena(vm);
 	test_print_code_player(vm);

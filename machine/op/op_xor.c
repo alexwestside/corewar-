@@ -3,7 +3,7 @@
 #include "../machine.h"
 
 
-void    op_xor(int args[MAX_ARGS_NUMBER], t_machine *vm, t_forks *fork)
+void    op_xor(int args[MAX_ARGS_NUMBER], t_forks *fork, t_machine *vm)
 {
     int f_arg;
     int s_arg;

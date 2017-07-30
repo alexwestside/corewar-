@@ -140,3 +140,20 @@ void	run_vm(t_machine vm)
 		vm.count_life >= NBR_LIVE || j == MAX_CHECKS ? j = 0 : 0;
 	}
 }
+
+
+void	run_vm(t_machine vm)
+{
+	unsigned	i;
+	int 		j;
+
+	i = 0;
+	j = -1;
+	init_arena_vm(&vm);
+	while (vm.head_lst && vm.cycle_to_die_now > 0)
+	{
+
+	}
+
+
+}

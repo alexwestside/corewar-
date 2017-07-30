@@ -22,5 +22,5 @@ void    run_op_cmd(int cmd, int *args, t_forks *fork, t_machine *vm)
         return ;
     if (g_op_tab[cmd].carry == 1)
         change_carry(cmd, fork, args);
-    g_opfunc[cmd].func(args, vm, fork);
+    g_opfunc[cmd].func(args, fork, vm);
 }

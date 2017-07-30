@@ -129,7 +129,7 @@ void    handling_args(int cmd, t_machine *vm, t_forks **tmp)
             args[i] = size > 0 && f == 1 ? read_int(vm, pc, size) : 0;
         }
     if (g_op_tab[cmd].cod_oct == 0 || i == g_op_tab[cmd].params)
-        switch_pc_cmd(cmd, args, *tmp, vm);
+        run_op_cmd(cmd, args, *tmp, vm);
     shift_pc_on_map(*tmp, pc, cmd);
 }
 
