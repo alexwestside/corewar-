@@ -26,7 +26,9 @@ set(SOURCE_FILES
         ./machine/validate_data.c
         ./machine/get_args.c
         ./machine/run_op_cmd.c
+        ./machine/func_fork.c
         ./machine/main.c
+        ./machine/work_vm.c
         ./machine/init.c
         ./machine/op_func.c
         ./machine/usage.c

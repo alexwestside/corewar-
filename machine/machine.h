@@ -12,7 +12,6 @@
 
 #ifndef MACHINE_H
 # define MACHINE_H
-# define MAX_T 3						//	count byte code (T_REG, T_DIR, T_IND)
 # define SIZE_BUFF 1000					// 	read data in code player (after code)
 # define PR_SIZE_ARENA 0x0040			//	variable start when print with flag (d, ...)
 # define GET_DIR_SIZE(cmd) g_op_tab[cmd].size ? DIR_SIZE >> 1 : DIR_SIZE
@@ -30,24 +29,20 @@ typedef struct		s_fork
     int 			pc;           	 	// position in char elements
 	int 			id;					//	number player
 	int				reg[REG_NUMBER];	// registers of the processor
+    int 			mod;
+    int             cmd;
+    unsigned		time_cycle;
+    struct s_fork	*next;
 }					t_fork;
-
-typedef struct		s_forks
-{
-	t_fork			node;
-	int 			mod;
-	unsigned		time_cycle;
-	t_fork			*next;
-}					t_forks;
 
 typedef	struct		s_machine
 {
-	t_forks			*head_lst;				// all forks
+	t_fork			*head_lst;				// all forks
 	unsigned		count_life;				// all life forks
 	int				cycle_to_die_now;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
-	unsigned		cycle_to_die;			// next iter to go cycle_to_die_now
+    int     		cycle_to_die;			// next iter to go cycle_to_die_now
 	unsigned char 	*arena;					//
-	t_forks			*won_player;			// last say "I am life" player
+	int				won_player;			// last say "I am life" player
 	unsigned		count_players;			// count players
 	int 			*id_players;			// number players
 	header_t		*players;				// vector players
@@ -78,27 +73,27 @@ typedef struct			s_m_op
 typedef struct			s_opfunc
 {
 	int					op;
-	void				(*func)(int argvs[MAX_ARGS_NUMBER], t_forks *,  t_machine *);
+	void				(*func)(int argvs[MAX_ARGS_NUMBER], t_fork *,  t_machine *);
 }						t_opfunc;
 
 #endif
 
-void					op_add(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_aff(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_and(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_fork(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_ld(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_ldi(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_lfork(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_live(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_lld(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_lldi(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_or(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_st(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_sti(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_sub(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_xor(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
-void					op_zjmp(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
+void					op_add(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_aff(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_and(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_fork(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_ld(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_ldi(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm);
+void					op_lfork(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_live(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_lld(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm);
+void					op_lldi(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_or(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm);
+void					op_st(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm);
+void					op_sti(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm);
+void					op_sub(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm);
+void					op_xor(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
+void					op_zjmp(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
 
 /*
 ** func tools
@@ -106,9 +101,14 @@ void					op_zjmp(int args[MAX_ARGS_NUMBER], t_forks *player, t_machine *vm);
 
 int     move_pc(int pc);
 int		read_4_bytes(unsigned char *arena, int index);
-void	write_4_bytes(t_machine *vm, t_forks *forks, int index, int var);
-int		get_arg(char bin_code, t_forks *forks, int arg, unsigned char *arena);
-int		get_arg_noidx(char bin_code, t_forks *forks, int arg, unsigned char *arena);
+void	write_4_bytes(t_machine *vm, t_fork *forks, int index, int var);
+int		get_arg(char bin_code, t_fork *fork, int arg, unsigned char *arena);
+int		get_arg_noidx(char bin_code, t_fork *forks, int arg, unsigned char *arena);
+
+void    handling_args(int cmd, t_machine *vm, t_fork *iter);
+
+
+void 		run_vm(t_machine *vm);
 
 
 
@@ -165,7 +165,7 @@ int 	check_corect_data_read(t_machine vm, int index_player);
 void	usage(int count, char *s);
 void	work_with_flags(char **argv, int argc, t_flags *flags);
 int 	is_number(char *s);
-void    run_op_cmd(int cmd, int *args, t_forks *fork, t_machine *vm);
+void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 
 /*
 ** func init_players
@@ -181,6 +181,7 @@ int 			create_point_path(int count_strs, char **strs, char **paths);
 */
 
 t_fork		*create_fork(int id, int pc);
+void		add_before(t_fork **alst, t_fork *node);
 
 /*
 ** func read_file

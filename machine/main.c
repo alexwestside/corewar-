@@ -20,10 +20,10 @@ void	init_vm(t_machine *vm, int count_player)
 		return ;
 	vm->head_lst = NULL;
 	vm->count_life = 0;
-	vm->cycle_to_die_now = 0;
+	vm->cycle_to_die_now = CYCLE_TO_DIE;
 	vm->cycle_to_die = 0;
 	vm->arena = (unsigned char *)ft_strnew(MEM_SIZE);
-	vm->won_player = NULL;
+	vm->won_player = 0;
 	vm->id_players = NULL;
 	vm->players = create_players(vm->count_players);
 	vm->code_players = NULL;
@@ -49,7 +49,8 @@ int		main(int argc, char **argv)
 	head_print(vm);
 	console_print_arena(vm);
 	test_print_code_player(vm);
-	test_code_octal(&vm, '\0');
+//	test_code_octal(&vm, '\0');
+	run_vm(&vm);
 
 	int tet = -1;
 	ft_printf("\n\n test %02x \n\n", (unsigned)tet);

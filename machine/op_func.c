@@ -1,33 +1,33 @@
 
 #include "machine.h"
-
-unsigned char	*test_code_octal(t_machine *vm, unsigned char code)
-{
-	int i;
-	int mov;
-	unsigned char *bytecode;
-
-	bytecode = (unsigned char *)ft_strnew(MAX_T - 1);
-	ft_printf("\n\nhex [%x], bin [%b]\n", vm->code_players[0][1], vm->code_players[0][1]);
-	//todo in "big endian" junior byte skeep this op
-	i = MAX_T; // max unsigned char it's 0xff => 0b11111111 when need to split argument xx xx xx 00
-	mov = 2;
-	code = vm->code_players[0][1];
-	while (--i != -1)
-	{
-		if (i < MAX_T)
-			bytecode[i] = (unsigned char)(code >> mov & 0x03);
-		mov += 2;
-	}
-	// test
-	i = -1;
-	ft_printf("\n\n test code octal\n");
-	while (++i < MAX_T)
-		ft_printf(" %02x", bytecode[i]);
-	ft_putchar('\n');
-	return (bytecode);
-
-}
+//
+//unsigned char	*test_code_octal(t_machine *vm, unsigned char code)
+//{
+//	int i;
+//	int mov;
+//	unsigned char *bytecode;
+//
+//	bytecode = (unsigned char *)ft_strnew(MAX_T - 1);
+//	ft_printf("\n\nhex [%x], bin [%b]\n", vm->code_players[0][1], vm->code_players[0][1]);
+//	//todo in "big endian" junior byte skeep this op
+//	i = MAX_T; // max unsigned char it's 0xff => 0b11111111 when need to split argument xx xx xx 00
+//	mov = 2;
+//	code = vm->code_players[0][1];
+//	while (--i != -1)
+//	{
+//		if (i < MAX_T)
+//			bytecode[i] = (unsigned char)(code >> mov & 0x03);
+//		mov += 2;
+//	}
+//	// test
+//	i = -1;
+//	ft_printf("\n\n test code octal\n");
+//	while (++i < MAX_T)
+//		ft_printf(" %02x", bytecode[i]);
+//	ft_putchar('\n');
+//	return (bytecode);
+//
+//}
 
 //int 	*code_octal(int code)
 //{
@@ -68,26 +68,26 @@ unsigned char	*test_code_octal(t_machine *vm, unsigned char code)
 //}
 
 
-void	sti(t_machine *vm, t_forks *fork)
-{
-	size_t p_pc;
-	int sum;
-	unsigned char *bytecode;
-	int i;
-
-	i = 0;
-	p_pc = fork->node.pc;
-	if (op_tab[p_pc].carry)
-		bytecode = test_code_octal(vm, vm->arena[(p_pc + 1) % MEM_SIZE]);
-	// todo create func to check correctly bytecode and run func when have bytecode
-	sum = 0;
-	while (++i < op_tab[p_pc].count_args)
-	{
-		sum += bytecode[i] == REG_CODE ? (int)vm->arena[(p_pc + 2) % MEM_SIZE] : 0;
-		sum += bytecode[i] == DIR_CODE ? (int)vm->arena[(p_pc + 4) % MEM_SIZE]: 0; // {"sti", 3, {0, 0, 0}, 11, 25, "store index", 1, 1},
-																					// last element 1 == 2b in DIR_CODE
-		sum += bytecode[i] == IND_CODE ? (int)vm->arena[(p_pc + 6) % MEM_SIZE]: 0;
-	}
-
-	free(bytecode);
-}
+//void	sti(t_machine *vm, t_fork *fork)
+//{
+//	size_t p_pc;
+//	int sum;
+//	unsigned char *bytecode;
+//	int i;
+//
+//	i = 0;
+//	p_pc = fork->node.pc;
+//	if (op_tab[p_pc].carry)
+//		bytecode = test_code_octal(vm, vm->arena[(p_pc + 1) % MEM_SIZE]);
+//	// todo create func to check correctly bytecode and run func when have bytecode
+//	sum = 0;
+//	while (++i < op_tab[p_pc].count_args)
+//	{
+//		sum += bytecode[i] == REG_CODE ? (int)vm->arena[(p_pc + 2) % MEM_SIZE] : 0;
+//		sum += bytecode[i] == DIR_CODE ? (int)vm->arena[(p_pc + 4) % MEM_SIZE]: 0; // {"sti", 3, {0, 0, 0}, 11, 25, "store index", 1, 1},
+//																					// last element 1 == 2b in DIR_CODE
+//		sum += bytecode[i] == IND_CODE ? (int)vm->arena[(p_pc + 6) % MEM_SIZE]: 0;
+//	}
+//
+//	free(bytecode);
+//}

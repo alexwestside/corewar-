@@ -3,9 +3,8 @@
 #include "../machine.h"
 
 
-void    op_sub(int args[MAX_ARGS_NUMBER], t_forks *forks, t_machine *vm)
+void    op_sub(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm)
 {
     (void)vm;
-    forks->node.reg[args[2] - 1] = forks->node.reg[args[0] - 1] -
-            forks->node.reg[args[1] - 1];
+    fork->reg[args[2] - 1] = fork->reg[args[0] - 1] - fork->reg[args[1] - 1];
 }

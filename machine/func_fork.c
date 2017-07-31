@@ -9,51 +9,21 @@ t_fork		*create_fork(int id, int pc)
 	new_fork = (t_fork*)malloc(sizeof(t_fork));
 	if (new_fork == NULL)
 		return (NULL);
-	new_fork = (t_fork){0, 0, pc, id};
+	new_fork->carry = 0;
+	new_fork->life = 0;
+	new_fork->pc = pc;
+	new_fork->id = id;
 	new_fork->reg[0] = id;
+	new_fork->mod = 0;
+	new_fork->cmd = 0;
+	new_fork->time_cycle = 0;
+	new_fork->next = NULL;
 	return (new_fork);
 }
 
-t_forks		*create_containe(t_fork *node)
+void		add_before(t_fork **alst, t_fork *node)
 {
-	t_forks *new_container;
-
-	new_container = (t_forks*)malloc(sizeof(t_forks));
-	if (new_container == NULL)
-		return (NULL);
-	new_container = (t_forks){node, 0, 0, NULL};
-	return (new_container);
-}
-
-
-void		add_forks(t_forks **alts, t_fork *node)
-{
-	t_forks *p;
-	t_forks *new;
-
-	new = create_containe(node);
-	if (new == NULL)
-		return ;
-	p = *alts;
-	if (p)
-		new->next = p->next;
-	p = new;
-}
-
-void		delete(t_forks **alts, t_forks *node)
-{
-	t_forks *p;
-
-	p = *alts;
-	if (p == node)
-	{
-		p = node->next;
-		free(node);
-		return ;
-	}
-	else
-		while (p && p != node)
-			p = p->next;
-	p != NULL ? p->next = node->next : 0;
-	free(node);
+	if (*alst)
+		node->next = *alst;
+	*alst = node;
 }
