@@ -14,7 +14,10 @@
 # define MACHINE_H
 # define SIZE_BUFF 1000					// 	read data in code player (after code)
 # define PR_SIZE_ARENA 0x0040			//	variable start when print with flag (d, ...)
-# define GET_DIR_SIZE(cmd) g_op_tab[cmd].size ? DIR_SIZE >> 1 : DIR_SIZE
+#define IND_SIZE 2
+#define REG_SIZE 1
+#define DIR_SIZE REG_SIZE
+# define GET_DIR_SIZE(cmd) g_op_tab[cmd].size ? DIR_SIZE << 1 : DIR_SIZE << 2
 # define IS_VAL_REG(r) 0 < r && r < 17 ? 1 : 0
 # include <fcntl.h>
 # include <ncurses.h>
@@ -26,7 +29,7 @@ typedef struct		s_fork
 {
 	int				carry : 1; 			// carry flag
 	int 			life : 1;			// process worker
-    int 			pc;           	 	// position in char elements
+    unsigned		pc;           	 	// position in char elements
 	int 			id;					//	number player
 	int				reg[REG_NUMBER];	// registers of the processor
     int 			mod;
@@ -39,10 +42,12 @@ typedef	struct		s_machine
 {
 	t_fork			*head_lst;				// all forks
 	unsigned		count_life;				// all life forks
-	int				cycle_to_die_now;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
-    int     		cycle_to_die;			// next iter to go cycle_to_die_now
+	int				iter_cycle_to_die;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
+    int     		cycle_to_die;			// next iter to go iter_cycle_to_die
+    int             iter_max_checks;
 	unsigned char 	*arena;					//
 	int				won_player;			// last say "I am life" player
+    int             count_forks;
 	unsigned		count_players;			// count players
 	int 			*id_players;			// number players
 	header_t		*players;				// vector players
@@ -99,12 +104,11 @@ void					op_zjmp(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
 ** func tools
 */
 
-int     move_pc(int pc);
+unsigned     move_pc(int pc);
 int		read_4_bytes(unsigned char *arena, int index);
 void	write_4_bytes(t_machine *vm, t_fork *forks, int index, int var);
 int		get_arg(char bin_code, t_fork *fork, int arg, unsigned char *arena);
 int		get_arg_noidx(char bin_code, t_fork *forks, int arg, unsigned char *arena);
-
 void    handling_args(int cmd, t_machine *vm, t_fork *iter);
 
 
@@ -113,46 +117,46 @@ void 		run_vm(t_machine *vm);
 
 
 
-static const t_opfunc	g_opfunc[] =
-		{
-				{0,   &op_live},
-				{1,   &op_ld},
-				{2,   &op_st},
-				{3,   &op_add},
-				{4,   &op_sub},
-				{5,   &op_and},
-				{6,   &op_or},
-				{7,   &op_xor},
-				{8,   &op_zjmp},
-				{9,   &op_ldi},
-				{10,  &op_sti},
-				{11,  &op_fork},
-				{12,  &op_lld},
-				{13,  &op_lldi},
-				{14,  &op_lfork},
-				{15,  &op_aff}
-		};
+//static const t_opfunc	g_opfunc[] =
+//		{
+//				{0,   &op_live},
+//				{1,   &op_ld},
+//				{2,   &op_st},
+//				{3,   &op_add},
+//				{4,   &op_sub},
+//				{5,   &op_and},
+//				{6,   &op_or},
+//				{7,   &op_xor},
+//				{8,   &op_zjmp},
+//				{9,   &op_ldi},
+//				{10,  &op_sti},
+//				{11,  &op_fork},
+//				{12,  &op_lld},
+//				{13,  &op_lldi},
+//				{14,  &op_lfork},
+//				{15,  &op_aff}
+//		};
 
 static const t_m_op	g_op_tab[17] =
 		{
-				{"live",  1, {T_DIR},       								1, 10,   "alive",            0, 0, 0},
-				{"ld",    2, {T_DIR | T_IND, T_REG},    					2,  5,    "load",            1, 1, 0},
+				{"live",  1, {T_DIR},       								1, 10,   "alive",            0, 0, 4},
+				{"ld",    2, {T_DIR | T_IND, T_REG},    					2,  5,    "load",            1, 1, 4},
 				{"st",    2, {T_REG, T_IND | T_REG},    					3,  5,    "store",           0, 1, 0},
 				{"add",   3, {T_REG, T_REG, T_REG},                         4,  10,   "addition",        1, 1, 0},
 				{"sub",   3, {T_REG, T_REG, T_REG}, 						5,  10,   "soustraction",    1, 1, 0},
 				{"and",   3, {T_REG | T_DIR | T_IND, T_REG | T_IND | T_DIR, T_REG}, 6, 6,
-						"et (and  r1, r2, r3   r1&r2 -> r3",    1, 1, 0},
+						"et (and  r1, r2, r3   r1&r2 -> r3",    1, 1, 4},
 				{"or",    3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG}, 7, 6,
-						"ou  (or   r1, r2, r3   r1 | r2 -> r3", 1, 1, 0},
+						"ou  (or   r1, r2, r3   r1 | r2 -> r3", 1, 1, 4},
 				{"xor",   3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG}, 8, 6,
-						"ou (xor  r1, r2, r3   r1^r2 -> r3",    1, 1, 0},
-				{"zjmp",  1, {T_DIR}, 										9,  20,   "jump if zero",	 0, 0, 1},
-				{"ldi",   3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 10, 25,   "load index",      0, 1, 1},
-				{"sti",   3, {T_REG, T_REG | T_DIR | T_IND, T_DIR | T_REG}, 11, 25,   "store index",     0, 1, 1},
-				{"fork",  1, {T_DIR},       								12, 800,  "fork",            0, 0, 1},
-				{"lld",   2, {T_DIR | T_IND, T_REG},						13, 10,   "long load",       1, 1, 0},
-				{"lldi",  3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 14, 50,   "long load index", 1, 1, 1},
-				{"lfork", 1, {T_DIR},       								15, 1000, "long fork",       0, 0, 1},
+						"ou (xor  r1, r2, r3   r1^r2 -> r3",    1, 1, 4},
+				{"zjmp",  1, {T_DIR}, 										9,  20,   "jump if zero",	 0, 0, 2},
+				{"ldi",   3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 10, 25,   "load index",      0, 1, 2},
+				{"sti",   3, {T_REG, T_REG | T_DIR | T_IND, T_DIR | T_REG}, 11, 25,   "store index",     0, 1, 2},
+				{"fork",  1, {T_DIR},       								12, 800,  "fork",            0, 0, 2},
+				{"lld",   2, {T_DIR | T_IND, T_REG},						13, 10,   "long load",       1, 1, 4},
+				{"lldi",  3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 14, 50,   "long load index", 1, 1, 2},
+				{"lfork", 1, {T_DIR},       								15, 1000, "long fork",       0, 0, 2},
 				{"aff",   1, {T_REG},										16, 2,    "aff",             0, 1, 0},
 				{0,       0, {0},      										0,  0,    0,                 0, 0, 0}
 		};

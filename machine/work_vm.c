@@ -16,42 +16,12 @@ void	init_arena_vm(t_machine *vm)
 //			break ;
 		ft_memcpy(vm->arena + size_pl, vm->code_players[i], vm->size_code_players[i]);
         add_before(&vm->head_lst, create_fork(-(i + 1), size_pl));
+        vm->count_forks++;
 	}
 	// debug
 //	if (i != vm->count_players)
 //		ft_printf("/n/nError to init arena vm index %d %d > %d/n/n", i, size_pl + vm->size_code_players[i], MEM_SIZE);
 }
-
-
-
-//void	run_vm(t_machine vm)
-//{
-//	unsigned	i;
-//	int			j;
-//	t_tasks		*node;
-//
-//	i = 0;
-//	j = -1;
-//	init_arena_vm(&vm);
-//	init_forks(&vm, 0);
-//	while (vm.cycle_to_die_now > 0)
-//	{
-//		while (++i <= vm.cycle_to_die_now || j < MAX_CHECKS)
-//		{
-//			init_forks(&vm, i);
-//			working_forks(&vm, i);
-//			//todo remember when forks save life for player and vm.count_life += 1
-//			//todo check task is faled operation or byte '00' move to task_zombi
-//		}
-//		//todo check life forks
-//		//todo del forks ho dont life
-//		if (vm.head_lst == NULL)
-//			break ;
-//		vm.count_life >= NBR_LIVE || j == MAX_CHECKS ? vm.cycle_to_die_now += (vm.cycle_to_die -= CYCLE_DELTA) : j++;
-//		vm.count_life >= NBR_LIVE || j == MAX_CHECKS ? j = 0 : 0;
-//	}
-//}
-
 
 void    check_forks(t_machine *vm, unsigned cycle)
 {
@@ -78,26 +48,75 @@ void    check_forks(t_machine *vm, unsigned cycle)
             else
                 iter->pc = move_pc(iter->pc + 1);
         }
-        iter->next;
+        iter = iter->next;
+    }
+}
+
+void    overwrite_cycle_to_die(t_machine *vm)
+{
+    if (vm->count_life >= NBR_LIVE || vm->iter_max_checks == MAX_CHECKS)
+    {
+        vm->cycle_to_die -= CYCLE_DELTA;
+        vm->iter_max_checks = 0;
+        ft_printf("cycle to die %d \n", vm->cycle_to_die);
+    }
+    else
+        vm->iter_max_checks++;
+    vm->count_life = 0;
+    vm->iter_cycle_to_die += vm->cycle_to_die;
+}
+
+void    cycle_to_die(t_machine *vm)
+{
+    t_fork *iter;
+    t_fork *next;
+
+    iter = vm->head_lst;
+    while (iter)
+    {
+        next = iter->next;
+        if (iter->life == 0)
+        {
+            if (vm->head_lst == iter)
+                vm->head_lst = iter->next;
+            next ? next->next = iter->next : 0;
+            free(iter);
+            vm->count_forks--;
+        }
+        iter = next;
+    }
+    overwrite_cycle_to_die(vm);
+}
+
+void    print_forks(t_fork *head)
+{
+    t_fork *tmp;
+
+    tmp = head;
+    while (tmp)
+    {
+        ft_printf("fork pc %d \n", tmp->pc);
+        tmp = tmp->next;
     }
 }
 
 
 void	run_vm(t_machine *vm)
 {
-	unsigned	i;
-	int 		j;
+	unsigned    i;
 
 	i = 0;
-	j = -1;
 	init_arena_vm(vm);
     console_print_arena(*vm);
-	while (vm->head_lst)
+
+    print_forks(vm->head_lst);
+	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
         check_forks(vm, i);
+//        console_print_arena(*vm);
+        if (i == vm->iter_cycle_to_die)
+            cycle_to_die(vm);
         i++;
-        console_print_arena(*vm);
 	}
-
-
+    printf("finish\n\n");
 }
