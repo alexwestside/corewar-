@@ -14,7 +14,7 @@ void	init_arena_vm(t_machine *vm)
 		size_pl = size * i;
 //		if (size_pl + vm->size_code_players[i] > MEM_SIZE)
 //			break ;
-		ft_memcpy(vm->arena + size_pl, vm->code_players[i], vm->size_code_players[i]);
+		ft_memcpy(vm->arena + size_pl, vm->players[i].code, vm->players[i].prog_size);
         add_before(&vm->head_lst, create_fork(-(i + 1), size_pl));
         vm->count_forks++;
 	}
@@ -54,7 +54,7 @@ void    check_forks(t_machine *vm, unsigned cycle)
 
 void    overwrite_cycle_to_die(t_machine *vm)
 {
-    if (vm->count_life >= NBR_LIVE || vm->iter_max_checks == MAX_CHECKS)
+    if (vm->count_live >= NBR_LIVE || vm->iter_max_checks == MAX_CHECKS)
     {
         vm->cycle_to_die -= CYCLE_DELTA;
         vm->iter_max_checks = 0;
@@ -62,7 +62,7 @@ void    overwrite_cycle_to_die(t_machine *vm)
     }
     else
         vm->iter_max_checks++;
-    vm->count_life = 0;
+    vm->count_live = 0;
     vm->iter_cycle_to_die += vm->cycle_to_die;
 }
 
@@ -83,6 +83,8 @@ void    cycle_to_die(t_machine *vm)
             free(iter);
             vm->count_forks--;
         }
+        else
+            iter->life = 0;
         iter = next;
     }
     overwrite_cycle_to_die(vm);
@@ -118,5 +120,5 @@ void	run_vm(t_machine *vm)
             cycle_to_die(vm);
         i++;
 	}
-    printf("finish\n\n");
+    printf("finish %u\n\n",  i);
 }

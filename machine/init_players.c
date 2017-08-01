@@ -1,11 +1,24 @@
 
 #include "machine.h"
 
-header_t	*create_players(int count)
+t_player	*create_players(int count)
 {
-	header_t *players;
+	int 	i;
+	t_player *players;
 
-	players = (header_t *)malloc(count * sizeof(header_t));
+	i = -1;
+	players = (t_player *)malloc(count * sizeof(t_player));
+	while (players && ++i < count)
+	{
+		players[i].id = 0;
+		players[i].last_live = 0;
+		players[i].count_live = 0;
+		players[i].magic = 0;
+		ft_bzero(players[i].prog_name, PROG_NAME_LENGTH);
+		players[i].prog_size = 0;
+		ft_bzero(players[i].comment, PROG_NAME_LENGTH);
+		players[i].code = NULL;
+	}
 	return (players ? players : NULL);
 }
 

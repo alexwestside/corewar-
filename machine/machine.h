@@ -38,21 +38,30 @@ typedef struct		s_fork
     struct s_fork	*next;
 }					t_fork;
 
+typedef struct      s_player
+{
+    int             id;
+    unsigned        last_live;
+    unsigned        count_live;
+    unsigned        magic;
+    char 			prog_name[PROG_NAME_LENGTH + 1];
+    unsigned        prog_size;
+    char 			comment[COMMENT_LENGTH + 1];
+    unsigned char   *code;
+}                   t_player;
+
 typedef	struct		s_machine
 {
 	t_fork			*head_lst;				// all forks
-	unsigned		count_life;				// all life forks
+	unsigned		count_live;				// all life forks
 	int				iter_cycle_to_die;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
     int     		cycle_to_die;			// next iter to go iter_cycle_to_die
     int             iter_max_checks;
 	unsigned char 	*arena;					//
 	int				won_player;			// last say "I am life" player
-    int             count_forks;
+    unsigned        count_forks;
 	unsigned		count_players;			// count players
-	int 			*id_players;			// number players
-	header_t		*players;				// vector players
-	unsigned char	**code_players;			// code players
-	size_t			*size_code_players;		// size code read file
+	t_player        *players;
 }					t_machine;
 
 typedef struct		s_flags
@@ -175,7 +184,7 @@ void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 ** func init_players
 */
 
-header_t		*create_players(int count);
+t_player		*create_players(int count);
 unsigned char	**create_code_player(int count);
 int 			create_point_path(int count_strs, char **strs, char **paths);
 

@@ -17,8 +17,8 @@ int 	multi_parsing_files(t_machine *vm, char **path_files)
 		if (err == -1 || (fd = open(path_files[i], O_RDONLY)) == -1)
 			break ;
 		read_data(vm, fd, i);
-		read_code_player(vm, fd, i);
-		err = check_corect_data_read(*vm, i);
+		err = read_code_player(vm, fd, i);
+		err != -1 ? err = check_corect_data_read(*vm, i) : 0;
 		close(fd);
 	}
 	return (err == -1 || fd == -1 ? -1 : 0);
@@ -81,13 +81,10 @@ int		read_code_player(t_machine *vm, int fd, int index)
 		tmp = realloc(tmp, (size_t)rd);
 		ft_memcpy(tmp, buff, (size_t)rd);
 	}
-	if (vm->code_players == NULL)
-		vm->code_players = (unsigned char **)malloc(vm->count_players * sizeof(unsigned char*));
-	if (vm->code_players == NULL)
-		return (-1);
-	vm->code_players[index] = (unsigned char *)malloc(sum * sizeof(unsigned char));
-	vm->size_code_players[index] = sum;
-	ft_memcpy(vm->code_players[index], tmp, sum);
+	vm->players[index].code = (unsigned char *)malloc(sum * sizeof(unsigned char));
+	ft_memcpy(vm->players[index].code, tmp, sum);
 	free(tmp);
+	if (vm->players[index].prog_size != sum)
+		return (-1);
 	return (sum > 0 ? (int)sum : -1);
 }

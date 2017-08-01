@@ -17,8 +17,6 @@ int 	check_corect_data_read(t_machine vm, int index_player)
 {
 	if (vm.players[index_player].magic != COREWAR_EXEC_MAGIC)
 		return (-1);
-	if (vm.size_code_players[index_player] != vm.players[index_player].prog_size)
-		return (-1);
 	if (vm.players[index_player].prog_size > CHAMP_MAX_SIZE)
 		return (-1);
 	return (0);
@@ -33,7 +31,7 @@ int		check_placement_players(t_machine vm)
 	i = -1;
 	size =  MEM_SIZE / vm.count_players;
 	while (++i < vm.count_players)
-		if (vm.size_code_players[i] > size)
+		if (vm.players[i].prog_size > size)
 			return (-2);
 	return (0);
 }

@@ -19,18 +19,14 @@ void	init_vm(t_machine *vm, int count_player)
 	if (vm->count_players == 0)
 		return ;
 	vm->head_lst = NULL;
-	vm->count_life = 0;
+	vm->count_live = 0;
 	vm->iter_cycle_to_die = CYCLE_TO_DIE;
 	vm->cycle_to_die = CYCLE_TO_DIE;
     vm->iter_max_checks = 0;
 	vm->arena = (unsigned char *)ft_strnew(MEM_SIZE);
     vm->count_forks = 0;
 	vm->won_player = 0;
-	vm->id_players = NULL;
 	vm->players = create_players(vm->count_players);
-	vm->code_players = NULL;
-//	vm->code_players = create_code_player(vm->count_players);
-	vm->size_code_players = (size_t*)malloc(vm->count_players);
 }
 
 int		main(int argc, char **argv)

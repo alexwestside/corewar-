@@ -10,10 +10,6 @@ static void     change_carry(int cmd, t_fork *fork, int *args)
     fork->carry = fork->reg[args[tmp] - 1] == 0 ? 1 : 0;
 }
 
-/*
-** if argument is T_REG, but not valid, then skip command and args
-*/
-
 void    switch_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
 {
     static t_opfunc	opfunc[] =
@@ -38,6 +34,10 @@ void    switch_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
     opfunc[cmd].func(args, fork, vm);
 }
 
+
+/*
+** if argument is T_REG, but not valid, then skip command and args
+*/
 
 void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
 {

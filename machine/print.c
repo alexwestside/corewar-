@@ -34,11 +34,11 @@ void	test_print_code_player(t_machine vm)
 	while (++j < vm.count_players)
 	{
 		i = -1;
-		ft_printf("\n\n size code player [%u]\n", vm.size_code_players[j]);
+		ft_printf("\n\n size code player [%u]\n", vm.players[j].prog_size);
 		ft_printf("\n\n byte code player [%d]\n", j);
-		while (++i < vm.size_code_players[j])
+		while (++i < vm.players[j].prog_size)
 		{
-			ft_printf(" %02x", vm.code_players[j][i]);
+			ft_printf(" %02x", vm.players[j].code[i]);
 		}
 		ft_putchar('\n');
 	}
