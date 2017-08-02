@@ -22,6 +22,8 @@
 # include "../libft/ft_printf.h"
 # include "../op.h"
 
+unsigned debug_cicle;
+
 typedef struct		s_fork
 {
 	int				carry; 			// carry flag

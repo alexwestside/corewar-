@@ -122,5 +122,5 @@ void    handling_args(int cmd, t_machine *vm, t_fork *tmp)
         }
     if (g_op_tab[cmd].cod_oct == 0 || f == g_op_tab[cmd].params)
         run_op_cmd(cmd, args, tmp, vm);
-    shift_pc_on_map(tmp, g_op_tab ? pc + 1 : pc, cmd);
+    shift_pc_on_map(tmp, pc + 1, cmd);
 }

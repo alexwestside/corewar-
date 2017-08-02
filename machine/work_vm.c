@@ -51,7 +51,7 @@ void    check_forks(t_machine *vm, unsigned cycle)
         if (iter->mod == 1 && iter->time_cycle && cycle == iter->time_cycle)
         {
             handling_args(iter->cmd - 1, vm, iter);
-            debug(*vm, cycle);
+//            debug(*vm, cycle);
             iter->mod = 0;
         }
         if (iter->mod == 0)
@@ -72,16 +72,16 @@ void    check_forks(t_machine *vm, unsigned cycle)
 
 void    overwrite_cycle_to_die(t_machine *vm)
 {
+    vm->iter_max_checks++;
     if (vm->count_live >= NBR_LIVE || vm->iter_max_checks == MAX_CHECKS)
     {
         vm->cycle_to_die -= CYCLE_DELTA;
+        vm->iter_cycle_to_die = debug_cicle + vm->cycle_to_die;
         vm->iter_max_checks = 0;
-        ft_printf("cycle to die %d \n", vm->cycle_to_die);
+//        ft_printf("cycle to die %d cycle %u count_live %u  last live %us\n", vm->cycle_to_die, debug_cicle, vm->count_live, vm->players[0].last_live);
     }
-    else
-        vm->iter_max_checks++;
     vm->count_live = 0;
-    vm->iter_cycle_to_die += vm->cycle_to_die;
+    vm->iter_cycle_to_die = debug_cicle + vm->cycle_to_die;
 }
 
 void    cycle_to_die(t_machine *vm)
@@ -137,6 +137,7 @@ void	run_vm(t_machine *vm)
         if (i == vm->iter_cycle_to_die)
             cycle_to_die(vm);
         i++;
+        debug_cicle = i;
 	}
     printf("finish %u\n\n",  i);
 }
