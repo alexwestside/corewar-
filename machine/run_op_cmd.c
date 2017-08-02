@@ -31,7 +31,7 @@ void    switch_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
                     {14,  &op_lfork},
                     {15,  &op_aff}
             };
-    if (0 < cmd < 17)
+    if (0 <= cmd < 17)
         opfunc[cmd].func(args, fork, vm);
 }
 
