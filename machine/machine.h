@@ -16,9 +16,6 @@
 # define PR_SIZE_ARENA 0x0040			//	variable start when print with flag (d, ...)
 #define IND_SIZE 2
 #define REG_SIZE 1
-#define DIR_SIZE REG_SIZE
-# define GET_DIR_SIZE(cmd) g_op_tab[cmd].size ? DIR_SIZE << 1 : DIR_SIZE << 2
-# define IS_VAL_REG(r) 0 < r && r < 17 ? 1 : 0
 # include <fcntl.h>
 # include <ncurses.h>
 # include "../libft/libft.h"
@@ -27,8 +24,8 @@
 
 typedef struct		s_fork
 {
-	int				carry : 1; 			// carry flag
-	int 			life : 1;			// process worker
+	int				carry; 			// carry flag
+	int 			life;			// process worker
     unsigned		pc;           	 	// position in char elements
 	int 			id;					//	number player
 	int				reg[REG_NUMBER];	// registers of the processor
@@ -123,28 +120,6 @@ void    handling_args(int cmd, t_machine *vm, t_fork *iter);
 
 void 		run_vm(t_machine *vm);
 
-
-
-
-//static const t_opfunc	g_opfunc[] =
-//		{
-//				{0,   &op_live},
-//				{1,   &op_ld},
-//				{2,   &op_st},
-//				{3,   &op_add},
-//				{4,   &op_sub},
-//				{5,   &op_and},
-//				{6,   &op_or},
-//				{7,   &op_xor},
-//				{8,   &op_zjmp},
-//				{9,   &op_ldi},
-//				{10,  &op_sti},
-//				{11,  &op_fork},
-//				{12,  &op_lld},
-//				{13,  &op_lldi},
-//				{14,  &op_lfork},
-//				{15,  &op_aff}
-//		};
 
 static const t_m_op	g_op_tab[17] =
 		{

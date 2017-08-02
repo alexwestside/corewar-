@@ -1,7 +1,6 @@
 
 #include "machine.h"
 
-
 unsigned     move_pc(int pc)
 {
     int move;
@@ -16,11 +15,6 @@ unsigned     move_pc(int pc)
 //    return (move >= 0 ? move : -move);
 }
 
-//int     get_dir_size(int cmd)
-//{
-//    return (g_op_tab[cmd].size ? DIR_SIZE >> 1 : DIR_SIZE);
-//}
-
 int     convert_code_into_t_code(int label)
 {
     if (label == T_REG)
@@ -31,45 +25,6 @@ int     convert_code_into_t_code(int label)
         return (IND_CODE);
     return (0);
 }
-
-//static  int     check_valid_params(int cmd, unsigned size, int code_octal, int i)
-//{
-//    int     tmp;
-//    int     code;
-//
-//    tmp = i == 0 ? 6 : 6 - (2 * i);
-//    tmp = code_octal >> tmp & 3;
-//    code = convert_code_into_t_code(tmp);
-//    if (g_op_tab[cmd].param_types[i] & code)
-//    {
-//        tmp == REG_CODE ? size =  REG_SIZE : 0;
-//        if (DIR_CODE && size == 0)
-//            size = (unsigned int) get_dir_size(cmd);
-//        tmp == IND_CODE && size == 0 ? size = IND_SIZE : 0;
-//    }
-//    return (size ? 1 : 0);
-//}
-
-
-//static  int     check_valid_params(int cmd, unsigned size, int code_octal, int i)
-//{
-//    int     tmp;
-//    int     code;
-//
-//    tmp = i == 0 ? 6 : 6 - (2 * i);
-//    tmp = code_octal >> tmp & 3;
-//    code = convert_code_into_t_code(tmp);
-//    if (g_op_tab[cmd].param_types[i] & code)
-//    {
-//        tmp == REG_CODE ? size =  REG_SIZE : 0;
-//        if (DIR_CODE && size == 0)
-//            size = (unsigned int) get_dir_size(cmd);
-//        tmp == IND_CODE && size == 0 ? size = IND_SIZE : 0;
-//    }
-//    return (size ? 1 : 0);
-//}
-
-
 
 static  size_t      get_size_read(int cmd, int code_octal, int i, int *valid)
 {
@@ -98,8 +53,8 @@ static unsigned  move_pc_into_args(int index, unsigned pc, int code_octal, int c
 {
     int tmp;
 
-    if (index == 0)
-        return (move_pc(pc + 1));
+//    if (index == 0)
+//        return (move_pc(pc + 1));
     tmp = 6 - 2 * index;
     tmp = code_octal >> tmp & 3;
     if (tmp == REG_CODE)
@@ -114,21 +69,21 @@ static unsigned  move_pc_into_args(int index, unsigned pc, int code_octal, int c
 
 int     read_int(t_machine vm, unsigned pc, size_t size)
 {
-    int           i;
-    unsigned char num[4]; // max size for all params
+    int         i;
+    int         f;
+    unsigned char num[3]; // size type int
 
     i = 0;
     if (size == 0)
         return (0);
     ft_bzero(num, 4);
+    f = vm.arena[move_pc(pc + 1)] > 127 ? 1 : 0;
     while (size)
-    {
-        num[i] = vm.arena[move_pc(pc + (int)size)];
-        i++;
-        size--;
-    }
+        num[i++] = vm.arena[move_pc(pc + (int)size--)];
+    while (f && i <= 3)
+        num[i++] = 0xff;
     int n = *(int *)num;
-    return (*(int *)num);
+    return (n);
 }
 
 
@@ -153,8 +108,8 @@ void    handling_args(int cmd, t_machine *vm, t_fork *tmp)
 
     i = -1;
     f = 0;
-    pc = move_pc(tmp->pc + 1);
     ft_bzero(args, sizeof(*args) * MAX_ARGS_NUMBER);
+    pc = g_op_tab[cmd].cod_oct == 1 ? move_pc(tmp->pc + 1) : tmp->pc;
     args[3] = g_op_tab[cmd].cod_oct == 1 ? (int)vm->arena[pc] : 0;
     if (g_op_tab[cmd].cod_oct == 0)
         args[0] = read_int(*vm, pc, (size_t)g_op_tab[cmd].size);
@@ -167,6 +122,5 @@ void    handling_args(int cmd, t_machine *vm, t_fork *tmp)
         }
     if (g_op_tab[cmd].cod_oct == 0 || f == g_op_tab[cmd].params)
         run_op_cmd(cmd, args, tmp, vm);
-    shift_pc_on_map(tmp, pc, cmd);
+    shift_pc_on_map(tmp, g_op_tab ? pc + 1 : pc, cmd);
 }
-

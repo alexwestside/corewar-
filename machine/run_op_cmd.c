@@ -31,7 +31,8 @@ void    switch_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
                     {14,  &op_lfork},
                     {15,  &op_aff}
             };
-    opfunc[cmd].func(args, fork, vm);
+    if (0 < cmd < 17)
+        opfunc[cmd].func(args, fork, vm);
 }
 
 
@@ -41,12 +42,12 @@ void    switch_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
 
 void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
 {
-    if (((((args[3] >> 6) & 3) == REG_CODE) && !IS_VAL_REG(args[0]))
-        || ((((args[3] >> 4) & 3) == REG_CODE) && !IS_VAL_REG(args[1]))
-        || ((((args[3] >> 2) & 3) == REG_CODE) && !IS_VAL_REG(args[2])))
+    if (((((args[3] >> 6) & 3) == REG_CODE) && (0 < args[0] < 17))
+        || ((((args[3] >> 4) & 3) == REG_CODE) && (0 < args[1] < 17))
+        || ((((args[3] >> 2) & 3) == REG_CODE) && (0 < args[2] < 17)))
         return ;
+    switch_op_cmd(cmd, args, fork, vm);
     if (g_op_tab[cmd].carry == 1)
         change_carry(cmd, fork, args);
-    switch_op_cmd(cmd, args, fork, vm);
 //    g_opfunc[cmd].func(args, fork, vm);
 }

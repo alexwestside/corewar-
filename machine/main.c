@@ -34,6 +34,16 @@ int		main(int argc, char **argv)
 	t_machine	vm;
 	char		*path_files[MAX_ARGS_NUMBER];
 
+	ft_printf("test \n\n");
+	unsigned char 		s[3];
+
+	s[0] = 0xff;
+	s[1] = 0xff;
+	s[2] = 0xff;
+	s[3] = 0xff;
+
+	ft_printf("%d, [%s], %d %d", *(int *)s, s, s[2], s[3]);
+
 //	init_op();
 	if (argc == 1)
 		usage(1, NULL);

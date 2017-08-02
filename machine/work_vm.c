@@ -16,11 +16,28 @@ void	init_arena_vm(t_machine *vm)
 //			break ;
 		ft_memcpy(vm->arena + size_pl, vm->players[i].code, vm->players[i].prog_size);
         add_before(&vm->head_lst, create_fork(-(i + 1), size_pl));
+        vm->players[i].id = -(i + 1);
         vm->count_forks++;
 	}
 	// debug
 //	if (i != vm->count_players)
 //		ft_printf("/n/nError to init arena vm index %d %d > %d/n/n", i, size_pl + vm->size_code_players[i], MEM_SIZE);
+}
+
+void    debug(t_machine vm, unsigned cycle)
+{
+
+    ft_printf("\n\ndebug mode %u\n\n", cycle);
+    console_print_arena(vm);
+
+    t_fork *iter;
+
+    iter = vm.head_lst;
+    while (iter)
+    {
+        ft_printf("/npc: %u/n", iter->pc);
+        iter = iter->next;
+    }
 }
 
 void    check_forks(t_machine *vm, unsigned cycle)
@@ -34,9 +51,10 @@ void    check_forks(t_machine *vm, unsigned cycle)
         if (iter->mod == 1 && iter->time_cycle && cycle == iter->time_cycle)
         {
             handling_args(iter->cmd - 1, vm, iter);
+            debug(*vm, cycle);
             iter->mod = 0;
         }
-        else if (iter->mod == 0)
+        if (iter->mod == 0)
         {
             cmd = (int)vm->arena[move_pc(iter->pc)];
             if (0 < cmd < 17)
