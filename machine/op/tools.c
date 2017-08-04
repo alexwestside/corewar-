@@ -51,3 +51,15 @@ int		get_arg_noidx(char bin_code, t_fork *fork, int arg, unsigned char *arena)
         return (read_4_bytes(arena, fork->pc + arg));
     return (arg);
 }
+
+void    inheritance(t_fork *child, t_fork *father, int shift)
+{
+    child->id = father->id;
+    child->pc = move_pc(father->pc + shift);
+    child->life = 0;                            // ?????
+    child->time_cycle = 0;
+    child->mod = 0;
+    child->cmd = -1;
+    child->carry = father->carry;
+    ft_memcpy(child->reg, father->reg, sizeof(int) * REG_NUMBER);
+}

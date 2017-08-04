@@ -117,6 +117,7 @@ int		read_4_bytes(unsigned char *arena, int index);
 void	write_4_bytes(t_machine *vm, t_fork *forks, int index, int var);
 int		get_arg(char bin_code, t_fork *fork, int arg, unsigned char *arena);
 int		get_arg_noidx(char bin_code, t_fork *forks, int arg, unsigned char *arena);
+void    inheritance(t_fork *child, t_fork *father, int shift);
 void    handling_args(int cmd, t_machine *vm, t_fork *iter);
 
 
