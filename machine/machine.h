@@ -14,8 +14,9 @@
 # define MACHINE_H
 # define SIZE_BUFF 1000					// 	read data in code player (after code)
 # define PR_SIZE_ARENA 0x0040			//	variable start when print with flag (d, ...)
-#define IND_SIZE 2
-#define REG_SIZE 1
+# define IND_SIZE 2
+# define REG_SIZE 1
+# define INT_MAX 2147483647
 # include <fcntl.h>
 # include <ncurses.h>
 # include "../libft/libft.h"
