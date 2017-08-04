@@ -203,3 +203,11 @@ void	console_print_arena(t_machine vm);
 */
 
 void	test_print_code_player(t_machine vm);
+
+
+/*
+** func delete memory
+*/
+
+void		all_delete(t_fork **alst);
+void		release_memory(t_machine *vm);

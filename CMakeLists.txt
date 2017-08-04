@@ -32,6 +32,6 @@ set(SOURCE_FILES
         ./machine/init.c
         ./machine/op_func.c
         ./machine/usage.c
-        op.c machine/op/op_fork.c machine/op/op_lfork.c machine/op/op_live.c)
+        op.c machine/op/op_fork.c machine/op/op_lfork.c machine/op/op_live.c machine/release_memory.c)
 add_executable(corewar ${SOURCE_FILES})
 target_link_libraries(corewar ${CMAKE_SOURCE_DIR}/libft/libft.a)
