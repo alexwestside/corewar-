@@ -16,8 +16,10 @@
 # define PR_SIZE_ARENA 0x0040			//	variable start when print with flag (d, ...)
 # define IND_SIZE 2
 # define REG_SIZE 1
+# define MAX_CHAR_FLAG 5
 # define INT_MAX 2147483647
 # include <fcntl.h>
+# include <errno.h>
 # include <ncurses.h>
 # include "../libft/libft.h"
 # include "../libft/ft_printf.h"
@@ -50,6 +52,13 @@ typedef struct      s_player
     unsigned char   *code;
 }                   t_player;
 
+typedef struct		s_flags
+{
+	char 			flag[MAX_CHAR_FLAG];
+	int 			number;
+}					t_flags;
+
+
 typedef	struct		s_machine
 {
 	t_fork			*head_lst;				// all forks
@@ -62,14 +71,8 @@ typedef	struct		s_machine
     unsigned        count_forks;
 	unsigned		count_players;			// count players
 	t_player        *players;
+	t_flags			flags;
 }					t_machine;
-
-typedef struct		s_flags
-{
-	char 			flag;
-	int 			number;
-}					t_flags;
-
 
 typedef struct			s_m_op
 {
@@ -153,9 +156,9 @@ static const t_m_op	g_op_tab[17] =
 ** func validate_data
 */
 
-int 	check_corect_data_read(t_machine vm, int index_player);
-void	usage(int count, char *s);
-void	work_with_flags(char **argv, int argc, t_flags *flags);
+int 	check_corect_data_read(t_machine *vm, int index_player);
+void	usage(int count, char *s, t_machine *vm);
+void	work_with_flags(char **argv, int argc, t_machine *vm);
 int 	is_number(char *s);
 void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 
@@ -164,9 +167,10 @@ void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 */
 
 t_player		*create_players(int count);
+void			init_number_players(t_machine *vm, int argc, char **argv);
 unsigned char	**create_code_player(int count);
-int 			create_point_path(int count_strs, char **strs, char **paths);
-
+void			create_point_path(int count_strs, char **strs, char **paths,
+								  unsigned *count);
 
 /*
 ** func func_forks
@@ -179,7 +183,7 @@ void		add_before(t_fork **alst, t_fork *node);
 ** func read_file
 */
 
-int 	multi_parsing_files(t_machine *vm, char **strs);
+void 	multi_parsing_files(t_machine *vm, char **strs);
 void	switch_data(t_machine *vm, char *data, int index_player, int i);
 int 	read_data(t_machine *vm, int fd, int i);
 int		read_code_player(t_machine *vm, int fd, int index);
@@ -197,6 +201,7 @@ unsigned char	*test_code_octal(t_machine *vm, unsigned char code);
 
 void	head_print(t_machine vm);
 void	console_print_arena(t_machine vm);
+void	is_winner(t_machine vm);
 
 
 /*
@@ -212,3 +217,9 @@ void	test_print_code_player(t_machine vm);
 
 void		all_delete(t_fork **alst);
 void		release_memory(t_machine *vm);
+
+/*
+** func print error massages and exit
+*/
+
+void	error_exit(char *str, int code, t_machine *vm);

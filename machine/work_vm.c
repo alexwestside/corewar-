@@ -15,7 +15,7 @@ void	init_arena_vm(t_machine *vm)
 //		if (size_pl + vm->size_code_players[i] > MEM_SIZE)
 //			break ;
 		ft_memcpy(vm->arena + size_pl, vm->players[i].code, vm->players[i].prog_size);
-        add_before(&vm->head_lst, create_fork(-(i + 1), size_pl));
+        add_before(&vm->head_lst, create_fork(vm->players[i].id, size_pl));
         vm->players[i].id = -(i + 1);
         vm->count_forks++;
 	}
@@ -120,24 +120,27 @@ void    print_forks(t_fork *head)
     }
 }
 
-
 void	run_vm(t_machine *vm)
 {
 	unsigned    i;
 
 	i = 0;
 	init_arena_vm(vm);
-    console_print_arena(*vm);
-
+//    console_print_arena(*vm);
     print_forks(vm->head_lst);
 	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
         check_forks(vm, i);
-//        console_print_arena(*vm);
         if (i == vm->iter_cycle_to_die)
             cycle_to_die(vm);
+        if (vm->flags.flag[0] == 'd')
+        {
+            console_print_arena(*vm);
+            release_memory(vm);
+            exit(0);
+        }
         i++;
         debug_cicle = i;
 	}
-    printf("finish %u\n\n",  i);
+    is_winner(*vm);
 }

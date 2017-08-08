@@ -57,3 +57,12 @@ void	console_print_arena(t_machine vm)
 	}
 	ft_putchar('\n');
 }
+
+void	is_winner(t_machine vm)
+{
+	int index_won;
+
+	index_won = vm.won_player;
+	ft_printf("Player %d, \"%s\", has won\n", index_won + 1,
+			  vm.players[index_won].prog_name);
+}

@@ -8,6 +8,8 @@ void    release_memory(t_machine *vm)
     int i;
 
     i = -1;
+    if (vm == NULL)
+        return ;
     free(vm->arena);
     vm->arena = NULL;
     all_delete(&vm->head_lst);

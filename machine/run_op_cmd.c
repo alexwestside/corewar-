@@ -42,9 +42,9 @@ void    switch_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
 
 void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm)
 {
-    if (((((args[3] >> 6) & 3) == REG_CODE) && !(0 < args[0] < 17))
-        || ((((args[3] >> 4) & 3) == REG_CODE) && !(0 < args[1] < 17))
-        || ((((args[3] >> 2) & 3) == REG_CODE) && !(0 < args[2] < 17)))
+    if (((((args[3] >> 6) & 3) == REG_CODE) && !(0 < args[0] <= REG_NUMBER))
+        || ((((args[3] >> 4) & 3) == REG_CODE) && !(0 < args[1] <= REG_NUMBER))
+        || ((((args[3] >> 2) & 3) == REG_CODE) && !(0 < args[2] <= REG_NUMBER)))
         return ;
     switch_op_cmd(cmd, args, fork, vm);
     if (g_op_tab[cmd].carry == 1)

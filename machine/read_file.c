@@ -1,27 +1,24 @@
 
 #include "machine.h"
 
-int 	multi_parsing_files(t_machine *vm, char **path_files)
+void 	multi_parsing_files(t_machine *vm, char **path_files)
 {
 	int	i;
 	int	fd;
-	int	err;
 
 	i = -1;
-	fd = 0;
-	err = 0;
 	if (path_files == NULL)
-		return (-1);
+		error_exit("something is wrong", 0, vm);
 	while (path_files[++i])
 	{
-		if (err == -1 || (fd = open(path_files[i], O_RDONLY)) == -1)
-			break ;
+		if ((fd = open(path_files[i], O_RDONLY)) == -1)
+			error_exit("\0", 0, vm);
 		read_data(vm, fd, i);
-		err = read_code_player(vm, fd, i);
-		err != -1 ? err = check_corect_data_read(*vm, i) : 0;
+		read_code_player(vm, fd, i) == -1 ?
+		error_exit("something is wrong to read file champion", 0, vm) : 0;
+		check_corect_data_read(vm, i);
 		close(fd);
 	}
-	return (err == -1 || fd == -1 ? -1 : 0);
 }
 
 char	*reverse(char *str, size_t size)
@@ -84,7 +81,7 @@ int		read_code_player(t_machine *vm, int fd, int index)
 	vm->players[index].code = (unsigned char *)malloc(sum * sizeof(unsigned char));
 	ft_memcpy(vm->players[index].code, tmp, sum);
 	free(tmp);
-	if (vm->players[index].prog_size != sum)
-		return (-1);
+	vm->players[index].prog_size != sum ? error_exit(
+			"Different read size into player champions", 0, vm) : 0;
 	return (sum > 0 ? (int)sum : -1);
 }

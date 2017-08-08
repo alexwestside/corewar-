@@ -54,7 +54,7 @@ void	init_number_players(t_machine *vm, int argc, char **argv)
             if (i + 1 < argc && is_number(argv[++i]) &&
                 check_valid_is_file(argv, i, argc, 1))
             {
-                num = ft_atoi(argv[++i]);
+                num = ft_atoi(argv[i]);
                 if (j + 1 < vm->count_players)
                     set_number(vm, ++j, num);
             }

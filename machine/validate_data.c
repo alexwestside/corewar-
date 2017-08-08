@@ -13,12 +13,12 @@
 #include "machine.h"
 
 
-int 	check_corect_data_read(t_machine vm, int index_player)
+int 	check_corect_data_read(t_machine *vm, int index_player)
 {
-	if (vm.players[index_player].magic != COREWAR_EXEC_MAGIC)
-		return (-1);
-	if (vm.players[index_player].prog_size > CHAMP_MAX_SIZE)
-		return (-1);
+	if (vm->players[index_player].magic != COREWAR_EXEC_MAGIC)
+		error_exit("Unvalid magic into player champions", 0, vm);
+	if (vm->players[index_player].prog_size > CHAMP_MAX_SIZE)
+		error_exit("Is too big to be a champion", 0, vm);
 	return (0);
 }
 
