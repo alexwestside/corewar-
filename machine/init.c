@@ -12,7 +12,6 @@ void	init_vm(t_machine *vm, char **argv)
 	vm->cycle_to_die = CYCLE_TO_DIE;
 	vm->iter_max_checks = 0;
 	vm->players = create_players(vm->count_players);
-	ft_bzero(vm->flags.flag, MAX_CHAR_FLAG * sizeof(char));
 	vm->arena = (unsigned char *)ft_strnew(MEM_SIZE);
 	vm->color_arena = (unsigned char *)malloc(MEM_SIZE * sizeof(unsigned char));
 	if (vm->arena == NULL || vm->color_arena == NULL)
@@ -20,6 +19,7 @@ void	init_vm(t_machine *vm, char **argv)
 	vm->count_forks = 0;
 	vm->won_player = 0;
 	vm->flags.number = 0;
+    vm->flags.flag = '\0';
 }
 
 t_player	*create_players(int count)

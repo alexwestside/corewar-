@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES
         ./machine/machine.h
         op.h
+#        graphical_mode.c
         machine/op_add.c
         machine/tools.c
         machine/op_aff.c

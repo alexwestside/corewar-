@@ -54,7 +54,7 @@ typedef struct      s_player
 
 typedef struct		s_flags
 {
-	char 			flag[MAX_CHAR_FLAG];
+	char 			flag;
 	int 			number;
 }					t_flags;
 

@@ -129,13 +129,13 @@ void	run_vm(t_machine *vm)
 	init_arena_vm(vm);
 //    console_print_arena(*vm);
     print_forks(vm->head_lst);
-    vm->flags.flag[0] == 'g' ? init_window(vm, &graf) : 0;
+//    vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
 	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
         check_forks(vm, i);
         if (i == (unsigned)vm->iter_cycle_to_die)
             cycle_to_die(vm);
-        if (vm->flags.flag[0] == 'd')
+        if (vm->flags.flag == 'd')
         {
             console_print_arena(*vm);
             release_memory(vm);

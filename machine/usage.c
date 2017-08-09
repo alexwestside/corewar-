@@ -43,7 +43,7 @@ void	copy_flags(char **argv, int argc, int i, t_machine *vm)
 	char *tmp;
 
 	tmp = argv[i];
-	ft_strncpy(vm->flags.flag, tmp + 1, MAX_CHAR_FLAG);
+	vm->flags.flag = *(tmp + 1);
 	if (!ft_strcmp(argv[i], "-g"))
 		return ;
 	if (i + 1 < argc && is_number(argv[i + 1]))
