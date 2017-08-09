@@ -1,11 +1,11 @@
 
 
-#include "../machine.h"
+#include "machine.h"
 
 
 void    op_live(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm)
 {
-    int i;
+    unsigned i;
 
     i = -1;
     fork->life = 1;

@@ -23,15 +23,15 @@ int 	check_corect_data_read(t_machine *vm, int index_player)
 }
 
 
-int		check_placement_players(t_machine vm)
-{
-	int i;
-	int size;
-
-	i = -1;
-	size =  MEM_SIZE / vm.count_players;
-	while (++i < vm.count_players)
-		if (vm.players[i].prog_size > size)
-			return (-2);
-	return (0);
-}
+//int		check_placement_players(t_machine vm)
+//{
+//	int i;
+//	int size;
+//
+//	i = -1;
+//	size =  MEM_SIZE / vm.count_players;
+//	while (++i < vm.count_players)
+//		if (vm.players[i].prog_size > size)
+//			return (-2);
+//	return (0);
+//}

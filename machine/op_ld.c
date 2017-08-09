@@ -1,6 +1,6 @@
 
 
-#include "../machine.h"
+#include "machine.h"
 
 
 void    op_ld(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm)

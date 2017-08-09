@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include "machine.h"
-#include "ncurses.h"
+#include <ncurses.h>
 #define PR_SIZE_ARENA 0x0040
 #define MEM_SIZE 4096
 
@@ -31,7 +31,7 @@
 //}			t_win;
 
 
-void	console_print_arena(unsigned char *vm)
+void	print_graf_arena(t_machine *vm)
 {
 	int i;
 	int y;
@@ -39,12 +39,14 @@ void	console_print_arena(unsigned char *vm)
 	i = -1;
 	y = 2;
 	move(1, 3);
+	attron(COLOR_PAIR(6) |A_BOLD);
 	while (++i < MEM_SIZE)
 	{
 		if ((i % PR_SIZE_ARENA) == 0)
 			move(y++, 3);
-		printw(" %02x", vm[i]);
+		printw(" %02x", vm->arena[i]);
 	}
+	attroff(COLOR_PAIR(6) | A_BOLD);
 }
 
 
@@ -85,7 +87,7 @@ void	draw_border(void)
 	attroff(COLOR_PAIR(10));
 }
 
-void	def_submenu_top(int process)
+void	def_submenu_top(t_machine *vm, t_graf *graf, int cycle)
 {
 	int y;
 	int x;
@@ -93,11 +95,14 @@ void	def_submenu_top(int process)
 	y = 3;
 	x = 197 + 3;
 	attron(COLOR_PAIR(5) |A_BOLD);
-	mvprintw(y, x, "** PAUSED **");
-	mvprintw(y + 2, x, "Cycles/second limit : 50");
-	mvprintw(y + 5, x, "Cycle : 0");
-	mvprintw(y + 7, x, "Processes : %d", process);
-	attroff(COLOR_PAIR(5) |A_BOLD);
+	if (graf->pause == 1)
+		mvprintw(y, x, "** PAUSED **");
+	else
+		mvprintw(y, x, "** RUNNING **");
+	mvprintw(y + 2, x, "Cycles/second limit : %f", graf->speed);
+	mvprintw(y + 5, x, "Cycle : %d", cycle);
+	mvprintw(y + 7, x, "Processes : %u", vm->count_forks);
+	attroff(COLOR_PAIR(5) | A_BOLD);
 }
 
 void	static_submenu_bottom(void)
@@ -108,11 +113,34 @@ void	static_submenu_bottom(void)
 	y = 50;
 	x = 197 + 3;
 	attron(COLOR_PAIR(5) |A_BOLD);
-	mvprintw(y, x, "CYCLE_TO_DIE : %d", 1536);
-	mvprintw(y + 2, x, "CYCLE_DELTA : %d", 50);
-	mvprintw(y + 4, x, "NBR_LIVE : %d", 21);
-	mvprintw(y + 6, x, "MAX_CHECKS : %d", 10);
+	mvprintw(y, x, "CYCLE_TO_DIE : %d", CYCLE_TO_DIE);
+	mvprintw(y + 2, x, "CYCLE_DELTA : %d", CYCLE_DELTA);
+	mvprintw(y + 4, x, "NBR_LIVE : %d", NBR_LIVE);
+	mvprintw(y + 6, x, "MAX_CHECKS : %d", MAX_CHECKS);
 	attroff(COLOR_PAIR(5) |A_BOLD);
+}
+
+void	init_graf(t_graf *graf)
+{
+	graf->pause = 1;
+	graf->print = 0;
+	graf->speed = 50;
+}
+
+void	init_window(t_machine *vm, t_graf *graf)
+{
+	init_graf(graf);
+	initscr();
+	noecho(); 			//Не печатать на экране то, что набирает пользователь на клавиатуре
+	curs_set(0);		//Убрать курсор
+	init_pairs();
+	draw_border();
+	print_graf_arena(vm);
+	def_submenu_top(vm, graf, 0);
+	static_submenu_bottom();
+	refresh();
+	getch();
+	endwin();
 }
 
 
@@ -125,10 +153,8 @@ void	static_submenu_bottom(void)
 //	curs_set(0);		//Убрать курсор
 //	init_pairs();
 //	draw_border();
-//	attron(COLOR_PAIR(6) |A_BOLD);
-//	console_print_arena(vm);
-//	attroff(COLOR_PAIR(6) | A_BOLD);
-//	def_submenu_top(1);
+//
+//	def_submenu_top(vm);
 //	static_submenu_bottom();
 //	move(10, 20);
 //	refresh();

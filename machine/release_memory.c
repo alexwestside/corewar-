@@ -5,13 +5,15 @@
 
 void    release_memory(t_machine *vm)
 {
-    int i;
+    unsigned i;
 
     i = -1;
     if (vm == NULL)
         return ;
     free(vm->arena);
     vm->arena = NULL;
+    free(vm->color_arena);
+    vm->color_arena = NULL;
     all_delete(&vm->head_lst);
     vm->head_lst = NULL;
     while (++i < vm->count_players)

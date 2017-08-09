@@ -1,6 +1,6 @@
 
 
-#include "../machine.h"
+#include "machine.h"
 
 int		read_4_bytes(unsigned char *arena, int index)
 {

@@ -3,7 +3,7 @@
 
 void	init_arena_vm(t_machine *vm)
 {
-	int i;
+    unsigned i;
 	int size;
 	int size_pl;
 
@@ -57,7 +57,7 @@ void    check_forks(t_machine *vm, unsigned cycle)
         if (iter->mod == 0)
         {
             cmd = (int)vm->arena[move_pc(iter->pc)];
-            if (0 < cmd < 17)
+            if (0 < cmd && cmd < 17)
             {
                 iter->cmd = cmd;
                 iter->mod = 1;
@@ -123,15 +123,17 @@ void    print_forks(t_fork *head)
 void	run_vm(t_machine *vm)
 {
 	unsigned    i;
+    t_graf      graf;
 
 	i = 0;
 	init_arena_vm(vm);
 //    console_print_arena(*vm);
     print_forks(vm->head_lst);
+    vm->flags.flag[0] == 'g' ? init_window(vm, &graf) : 0;
 	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
         check_forks(vm, i);
-        if (i == vm->iter_cycle_to_die)
+        if (i == (unsigned)vm->iter_cycle_to_die)
             cycle_to_die(vm);
         if (vm->flags.flag[0] == 'd')
         {

@@ -67,6 +67,7 @@ typedef	struct		s_machine
     int     		cycle_to_die;			// next iter to go iter_cycle_to_die
     int             iter_max_checks;
 	unsigned char 	*arena;					//
+	unsigned char	*color_arena;
 	int				won_player;			// last say "I am life" player
     unsigned        count_forks;
 	unsigned		count_players;			// count players
@@ -93,6 +94,14 @@ typedef struct			s_opfunc
 	void				(*func)(int argvs[MAX_ARGS_NUMBER], t_fork *,  t_machine *);
 }						t_opfunc;
 
+typedef struct	graf
+{
+	int 		pause;
+	double		speed;
+	int 		print;
+
+}				t_graf;
+
 #endif
 
 void					op_add(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
@@ -116,6 +125,7 @@ void					op_zjmp(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
 ** func tools
 */
 
+void	init_vm(t_machine *vm, char **argv);
 unsigned     move_pc(int pc);
 int		read_4_bytes(unsigned char *arena, int index);
 void	write_4_bytes(t_machine *vm, t_fork *forks, int index, int var);
@@ -168,7 +178,6 @@ void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 
 t_player		*create_players(int count);
 void			init_number_players(t_machine *vm, int argc, char **argv);
-unsigned char	**create_code_player(int count);
 void			create_point_path(int count_strs, char **strs, char **paths,
 								  unsigned *count);
 
@@ -223,3 +232,9 @@ void		release_memory(t_machine *vm);
 */
 
 void	error_exit(char *str, int code, t_machine *vm);
+
+/*
+**
+*/
+
+void	init_window(t_machine *vm, t_graf *graf);

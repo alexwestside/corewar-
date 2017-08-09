@@ -41,7 +41,7 @@ int 	read_data(t_machine *vm, int fd, int i)
 {
 	int		j;
 	char 	*buf;
-	int 	rd;
+	ssize_t 	rd;
 	static size_t st[] = {sizeof(COREWAR_EXEC_MAGIC), PROG_NAME_LENGTH, 4,
 						  sizeof(vm->players[i].prog_size), COMMENT_LENGTH, 4};
 	static	int size_st = 6;
@@ -51,11 +51,11 @@ int 	read_data(t_machine *vm, int fd, int i)
 	while (++j < size_st && rd != -1)
 	{
 		buf = (char *)malloc(st[j]);
-		if (!buf || ((rd = (int)read(fd, buf, st[j])) == -1))
+		if (!buf || ((rd = read(fd, buf, st[j])) == -1))
 			break ;
 		j == 0 ? vm->players[i].magic = *(unsigned*)reverse(buf, st[j]) : 0;
 		j == 1 ? ft_memcpy(vm->players[i].prog_name, buf, (size_t)rd) : 0;
-		(j == 2 || j == 5) && rd != st[j] ? rd = -1 : 0;
+		(j == 2 || j == 5) && rd != (ssize_t)st[j] ? rd = -1 : 0;
 		j == 3 ? vm->players[i].prog_size = *(unsigned*)reverse(buf, st[j]) : 0;
 		j == 4 ? ft_memcpy(vm->players[i].comment, buf, (size_t)rd) : 0;
 		free(buf);

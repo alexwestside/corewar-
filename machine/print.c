@@ -27,7 +27,7 @@ void	head_print(t_machine vm)
 void	test_print_code_player(t_machine vm)
 {
 	size_t  i;
-	int j;
+	unsigned j;
 
 	i = -1;
 	j = -1;

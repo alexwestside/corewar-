@@ -17,8 +17,8 @@ int		check_valid_is_file(char **str, int index, int len_str, int mod)
 
 void	set_number(t_machine *vm, int index, int num)
 {
-    int i;
-    int j;
+    unsigned i;
+    unsigned j;
     int min;
 
     i = -1;
@@ -42,7 +42,7 @@ void	set_number(t_machine *vm, int index, int num)
 void	init_number_players(t_machine *vm, int argc, char **argv)
 {
     int i;	// iter to arg
-    int j;	// iter to players
+    unsigned j;	// iter to players
     int num;
 
     i = 0;
