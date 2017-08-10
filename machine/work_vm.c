@@ -73,6 +73,7 @@ void    check_forks(t_machine *vm, unsigned cycle)
 void    overwrite_cycle_to_die(t_machine *vm)
 {
     unsigned i;
+//    t_player tmp;
 
     i = -1;
     vm->iter_max_checks++;
@@ -83,6 +84,7 @@ void    overwrite_cycle_to_die(t_machine *vm)
         vm->iter_max_checks = 0;
         while (++i < vm->count_players)
         {
+//            tmp = vm->players[i];
             vm->players[i].count_live = 0;
             vm->players[i].last_live = 0;
         }
@@ -123,8 +125,19 @@ void    print_forks(t_fork *head)
     tmp = head;
     while (tmp)
     {
-        ft_printf("fork pc %d \n", tmp->pc);
+        ft_printf("fork pc %u id %d reg[0] %d \n", tmp->pc, tmp->id, tmp->reg[0]);
         tmp = tmp->next;
+    }
+}
+
+void    print_players(t_machine vm)
+{
+    unsigned i;
+
+    i = -1;
+    while (++i < vm.count_players)
+    {
+        ft_printf("players iter %d id player %d\n", i, vm.players[i].id);
     }
 }
 
@@ -134,6 +147,8 @@ void	run_vm(t_machine *vm)
 
 	init_arena_vm(vm);
     vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
+//    print_forks(vm->head_lst);
+//    print_players(*vm);
 	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
         check_forks(vm, vm->cycle);

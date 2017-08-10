@@ -199,7 +199,7 @@ void	init_window(t_machine *vm, t_graf *graf)
 	print_static_players(*vm);
 	dynamic_players(*vm);
 	static_submenu_bottom();
-    pause_event(vm, graf);
+    pause_occurrent(vm, graf);
 }
 
 void	graphic_main(t_machine vm, t_graf *grap)
@@ -208,7 +208,7 @@ void	graphic_main(t_machine vm, t_graf *grap)
 	dynamic_players(vm);
 	print_graf_arena(vm);
 	print_pc_arena(vm);
-    key_event(&vm, grap);
+    key_occurrent(&vm, grap);
 }
 
 void	grah_is_winner(t_machine vm)

@@ -18,6 +18,9 @@
 # define REG_SIZE 1
 # define MAX_CHAR_FLAG 5
 # define INT_MAX 2147483647
+# define MSLEEP(msec) usleep(msec * 1000000.0)
+# define SPACE 32
+# define ESC 27
 # include <fcntl.h>
 # include <errno.h>
 # include <ncurses.h>
@@ -240,8 +243,8 @@ void	error_exit(char *str, int code, t_machine *vm);
 */
 
 void	init_window(t_machine *vm, t_graf *graf);
-void	pause_event(t_machine *vm, t_graf *graf);
-void	key_event(t_machine *vm, t_graf *graf);
+void	pause_occurrent(t_machine *vm, t_graf *graf);
+void	key_occurrent(t_machine *vm, t_graf *graf);
 void	graphic_main(t_machine vm, t_graf *grap);
 void	grah_is_winner(t_machine vm);
 
