@@ -7,9 +7,10 @@ int		check_valid_is_file(char **str, int index, int len_str, int mod)
 {
     int fd;
 
-    if (mod && index + 1 >= len_str)
+    index += mod == 1 ? 1 : 0;
+    if (index >= len_str)
         return (0);
-    fd = open(str[index + 1], O_RDONLY);
+    fd = open(str[index], O_RDONLY);
     if (fd == -1 || read(fd, 0, 0) == -1)
         return (0);
     return (1);
@@ -33,7 +34,7 @@ void	set_number(t_machine *vm, int index, int num)
                     min = vm->players[i].id;
             vm->players[index].id = min < 0 ? min - 1 : -1;
         }
-    if (num && vm->players[index].id == 0)
+    if (num)
         vm->players[index].id = num;
 }
 

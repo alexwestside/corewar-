@@ -29,9 +29,6 @@
 enum    pl_color  {green = 1, blue, red, cyan, un_byte};
 enum    pl_pc_color {pc_green = 10, pc_blue, pc_red, pc_cyan, pc_un_byte, w_text};
 
-
-unsigned debug_cicle;
-
 typedef struct		s_fork
 {
 	int				carry; 			// carry flag
@@ -67,6 +64,7 @@ typedef struct		s_flags
 typedef	struct		s_machine
 {
 	t_fork			*head_lst;				// all forks
+    unsigned        cycle;
 	unsigned		count_live;				// all life forks
 	int				iter_cycle_to_die;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
     int     		cycle_to_die;			// next iter to go iter_cycle_to_die
@@ -103,7 +101,6 @@ typedef struct	graf
 {
 	int 		pause;
 	double		speed;
-	int 		print;
 
 }				t_graf;
 
@@ -243,3 +240,16 @@ void	error_exit(char *str, int code, t_machine *vm);
 */
 
 void	init_window(t_machine *vm, t_graf *graf);
+void	pause_event(t_machine *vm, t_graf *graf);
+void	key_event(t_machine *vm, t_graf *graf);
+void	graphic_main(t_machine vm, t_graf *grap);
+void	grah_is_winner(t_machine vm);
+
+
+
+
+/*
+** temp func
+*/
+
+void    debug(t_machine vm, unsigned cycle);

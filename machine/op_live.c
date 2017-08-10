@@ -15,7 +15,7 @@ void    op_live(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm)
         {
             vm->won_player = i;
             vm->players[i].count_live++;
-            vm->players[i].last_live = debug_cicle;
+            vm->players[i].last_live = vm->cycle;
             return ;
         }
 }

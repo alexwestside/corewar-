@@ -23,6 +23,7 @@ SRCS =  main.c \
         validate_data.c \
         work_vm.c \
         graphical_mode.c \
+        graphics_key.c \
         ./op_add.c \
         ./op_aff.c \
         ./op_and.c \

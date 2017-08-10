@@ -95,7 +95,7 @@ void	draw_border(void)
 	attroff(COLOR_PAIR(100));
 }
 
-void	static_submenu_top(t_machine vm, t_graf graf, int cycle)
+void	static_submenu_top(t_machine vm, t_graf graf, unsigned cycle)
 {
 	int y;
 	int x;
@@ -103,9 +103,9 @@ void	static_submenu_top(t_machine vm, t_graf graf, int cycle)
 	y = 3;
 	x = 197 + 3;
 	attron(COLOR_PAIR(w_text) | A_BOLD);
-	mvprintw(y, x, "** PAUSED **");
-	mvprintw(y + 2, x, "Cycles/second limit : %.0f", graf.speed);
-	mvprintw(y + 5, x, "Cycle : %d", cycle);
+//	mvprintw(y, x, "** PAUSED **");
+	 mvprintw(y + 2, x, "Cycles/second limit : %.0f", graf.speed);
+	mvprintw(y + 5, x, "Cycle : %u", cycle);
 	mvprintw(y + 7, x, "Processes : %u", vm.count_forks);
 	attroff(COLOR_PAIR(w_text) | A_BOLD);
 }
@@ -159,15 +159,11 @@ void	dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
 
 	y = 5;
 	x = 222;
-	attron(COLOR_PAIR(w_text) |A_BOLD);
-//	if (graf->pause == 1)
-//		mvprintw(y, x, "** PAUSED **");
-//	else
-//		mvprintw(y, x, "** RUNNING **");
+	attron(COLOR_PAIR(w_text) | A_BOLD);
 	mvprintw(y, x, "%-4.0f", graf.speed);
-	y += 5;
-	mvprintw(y, x - 14, "-20d", cycle);
-	y += 7;
+	y += 3;
+	mvprintw(y, x - 14, "%-20u", cycle);
+	y += 2;
 	mvprintw(y, x - 10, "%-20u", vm.count_forks);
 	y = 50;
 	mvprintw(y, x - 7, "%-4d", vm.cycle_to_die);
@@ -189,16 +185,9 @@ void	static_submenu_bottom(void)
 	attroff(COLOR_PAIR(w_text) | A_BOLD);
 }
 
-void	init_graf(t_graf *graf)
-{
-	graf->pause = 1;
-	graf->print = 0;
-	graf->speed = 50;
-}
-
 void	init_window(t_machine *vm, t_graf *graf)
 {
-	init_graf(graf);
+	*graf = (t_graf){1, 50};
 	initscr();
 	noecho(); 			//Не печатать на экране то, что набирает пользователь на клавиатуре
 	curs_set(0);		//Убрать курсор
@@ -210,7 +199,36 @@ void	init_window(t_machine *vm, t_graf *graf)
 	print_static_players(*vm);
 	dynamic_players(*vm);
 	static_submenu_bottom();
-	refresh();
+    pause_event(vm, graf);
+}
+
+void	graphic_main(t_machine vm, t_graf *grap)
+{
+	dynamic_submenu_top(vm, *grap, vm.cycle);
+	dynamic_players(vm);
+	print_graf_arena(vm);
+	print_pc_arena(vm);
+    key_event(&vm, grap);
+}
+
+void	grah_is_winner(t_machine vm)
+{
+	int y;
+	int x;
+	int winner;
+
+	y = 33;
+	x = 200;
+	winner = vm.won_player;
+	attron(COLOR_PAIR(w_text) | A_BOLD);
+	mvprintw(8, 222 - 14, "%-20u", vm.cycle);
+	mvprintw(y, x, "The winner is : ");
+	attron(COLOR_PAIR(green + winner));
+	mvprintw(y, x + 16, "%s", vm.players[winner].prog_name);
+	attroff(COLOR_PAIR(green + winner));
+	mvprintw(y + 2, x, "Press any key to finish");
+	attroff(COLOR_PAIR(w_text) | A_BOLD);
+	nodelay(stdscr, FALSE);
 	getch();
 	endwin();
 }

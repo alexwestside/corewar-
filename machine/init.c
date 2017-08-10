@@ -7,6 +7,7 @@ void	init_vm(t_machine *vm, char **argv)
 	if (vm->count_players == 0)
 		usage(2, argv[1], NULL);
 	vm->head_lst = NULL;
+    vm->cycle = 0;
 	vm->count_live = 0;
 	vm->iter_cycle_to_die = CYCLE_TO_DIE;
 	vm->cycle_to_die = CYCLE_TO_DIE;

@@ -66,7 +66,6 @@ static unsigned  move_pc_into_args(int index, unsigned pc, int code_octal, int c
     return (pc);
 }
 
-
 int     read_int(t_machine vm, unsigned pc, size_t size)
 {
     int         i;

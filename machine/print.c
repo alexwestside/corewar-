@@ -63,6 +63,6 @@ void	is_winner(t_machine vm)
 	int index_won;
 
 	index_won = vm.won_player;
-	ft_printf("Player %d, \"%s\", has won\n", index_won + 1,
+	ft_printf("Player %d, \"%s\", has won\n", vm.players[index_won].id,
 			  vm.players[index_won].prog_name);
 }

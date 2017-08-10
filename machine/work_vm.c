@@ -16,7 +16,6 @@ void	init_arena_vm(t_machine *vm)
 //			break ;
 		ft_memcpy(vm->arena + size_pl, vm->players[i].code, vm->players[i].prog_size);
         add_before(&vm->head_lst, create_fork(vm->players[i].id, size_pl));
-        vm->players[i].id = -(i + 1);
         vm->count_forks++;
         if (vm->flags.flag == 'g')
             ft_memset(vm->color_arena + size_pl, i + 1, vm->players[i].prog_size);
@@ -73,16 +72,24 @@ void    check_forks(t_machine *vm, unsigned cycle)
 
 void    overwrite_cycle_to_die(t_machine *vm)
 {
+    unsigned i;
+
+    i = -1;
     vm->iter_max_checks++;
     if (vm->count_live >= NBR_LIVE || vm->iter_max_checks == MAX_CHECKS)
     {
         vm->cycle_to_die -= CYCLE_DELTA;
-        vm->iter_cycle_to_die = debug_cicle + vm->cycle_to_die;
+        vm->iter_cycle_to_die = vm->cycle + vm->cycle_to_die;
         vm->iter_max_checks = 0;
+        while (++i < vm->count_players)
+        {
+            vm->players[i].count_live = 0;
+            vm->players[i].last_live = 0;
+        }
 //        ft_printf("cycle to die %d cycle %u count_live %u  last live %us\n", vm->cycle_to_die, debug_cicle, vm->count_live, vm->players[0].last_live);
     }
     vm->count_live = 0;
-    vm->iter_cycle_to_die = debug_cicle + vm->cycle_to_die;
+    vm->iter_cycle_to_die = vm->cycle + vm->cycle_to_die;
 }
 
 void    cycle_to_die(t_machine *vm)
@@ -123,18 +130,14 @@ void    print_forks(t_fork *head)
 
 void	run_vm(t_machine *vm)
 {
-	unsigned    i;
     t_graf      graf;
 
-	i = 0;
 	init_arena_vm(vm);
-//    console_print_arena(*vm);
-    print_forks(vm->head_lst);
     vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
 	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
-        check_forks(vm, i);
-        if (i == (unsigned)vm->iter_cycle_to_die)
+        check_forks(vm, vm->cycle);
+        if (vm->cycle == (unsigned)vm->iter_cycle_to_die)
             cycle_to_die(vm);
         if (vm->flags.flag == 'd')
         {
@@ -142,8 +145,9 @@ void	run_vm(t_machine *vm)
             release_memory(vm);
             exit(0);
         }
-        i++;
-        debug_cicle = i;
+        vm->flags.flag == 'g' ? graphic_main(*vm, &graf) : 0;
+        vm->cycle++;
 	}
-    is_winner(*vm);
+    vm->flags.flag == 'g' ? grah_is_winner(*vm) : is_winner(*vm);
+    release_memory(vm);
 }
