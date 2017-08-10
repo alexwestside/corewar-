@@ -25,6 +25,11 @@
 # include "../libft/ft_printf.h"
 # include "../op.h"
 
+
+enum    pl_color  {green = 1, blue, red, cyan, un_byte};
+enum    pl_pc_color {pc_green = 10, pc_blue, pc_red, pc_cyan, pc_un_byte, w_text};
+
+
 unsigned debug_cicle;
 
 typedef struct		s_fork

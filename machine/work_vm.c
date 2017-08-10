@@ -18,6 +18,8 @@ void	init_arena_vm(t_machine *vm)
         add_before(&vm->head_lst, create_fork(vm->players[i].id, size_pl));
         vm->players[i].id = -(i + 1);
         vm->count_forks++;
+        if (vm->flags.flag == 'g')
+            ft_memset(vm->color_arena + size_pl, i + 1, vm->players[i].prog_size);
 	}
 	// debug
 //	if (i != vm->count_players)
@@ -51,7 +53,6 @@ void    check_forks(t_machine *vm, unsigned cycle)
         if (iter->mod == 1 && iter->time_cycle && cycle == iter->time_cycle)
         {
             handling_args(iter->cmd - 1, vm, iter);
-//            debug(*vm, cycle);
             iter->mod = 0;
         }
         if (iter->mod == 0)
@@ -129,7 +130,7 @@ void	run_vm(t_machine *vm)
 	init_arena_vm(vm);
 //    console_print_arena(*vm);
     print_forks(vm->head_lst);
-//    vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
+    vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
 	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
         check_forks(vm, i);

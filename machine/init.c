@@ -16,6 +16,7 @@ void	init_vm(t_machine *vm, char **argv)
 	vm->color_arena = (unsigned char *)malloc(MEM_SIZE * sizeof(unsigned char));
 	if (vm->arena == NULL || vm->color_arena == NULL)
 		error_exit("some thing wrong", 999, vm);
+    ft_memset(vm->color_arena, un_byte, MEM_SIZE);
 	vm->count_forks = 0;
 	vm->won_player = 0;
 	vm->flags.number = 0;
