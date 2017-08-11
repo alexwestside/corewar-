@@ -21,7 +21,6 @@ void	set_number(t_machine *vm, int index, int num)
     unsigned i;
     unsigned j;
     int min;
-//    int tmp;
 
     i = -1;
     // num doesnt = 0
@@ -34,7 +33,6 @@ void	set_number(t_machine *vm, int index, int num)
                 if (vm->players[j].id < min)
                     min = vm->players[j].id;
             vm->players[index].id = min < 0 ? min - 1 : -1;
-//            tmp = vm->players[index].id;
             break ;
         }
     if (num && vm->players[index].id == 0)

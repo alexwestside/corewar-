@@ -37,7 +37,9 @@ set(SOURCE_FILES
         machine/release_memory.c
         machine/init_number_players.c
 #        machine/graphics_key.c
-        machine/graphic_print_tools.c machine/graphic_static.c)
+#        machine/graphic_print_tools.c
+#        machine/graphic_static.c
+        )
 add_executable(corewar ${SOURCE_FILES})
 
 set(CURSES_NEED_NCURSES TRUE)

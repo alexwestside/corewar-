@@ -25,11 +25,24 @@ int		read_4_bytes(unsigned char *arena, int index)
 
 void	write_4_bytes(t_machine *vm, t_fork *fork, int index, int var)
 {
-    (void)fork;
+    unsigned i;
+
+    i = 0;
     vm->arena[move_pc(index + 0)] = (var & 0xff000000) >> 24;
     vm->arena[move_pc(index + 1)] = (var & 0xff0000) >> 16;
     vm->arena[move_pc(index + 2)] = (var & 0xff00) >> 8;
     vm->arena[move_pc(index + 3)] = var & 0xff;
+    if (vm->flags.flag == 'g')
+    {
+        while (i < vm->count_players && fork->id != vm->players[i].id)
+            i++;
+        if (i == vm->count_players)
+            return ;
+        vm->color_arena[move_pc(index + 0)] = green + i;
+        vm->color_arena[move_pc(index + 1)] = green + i;
+        vm->color_arena[move_pc(index + 2)] = green + i;
+        vm->color_arena[move_pc(index + 3)] = green + i;
+    }
 }
 
 
