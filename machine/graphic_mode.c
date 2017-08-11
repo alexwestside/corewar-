@@ -1,14 +1,12 @@
 
 #include "machine.h"
-#include <ncurses.h>
-
 
 /*
 **  init pairs
 **  100  border
 */
 
-void	init_pairs(void)
+void        init_pairs(void)
 {
 	if (!has_colors())
 	{
@@ -32,7 +30,7 @@ void	init_pairs(void)
 
 }
 
-void	dynamic_players(t_machine vm)
+void        dynamic_players(t_machine vm)
 {
 	int			y;
 	int			x;
@@ -51,7 +49,7 @@ void	dynamic_players(t_machine vm)
 	attroff(COLOR_PAIR(w_text) | A_BOLD);
 }
 
-void	dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
+static void dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
 {
 	int y;
 	int x;
@@ -69,16 +67,7 @@ void	dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
 	attroff(COLOR_PAIR(w_text) | A_BOLD);
 }
 
-void	graphic_main(t_machine vm, t_graf *grap)
-{
-	dynamic_submenu_top(vm, *grap, vm.cycle);
-	dynamic_players(vm);
-	print_graf_arena(vm);
-	print_pc_arena(vm);
-    key_occurrent(&vm, grap);
-}
-
-void	grah_is_winner(t_machine vm)
+void        graph_is_winner(t_machine vm)
 {
 	int y;
 	int x;
@@ -98,4 +87,13 @@ void	grah_is_winner(t_machine vm)
 	nodelay(stdscr, FALSE);
 	getch();
 	endwin();
+}
+
+void        graph_main(t_machine vm, t_graf *grap)
+{
+    dynamic_submenu_top(vm, *grap, vm.cycle);
+    dynamic_players(vm);
+    print_graph_arena(vm);
+    print_pc_arena(vm);
+    key_occurrent(&vm, grap);
 }

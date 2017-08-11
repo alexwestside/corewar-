@@ -59,33 +59,3 @@ void	delete_forks(t_fork *head, t_fork *oldfork)
 	}
 	free(oldfork);
 }
-
-
-//void	delete_forks2(t_fork *head)
-//{
-//	t_fork *q;
-//	t_fork *next;
-//
-//	q = head;
-//	if (head == oldfork)
-//		head = oldfork->next;
-//	else
-//	{
-//		while (q && q->next != oldfork)
-//			q = q->next;
-//		if (q == NULL)
-//			return ;
-//		q->next = oldfork->next;
-//	}
-//	free(oldfork);
-//	while (q)
-//	{
-//		next = q->next;
-//		if (q->life == 0)
-//		{
-//			next->next = q->next;
-//			free(q);
-//		}
-//		q = next;
-//	}
-//}

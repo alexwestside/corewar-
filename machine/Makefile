@@ -11,6 +11,10 @@ LIBFT = libft.a
 NAME = corewar
 
 SRCS =  main.c \
+        graphic_key.c \
+        graphic_mode.c \
+        graphic_print_tools.c \
+        graphic_static.c \
         func_fork.c \
         get_args.c \
         init.c \
@@ -22,8 +26,6 @@ SRCS =  main.c \
         usage.c \
         validate_data.c \
         work_vm.c \
-        graphical_mode.c \
-        graphics_key.c \
         ./op_add.c \
         ./op_aff.c \
         ./op_and.c \

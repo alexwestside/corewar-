@@ -160,9 +160,9 @@ void	run_vm(t_machine *vm)
             release_memory(vm);
             exit(0);
         }
-        vm->flags.flag == 'g' ? graphic_main(*vm, &graf) : 0;
+        vm->flags.flag == 'g' ? graph_main(*vm, &graf) : 0;
         vm->cycle++;
 	}
-    vm->flags.flag == 'g' ? grah_is_winner(*vm) : is_winner(*vm);
+    vm->flags.flag == 'g' ? graph_is_winner(*vm) : is_winner(*vm);
     release_memory(vm);
 }

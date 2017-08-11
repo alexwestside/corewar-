@@ -239,14 +239,18 @@ void		release_memory(t_machine *vm);
 void	error_exit(char *str, int code, t_machine *vm);
 
 /*
-**
+** func graphic mode
 */
 
+void	init_pairs(void);
 void	init_window(t_machine *vm, t_graf *graf);
+void	print_graph_arena(t_machine vm);
+void	print_pc_arena(t_machine vm);
+void    dynamic_players(t_machine vm);
 void	pause_occurrent(t_machine *vm, t_graf *graf);
 void	key_occurrent(t_machine *vm, t_graf *graf);
-void	graphic_main(t_machine vm, t_graf *grap);
-void	grah_is_winner(t_machine vm);
+void	graph_main(t_machine vm, t_graf *grap);
+void	graph_is_winner(t_machine vm);
 
 
 

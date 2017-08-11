@@ -3,8 +3,8 @@
 
 unsigned     move_pc(int pc)
 {
-    int move;
-    unsigned res;
+    int         move;
+    unsigned    res;
 
     move = pc % MEM_SIZE;
     if (move >= 0)
@@ -12,7 +12,6 @@ unsigned     move_pc(int pc)
     else
         res = (unsigned)move * (-1);
     return (res);
-//    return (move >= 0 ? move : -move);
 }
 
 int     convert_code_into_t_code(int label)
@@ -53,8 +52,6 @@ static unsigned  move_pc_into_args(int index, unsigned pc, int code_octal, int c
 {
     int tmp;
 
-//    if (index == 0)
-//        return (move_pc(pc + 1));
     tmp = 6 - 2 * index;
     tmp = code_octal >> tmp & 3;
     if (tmp == REG_CODE)
@@ -68,9 +65,10 @@ static unsigned  move_pc_into_args(int index, unsigned pc, int code_octal, int c
 
 int     read_int(t_machine vm, unsigned pc, size_t size)
 {
-    int         i;
-    int         f;
-    unsigned char num[3]; // size type int
+    int             i;
+    int             f;
+    int             n;
+    unsigned char   num[3]; // size type int
 
     i = 0;
     if (size == 0)
@@ -81,21 +79,21 @@ int     read_int(t_machine vm, unsigned pc, size_t size)
         num[i++] = vm.arena[move_pc(pc + (int)size--)];
     while (f && i <= 3)
         num[i++] = 0xff;
-    int n = *(int *)num;
+    n = *(int *)num;
     return (n);
 }
 
 
-void    shift_pc_on_map(t_fork *fork, int pc, int  cmd)
-{
-    if (cmd != 8)
-    {
-        if (g_op_tab[cmd].cod_oct == 1)
-            fork->pc = move_pc(pc);
-        else
-            fork->pc = move_pc(pc + g_op_tab[cmd].size);
-    }
-}
+//void    shift_pc_on_map(t_fork *fork, int pc, int  cmd)
+//{
+//    if (cmd != 8)
+//    {
+//        if (g_op_tab[cmd].cod_oct == 1)
+//            fork->pc = move_pc(pc);
+//        else
+//            fork->pc = move_pc(pc + g_op_tab[cmd].size);
+//    }
+//}
 
 void    handling_args(int cmd, t_machine *vm, t_fork *tmp)
 {
@@ -121,5 +119,8 @@ void    handling_args(int cmd, t_machine *vm, t_fork *tmp)
         }
     if (g_op_tab[cmd].cod_oct == 0 || f == g_op_tab[cmd].params)
         run_op_cmd(cmd, args, tmp, vm);
-    shift_pc_on_map(tmp, pc + 1, cmd);
+    if (cmd != 8)
+        tmp->pc = g_op_tab[cmd].cod_oct == 1 ? move_pc(pc + 1) :
+                  move_pc(pc + 1 + g_op_tab[cmd].size);
+//    shift_pc_on_map(tmp, pc + 1, cmd);
 }
