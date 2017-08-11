@@ -146,7 +146,7 @@ void	run_vm(t_machine *vm)
     t_graf      graf;
 
 	init_arena_vm(vm);
-    vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
+//    vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
 //    print_forks(vm->head_lst);
 //    print_players(*vm);
 	while (vm->head_lst && vm->cycle_to_die >= 0)
@@ -160,9 +160,9 @@ void	run_vm(t_machine *vm)
             release_memory(vm);
             exit(0);
         }
-        vm->flags.flag == 'g' ? graph_main(*vm, &graf) : 0;
+//        vm->flags.flag == 'g' ? graph_main(*vm, &graf) : 0;
         vm->cycle++;
 	}
-    vm->flags.flag == 'g' ? graph_is_winner(*vm) : is_winner(*vm);
+//    vm->flags.flag == 'g' ? graph_is_winner(*vm) : is_winner(*vm);
     release_memory(vm);
 }
