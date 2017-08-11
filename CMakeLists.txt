@@ -30,6 +30,21 @@ set(SOURCE_FILES
         ./machine/work_vm.c
         ./machine/init.c
         ./machine/usage.c
-        op.c machine/op_fork.c machine/op_lfork.c machine/op_live.c machine/release_memory.c machine/init_number_players.c)
+        op.c
+        machine/op_fork.c
+        machine/op_lfork.c
+        machine/op_live.c
+        machine/release_memory.c
+        machine/init_number_players.c
+#        machine/graphics_key.c
+        machine/graphic_print_tools.c machine/graphic_static.c)
 add_executable(corewar ${SOURCE_FILES})
+
+set(CURSES_NEED_NCURSES TRUE)
+find_package(Curses REQUIRED)
+#if (CURSES_FOUND AND CURSES_HAVE_NCURSES_H)
+#    include_directories(${CURSES_INCLUDE_DIR})
+#    target_link_libraries (corewar ${CURSES_LIBRARIES})
+#endif()
+
 target_link_libraries(corewar ${CMAKE_SOURCE_DIR}/libft/libft.a)
