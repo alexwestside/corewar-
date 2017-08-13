@@ -15,10 +15,10 @@ void		init_pairs(void)
 		exit(1);
 	}
 	start_color();
-    init_pair(green, COLOR_GREEN, COLOR_BLACK);
-    init_pair(blue, COLOR_BLUE, COLOR_BLACK);
-    init_pair(red, COLOR_RED, COLOR_BLACK);
-    init_pair(cyan, COLOR_CYAN, COLOR_BLACK);
+	init_pair(green, COLOR_GREEN, COLOR_BLACK);
+	init_pair(blue, COLOR_BLUE, COLOR_BLACK);
+	init_pair(red, COLOR_RED, COLOR_BLACK);
+	init_pair(cyan, COLOR_CYAN, COLOR_BLACK);
 	init_pair(un_byte, 240, COLOR_BLACK);
 	init_pair(pc_green, COLOR_BLACK, COLOR_GREEN);
 	init_pair(pc_blue, COLOR_BLACK, COLOR_BLUE);
@@ -90,9 +90,9 @@ void		graph_is_winner(t_machine vm)
 
 void		graph_main(t_machine vm, t_graf *grap)
 {
-    dynamic_submenu_top(vm, *grap, vm.cycle);
-    dynamic_players(vm);
-    print_graph_arena(vm);
-    print_pc_arena(vm);
-    key_occurrent(&vm, grap);
+	dynamic_submenu_top(vm, *grap, vm.cycle);
+	dynamic_players(vm);
+	print_graph_arena(vm);
+	print_pc_arena(vm);
+	key_occurrent(&vm, grap);
 }
