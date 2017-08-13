@@ -6,7 +6,7 @@
 **  100  border
 */
 
-void        init_pairs(void)
+void		init_pairs(void)
 {
 	if (!has_colors())
 	{
@@ -27,10 +27,9 @@ void        init_pairs(void)
 	init_pair(pc_un_byte, 240, 240);
 	init_pair(100, 240, 240);
 	init_pair(w_text, COLOR_WHITE, COLOR_BLACK);
-
 }
 
-void        dynamic_players(t_machine vm)
+void		dynamic_players(t_machine vm)
 {
 	int			y;
 	int			x;
@@ -49,7 +48,7 @@ void        dynamic_players(t_machine vm)
 	attroff(COLOR_PAIR(w_text) | A_BOLD);
 }
 
-static void dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
+static void	dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
 {
 	int y;
 	int x;
@@ -67,7 +66,7 @@ static void dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
 	attroff(COLOR_PAIR(w_text) | A_BOLD);
 }
 
-void        graph_is_winner(t_machine vm)
+void		graph_is_winner(t_machine vm)
 {
 	int y;
 	int x;
@@ -89,7 +88,7 @@ void        graph_is_winner(t_machine vm)
 	endwin();
 }
 
-void        graph_main(t_machine vm, t_graf *grap)
+void		graph_main(t_machine vm, t_graf *grap)
 {
     dynamic_submenu_top(vm, *grap, vm.cycle);
     dynamic_players(vm);
