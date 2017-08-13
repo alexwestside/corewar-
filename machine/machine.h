@@ -29,69 +29,69 @@
 # include "../op.h"
 
 
-enum    pl_color  {green = 1, blue, red, cyan, un_byte};
-enum    pl_pc_color {pc_green = 10, pc_blue, pc_red, pc_cyan, pc_un_byte, w_text};
+enum					pl_color  {green = 1, blue, red, cyan, un_byte};
+enum					pl_pc_color {pc_green = 10, pc_blue, pc_red, pc_cyan, pc_un_byte, w_text};
 
-typedef struct		s_fork
+typedef struct			s_fork
 {
-	int				carry; 			// carry flag
-	int 			life;			// process worker
-    unsigned		pc;           	 	// position in char elements
-	int 			id;					//	number player
-	int				reg[REG_NUMBER];	// registers of the processor
-    int 			mod;
-    int             cmd;
-    unsigned		time_cycle;
-    struct s_fork	*next;
-}					t_fork;
+	int					carry; 			// carry flag
+	int 				life;			// process worker
+	unsigned			pc;           	 	// position in char elements
+	int 				id;					//	number player
+	int					reg[REG_NUMBER];	// registers of the processor
+	int 				mod;
+	int             	cmd;
+	unsigned			time_cycle;
+	struct s_fork		*next;
+}						t_fork;
 
-typedef struct      s_player
+typedef struct			s_player
 {
-    int             id;
-    unsigned        last_live;
-    unsigned        count_live;
-    unsigned        magic;
-    char 			prog_name[PROG_NAME_LENGTH + 1];
-    unsigned        prog_size;
-    char 			comment[COMMENT_LENGTH + 1];
-    unsigned char   *code;
-}                   t_player;
+	int					id;
+	unsigned			last_live;
+	unsigned			count_live;
+	unsigned			magic;
+	char				prog_name[PROG_NAME_LENGTH + 1];
+	unsigned			prog_size;
+	char				comment[COMMENT_LENGTH + 1];
+	unsigned char		*code;
+}						t_player;
 
-typedef struct		s_flags
+typedef struct			s_flags
 {
-	char 			flag;
-	int 			number;
-}					t_flags;
+	char				flag;
+	int					number;
+}						t_flags;
 
 
-typedef	struct		s_machine
+typedef	struct			s_machine
 {
-	t_fork			*head_lst;				// all forks
-    unsigned        cycle;
-	unsigned		count_live;				// all life forks
-	int				iter_cycle_to_die;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
-    int     		cycle_to_die;			// next iter to go iter_cycle_to_die
-    int             iter_max_checks;
-	unsigned char 	*arena;					//
-	unsigned char	*color_arena;
-	int				won_player;			// last say "I am life" player
-    unsigned        count_forks;
-	unsigned		count_players;			// count players
-	t_player        *players;
-	t_flags			flags;
-}					t_machine;
+	t_fork				*head_lst;				// all forks
+	unsigned			cycle;
+	unsigned			count_live;				// all life forks
+	int					iter_cycle_to_die;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
+	int					cycle_to_die;			// next iter to go iter_cycle_to_die
+	int					iter_max_checks;
+	unsigned char		*arena;					//
+	unsigned char		*color_arena;
+	int					won_player;			// last say "I am life" player
+	unsigned			count_forks;
+	unsigned			count_players;			// count players
+	t_player			*players;
+	t_flags				flags;
+}						t_machine;
 
 typedef struct			s_m_op
 {
 	char				*name;
 	short				params;
 	short				param_types[MAX_ARGS_NUMBER];
-    short				opcode;
+	short				opcode;
 	int					cycles;
 	char				*description;
 	short 				carry;
-    short				cod_oct;
-    short				size;
+	short				cod_oct;
+	short				size;
 }						t_m_op;
 
 typedef struct			s_opfunc
@@ -100,12 +100,11 @@ typedef struct			s_opfunc
 	void				(*func)(int argvs[MAX_ARGS_NUMBER], t_fork *,  t_machine *);
 }						t_opfunc;
 
-typedef struct	graf
+typedef struct			graf
 {
-	int 		pause;
-	double		speed;
-
-}				t_graf;
+	int					pause;
+	double				speed;
+}						t_graf;
 
 #endif
 
@@ -130,17 +129,17 @@ void					op_zjmp(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
 ** func tools
 */
 
-void	init_vm(t_machine *vm, char **argv);
-unsigned     move_pc(int pc);
-int		read_4_bytes(unsigned char *arena, int index);
-void	write_4_bytes(t_machine *vm, t_fork *forks, int index, int var);
-int		get_arg(char bin_code, t_fork *fork, int arg, unsigned char *arena);
-int		get_arg_noidx(char bin_code, t_fork *forks, int arg, unsigned char *arena);
-void    inheritance(t_fork *child, t_fork *father, int shift);
-void    handling_args(int cmd, t_machine *vm, t_fork *iter);
+void					init_vm(t_machine *vm, char **argv);
+unsigned				move_pc(int pc);
+int						read_4_bytes(unsigned char *arena, int index);
+void					write_4_bytes(t_machine *vm, t_fork *forks, int index, int var);
+int						get_arg(char bin_code, t_fork *fork, int arg, unsigned char *arena);
+int						get_arg_noidx(char bin_code, t_fork *forks, int arg, unsigned char *arena);
+void					inheritance(t_fork *child, t_fork *father, int shift);
+void					handling_args(int cmd, t_machine *vm, t_fork *iter);
 
 
-void 		run_vm(t_machine *vm);
+void					run_vm(t_machine *vm);
 
 
 static const t_m_op	g_op_tab[17] =
@@ -171,86 +170,86 @@ static const t_m_op	g_op_tab[17] =
 ** func validate_data
 */
 
-int 	check_corect_data_read(t_machine *vm, int index_player);
-void	usage(int count, char *s, t_machine *vm);
-void	work_with_flags(char **argv, int argc, t_machine *vm);
-int 	is_number(char *s);
-void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
+int 					check_corect_data_read(t_machine *vm, int index_player);
+void					usage(int count, char *s, t_machine *vm);
+void					work_with_flags(char **argv, int argc, t_machine *vm);
+int 					is_number(char *s);
+void    				run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 
 /*
 ** func init_players
 */
 
-t_player		*create_players(int count);
-void			init_number_players(t_machine *vm, int argc, char **argv);
-void			create_point_path(int count_strs, char **strs, char **paths,
+t_player				*create_players(int count);
+void					init_number_players(t_machine *vm, int argc, char **argv);
+void					create_point_path(int count_strs, char **strs, char **paths,
 								  unsigned *count);
 
 /*
 ** func func_forks
 */
 
-t_fork		*create_fork(int id, int pc);
-void		add_before(t_fork **alst, t_fork *node);
+t_fork					*create_fork(int id, int pc);
+void					add_before(t_fork **alst, t_fork *node);
 
 /*
 ** func read_file
 */
 
-void 	multi_parsing_files(t_machine *vm, char **strs);
-void	switch_data(t_machine *vm, char *data, int index_player, int i);
-int 	read_data(t_machine *vm, int fd, int i);
-int		read_code_player(t_machine *vm, int fd, int index);
-int 	custom_read(int fd, char *buff, size_t size_buff, int ckeck);
+void 					multi_parsing_files(t_machine *vm, char **strs);
+void					switch_data(t_machine *vm, char *data, int index_player, int i);
+int 					read_data(t_machine *vm, int fd, int i);
+int						read_code_player(t_machine *vm, int fd, int index);
+int						custom_read(int fd, char *buff, size_t size_buff, int ckeck);
 
 /*
 ** 	func op (operation)
 */
 
-unsigned char	*test_code_octal(t_machine *vm, unsigned char code);
+unsigned char			*test_code_octal(t_machine *vm, unsigned char code);
 
 /*
 **  func print
 */
 
-void	head_print(t_machine vm);
-void	console_print_arena(t_machine vm);
-void	is_winner(t_machine vm);
+void					head_print(t_machine vm);
+void					console_print_arena(t_machine vm);
+void					is_winner(t_machine vm);
 
 
 /*
 **	debug function
 */
 
-void	test_print_code_player(t_machine vm);
+void					test_print_code_player(t_machine vm);
 
 
 /*
 ** func delete memory
 */
 
-void		all_delete(t_fork **alst);
-void		release_memory(t_machine *vm);
+void					all_delete(t_fork **alst);
+void					release_memory(t_machine *vm);
 
 /*
 ** func print error massages and exit
 */
 
-void	error_exit(char *str, int code, t_machine *vm);
+void					error_exit(char *str, int code, t_machine *vm);
 
 /*
 ** func graphic mode
 */
 
-void	init_pairs(void);
-void	init_window(t_machine *vm, t_graf *graf);
-void	print_graph_arena(t_machine vm);
-void	print_pc_arena(t_machine vm);
-void    dynamic_players(t_machine vm);
-void	pause_occurrent(t_machine *vm, t_graf *graf);
-void	key_occurrent(t_machine *vm, t_graf *graf);
-void	graph_main(t_machine vm, t_graf *grap);
-void	graph_is_winner(t_machine vm);
+void					init_pairs(void);
+void					init_window(t_machine *vm, t_graf *graf);
+void					print_graph_arena(t_machine vm);
+void					print_pc_arena(t_machine vm);
+void    				dynamic_players(t_machine vm);
+void					pause_occurrent(t_machine *vm, t_graf *graf);
+void					key_occurrent(t_machine *vm, t_graf *graf);
+void					graph_main(t_machine vm, t_graf *grap);
+void					graph_is_winner(t_machine vm);
 
 
 
@@ -259,4 +258,4 @@ void	graph_is_winner(t_machine vm);
 ** temp func
 */
 
-void    debug(t_machine vm, unsigned cycle);
+void					debug(t_machine vm, unsigned cycle);
