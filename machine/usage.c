@@ -4,7 +4,7 @@
 void	usage(int count, char *s, t_machine *vm)
 {
 	if (count == 1)
-		ft_putstr("Usage: ./corewar [-g] [-dump nbr_cycles] [[-n number] champion1.cor] ...\n");
+		ft_putstr("Usage: ./corewar_my [-g] [-dump nbr_cycles] [[-n number] champion1.cor] ...\n");
 	else if (count == 2)
 	{
 		ft_putstr("File ");

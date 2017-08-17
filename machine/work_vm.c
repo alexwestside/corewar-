@@ -105,10 +105,11 @@ void    cycle_to_die(t_machine *vm)
         next = iter->next;
         if (iter->life == 0)
         {
-            if (vm->head_lst == iter)
-                vm->head_lst = iter->next;
-            next ? next->next = iter->next : 0;
-            free(iter);
+//            if (vm->head_lst == iter)
+//                vm->head_lst = iter->next;
+//            next ? next->next = iter->next : 0;
+            delete_forks(vm, iter);
+//            free(iter);
             vm->count_forks--;
         }
         else
@@ -146,7 +147,7 @@ void	run_vm(t_machine *vm)
     t_graf      graf;
 
 	init_arena_vm(vm);
-//    vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
+    vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
 //    print_forks(vm->head_lst);
 //    print_players(*vm);
 	while (vm->head_lst && vm->cycle_to_die >= 0)
@@ -160,9 +161,12 @@ void	run_vm(t_machine *vm)
             release_memory(vm);
             exit(0);
         }
-//        vm->flags.flag == 'g' ? graph_main(*vm, &graf) : 0;
+        vm->flags.flag == 'g' ? graph_main(*vm, &graf) : 0;
         vm->cycle++;
+//            if (vm->cycle == 4606)
+//            ft_printf("\n print debug\n");
 	}
-//    vm->flags.flag == 'g' ? graph_is_winner(*vm) : is_winner(*vm);
+    vm->flags.flag == 'g' ? graph_is_winner(*vm) : is_winner(*vm);
+//    is_winner(*vm);
     release_memory(vm);
 }

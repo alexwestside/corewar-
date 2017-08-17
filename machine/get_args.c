@@ -16,12 +16,12 @@ unsigned     move_pc(int pc)
 
 int     convert_code_into_t_code(int label)
 {
-    if (label == T_REG)
-        return (REG_CODE);
-    if (label == T_DIR)
-        return (DIR_CODE);
-    if (label == T_IND)
-        return (IND_CODE);
+    if (label == REG_CODE)
+        return (T_REG);
+    if (label == DIR_CODE)
+        return (T_DIR);
+    if (label == IND_CODE)
+        return (T_IND);
     return (0);
 }
 
@@ -35,7 +35,7 @@ static  size_t      get_size_read(int cmd, int code_octal, int i, int *valid)
     tmp = i == 0 ? 6 : 6 - (2 * i);
     tmp = code_octal >> tmp & 3;
     code = convert_code_into_t_code(tmp);
-    if (g_op_tab[cmd].param_types[i] & code)
+    if (code & g_op_tab[cmd].param_types[i])
     {
         if (tmp == REG_CODE)
             size = REG_SIZE;

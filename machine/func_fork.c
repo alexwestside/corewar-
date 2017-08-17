@@ -4,8 +4,10 @@
 
 t_fork		*create_fork(int id, int pc)
 {
+    int i;
 	t_fork *new_fork;
 
+    i = 0;
 	new_fork = (t_fork*)malloc(sizeof(t_fork));
 	if (new_fork == NULL)
 		return (NULL);
@@ -13,6 +15,8 @@ t_fork		*create_fork(int id, int pc)
 	new_fork->life = 0;
 	new_fork->pc = pc;
 	new_fork->id = id;
+    while (++i < REG_NUMBER)
+        new_fork->reg[i] = 0;
 	new_fork->reg[0] = id;
 	new_fork->mod = 0;
 	new_fork->cmd = -1;
@@ -42,13 +46,13 @@ void       all_delete(t_fork **alst)
 	}
 }
 
-void	delete_forks(t_fork *head, t_fork *oldfork)
+void	delete_forks(t_machine *vm, t_fork *oldfork)
 {
 	t_fork *q;
 
-	q = head;
-	if (head == oldfork)
-		head = oldfork->next;
+	q = vm->head_lst;
+	if (vm->head_lst == oldfork)
+		vm->head_lst = oldfork->next;
 	else
 	{
 		while (q && q->next != oldfork)

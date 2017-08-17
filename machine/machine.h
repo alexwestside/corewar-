@@ -192,6 +192,7 @@ void			create_point_path(int count_strs, char **strs, char **paths,
 
 t_fork		*create_fork(int id, int pc);
 void		add_before(t_fork **alst, t_fork *node);
+void		delete_forks(t_machine *vm, t_fork *oldfork);
 
 /*
 ** func read_file

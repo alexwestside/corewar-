@@ -3,7 +3,7 @@
 CC = gcc
 #CC = clang
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -g -Wall -Wextra -Werror
 
 LIBFTPATH = ../libft
 LIBFT = libft.a
