@@ -20,7 +20,7 @@ t_fork		*create_fork(int id, int pc)
 	new_fork->reg[0] = id;
 	new_fork->mod = 0;
 	new_fork->cmd = -1;
-	new_fork->time_cycle = 0;
+	new_fork->time_cycle = -1;
 	new_fork->next = NULL;
 	return (new_fork);
 }

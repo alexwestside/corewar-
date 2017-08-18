@@ -1,16 +1,17 @@
 
 #include "machine.h"
 
-unsigned     move_pc(int pc)
+unsigned     move_pc(unsigned pc)
 {
-    int         move;
+//    int         move;
     unsigned    res;
 
-    move = pc % MEM_SIZE;
-    if (move >= 0)
-        res = (unsigned)move;
-    else
-        res = (unsigned)move * (-1);
+    res = pc % MEM_SIZE;
+//    move = pc % MEM_SIZE;
+//    if (move >= 0)
+//        res = (unsigned)move;
+//    else
+//        res = (unsigned)move * (-1);
     return (res);
 }
 

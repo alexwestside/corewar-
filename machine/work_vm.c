@@ -41,7 +41,36 @@ void    debug(t_machine vm, unsigned cycle)
     }
 }
 
-void    check_forks(t_machine *vm, unsigned cycle)
+//void    check_forks_before(t_machine *vm, unsigned cycle, t_fork *finish)
+//{
+//    int     cmd;
+//    t_fork *iter;
+//
+//    iter = vm->head_lst;
+//    while (iter && iter != finish)
+//    {
+//        if (iter->mod == 1 && iter->time_cycle && cycle == iter->time_cycle)
+//        {
+//            handling_args(iter->cmd - 1, vm, iter);
+//            iter->mod = 0;
+//        }
+//        if (iter->mod == 0)
+//        {
+//            cmd = (int)vm->arena[move_pc(iter->pc)];
+//            if (0 < cmd && cmd < 17)
+//            {
+//                iter->cmd = cmd;
+//                iter->mod = 1;
+//                iter->time_cycle = cycle + g_op_tab[cmd - 1].cycles;
+//            }
+//            else
+//                iter->pc = move_pc(iter->pc + 1);
+//        }
+//        iter = iter->next;
+//    }
+//}
+
+void    check_forks(t_machine *vm)
 {
     int     cmd;
     t_fork *iter;
@@ -49,26 +78,62 @@ void    check_forks(t_machine *vm, unsigned cycle)
     iter = vm->head_lst;
     while (iter)
     {
-        if (iter->mod == 1 && iter->time_cycle && cycle == iter->time_cycle)
+        if (iter->time_cycle == 0)
         {
             handling_args(iter->cmd - 1, vm, iter);
-            iter->mod = 0;
+            iter->time_cycle -= 1;
+//            iter->mod = 0;
         }
-        if (iter->mod == 0)
+//        iter->cmd == 15 || iter->cmd == 12 ? check_forks_before(vm, vm->cycle, iter) : 0;
+        else if (iter->time_cycle == -1)
         {
             cmd = (int)vm->arena[move_pc(iter->pc)];
             if (0 < cmd && cmd < 17)
             {
                 iter->cmd = cmd;
                 iter->mod = 1;
-                iter->time_cycle = cycle + g_op_tab[cmd - 1].cycles;
+                iter->time_cycle = g_op_tab[cmd - 1].cycles - 2;
             }
             else
                 iter->pc = move_pc(iter->pc + 1);
         }
+        else
+            iter->time_cycle -= 1;
         iter = iter->next;
     }
 }
+
+
+//void    check_forks(t_machine *vm, unsigned cycle)
+//{
+//    int     cmd;
+//    t_fork *iter;
+//
+//    iter = vm->head_lst;
+//    while (iter)
+//    {
+//        if (iter->mod == 1 && iter->time_cycle && cycle == iter->time_cycle)
+//        {
+//            handling_args(iter->cmd - 1, vm, iter);
+//            iter->mod = 0;
+//        }
+////        iter->cmd == 15 || iter->cmd == 12 ? check_forks_before(vm, vm->cycle, iter) : 0;
+//        else if (iter->mod == 0)
+//        {
+//            cmd = (int)vm->arena[move_pc(iter->pc)];
+//            if (0 < cmd && cmd < 17)
+//            {
+//                iter->cmd = cmd;
+//                iter->mod = 1;
+//                iter->time_cycle = cycle + g_op_tab[cmd - 1].cycles;
+//            }
+//                iter->time_cycle =
+////            else
+////                iter->pc = move_pc(iter->pc + 1);
+//        }
+//        iter = iter->next;
+//    }
+//}
 
 void    overwrite_cycle_to_die(t_machine *vm)
 {
@@ -152,8 +217,9 @@ void	run_vm(t_machine *vm)
 //    print_players(*vm);
 	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
-        check_forks(vm, vm->cycle);
-        if (vm->cycle == (unsigned)vm->iter_cycle_to_die)
+        vm->cycle++;
+        check_forks(vm);
+        if (vm->cycle == vm->iter_cycle_to_die)
             cycle_to_die(vm);
         if (vm->flags.flag == 'd')
         {
@@ -162,7 +228,6 @@ void	run_vm(t_machine *vm)
             exit(0);
         }
         vm->flags.flag == 'g' ? graph_main(*vm, &graf) : 0;
-        vm->cycle++;
 //            if (vm->cycle == 4606)
 //            ft_printf("\n print debug\n");
 	}

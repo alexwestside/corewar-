@@ -35,6 +35,7 @@ void        dynamic_players(t_machine vm)
 	int			y;
 	int			x;
 	unsigned	i;
+    static unsigned    las_player[MAX_PLAYERS] = {0, 0, 0, 0};
 
 	i = -1;
 	y = 13;
@@ -42,7 +43,9 @@ void        dynamic_players(t_machine vm)
 	attron(COLOR_PAIR(w_text) | A_BOLD);
 	while (++i < vm.count_players)
 	{
-		mvprintw(y, x + 3, "%10u", vm.players[i].last_live);
+        if (las_player[i] < vm.players[i].last_live)
+            las_player[i] = vm.players[i].last_live;
+		mvprintw(y, x + 3, "%10u", las_player[i]);
 		mvprintw(y + 1, x + 5, "%8u", vm.players[i].count_live);
 		y += 4;
 	}

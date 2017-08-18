@@ -41,7 +41,7 @@ typedef struct		s_fork
 	int				reg[REG_NUMBER];	// registers of the processor
     int 			mod;
     int             cmd;
-    unsigned		time_cycle;
+    int     		time_cycle;
     struct s_fork	*next;
 }					t_fork;
 
@@ -67,7 +67,7 @@ typedef struct		s_flags
 typedef	struct		s_machine
 {
 	t_fork			*head_lst;				// all forks
-    unsigned        cycle;
+    int             cycle;
 	unsigned		count_live;				// all life forks
 	int				iter_cycle_to_die;		// CYCLE_TO_DIE - CYCLE_DELTA each iteration
     int     		cycle_to_die;			// next iter to go iter_cycle_to_die
@@ -131,7 +131,7 @@ void					op_zjmp(int args[MAX_ARGS_NUMBER], t_fork *player, t_machine *vm);
 */
 
 void	init_vm(t_machine *vm, char **argv);
-unsigned     move_pc(int pc);
+unsigned     move_pc(unsigned pc);
 int		read_4_bytes(unsigned char *arena, int index);
 void	write_4_bytes(t_machine *vm, t_fork *forks, int index, int var);
 int		get_arg(char bin_code, t_fork *fork, int arg, unsigned char *arena);
@@ -261,3 +261,10 @@ void	graph_is_winner(t_machine vm);
 */
 
 void    debug(t_machine vm, unsigned cycle);
+
+
+/*
+** func virtual machine
+*/
+
+//void    check_forks(t_machine *vm, unsigned cycle);
