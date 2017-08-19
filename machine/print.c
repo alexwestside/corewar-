@@ -24,25 +24,25 @@ void	head_print(t_machine vm)
 	}
 }
 
-void	test_print_code_player(t_machine vm)
-{
-	size_t  i;
-	unsigned j;
-
-	i = -1;
-	j = -1;
-	while (++j < vm.count_players)
-	{
-		i = -1;
-		ft_printf("\n\n size code player [%u]\n", vm.players[j].prog_size);
-		ft_printf("\n\n byte code player [%d]\n", j);
-		while (++i < vm.players[j].prog_size)
-		{
-			ft_printf(" %02x", vm.players[j].code[i]);
-		}
-		ft_putchar('\n');
-	}
-}
+//void	test_print_code_player(t_machine vm)
+//{
+//	size_t  i;
+//	unsigned j;
+//
+//	i = -1;
+//	j = -1;
+//	while (++j < vm.count_players)
+//	{
+//		i = -1;
+//		ft_printf("\n\n size code player [%u]\n", vm.players[j].prog_size);
+//		ft_printf("\n\n byte code player [%d]\n", j);
+//		while (++i < vm.players[j].prog_size)
+//		{
+//			ft_printf(" %02x", vm.players[j].code[i]);
+//		}
+//		ft_putchar('\n');
+//	}
+//}
 
 void	console_print_arena(t_machine vm)
 {
@@ -60,9 +60,9 @@ void	console_print_arena(t_machine vm)
 
 void	is_winner(t_machine vm)
 {
-	int index_won;
+	int won;
 
-	index_won = vm.won_player;
-	ft_printf("Player %d, \"%s\", has won\n", vm.players[index_won].id,
-			  vm.players[index_won].prog_name);
+	won = vm.won_player;
+	ft_printf("Contestant %d, \"%s\", has won !\n", won + 1,
+			  vm.players[vm.won_player].prog_name);
 }

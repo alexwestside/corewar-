@@ -1,0 +1,5 @@
+magic invalid
+Error: File zork.cor has an invalid header
+wrong header size
+Error: File zork.cor has a code size that differ from what its header says
+Error: File 42.cor has too large a code (993 bytes > 682 bytes)

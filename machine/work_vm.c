@@ -82,9 +82,7 @@ void    check_forks(t_machine *vm)
         {
             handling_args(iter->cmd - 1, vm, iter);
             iter->time_cycle -= 1;
-//            iter->mod = 0;
         }
-//        iter->cmd == 15 || iter->cmd == 12 ? check_forks_before(vm, vm->cycle, iter) : 0;
         else if (iter->time_cycle == -1)
         {
             cmd = (int)vm->arena[move_pc(iter->pc)];

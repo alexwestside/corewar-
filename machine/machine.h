@@ -171,9 +171,12 @@ static const t_m_op	g_op_tab[17] =
 ** func validate_data
 */
 
-int 	check_corect_data_read(t_machine *vm, int index_player);
+void	fast_check_position_args(int num, char **strs);
+int 	check_corect_data_read(t_machine *vm, int index_player, char *file);
+void	check_is_champion(t_machine *vm, int fd, char *file_name);
+void	print_usage(void);
 void	usage(int count, char *s, t_machine *vm);
-void	work_with_flags(char **argv, int argc, t_machine *vm);
+t_flags	work_with_flags(int argc, char **argv);
 int 	is_number(char *s);
 void    run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 
@@ -201,7 +204,7 @@ void		delete_forks(t_machine *vm, t_fork *oldfork);
 void 	multi_parsing_files(t_machine *vm, char **strs);
 void	switch_data(t_machine *vm, char *data, int index_player, int i);
 int 	read_data(t_machine *vm, int fd, int i);
-int		read_code_player(t_machine *vm, int fd, int index);
+int		read_code_player(t_machine *vm, int fd, int index, char *file_name);
 int 	custom_read(int fd, char *buff, size_t size_buff, int ckeck);
 
 /*

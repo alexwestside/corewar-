@@ -12,11 +12,12 @@ void 	multi_parsing_files(t_machine *vm, char **path_files)
 	while (path_files[++i])
 	{
 		if ((fd = open(path_files[i], O_RDONLY)) == -1)
-			error_exit("\0", 0, vm);
+			error_exit(path_files[i], -1, vm);
+		check_is_champion(vm, fd, path_files[i]);
 		read_data(vm, fd, i);
-		read_code_player(vm, fd, i) == -1 ?
+		check_corect_data_read(vm, i, path_files[i]);
+		read_code_player(vm, fd, i, path_files[i]) == -1 ?
 		error_exit("something is wrong to read file champion", 0, vm) : 0;
-		check_corect_data_read(vm, i);
 		close(fd);
 	}
 }
@@ -63,7 +64,7 @@ int 	read_data(t_machine *vm, int fd, int i)
 	return (0);
 }
 
-int		read_code_player(t_machine *vm, int fd, int index)
+int		read_code_player(t_machine *vm, int fd, int index, char *file_name)
 {
 	ssize_t rd;
 	char 	buff[SIZE_BUFF];
@@ -81,7 +82,6 @@ int		read_code_player(t_machine *vm, int fd, int index)
 	vm->players[index].code = (unsigned char *)malloc(sum * sizeof(unsigned char));
 	ft_memcpy(vm->players[index].code, tmp, sum);
 	free(tmp);
-	vm->players[index].prog_size != sum ? error_exit(
-			"Different read size into player champions", 0, vm) : 0;
+	vm->players[index].prog_size != sum ? error_exit(file_name, 6, vm) : 0;
 	return (sum > 0 ? (int)sum : -1);
 }

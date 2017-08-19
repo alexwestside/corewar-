@@ -13,13 +13,37 @@
 #include "machine.h"
 
 
-int 	check_corect_data_read(t_machine *vm, int index_player)
+int 	check_corect_data_read(t_machine *vm, int index_player, char *file)
 {
+	static char err[] = "ERROR:";
+	int			er_s;
+
+	er_s = 0;
 	if (vm->players[index_player].magic != COREWAR_EXEC_MAGIC)
-		error_exit("Unvalid magic into player champions", 0, vm);
+		er_s = ft_printf("%s File %s has an an invalid header\n", err, file);
+//		error_exit("Unvalid magic into player champions", 0, vm);
+	er_s != 0 ? error_exit("\0", 777, vm) : 0;
 	if (vm->players[index_player].prog_size > CHAMP_MAX_SIZE)
-		error_exit("Is too big to be a champion", 0, vm);
+		er_s = ft_printf("%s File %s has too large a code (%u bytes > %u bytes)\n",
+						 err, file, vm->players[index_player].prog_size, CHAMP_MAX_SIZE);
+//		error_exit("Is too big to be a champion", 0, vm);
+	er_s != 0 ? error_exit("\0", 777, vm) : 0;
 	return (0);
+}
+
+
+void	check_is_champion(t_machine *vm, int fd, char *file_name)
+{
+	ssize_t rd;
+	char 	buff[SIZE_BUFF];
+	size_t 	sum;
+
+	sum = 0;
+	while ((rd = read(fd, buff, SIZE_BUFF)) > 0)
+		sum += rd;
+	lseek(fd, 0, SEEK_SET);
+	if (sum < sizeof(header_t))
+		error_exit(file_name, 1, vm);
 }
 
 

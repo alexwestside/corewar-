@@ -29,15 +29,16 @@ int		main(int argc, char **argv)
 //	return (0);
 
 	if (argc == 1)
-		usage(1, NULL, NULL);
+		print_usage();
+	fast_check_position_args(argc, argv);
 	create_point_path(argc, argv, path_files, &vm.count_players);
+	vm.flags = work_with_flags(argc, argv);
 	init_vm(&vm, argv);
-	work_with_flags(argv, argc, &vm);
 	multi_parsing_files(&vm, path_files);
 	init_number_players(&vm, argc, argv);
 	head_print(vm);
 	//console_print_arena(vm);
-	test_print_code_player(vm);
+//	test_print_code_player(vm);
 //	test_code_octal(&vm, '\0');
 	run_vm(&vm);
 	return (0);
