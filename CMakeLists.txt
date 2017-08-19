@@ -1,17 +1,136 @@
 cmake_minimum_required(VERSION 3.7)
-
 project(corewar)
+
 set(CMAKE_CXX_STANDARD 11)
+
 set(SOURCE_FILES
-        ./machine/machine.h
-        op.h
-#        graphical_mode.c
+        libft/ft_arg_void.c
+        libft/ft_atoi.c
+        libft/ft_binary.c
+        libft/ft_bzero.c
+        libft/ft_character.c
+        libft/ft_check.c
+        libft/ft_count_words.c
+        libft/ft_finder.c
+        libft/ft_flag_char.c
+        libft/ft_int_min.c
+        libft/ft_isalnum.c
+        libft/ft_isalpha.c
+        libft/ft_isascii.c
+        libft/ft_isdigit.c
+        libft/ft_isprint.c
+        libft/ft_isspace.c
+        libft/ft_itoa.c
+        libft/ft_len_char.c
+        libft/ft_len_int.c
+        libft/ft_lstadd.c
+        libft/ft_lstdel.c
+        libft/ft_lstdelone.c
+        libft/ft_lstiter.c
+        libft/ft_lstmap.c
+        libft/ft_lstnew.c
+        libft/ft_max.c
+        libft/ft_max_int.c
+        libft/ft_memalloc.c
+        libft/ft_memccpy.c
+        libft/ft_memchr.c
+        libft/ft_memcmp.c
+        libft/ft_memcpy.c
+        libft/ft_memcpy_rev.c
+        libft/ft_memdel.c
+        libft/ft_memmove.c
+        libft/ft_memset.c
+        libft/ft_min_fild_width.c
+        libft/ft_null_format.c
+        libft/ft_num_len.c
+        libft/ft_num_strlen.c
+        libft/ft_num_width.c
+        libft/ft_octal.c
+        libft/ft_octal_long.c
+        libft/ft_parse.c
+        libft/ft_precision.c
+        libft/ft_print_format.c
+        libft/ft_printf.c
+        libft/ft_printf.h
+        libft/ft_put_num_base.c
+        libft/ft_putchar.c
+        libft/ft_putchar_fd.c
+        libft/ft_putendl.c
+        libft/ft_putendl_fd.c
+        libft/ft_putnbr.c
+        libft/ft_putnbr_fd.c
+        libft/ft_putnstr.c
+        libft/ft_putstr.c
+        libft/ft_putstr_fd.c
+        libft/ft_signed.c
+        libft/ft_signed_int_decimal.c
+        libft/ft_signed_int_decimal_long.c
+        libft/ft_single_persent.c
+        libft/ft_size_spec.c
+        libft/ft_strcat.c
+        libft/ft_strchr.c
+        libft/ft_strclr.c
+        libft/ft_strcmp.c
+        libft/ft_strcpy.c
+        libft/ft_strdel.c
+        libft/ft_strdup.c
+        libft/ft_strequ.c
+        libft/ft_string.c
+        libft/ft_striter.c
+        libft/ft_striteri.c
+        libft/ft_strjoin.c
+        libft/ft_strlcat.c
+        libft/ft_strlen.c
+        libft/ft_strmap.c
+        libft/ft_strmapi.c
+        libft/ft_strncat.c
+        libft/ft_strncmp.c
+        libft/ft_strncpy.c
+        libft/ft_strndup.c
+        libft/ft_strnequ.c
+        libft/ft_strnew.c
+        libft/ft_strnjoin.c
+        libft/ft_strnlen.c
+        libft/ft_strnstr.c
+        libft/ft_strrchr.c
+        libft/ft_strsplit.c
+        libft/ft_strstr.c
+        libft/ft_strsub.c
+        libft/ft_strtrim.c
+        libft/ft_tolower.c
+        libft/ft_toupper.c
+        libft/ft_unsigned.c
+        libft/ft_unsigned_decimal.c
+        libft/ft_unsigned_decimal_long.c
+        libft/ft_unsigned_hexadesimalx.c
+        libft/ft_unsigned_hexadesimalxl.c
+        libft/ft_wcharacter.c
+        libft/ft_wcharlen.c
+        libft/ft_width_padd.c
+        libft/ft_wstring.c
+        libft/get_next_line.c
+        libft/get_next_line.h
+        libft/libft.h
+        libft/singned_size.c
+        libft/unsingned_size.c
+        machine/func_fork.c
+        machine/get_args.c
+        machine/graphic_key.c
+        machine/graphic_mode.c
+        machine/graphic_print_tools.c
+        machine/graphic_static.c
+        machine/init.c
+        machine/init_number_players.c
+        machine/machine.h
+        machine/main.c
         machine/op_add.c
-        machine/tools.c
         machine/op_aff.c
         machine/op_and.c
+        machine/op_fork.c
         machine/op_ld.c
         machine/op_ldi.c
+        machine/op_lfork.c
+        machine/op_live.c
         machine/op_lld.c
         machine/op_lldi.c
         machine/op_or.c
@@ -20,33 +139,21 @@ set(SOURCE_FILES
         machine/op_sub.c
         machine/op_xor.c
         machine/op_zjmp.c
-        ./machine/print.c
-        ./machine/read_file.c
-        ./machine/validate_data.c
-        ./machine/get_args.c
-        ./machine/run_op_cmd.c
-        ./machine/func_fork.c
-        ./machine/main.c
-        ./machine/work_vm.c
-        ./machine/init.c
-        ./machine/usage.c
-        op.c
-        machine/op_fork.c
-        machine/op_lfork.c
-        machine/op_live.c
+        machine/print.c
+        machine/read_file.c
         machine/release_memory.c
-        machine/init_number_players.c
-#        machine/graphics_key.c
-#        machine/graphic_print_tools.c
-#        machine/graphic_static.c
-        )
+        machine/run_op_cmd.c
+        machine/tools.c
+        machine/usage.c
+        machine/validate_data.c
+        machine/work_vm.c
+        op.h)
+
 add_executable(corewar ${SOURCE_FILES})
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
-#if (CURSES_FOUND AND CURSES_HAVE_NCURSES_H)
-#    include_directories(${CURSES_INCLUDE_DIR})
-#    target_link_libraries (corewar ${CURSES_LIBRARIES})
-#endif()
-
-target_link_libraries(corewar ${CMAKE_SOURCE_DIR}/libft/libft.a)
+if (CURSES_FOUND AND CURSES_HAVE_NCURSES_H)
+    include_directories(${CURSES_INCLUDE_DIR})
+    target_link_libraries (corewar ${CURSES_LIBRARIES})
+endif()
