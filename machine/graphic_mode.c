@@ -6,7 +6,7 @@
 **  100  border
 */
 
-void        init_pairs(void)
+void		init_pairs(void)
 {
 	if (!has_colors())
 	{
@@ -15,10 +15,10 @@ void        init_pairs(void)
 		exit(1);
 	}
 	start_color();
-    init_pair(green, COLOR_GREEN, COLOR_BLACK);
-    init_pair(blue, COLOR_BLUE, COLOR_BLACK);
-    init_pair(red, COLOR_RED, COLOR_BLACK);
-    init_pair(cyan, COLOR_CYAN, COLOR_BLACK);
+	init_pair(green, COLOR_GREEN, COLOR_BLACK);
+	init_pair(blue, COLOR_BLUE, COLOR_BLACK);
+	init_pair(red, COLOR_RED, COLOR_BLACK);
+	init_pair(cyan, COLOR_CYAN, COLOR_BLACK);
 	init_pair(un_byte, 240, COLOR_BLACK);
 	init_pair(pc_green, COLOR_BLACK, COLOR_GREEN);
 	init_pair(pc_blue, COLOR_BLACK, COLOR_BLUE);
@@ -27,15 +27,14 @@ void        init_pairs(void)
 	init_pair(pc_un_byte, 240, 240);
 	init_pair(100, 240, 240);
 	init_pair(w_text, COLOR_WHITE, COLOR_BLACK);
-
 }
 
-void        dynamic_players(t_machine vm)
+void		dynamic_players(t_machine vm)
 {
-	int			y;
-	int			x;
-	unsigned	i;
-    static unsigned    las_player[MAX_PLAYERS] = {0, 0, 0, 0};
+	int				y;
+	int				x;
+	unsigned		i;
+	static unsigned	las_player[MAX_PLAYERS] = {0, 0, 0, 0};
 
 	i = -1;
 	y = 13;
@@ -43,8 +42,8 @@ void        dynamic_players(t_machine vm)
 	attron(COLOR_PAIR(w_text) | A_BOLD);
 	while (++i < vm.count_players)
 	{
-        if (las_player[i] < vm.players[i].last_live)
-            las_player[i] = vm.players[i].last_live;
+		if (las_player[i] < vm.players[i].last_live)
+			las_player[i] = vm.players[i].last_live;
 		mvprintw(y, x + 3, "%10u", las_player[i]);
 		mvprintw(y + 1, x + 5, "%8u", vm.players[i].count_live);
 		y += 4;
@@ -52,10 +51,10 @@ void        dynamic_players(t_machine vm)
 	attroff(COLOR_PAIR(w_text) | A_BOLD);
 }
 
-static void dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
+static void	dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
 {
-	int y;
-	int x;
+	int	y;
+	int	x;
 
 	y = 5;
 	x = 222;
@@ -70,7 +69,7 @@ static void dynamic_submenu_top(t_machine vm, t_graf graf, int cycle)
 	attroff(COLOR_PAIR(w_text) | A_BOLD);
 }
 
-void        graph_is_winner(t_machine vm)
+void		graph_is_winner(t_machine vm)
 {
 	int y;
 	int x;
@@ -92,11 +91,11 @@ void        graph_is_winner(t_machine vm)
 	endwin();
 }
 
-void        graph_main(t_machine vm, t_graf *grap)
+void		graph_main(t_machine vm, t_graf *grap)
 {
-    dynamic_submenu_top(vm, *grap, vm.cycle);
-    dynamic_players(vm);
-    print_graph_arena(vm);
-    print_pc_arena(vm);
-    key_occurrent(&vm, grap);
+	dynamic_submenu_top(vm, *grap, vm.cycle);
+	dynamic_players(vm);
+	print_graph_arena(vm);
+	print_pc_arena(vm);
+	key_occurrent(&vm, grap);
 }
