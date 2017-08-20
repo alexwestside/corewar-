@@ -201,7 +201,8 @@ void				p_paths(int c_strs, char **strs, char **paths, unsigned *n);
 
 t_fork				*create_fork(int id, int pc);
 void				add_before(t_fork **alst, t_fork *node);
-void				delete_forks(t_machine *vm, t_fork *oldfork);
+void				delete_fork(t_machine *vm, t_fork *oldfork);
+void				all_delete(t_fork **alst);
 
 /*
 ** func read_file
@@ -237,7 +238,6 @@ void				test_print_code_player(t_machine vm);
 ** func delete memory
 */
 
-void				all_delete(t_fork **alst);
 void				release_memory(t_machine *vm);
 
 /*

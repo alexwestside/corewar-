@@ -1,22 +1,32 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   func_fork.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/08/20 20:42:53 by ayatsyny          #+#    #+#             */
+/*   Updated: 2017/08/20 20:42:56 by ayatsyny         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "machine.h"
 
-t_fork		*create_fork(int id, int pc)
+t_fork	*create_fork(int id, int pc)
 {
-    int i;
-	t_fork *new_fork;
+	int		i;
+	t_fork	*new_fork;
 
-    i = 0;
-	new_fork = (t_fork*)malloc(sizeof(t_fork));
+	i = 0;
+	new_fork = (t_fork *)malloc(sizeof(t_fork));
 	if (new_fork == NULL)
 		return (NULL);
 	new_fork->carry = 0;
 	new_fork->life = 0;
 	new_fork->pc = pc;
 	new_fork->id = id;
-    while (++i < REG_NUMBER)
-        new_fork->reg[i] = 0;
+	while (++i < REG_NUMBER)
+		new_fork->reg[i] = 0;
 	new_fork->reg[0] = id;
 	new_fork->cmd = -1;
 	new_fork->time_cycle = -1;
@@ -24,19 +34,19 @@ t_fork		*create_fork(int id, int pc)
 	return (new_fork);
 }
 
-void		add_before(t_fork **alst, t_fork *node)
+void	add_before(t_fork **alst, t_fork *node)
 {
 	if (*alst)
 		node->next = *alst;
 	*alst = node;
 }
 
-void       all_delete(t_fork **alst)
+void	all_delete(t_fork **alst)
 {
-	t_fork *iter;
-    t_fork *del;
+	t_fork	*iter;
+	t_fork	*del;
 
-    iter = *alst;
+	iter = *alst;
 	while (iter)
 	{
 		del = iter;
@@ -45,7 +55,7 @@ void       all_delete(t_fork **alst)
 	}
 }
 
-void	delete_forks(t_machine *vm, t_fork *oldfork)
+void	delete_fork(t_machine *vm, t_fork *oldfork)
 {
 	t_fork *q;
 

@@ -204,7 +204,7 @@ void    cycle_to_die(t_machine *vm)
 //            if (vm->head_lst == iter)
 //                vm->head_lst = iter->next;
 //            next ? next->next = iter->next : 0;
-            delete_forks(vm, iter);
+			delete_fork(vm, iter);
 //            free(iter);
             vm->count_forks--;
         }
