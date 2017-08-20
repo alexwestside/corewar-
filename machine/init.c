@@ -115,7 +115,7 @@ void	fast_check_position_args(int num, char **strs)
 	while (++i < num)
 	{
 		res = check_param(num, strs, &i);
-		if ((res == 1 && f_first) || (f_secod >= res))
+		if ((res == 1 && f_first) || (f_secod >= res && res != 3))
 			print_usage();
 		else if (res == 1 && f_first == 0)
 			f_first = 1;
