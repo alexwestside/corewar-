@@ -5,12 +5,14 @@ void 	multi_parsing_files(t_machine *vm, char **path_files)
 {
 	int	i;
 	int	fd;
+	char *s;
 
 	i = -1;
 	if (path_files == NULL)
 		error_exit("something is wrong", 0, vm);
 	while (path_files[++i])
 	{
+		s = path_files[i];
 		if ((fd = open(path_files[i], O_RDONLY)) == -1)
 			error_exit(path_files[i], -1, vm);
 		check_is_champion(vm, fd, path_files[i]);

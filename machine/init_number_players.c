@@ -41,6 +41,7 @@ void	set_number(t_machine *vm, int index, int num)
 
 // виключити флагі які потрібні для бонусного режиму в argc і argv і передати
 // у функцію
+
 void	init_number_players(t_machine *vm, int argc, char **argv)
 {
     int i;	// iter to arg

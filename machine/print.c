@@ -11,12 +11,15 @@ void	format_player(char *fmt_st, char *fmt_end, const char *str)
 void	head_print(t_machine vm)
 {
 	unsigned i;
+	int 	num_player;
 
 	i = -1;
 	ft_printf("Introducing contestants...\n");
 	while (++i < vm.count_players)
 	{
-		ft_printf("%c Player %u, weighing %u bytes, ", '*', i + 1, vm.players[i].prog_size);
+		num_player = vm.players[i].id;
+		num_player *= num_player < 0 ? -1 : 1;
+		ft_printf("%c Player %u, weighing %u bytes, ", '*', num_player, vm.players[i].prog_size);
 		format_player("\"", "\"", vm.players[i].prog_name);
 		ft_putchar(' ');
 		format_player("(\"", "\")", vm.players[i].comment);
@@ -62,7 +65,8 @@ void	is_winner(t_machine vm)
 {
 	int won;
 
-	won = vm.won_player;
-	ft_printf("Contestant %d, \"%s\", has won !\n", won + 1,
+	won = vm.players[vm.won_player].id;
+	won *= won < 0 ? -1 : 1;
+	ft_printf("Contestant %d, \"%s\", has won !\n", won,
 			  vm.players[vm.won_player].prog_name);
 }

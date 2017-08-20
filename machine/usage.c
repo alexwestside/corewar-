@@ -64,12 +64,14 @@ void	copy_flags(char **argv, int argc, int i, t_flags *flags)
 
 	tmp = argv[i];
 	flags->flag = *(tmp + 1);
-	if (!ft_strcmp(argv[i], "-g") || !ft_strcmp(argv[i], "-v") || !ft_strcmp(argv[i], "-a"))
+	if (!ft_strcmp(argv[i], "-g") || !ft_strcmp(argv[i], "-a"))
 		return ;
 	if (i + 1 < argc && is_number(argv[i + 1]))
 		flags->number = ft_atoi(argv[i + 1]);
 	else
 		print_usage();
+    if (flags->flag == 'v' && flags->number > 2)
+        print_usage();
 }
 
 t_flags		work_with_flags(int argc, char **argv)

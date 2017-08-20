@@ -105,18 +105,21 @@ int		check_param(int num_strs, char **strs, int *i)
 void	fast_check_position_args(int num, char **strs)
 {
 	int i;
-	int f;
+	int f_first;
+    int f_secod;
 	int res;
 
 	i = 0;
-	f = 0;
+    f_secod = 0;
+	f_first = 0;
 	while (++i < num)
 	{
 		res = check_param(num, strs, &i);
-		if (res == 1 && f)
+		if ((res == 1 && f_first) || (f_secod >= res))
 			print_usage();
-		else if (res == 1 && f == 0)
-			f = 1;
+		else if (res == 1 && f_first == 0)
+			f_first = 1;
+        f_secod = res;
 	}
 }
 
@@ -130,7 +133,6 @@ void 	create_point_path(int argc, char **argv, char *paths[MAX_PLAYERS],
 	i = 0;
 	j = 0;
 	*count = 0;
-	ft_bzero(paths, MAX_PLAYERS * sizeof(char *));
 	while (++i < argc)
 	{
 		if (check_param(argc, argv, &i) != 3)
@@ -144,5 +146,5 @@ void 	create_point_path(int argc, char **argv, char *paths[MAX_PLAYERS],
 			error_exit("\0", -5, NULL);
 		j < MAX_PLAYERS ? paths[j++] = argv[i] : 0;
 	}
-	paths[i] = NULL;
+	paths[j] = NULL;
 }

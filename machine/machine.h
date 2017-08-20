@@ -16,6 +16,7 @@
 # define PR_SIZE_ARENA 0x0040
 # define IND_SIZE 2
 # define REG_SIZE 1
+# define MAX_ARGS_N MAX_ARGS_NUMBER
 # define MAX_CHAR_FLAG 5
 # define INT_MAX 2147483647
 # define MSLEEP(msec) usleep(msec * 1000000.0)
@@ -89,7 +90,7 @@ typedef struct		s_m_op
 {
 	char			*name;
 	short			params;
-	short			param_types[MAX_ARGS_NUMBER];
+	short			param_types[MAX_ARGS_N];
 	short			opcode;
 	int				cycles;
 	char			*description;
@@ -101,7 +102,7 @@ typedef struct		s_m_op
 typedef struct		s_opfunc
 {
 	int				op;
-	void			(*func)(int argvs[MAX_ARGS_NUMBER], t_fork *, t_machine *);
+	void			(*func)(int argvs[MAX_ARGS_N], t_fork *, t_machine *);
 }					t_opfunc;
 
 typedef struct		graf
@@ -111,38 +112,22 @@ typedef struct		graf
 
 }					t_graf;
 
-void				op_add(int args[MAX_ARGS_NUMBER], t_fork *player,
-			t_machine *vm);
-void				op_aff(int args[MAX_ARGS_NUMBER], t_fork *player,
-				t_machine *vm);
-void				op_and(int args[MAX_ARGS_NUMBER], t_fork *player,
-			t_machine *vm);
-void				op_fork(int args[MAX_ARGS_NUMBER], t_fork *player,
-			t_machine *vm);
-void				op_ld(int args[MAX_ARGS_NUMBER], t_fork *player,
-			t_machine *vm);
-void				op_ldi(int args[MAX_ARGS_NUMBER], t_fork *fork,
-				t_machine *vm);
-void				op_lfork(int args[MAX_ARGS_NUMBER], t_fork *player,
-			t_machine *vm);
-void				op_live(int args[MAX_ARGS_NUMBER], t_fork *player,
-			t_machine *vm);
-void				op_lld(int args[MAX_ARGS_NUMBER], t_fork *fork,
-		t_machine *vm);
-void				op_lldi(int args[MAX_ARGS_NUMBER], t_fork *player,
-	t_machine *vm);
-void				op_or(int args[MAX_ARGS_NUMBER], t_fork *fork,
-			t_machine *vm);
-void				op_st(int args[MAX_ARGS_NUMBER], t_fork *fork,
-		t_machine *vm);
-void				op_sti(int args[MAX_ARGS_NUMBER], t_fork *fork,
-		t_machine *vm);
-void				op_sub(int args[MAX_ARGS_NUMBER], t_fork *fork,
-			t_machine *vm);
-void				op_xor(int args[MAX_ARGS_NUMBER], t_fork *player,
-		t_machine *vm);
-void				op_zjmp(int args[MAX_ARGS_NUMBER], t_fork *player,
-	t_machine *vm);
+void				op_add(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_aff(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_and(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_fork(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_ld(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_ldi(int args[MAX_ARGS_N], t_fork *fork, t_machine *vm);
+void				op_lfork(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_live(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_lld(int args[MAX_ARGS_N], t_fork *fork, t_machine *vm);
+void				op_lldi(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_or(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_st(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_sti(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_sub(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_xor(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
+void				op_zjmp(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
 
 /*
 ** func tools
@@ -197,8 +182,7 @@ static const t_m_op g_op_tab[17] =
 */
 
 void				fast_check_position_args(int num, char **strs);
-int					check_corect_data_read(t_machine *vm, int index_player,
-							char *file);
+int					check_corect_data_read(t_machine *vm, int i_player, char *file);
 void				check_is_champion(t_machine *vm, int fd, char *file_name);
 void				print_usage(void);
 void				usage(int count, char *s, t_machine *vm);
@@ -228,13 +212,10 @@ void				delete_forks(t_machine *vm, t_fork *oldfork);
 */
 
 void				multi_parsing_files(t_machine *vm, char **strs);
-void				switch_data(t_machine *vm, char *data, int index_player,
-				int i);
+void				switch_data(t_machine *vm, char *data, int i_player, int i);
 int					read_data(t_machine *vm, int fd, int i);
-int					read_code_player(t_machine *vm, int fd, int index,
-					char *file_name);
-int					custom_read(int fd, char *buff, size_t size_buff,
-			int ckeck);
+int					read_code_player(t_machine *vm, int fd, int index, char *n);
+int					custom_read(int fd, char *buff, size_t s_buff, int ckeck);
 
 /*
 ** 	func op (operation)
@@ -292,6 +273,12 @@ void				debug(t_machine vm, unsigned cycle);
 /*
 ** func virtual machine
 */
+
+/*
+**
+*/
+
+void    print_flag(t_machine vm, t_player *p, int mod);
 
 //void    check_forks(t_machine *vm, unsigned cycle);
 

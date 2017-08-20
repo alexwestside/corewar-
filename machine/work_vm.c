@@ -41,6 +41,36 @@ void    debug(t_machine vm, unsigned cycle)
     }
 }
 
+//char    *get_name_player(t_machine vm, t_fork *fork)
+//{
+//    int i;
+//
+//    i = -1;
+//    while (++i < vm.count_players)
+//        if (vm.players[i].id == fork->id)
+//            return (vm.players[i].prog_name);
+//    return ("dont found name player");
+//}
+
+void    print_flag(t_machine vm, t_player *p, int mod)
+{
+    int id_player;
+
+    if (vm.flags.flag == '\0')
+        return ;
+    if (vm.flags.flag == 'v' && vm.flags.number == 2 && mod == -1)
+        ft_printf("It is now cycle %u\n", vm.cycle + 1);
+    else if (vm.flags.flag == 'v' && vm.flags.number == 2 && mod == 0)
+        ft_printf("It is now cycle %u\n", vm.cycle);
+    else if (vm.flags.flag == 'v' && vm.flags.number == 2 && mod == 2)
+        ft_printf("Cycle to die is now %d\n", vm.cycle_to_die);
+    else if (vm.flags.flag == 'v' && vm.flags.number == 1 && mod == 1)
+    {
+        id_player = p->id < 0 ? p->id * (-1) : 0;
+        ft_printf("Player %d (%s) is said to be alive\n", id_player, p->prog_name);
+    }
+}
+
 //void    check_forks_before(t_machine *vm, unsigned cycle, t_fork *finish)
 //{
 //    int     cmd;
@@ -70,6 +100,13 @@ void    debug(t_machine vm, unsigned cycle)
 //    }
 //}
 
+void    save_run_fork(t_fork *iter, int cmd)
+{
+    iter->cmd = cmd;
+    iter->mod = 1;
+    iter->time_cycle = g_op_tab[cmd - 1].cycles - 2;
+}
+
 void    check_forks(t_machine *vm)
 {
     int     cmd;
@@ -87,11 +124,7 @@ void    check_forks(t_machine *vm)
         {
             cmd = (int)vm->arena[move_pc(iter->pc)];
             if (0 < cmd && cmd < 17)
-            {
-                iter->cmd = cmd;
-                iter->mod = 1;
-                iter->time_cycle = g_op_tab[cmd - 1].cycles - 2;
-            }
+                save_run_fork(iter, cmd);
             else
                 iter->pc = move_pc(iter->pc + 1);
         }
@@ -145,6 +178,7 @@ void    overwrite_cycle_to_die(t_machine *vm)
         vm->cycle_to_die -= CYCLE_DELTA;
         vm->iter_cycle_to_die = vm->cycle + vm->cycle_to_die;
         vm->iter_max_checks = 0;
+        print_flag(*vm, NULL, 2);
         while (++i < vm->count_players)
         {
 //            tmp = vm->players[i];
@@ -205,31 +239,35 @@ void    print_players(t_machine vm)
     }
 }
 
+void    print_dump(t_machine *vm)
+{
+    console_print_arena(*vm);
+    release_memory(vm);
+    exit(0);
+}
+
 void	run_vm(t_machine *vm)
 {
     t_graf      graf;
 
 	init_arena_vm(vm);
-    vm->flags.flag == 'g' ? init_window(vm, &graf) : 0;
+    vm->flags.flag == 'g' ? init_window(vm, &graf) : head_print(*vm);
 //    print_forks(vm->head_lst);
 //    print_players(*vm);
 	while (vm->head_lst && vm->cycle_to_die >= 0)
 	{
         vm->cycle++;
+        print_flag(*vm, NULL, 0);
         check_forks(vm);
         if (vm->cycle == vm->iter_cycle_to_die)
             cycle_to_die(vm);
-        if (vm->flags.flag == 'd')
-        {
-            console_print_arena(*vm);
-            release_memory(vm);
-            exit(0);
-        }
+        if (vm->flags.flag == 'd' && vm->flags.number == vm->cycle)
+            print_dump(vm);
         vm->flags.flag == 'g' ? graph_main(*vm, &graf) : 0;
 //            if (vm->cycle == 4606)
 //            ft_printf("\n print debug\n");
 	}
+    print_flag(*vm, NULL, -1);
     vm->flags.flag == 'g' ? graph_is_winner(*vm) : is_winner(*vm);
-//    is_winner(*vm);
     release_memory(vm);
 }
