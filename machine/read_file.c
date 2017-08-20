@@ -17,7 +17,7 @@ void 	multi_parsing_files(t_machine *vm, char **path_files)
 			error_exit(path_files[i], -1, vm);
 		check_is_champion(vm, fd, path_files[i]);
 		read_data(vm, fd, i);
-		check_corect_data_read(vm, i, path_files[i]);
+        check_read_data(vm, i, path_files[i]);
 		read_code_player(vm, fd, i, path_files[i]) == -1 ?
 		error_exit("something is wrong to read file champion", 0, vm) : 0;
 		close(fd);

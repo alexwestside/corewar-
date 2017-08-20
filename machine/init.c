@@ -123,8 +123,7 @@ void	fast_check_position_args(int num, char **strs)
 	}
 }
 
-void 	create_point_path(int argc, char **argv, char *paths[MAX_PLAYERS],
-						  unsigned *count)
+void 	p_paths(int argc, char **argv, char *paths[MAX_PLAYERS], unsigned *count)
 {
 	int		i;
 	int		j;

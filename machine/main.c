@@ -32,7 +32,7 @@ int		main(int argc, char **argv)
 		print_usage();
 	fast_check_position_args(argc, argv);
     ft_bzero(path_files, (MAX_PLAYERS + 1 * sizeof(char *)));
-	create_point_path(argc, argv, path_files, &vm.count_players);
+	p_paths(argc, argv, path_files, &vm.count_players);
 	vm.flags = work_with_flags(argc, argv);
 	init_vm(&vm, argv);
 	multi_parsing_files(&vm, path_files);

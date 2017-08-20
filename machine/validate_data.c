@@ -13,7 +13,7 @@
 #include "machine.h"
 
 
-int 	check_corect_data_read(t_machine *vm, int index_player, char *file)
+int 	check_read_data(t_machine *vm, int index_player, char *file)
 {
 	static char err[] = "ERROR:";
 	int			er_s;

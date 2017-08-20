@@ -71,7 +71,6 @@ void    inheritance(t_fork *child, t_fork *father, int shift)
     child->pc = move_pc(father->pc + shift);
     child->life = father->id;
     child->time_cycle = -1;
-    child->mod = 0;
     child->cmd = -1;
     child->carry = father->carry;
     ft_memcpy(child->reg, father->reg, sizeof(int) * REG_NUMBER);

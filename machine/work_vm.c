@@ -103,7 +103,6 @@ void    print_flag(t_machine vm, t_player *p, int mod)
 void    save_run_fork(t_fork *iter, int cmd)
 {
     iter->cmd = cmd;
-    iter->mod = 1;
     iter->time_cycle = g_op_tab[cmd - 1].cycles - 2;
 }
 

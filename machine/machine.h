@@ -6,7 +6,7 @@
 /*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/12 22:46:57 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/06/12 22:47:03 by ayatsyny         ###   ########.fr       */
+/*   Updated: 2017/08/20 17:52:08 by ayatsyny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,12 @@
 # include "../libft/ft_printf.h"
 # include "../op.h"
 
+enum	e_pl_color
+{
+	green = 1, blue, red, cyan, un_byte
+};
 
-enum	pl_color{green = 1, blue, red, cyan, un_byte};
-
-enum	pl_pc_color
+enum	e_pl_pc_color
 {
 	pc_green = 10, pc_blue, pc_red, pc_cyan, pc_un_byte, w_text
 };
@@ -45,7 +47,6 @@ typedef struct		s_fork
 	unsigned		pc;
 	int				id;
 	int				reg[REG_NUMBER];
-	int				mod;
 	int				cmd;
 	int				time_cycle;
 	struct s_fork	*next;
@@ -71,17 +72,17 @@ typedef struct		s_flags
 
 typedef struct		s_machine
 {
-	t_fork			*head_lst;                // all forks
+	t_fork			*head_lst;
 	int				cycle;
-	unsigned		count_live;                // all life forks
-	int				iter_cycle_to_die;        // CYCLE_TO_DIE - CYCLE_DELTA each iteration
-	int				cycle_to_die;            // next iter to go iter_cycle_to_die
+	unsigned		count_live;
+	int				iter_cycle_to_die;
+	int				cycle_to_die;
 	int				iter_max_checks;
-	unsigned char	*arena;                    //
+	unsigned char	*arena;
 	unsigned char	*color_arena;
-	int				won_player;            // last say "I am life" player
+	int				won_player;
 	unsigned		count_forks;
-	unsigned		count_players;            // count players
+	unsigned		count_players;
 	t_player		*players;
 	t_flags			flags;
 }					t_machine;
@@ -105,12 +106,39 @@ typedef struct		s_opfunc
 	void			(*func)(int argvs[MAX_ARGS_N], t_fork *, t_machine *);
 }					t_opfunc;
 
-typedef struct		graf
+typedef struct		s_graf
 {
 	int				pause;
 	double			speed;
 
 }					t_graf;
+
+static const t_m_op g_op_tab[17] =
+{
+	{"live", 1, {T_DIR}, 1, 10, "alive", 0, 0, 4},
+	{"ld", 2, {T_DIR | T_IND, T_REG}, 2, 5, "load", 1, 1, 4},
+	{"st", 2, {T_REG, T_IND | T_REG}, 3, 5, "store", 0, 1, 0},
+	{"add", 3, {T_REG, T_REG, T_REG}, 4, 10, "addition", 1, 1, 0},
+	{"sub", 3, {T_REG, T_REG, T_REG}, 5, 10, "soustraction", 1, 1, 0},
+	{"and", 3, {T_REG | T_DIR | T_IND, T_REG | T_IND | T_DIR, T_REG}, 6, 6,
+		"et (and  r1, r2, r3   r1&r2 -> r3", 1, 1, 4},
+	{"or", 3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG}, 7, 6,
+		"ou  (or   r1, r2, r3   r1 | r2 -> r3", 1, 1, 4},
+	{"xor", 3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG}, 8, 6,
+		"ou (xor  r1, r2, r3   r1^r2 -> r3", 1, 1, 4},
+	{"zjmp", 1, {T_DIR}, 9, 20, "jump if zero", 0, 0, 2},
+	{"ldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 10, 25,
+		"load index", 0, 1, 2},
+	{"sti", 3, {T_REG, T_REG | T_DIR | T_IND, T_DIR | T_REG}, 11, 25,
+		"store index", 0, 1, 2},
+	{"fork", 1, {T_DIR}, 12, 800, "fork", 0, 0, 2},
+	{"lld", 2, {T_DIR | T_IND, T_REG}, 13, 10, "long load", 1, 1, 4},
+	{"lldi", 3, {T_REG | T_DIR | T_IND, T_DIR | T_REG, T_REG}, 14, 50,
+		"long load index", 1, 1, 2},
+	{"lfork", 1, {T_DIR}, 15, 1000, "long fork", 0, 0, 2},
+	{"aff", 1, {T_REG}, 16, 2, "aff", 0, 1, 0},
+	{0, 0, {0}, 0, 0, 0, 0, 0, 0}
+};
 
 void				op_add(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
 void				op_aff(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
@@ -146,43 +174,12 @@ void				inheritance(t_fork *child, t_fork *father, int shift);
 void				handling_args(int cmd, t_machine *vm, t_fork *iter);
 void				run_vm(t_machine *vm);
 
-
-static const t_m_op g_op_tab[17] =
-		{
-				{"live",  1, {T_DIR},                                               1,  10,   "alive",                                0, 0, 4},
-				{"ld",    2, {T_DIR |
-							  T_IND,                 T_REG},                        2,  5,    "load",                                 1, 1, 4},
-				{"st",    2, {T_REG, T_IND |
-									 T_REG},                                        3,  5,    "store",                                0, 1, 0},
-				{"add",   3, {T_REG, T_REG, T_REG},                                 4,  10,   "addition",                             1, 1, 0},
-				{"sub",   3, {T_REG, T_REG, T_REG},                                 5,  10,   "soustraction",                         1, 1, 0},
-				{"and",   3, {T_REG | T_DIR | T_IND, T_REG | T_IND | T_DIR, T_REG}, 6,  6,
-																							  "et (and  r1, r2, r3   r1&r2 -> r3",    1, 1, 4},
-				{"or",    3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG}, 7,  6,
-																							  "ou  (or   r1, r2, r3   r1 | r2 -> r3", 1, 1, 4},
-				{"xor",   3, {T_REG | T_IND | T_DIR, T_REG | T_IND | T_DIR, T_REG}, 8,  6,
-																							  "ou (xor  r1, r2, r3   r1^r2 -> r3",    1, 1, 4},
-				{"zjmp",  1, {T_DIR},                                               9,  20,   "jump if zero",                         0, 0, 2},
-				{"ldi",   3, {T_REG | T_DIR | T_IND, T_DIR |
-													 T_REG,                 T_REG}, 10, 25,   "load index",                           0, 1, 2},
-				{"sti",   3, {T_REG, T_REG | T_DIR | T_IND, T_DIR |
-															T_REG},                 11, 25,   "store index",                          0, 1, 2},
-				{"fork",  1, {T_DIR},                                               12, 800,  "fork",                                 0, 0, 2},
-				{"lld",   2, {T_DIR |
-							  T_IND,                 T_REG},                        13, 10,   "long load",                            1, 1, 4},
-				{"lldi",  3, {T_REG | T_DIR | T_IND, T_DIR |
-													 T_REG,                 T_REG}, 14, 50,   "long load index",                      1, 1, 2},
-				{"lfork", 1, {T_DIR},                                               15, 1000, "long fork",                            0, 0, 2},
-				{"aff",   1, {T_REG},                                               16, 2,    "aff",                                  0, 1, 0},
-				{0,       0, {0},                                                   0,  0,    0,                                      0, 0, 0}
-		};
-
 /*
 ** func validate_data
 */
 
 void				fast_check_position_args(int num, char **strs);
-int					check_corect_data_read(t_machine *vm, int i_player, char *file);
+int					check_read_data(t_machine *vm, int i_player, char *file);
 void				check_is_champion(t_machine *vm, int fd, char *file_name);
 void				print_usage(void);
 void				usage(int count, char *s, t_machine *vm);
@@ -196,8 +193,7 @@ void				run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 
 t_player			*create_players(int count);
 void				init_number_players(t_machine *vm, int argc, char **argv);
-void				create_point_path(int count_strs, char **strs, char **paths,
-					   unsigned *count);
+void				p_paths(int c_strs, char **strs, char **paths, unsigned *n);
 
 /*
 ** func func_forks
@@ -274,12 +270,6 @@ void				debug(t_machine vm, unsigned cycle);
 ** func virtual machine
 */
 
-/*
-**
-*/
-
-void    print_flag(t_machine vm, t_player *p, int mod);
-
-//void    check_forks(t_machine *vm, unsigned cycle);
+void				print_flag(t_machine vm, t_player *p, int mod);
 
 #endif
