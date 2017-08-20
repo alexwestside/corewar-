@@ -208,10 +208,9 @@ void				all_delete(t_fork **alst);
 ** func read_file
 */
 
+char				*rev_byte(char *str, size_t size);
 void				multi_parsing_files(t_machine *vm, char **strs);
 void				switch_data(t_machine *vm, char *data, int i_player, int i);
-int					read_data(t_machine *vm, int fd, int i);
-int					read_code_player(t_machine *vm, int fd, int index, char *n);
 int					custom_read(int fd, char *buff, size_t s_buff, int ckeck);
 
 /*
