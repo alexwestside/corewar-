@@ -75,3 +75,11 @@ void    inheritance(t_fork *child, t_fork *father, int shift)
     child->carry = father->carry;
     ft_memcpy(child->reg, father->reg, sizeof(int) * REG_NUMBER);
 }
+
+unsigned move_pc(unsigned pc)
+{
+    unsigned res;
+
+    res = pc % MEM_SIZE;
+    return (res);
+}
