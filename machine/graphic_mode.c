@@ -89,8 +89,10 @@ void		graph_is_winner(t_machine vm)
 	y = 33;
 	x = 200;
 	winner = vm.won_player;
+	print_graph_arena(vm);
 	attron(COLOR_PAIR(w_text) | A_BOLD);
-	mvprintw(8, 222 - 14, "%-20u", vm.cycle);
+	mvprintw(8, 222 - 14, "%-20u", vm.cycle + 1);
+	mvprintw(10, 212, "%-20u", 0);
 	mvprintw(y, x, "The winner is : ");
 	attron(COLOR_PAIR(green + winner));
 	mvprintw(y, x + 16, "%s", vm.players[winner].prog_name);
