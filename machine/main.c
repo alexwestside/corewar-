@@ -22,8 +22,8 @@ int	main(int argc, char **argv)
 	fast_check_position_argv(argc, argv);
 	ft_bzero(path_files, ((MAX_PLAYERS + 1) * sizeof(char *)));
 	p_paths(argc, argv, path_files, &vm.count_players);
-	vm.flags = work_with_flags(argc, argv);
-	init_vm(&vm, argv);
+	vm.flags = get_flags(argc, argv);
+	init_vm(&vm);
 	multi_parsing_files(&vm, path_files);
 	init_number_players(&vm, argc, argv);
 	run_vm(&vm);

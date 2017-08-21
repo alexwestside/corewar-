@@ -33,10 +33,10 @@ t_player	*create_players(int count)
 	return (players ? players : NULL);
 }
 
-void		init_vm(t_machine *vm, char **argv)
+void		init_vm(t_machine *vm)
 {
 	if (vm->count_players == 0)
-		usage(2, argv[1], NULL);
+		print_usage();
 	vm->head_lst = NULL;
 	vm->cycle = 0;
 	vm->count_live = 0;

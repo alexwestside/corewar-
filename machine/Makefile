@@ -19,13 +19,14 @@ SRCS =  main.c \
         graphic_static.c \
         func_fork.c \
         get_args.c \
+        get_flags.c \
         init.c \
         init_number_players.c \
         print.c \
         read_file.c \
         release_memory.c \
         run_op_cmd.c \
-        usage.c \
+        get_flags.c \
         validate_data.c \
         work_vm.c \
         ./op_add.c \
@@ -45,6 +46,8 @@ SRCS =  main.c \
         ./op_xor.c \
         ./op_zjmp.c \
         ./tools.c \
+        ./tools2.c \
+        ./auxiliary_func.c \
 
 .PHONY: all clean fclean re
 

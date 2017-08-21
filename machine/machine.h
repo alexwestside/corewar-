@@ -17,12 +17,10 @@
 # define IND_SIZE 2
 # define REG_SIZE 1
 # define MAX_ARGS_N MAX_ARGS_NUMBER
-# define MAX_CHAR_FLAG 5
 # define INT_MAX 2147483647
 # define MSLEEP(msec) usleep(msec * 1000000.0)
 # define SPACE 32
 # define ESC 27
-
 # include <fcntl.h>
 # include <errno.h>
 # include <ncurses.h>
@@ -161,18 +159,16 @@ void				op_zjmp(int args[MAX_ARGS_N], t_fork *p, t_machine *vm);
 ** func tools
 */
 
-void				init_vm(t_machine *vm, char **argv);
 unsigned			move_pc(unsigned pc);
-int					read_4_bytes(unsigned char *arena, int index);
-void				write_4_bytes(t_machine *vm, t_fork *forks, int index,
-				int var);
+int					is_number(char *s);
+int					read_vm(unsigned char *arena, int index);
+void				write_vm(t_machine *vm, t_fork *forks, int index,
+							 int var);
 int					get_arg(char bin_code, t_fork *fork, int arg,
-			unsigned char *arena);
-int					get_arg_noidx(char bin_code, t_fork *forks, int arg,
-				unsigned char *arena);
+							   unsigned char *arena);
+int					get_arg_ni(char bin_code, t_fork *forks, int arg,
+								  unsigned char *arena);
 void				inheritance(t_fork *child, t_fork *father, int shift);
-void				handling_args(int cmd, t_machine *vm, t_fork *iter);
-void				run_vm(t_machine *vm);
 
 /*
 ** func validate_data
@@ -183,12 +179,15 @@ void				fast_check_position_argv(int num, char **strs);
 int					check_read_data(t_machine *vm, int i_player, char *file);
 void				check_is_champion(t_machine *vm, int fd, char *file_name);
 
+/*
+** func to working machine
+*/
 
-void				print_usage(void);
-void				usage(int count, char *s, t_machine *vm);
-t_flags				work_with_flags(int argc, char **argv);
-int					is_number(char *s);
+t_flags				get_flags(int argc, char **argv);
 void				run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
+void				init_vm(t_machine *vm);
+void				handling_args(int cmd, t_machine *vm, t_fork *iter);
+void				run_vm(t_machine *vm);
 
 /*
 ** func init_players
@@ -213,14 +212,6 @@ void				all_delete(t_fork **alst);
 
 char				*rev_byte(char *str, size_t size);
 void				multi_parsing_files(t_machine *vm, char **strs);
-void				switch_data(t_machine *vm, char *data, int i_player, int i);
-int					custom_read(int fd, char *buff, size_t s_buff, int ckeck);
-
-/*
-** 	func op (operation)
-*/
-
-unsigned char		*test_code_octal(t_machine *vm, unsigned char code);
 
 /*
 **  func print
@@ -229,12 +220,7 @@ unsigned char		*test_code_octal(t_machine *vm, unsigned char code);
 void				head_print(t_machine vm);
 void				console_print_arena(t_machine vm);
 void				is_winner(t_machine vm);
-
-/*
-**	debug function
-*/
-
-void				test_print_code_player(t_machine vm);
+void				print_usage(void);
 
 /*
 ** func delete memory
@@ -263,15 +249,11 @@ void				graph_main(t_machine vm, t_graf *grap);
 void				graph_is_winner(t_machine vm);
 
 /*
-** temp func
+** func auxiliary func
 */
 
-void				debug(t_machine vm, unsigned cycle);
-
-/*
-** func virtual machine
-*/
-
+void				save_run_fork(t_fork *iter, int cmd);
+void				print_dump(t_machine *vm);
 void				print_flag(t_machine vm, t_player *p, int mod);
 
 #endif

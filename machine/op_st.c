@@ -21,7 +21,7 @@ void	op_st(int args[MAX_ARGS_NUMBER], t_fork *fork, t_machine *vm)
 	if (((args[3] >> 4) & 3) == IND_CODE)
 	{
 		s_arg = args[1];
-		write_4_bytes(vm, fork, fork->pc + (s_arg % IDX_MOD), f_arg);
+		write_vm(vm, fork, fork->pc + (s_arg % IDX_MOD), f_arg);
 	}
 	else
 		fork->reg[args[1] - 1] = f_arg;
