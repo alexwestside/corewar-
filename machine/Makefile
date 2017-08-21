@@ -11,6 +11,8 @@ LIBFT = libft.a
 NAME = corewar
 
 SRCS =  main.c \
+        err_exit.c \
+        get_path_files.c \
         graphic_key.c \
         graphic_mode.c \
         graphic_print_tools.c \

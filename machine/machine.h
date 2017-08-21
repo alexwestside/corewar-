@@ -178,9 +178,12 @@ void				run_vm(t_machine *vm);
 ** func validate_data
 */
 
-void				fast_check_position_args(int num, char **strs);
+int					check_argv(int num_strs, char **strs, int *i);
+void				fast_check_position_argv(int num, char **strs);
 int					check_read_data(t_machine *vm, int i_player, char *file);
 void				check_is_champion(t_machine *vm, int fd, char *file_name);
+
+
 void				print_usage(void);
 void				usage(int count, char *s, t_machine *vm);
 t_flags				work_with_flags(int argc, char **argv);
@@ -193,7 +196,7 @@ void				run_op_cmd(int cmd, int *args, t_fork *fork, t_machine *vm);
 
 t_player			*create_players(int count);
 void				init_number_players(t_machine *vm, int argc, char **argv);
-void				p_paths(int c_strs, char **strs, char **paths, unsigned *n);
+void				p_paths(int n, char **strs, char **paths, unsigned *count);
 
 /*
 ** func func_forks

@@ -42,3 +42,24 @@ void	check_is_champion(t_machine *vm, int fd, char *file_name)
 	if (sum < sizeof(header_t))
 		error_exit(file_name, 1, vm);
 }
+
+void	fast_check_position_argv(int num, char **strs)
+{
+	int i;
+	int f_first;
+	int f_secod;
+	int res;
+
+	i = 0;
+	f_secod = 0;
+	f_first = 0;
+	while (++i < num)
+	{
+		res = check_argv(num, strs, &i);
+		if ((res == 1 && f_first) || (f_secod >= res && res != 3))
+			print_usage();
+		else if (res == 1 && f_first == 0)
+			f_first = 1;
+		f_secod = res;
+	}
+}

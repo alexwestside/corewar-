@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 
 	if (argc == 1)
 		print_usage();
-	fast_check_position_args(argc, argv);
+	fast_check_position_argv(argc, argv);
 	ft_bzero(path_files, ((MAX_PLAYERS + 1) * sizeof(char *)));
 	p_paths(argc, argv, path_files, &vm.count_players);
 	vm.flags = work_with_flags(argc, argv);
