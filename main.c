@@ -1,58 +1,56 @@
+#include "corewar_valid.h"
 
-#include "op.h"
-#include "corewar.h"
+//#include <stdio.h>
 
-size_t	two_dem_strlen(char **s)
-{
-	char	**p;
+void	valid(char **text, t_corewar *corewar) {
+	char	*name;
+	char	*comment;
 
-	p = s;
-	while (*p)
-		p++;
-	return ((p - s) + 1);
+	ft_name_comment(&name, &comment, &text);
+	corewar->bot = ft_command(text);
+	corewar->bot.name = name;
+	corewar->bot.comment = comment;
 }
 
+char	**open_read(char *av) {
+	int		fd;
+	char	*str;
+	char	*s;
 
-void init_bot(t_bot **bot)
-{
-	(*bot) = (t_bot*)malloc(sizeof(t_bot));
-	(*bot)->info = (char **)malloc(sizeof(char *)/* * 2*/);
-	(*bot)->info[0] = NULL;
-//	(*bot)->info[0] = NULL;
-//	(*bot)->info[1] = NULL;
-}
-
-void read_bot_info(t_bot **bot)
-{
-	int fd = open("/nfs/2016/o/orizhiy/ClionProjects/machine/resources/machine/champs/examples/zork.s", O_RDONLY);
-	size_t i = 0;
-
-	while (get_next_line(fd, &(*bot)->info[i]))
-	{
-		if ((*bot)->info[i][0])
-		{
-//			(*bot)->info = ft_realloc(&(*bot)->info, two_dem_strlen((*bot)->info));
-			(*bot)->info = (char **)realloc((*bot)->info, sizeof(char *) * (i + 2));
-			i++;
-		}
+	fd = open(av, O_RDONLY);
+	s = "";
+	while (get_next_line(fd, &str) != 0) {
+		s = ft_strjoin(s, str);
+		s = ft_strjoin(s, "\n");
 	}
-	(*bot)->info[i] = NULL;
+	return (ft_strsplit(s, '\n'));
 }
 
-void valid_bot(t_bot *bot)
-{
 
+int main(int ac, char **av) {
+	char *BOTS[] = {"zork", "bigzork", "bee_gees", "fluttershy", "helltrain", "turtle", NULL};
+	char **p = (char **) BOTS;
+	char *fpEXEMPES = "resources/corewar/champs/examples/";
+	char *_fpASM = "resources/exe/asm";
+	t_corewar corewar;
 
-
+	while (*p) {
+		valid(open_read(ft_strjoin("../", ft_strjoin(ft_strjoin(fpEXEMPES, *p), ".s"))), &corewar);
+		_asm(corewar);
+		system(ft_strjoin("../", ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin(_fpASM, " "), "../"), fpEXEMPES), *p), ".s")));
+		system(ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin("diff", " "), ft_strjoin("~/CLionProjects/corewar2/", ft_strjoin( ft_strjoin(fpEXEMPES, *p), ".cor"))), " "), ft_strjoin("~/CLionProjects/corewar2/", ft_strjoin(*p, ".cor"))));
+		p++;
+	}
 }
 
-int main(void)
-{
-	t_bot *bot;
 
-	init_bot(&bot);
-	read_bot_info(&bot);
-	valid_bot(bot);
-
-
-}
+//
+//int	main(int ac, char **av)
+//{
+//	char		**text;
+//	t_corewar	corewar;
+//
+//	text = open_read(av[1]);
+//	valid(text, &corewar);
+//	_asm(corewar);
+//}
