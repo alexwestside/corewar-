@@ -81,33 +81,9 @@ CMakeFiles/corewar2.dir/asm_to_binary.c.o.provides: CMakeFiles/corewar2.dir/asm_
 CMakeFiles/corewar2.dir/asm_to_binary.c.o.provides.build: CMakeFiles/corewar2.dir/asm_to_binary.c.o
 
 
-CMakeFiles/corewar2.dir/sub.c.o: CMakeFiles/corewar2.dir/flags.make
-CMakeFiles/corewar2.dir/sub.c.o: ../sub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/corewar2.dir/sub.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/sub.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/sub.c
-
-CMakeFiles/corewar2.dir/sub.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/corewar2.dir/sub.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/CLionProjects/corewar2/sub.c > CMakeFiles/corewar2.dir/sub.c.i
-
-CMakeFiles/corewar2.dir/sub.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/corewar2.dir/sub.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/CLionProjects/corewar2/sub.c -o CMakeFiles/corewar2.dir/sub.c.s
-
-CMakeFiles/corewar2.dir/sub.c.o.requires:
-
-.PHONY : CMakeFiles/corewar2.dir/sub.c.o.requires
-
-CMakeFiles/corewar2.dir/sub.c.o.provides: CMakeFiles/corewar2.dir/sub.c.o.requires
-	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/sub.c.o.provides.build
-.PHONY : CMakeFiles/corewar2.dir/sub.c.o.provides
-
-CMakeFiles/corewar2.dir/sub.c.o.provides.build: CMakeFiles/corewar2.dir/sub.c.o
-
-
 CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o: ../ft_strsplit_v2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/ft_strsplit_v2.c
 
 CMakeFiles/corewar2.dir/ft_strsplit_v2.c.i: cmake_force
@@ -131,7 +107,7 @@ CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o.provides.build: CMakeFiles/corewar2.d
 
 CMakeFiles/corewar2.dir/ft_command.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/ft_command.c.o: ../ft_command.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/corewar2.dir/ft_command.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/corewar2.dir/ft_command.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/ft_command.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/ft_command.c
 
 CMakeFiles/corewar2.dir/ft_command.c.i: cmake_force
@@ -155,7 +131,7 @@ CMakeFiles/corewar2.dir/ft_command.c.o.provides.build: CMakeFiles/corewar2.dir/f
 
 CMakeFiles/corewar2.dir/ft_name_comment.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/ft_name_comment.c.o: ../ft_name_comment.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/corewar2.dir/ft_name_comment.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/corewar2.dir/ft_name_comment.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/ft_name_comment.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/ft_name_comment.c
 
 CMakeFiles/corewar2.dir/ft_name_comment.c.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/corewar2.dir/ft_name_comment.c.o.provides.build: CMakeFiles/corewar2.
 
 CMakeFiles/corewar2.dir/ft_valid_command.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/ft_valid_command.c.o: ../ft_valid_command.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/corewar2.dir/ft_valid_command.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/corewar2.dir/ft_valid_command.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/ft_valid_command.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/ft_valid_command.c
 
 CMakeFiles/corewar2.dir/ft_valid_command.c.i: cmake_force
@@ -203,7 +179,7 @@ CMakeFiles/corewar2.dir/ft_valid_command.c.o.provides.build: CMakeFiles/corewar2
 
 CMakeFiles/corewar2.dir/get_sizes.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/get_sizes.c.o: ../get_sizes.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/corewar2.dir/get_sizes.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/corewar2.dir/get_sizes.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/get_sizes.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_sizes.c
 
 CMakeFiles/corewar2.dir/get_sizes.c.i: cmake_force
@@ -227,7 +203,7 @@ CMakeFiles/corewar2.dir/get_sizes.c.o.provides.build: CMakeFiles/corewar2.dir/ge
 
 CMakeFiles/corewar2.dir/hash.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/hash.c.o: ../hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/corewar2.dir/hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/corewar2.dir/hash.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/hash.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/hash.c
 
 CMakeFiles/corewar2.dir/hash.c.i: cmake_force
@@ -251,7 +227,7 @@ CMakeFiles/corewar2.dir/hash.c.o.provides.build: CMakeFiles/corewar2.dir/hash.c.
 
 CMakeFiles/corewar2.dir/main.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/corewar2.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/corewar2.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/main.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/main.c
 
 CMakeFiles/corewar2.dir/main.c.i: cmake_force
@@ -275,7 +251,7 @@ CMakeFiles/corewar2.dir/main.c.o.provides.build: CMakeFiles/corewar2.dir/main.c.
 
 CMakeFiles/corewar2.dir/op.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/op.c.o: ../op.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/corewar2.dir/op.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/corewar2.dir/op.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/op.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/op.c
 
 CMakeFiles/corewar2.dir/op.c.i: cmake_force
@@ -299,7 +275,7 @@ CMakeFiles/corewar2.dir/op.c.o.provides.build: CMakeFiles/corewar2.dir/op.c.o
 
 CMakeFiles/corewar2.dir/usage.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/usage.c.o: ../usage.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/corewar2.dir/usage.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/corewar2.dir/usage.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/usage.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/usage.c
 
 CMakeFiles/corewar2.dir/usage.c.i: cmake_force
@@ -323,7 +299,7 @@ CMakeFiles/corewar2.dir/usage.c.o.provides.build: CMakeFiles/corewar2.dir/usage.
 
 CMakeFiles/corewar2.dir/reg_dir_ind.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../reg_dir_ind.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/corewar2.dir/reg_dir_ind.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/corewar2.dir/reg_dir_ind.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/reg_dir_ind.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/reg_dir_ind.c
 
 CMakeFiles/corewar2.dir/reg_dir_ind.c.i: cmake_force
@@ -347,7 +323,7 @@ CMakeFiles/corewar2.dir/reg_dir_ind.c.o.provides.build: CMakeFiles/corewar2.dir/
 
 CMakeFiles/corewar2.dir/get_size_1.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/get_size_1.c.o: ../get_size_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/corewar2.dir/get_size_1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/corewar2.dir/get_size_1.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/get_size_1.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_1.c
 
 CMakeFiles/corewar2.dir/get_size_1.c.i: cmake_force
@@ -371,7 +347,7 @@ CMakeFiles/corewar2.dir/get_size_1.c.o.provides.build: CMakeFiles/corewar2.dir/g
 
 CMakeFiles/corewar2.dir/get_size_2.c.o: CMakeFiles/corewar2.dir/flags.make
 CMakeFiles/corewar2.dir/get_size_2.c.o: ../get_size_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/corewar2.dir/get_size_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/corewar2.dir/get_size_2.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/get_size_2.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_2.c
 
 CMakeFiles/corewar2.dir/get_size_2.c.i: cmake_force
@@ -396,7 +372,6 @@ CMakeFiles/corewar2.dir/get_size_2.c.o.provides.build: CMakeFiles/corewar2.dir/g
 # Object files for target corewar2
 corewar2_OBJECTS = \
 "CMakeFiles/corewar2.dir/asm_to_binary.c.o" \
-"CMakeFiles/corewar2.dir/sub.c.o" \
 "CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o" \
 "CMakeFiles/corewar2.dir/ft_command.c.o" \
 "CMakeFiles/corewar2.dir/ft_name_comment.c.o" \
@@ -414,7 +389,6 @@ corewar2_OBJECTS = \
 corewar2_EXTERNAL_OBJECTS =
 
 corewar2: CMakeFiles/corewar2.dir/asm_to_binary.c.o
-corewar2: CMakeFiles/corewar2.dir/sub.c.o
 corewar2: CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o
 corewar2: CMakeFiles/corewar2.dir/ft_command.c.o
 corewar2: CMakeFiles/corewar2.dir/ft_name_comment.c.o
@@ -430,7 +404,7 @@ corewar2: CMakeFiles/corewar2.dir/get_size_2.c.o
 corewar2: CMakeFiles/corewar2.dir/build.make
 corewar2: ../libft/libft.a
 corewar2: CMakeFiles/corewar2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable corewar2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable corewar2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/corewar2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -439,7 +413,6 @@ CMakeFiles/corewar2.dir/build: corewar2
 .PHONY : CMakeFiles/corewar2.dir/build
 
 CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/asm_to_binary.c.o.requires
-CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/sub.c.o.requires
 CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o.requires
 CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/ft_command.c.o.requires
 CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/ft_name_comment.c.o.requires

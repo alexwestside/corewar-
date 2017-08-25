@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/corewar2.dir/asm_to_binary.c.o"
-  "CMakeFiles/corewar2.dir/sub.c.o"
   "CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o"
   "CMakeFiles/corewar2.dir/ft_command.c.o"
   "CMakeFiles/corewar2.dir/ft_name_comment.c.o"

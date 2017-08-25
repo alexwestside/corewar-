@@ -61,7 +61,8 @@ void	t_dir_to_byte(char **data, int fd, t_corewar *corewar, int current_line)
 	{
 		data[2] = ft_strndup((ft_strchr(data[1], LABEL_CHAR) + 1),
 		ft_strlen(data[1]) - 2);
-		dist_to_command = get_distance_to_command(corewar, current_line, 0, corewar->bot.command);
+		dist_to_command =
+get_distance_to_command(corewar, current_line, 0, corewar->bot.command);
 		dist_to_method = get_distance_to_method(data[2], corewar, 0, NULL);
 		distance = (int)(dist_to_method - dist_to_command);
 		swap_bytes((char *)&distance, size);

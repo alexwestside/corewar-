@@ -447,33 +447,6 @@ reg_dir_ind.c.s:
 	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/reg_dir_ind.c.s
 .PHONY : reg_dir_ind.c.s
 
-sub.o: sub.c.o
-
-.PHONY : sub.o
-
-# target to build an object file
-sub.c.o:
-	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/sub.c.o
-.PHONY : sub.c.o
-
-sub.i: sub.c.i
-
-.PHONY : sub.i
-
-# target to preprocess a source file
-sub.c.i:
-	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/sub.c.i
-.PHONY : sub.c.i
-
-sub.s: sub.c.s
-
-.PHONY : sub.s
-
-# target to generate assembly for a file
-sub.c.s:
-	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/sub.c.s
-.PHONY : sub.c.s
-
 usage.o: usage.c.o
 
 .PHONY : usage.o
@@ -546,9 +519,6 @@ help:
 	@echo "... reg_dir_ind.o"
 	@echo "... reg_dir_ind.i"
 	@echo "... reg_dir_ind.s"
-	@echo "... sub.o"
-	@echo "... sub.i"
-	@echo "... sub.s"
 	@echo "... usage.o"
 	@echo "... usage.i"
 	@echo "... usage.s"
