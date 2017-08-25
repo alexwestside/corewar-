@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/hash.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/hash.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/main.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/main.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/op.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/op.c.o"
+  "/nfs/2016/o/orizhiy/CLionProjects/corewar2/reg_dir_ind.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/reg_dir_ind.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/sub.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/sub.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/usage.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/usage.c.o"
   )

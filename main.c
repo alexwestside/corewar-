@@ -36,7 +36,7 @@ int main(int ac, char **av) {
 
 	while (*p) {
 		valid(open_read(ft_strjoin("../", ft_strjoin(ft_strjoin(fpEXEMPES, *p), ".s"))), &corewar);
-		_asm(corewar);
+		ft_asm(&corewar);
 		system(ft_strjoin("../", ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin(_fpASM, " "), "../"), fpEXEMPES), *p), ".s")));
 		system(ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin("diff", " "), ft_strjoin("~/CLionProjects/corewar2/", ft_strjoin( ft_strjoin(fpEXEMPES, *p), ".cor"))), " "), ft_strjoin("~/CLionProjects/corewar2/", ft_strjoin(*p, ".cor"))));
 		p++;
@@ -52,5 +52,5 @@ int main(int ac, char **av) {
 //
 //	text = open_read(av[1]);
 //	valid(text, &corewar);
-//	_asm(corewar);
+//	ft_asm(corewar);
 //}

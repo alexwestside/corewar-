@@ -1,6 +1,6 @@
 #include "asm.h"
 
-void			hex(int n, int fd)
+void						hex(int n, int fd)
 {
 	if (n >= 16)
 	{
@@ -11,7 +11,7 @@ void			hex(int n, int fd)
 		ft_putchar_fd(HEX_BASE[n], fd);
 }
 
-void			hex_magic(int n, int fd, char *str, size_t *i)
+void						hex_magic(int n, int fd, char *str, size_t *i)
 {
 	if (n >= 16)
 	{
@@ -25,23 +25,24 @@ void			hex_magic(int n, int fd, char *str, size_t *i)
 	}
 }
 
-unsigned int	reverse_magic(unsigned int magic)
+unsigned int				reverse_magic(unsigned int magic)
 {
 	unsigned int	res;
 	unsigned int	i;
+	unsigned int	byte;
 
 	res = 0;
 	i = 0;
 	while (i < 4)
 	{
-		const unsigned int byte = (magic >> 8 * i) & 0xff;
+		byte = (magic >> 8 * i) & 0xff;
 		res |= byte << (24 - 8 * i);
 		i++;
 	}
 	return (res);
 }
 
-int				swap_bytes(char *s, size_t size)
+unsigned int				swap_bytes(char *s, size_t size)
 {
 	int		i;
 	int		j;
@@ -58,10 +59,10 @@ int				swap_bytes(char *s, size_t size)
 			s[j + 1] = tmp;
 		}
 	}
-	return ((int)s);
+	return ((unsigned int)s);
 }
 
-void		error(char *str)
+void						error(char *str)
 {
 	ft_printf("%s", str);
 	exit(0);

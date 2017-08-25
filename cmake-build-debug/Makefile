@@ -366,6 +366,33 @@ op.c.s:
 	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/op.c.s
 .PHONY : op.c.s
 
+reg_dir_ind.o: reg_dir_ind.c.o
+
+.PHONY : reg_dir_ind.o
+
+# target to build an object file
+reg_dir_ind.c.o:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/reg_dir_ind.c.o
+.PHONY : reg_dir_ind.c.o
+
+reg_dir_ind.i: reg_dir_ind.c.i
+
+.PHONY : reg_dir_ind.i
+
+# target to preprocess a source file
+reg_dir_ind.c.i:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/reg_dir_ind.c.i
+.PHONY : reg_dir_ind.c.i
+
+reg_dir_ind.s: reg_dir_ind.c.s
+
+.PHONY : reg_dir_ind.s
+
+# target to generate assembly for a file
+reg_dir_ind.c.s:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/reg_dir_ind.c.s
+.PHONY : reg_dir_ind.c.s
+
 sub.o: sub.c.o
 
 .PHONY : sub.o
@@ -456,6 +483,9 @@ help:
 	@echo "... op.o"
 	@echo "... op.i"
 	@echo "... op.s"
+	@echo "... reg_dir_ind.o"
+	@echo "... reg_dir_ind.i"
+	@echo "... reg_dir_ind.s"
 	@echo "... sub.o"
 	@echo "... sub.i"
 	@echo "... sub.s"

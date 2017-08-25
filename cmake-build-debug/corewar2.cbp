@@ -121,6 +121,9 @@
 		<Unit filename="/nfs/2016/o/orizhiy/CLionProjects/corewar2/op.h">
 			<Option target="corewar2"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/CLionProjects/corewar2/reg_dir_ind.c">
+			<Option target="corewar2"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/CLionProjects/corewar2/sub.c">
 			<Option target="corewar2"/>
 		</Unit>

@@ -13,7 +13,7 @@ void			ft_name_comment(char **name, char **comment, char ***text);
 unsigned int	hash_key(char *str);
 void			error(char *str);
 int				collision(unsigned int *keys, unsigned int key);
-void			_asm(t_corewar corewar);
+void			ft_asm(t_corewar *corewar);
 int				ft_arg_type(char *str);
 char			**ft_strsplit_2args(char const *s, char c1, char c2);
 size_t			ft_strclen(char *str, char c);

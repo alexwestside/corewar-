@@ -76,6 +76,15 @@ CMakeFiles/corewar2.dir/main.c.o: ../op.h
 CMakeFiles/corewar2.dir/op.c.o: ../op.c
 CMakeFiles/corewar2.dir/op.c.o: ../op.h
 
+CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../asm.h
+CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../corewar.h
+CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../corewar_valid.h
+CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../libft/ft_printf.h
+CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../libft/get_next_line.h
+CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../libft/libft.h
+CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../op.h
+CMakeFiles/corewar2.dir/reg_dir_ind.c.o: ../reg_dir_ind.c
+
 CMakeFiles/corewar2.dir/sub.c.o: ../corewar.h
 CMakeFiles/corewar2.dir/sub.c.o: ../libft/ft_printf.h
 CMakeFiles/corewar2.dir/sub.c.o: ../libft/get_next_line.h
