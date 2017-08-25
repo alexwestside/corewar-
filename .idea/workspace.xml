@@ -12,14 +12,126 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="652c81c2-3c76-448c-8bae-5df271e4307a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/asm_to_binary.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/asm_to_binary.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/get_sizes.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/get_sizes.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/reg_dir_ind.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/reg_dir_ind.c.o" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/asm.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/asm_to_binary.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/get_sizes.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/main.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/reg_dir_ind.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/sub.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/usage.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/corewar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/corewar_valid.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/*ft_flag_char.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/*ft_min_fild_width.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/*ft_precision.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/*ft_size_spec.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/*ft_strndup.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/*ft_strnjoin.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_arg_void.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_atoi.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_binary.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_bzero.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_character.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_check.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_count_words.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_finder.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_int_min.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_isalnum.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_isalpha.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_isascii.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_isdigit.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_isprint.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_isspace.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_itoa.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_len_char.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_len_int.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_lstadd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_lstdel.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_lstdelone.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_lstiter.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_lstmap.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_lstnew.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_max.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_max_int.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memalloc.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memccpy.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memchr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memcmp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memcpy.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memcpy_rev.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memdel.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memmove.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_memset.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_null_format.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_num_len.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_num_strlen.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_num_width.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_octal.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_octal_long.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_parse.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_print_format.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_printf.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_put_num_base.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putchar.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putchar_fd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putendl.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putendl_fd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putnbr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putnbr_fd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putnstr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putstr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_putstr_fd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_signed.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_signed_int_decimal.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_signed_int_decimal_long.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_single_persent.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strcat.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strchr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strclr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strcmp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strcpy.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strdel.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strdup.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strequ.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_string.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_striter.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_striteri.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strjoin.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strlcat.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strlen.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strmap.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strmapi.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strncat.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strncmp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strncpy.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strnequ.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strnew.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strnlen.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strnstr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strrchr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strsplit.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strstr.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strsub.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_strtrim.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_tolower.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_toupper.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_unsigned.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_unsigned_decimal.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_unsigned_decimal_long.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalx.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalxl.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_wcharacter.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_wcharlen.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_width_padd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/ft_wstring.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/get_next_line.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/singned_size.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libft/unsingned_size.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/corewar2" afterPath="$PROJECT_DIR$/cmake-build-debug/corewar2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm.h" afterPath="$PROJECT_DIR$/asm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_to_binary.c" afterPath="$PROJECT_DIR$/asm_to_binary.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_sizes.c" afterPath="$PROJECT_DIR$/get_sizes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reg_dir_ind.c" afterPath="$PROJECT_DIR$/reg_dir_ind.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/corewar2.dir/depend.make" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +147,8 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+            <state relative-caret-position="75">
+              <caret line="5" column="210" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="210" />
               <folding />
             </state>
           </provider>
@@ -65,18 +177,38 @@
       <file leaf-file-name="reg_dir_ind.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reg_dir_ind.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="63" column="98" lean-forward="false" selection-start-line="63" selection-start-column="98" selection-end-line="63" selection-end-column="98" />
+            <state relative-caret-position="723">
+              <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_sizes.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_sizes.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_sizes.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="843">
-              <caret line="177" column="1" lean-forward="true" selection-start-line="177" selection-start-column="1" selection-end-line="177" selection-end-column="1" />
+            <state relative-caret-position="918">
+              <caret line="81" column="1" lean-forward="false" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_size_2.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_size_2.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_size_1.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_size_1.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,21 +224,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asm.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asm.h">
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sub.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sub.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="720">
+              <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -134,11 +256,14 @@
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/corewar_valid.h" />
         <option value="$PROJECT_DIR$/usage.c" />
-        <option value="$PROJECT_DIR$/reg_dir_ind.c" />
         <option value="$PROJECT_DIR$/sub.c" />
         <option value="$PROJECT_DIR$/asm_to_binary.c" />
-        <option value="$PROJECT_DIR$/asm.h" />
         <option value="$PROJECT_DIR$/get_sizes.c" />
+        <option value="$PROJECT_DIR$/get_size_1.c" />
+        <option value="$PROJECT_DIR$/get_size_2.c" />
+        <option value="$PROJECT_DIR$/reg_dir_ind.c" />
+        <option value="$PROJECT_DIR$/asm.h" />
+        <option value="$PROJECT_DIR$/Makefile" />
       </list>
     </option>
   </component>
@@ -409,26 +534,25 @@
       <option name="presentableId" value="Default" />
       <updated>1503576251552</updated>
       <workItem from="1503576258269" duration="12190000" />
-      <workItem from="1503672398548" duration="10206000" />
+      <workItem from="1503672398548" duration="11996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22396000" />
+    <option name="totallyTimeSpent" value="24186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110802226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23795621" sideWeight="0.5031771" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28978103" sideWeight="0.49682286" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28978103" sideWeight="0.49682286" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23503649" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31240875" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -525,14 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/op.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -613,30 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sub.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reg_dir_ind.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="63" column="98" lean-forward="false" selection-start-line="63" selection-start-column="98" selection-end-line="63" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="110" lean-forward="false" selection-start-line="39" selection-start-column="110" selection-end-line="39" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asm_to_binary.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
@@ -645,10 +737,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm.h">
+    <entry file="file://$PROJECT_DIR$/get_sizes.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="918">
+          <caret line="81" column="1" lean-forward="false" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_size_1.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -661,10 +761,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_sizes.c">
+    <entry file="file://$PROJECT_DIR$/sub.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="177" column="1" lean-forward="true" selection-start-line="177" selection-start-column="1" selection-end-line="177" selection-end-column="1" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_size_2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reg_dir_ind.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="110" lean-forward="false" selection-start-line="39" selection-start-column="110" selection-end-line="39" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="210" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="210" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
           <folding />
         </state>
       </provider>

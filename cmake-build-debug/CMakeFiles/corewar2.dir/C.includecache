@@ -6,29 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/asm.h
-corewar.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/corewar.h
-corewar_valid.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/corewar_valid.h
-
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/asm_to_binary.c
-asm.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/asm.h
-
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/corewar.h
-libft/libft.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/libft/libft.h
-libft/get_next_line.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/libft/get_next_line.h
-libft/ft_printf.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/libft/ft_printf.h
-op.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/op.h
-
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/corewar_valid.h
-corewar.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/corewar.h
 asm.h
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/asm.h
 
@@ -48,6 +26,14 @@ corewar_valid.h
 corewar_valid.h
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/corewar_valid.h
 
+/nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_1.c
+asm.h
+/nfs/2016/o/orizhiy/CLionProjects/corewar2/asm.h
+
+/nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_2.c
+asm.h
+/nfs/2016/o/orizhiy/CLionProjects/corewar2/asm.h
+
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_sizes.c
 asm.h
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/asm.h
@@ -55,48 +41,6 @@ asm.h
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/hash.c
 corewar_valid.h
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/corewar_valid.h
-
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/libft/ft_printf.h
-libft.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/libft/libft.h
-stddef.h
--
-stdarg.h
--
-locale.h
--
-wchar.h
--
-stdio.h
--
-stdint.h
--
-inttypes.h
--
-sys/types.h
--
-
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/libft/get_next_line.h
-string.h
--
-stdlib.h
--
-unistd.h
--
-fcntl.h
--
-stdio.h
--
-libft.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/libft/libft.h
-
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/libft/libft.h
-stdlib.h
--
-string.h
--
-unistd.h
--
 
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/main.c
 corewar_valid.h
@@ -111,10 +55,6 @@ op.h
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/reg_dir_ind.c
 asm.h
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/asm.h
-
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/sub.c
-corewar.h
-/nfs/2016/o/orizhiy/CLionProjects/corewar2/corewar.h
 
 /nfs/2016/o/orizhiy/CLionProjects/corewar2/usage.c
 asm.h
