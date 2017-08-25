@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="corewar2" targetName="corewar2" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="652c81c2-3c76-448c-8bae-5df271e4307a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/migrate_to_gitlab.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/workon.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/create_vm.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/machine.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/main.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/validate_data.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/asm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/corewar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm/.gitkeep" afterPath="$PROJECT_DIR$/asm/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/champion/.gitkeep" afterPath="$PROJECT_DIR$/champion/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corewar.h" afterPath="$PROJECT_DIR$/corewar.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/Makefile" afterPath="$PROJECT_DIR$/libft/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_arg_void.c" afterPath="$PROJECT_DIR$/libft/ft_arg_void.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_atoi.c" afterPath="$PROJECT_DIR$/libft/ft_atoi.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_binary.c" afterPath="$PROJECT_DIR$/libft/ft_binary.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_bzero.c" afterPath="$PROJECT_DIR$/libft/ft_bzero.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_character.c" afterPath="$PROJECT_DIR$/libft/ft_character.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_check.c" afterPath="$PROJECT_DIR$/libft/ft_check.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_count_words.c" afterPath="$PROJECT_DIR$/libft/ft_count_words.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_finder.c" afterPath="$PROJECT_DIR$/libft/ft_finder.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_flag_char.c" afterPath="$PROJECT_DIR$/libft/ft_flag_char.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_int_min.c" afterPath="$PROJECT_DIR$/libft/ft_int_min.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isalnum.c" afterPath="$PROJECT_DIR$/libft/ft_isalnum.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isalpha.c" afterPath="$PROJECT_DIR$/libft/ft_isalpha.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isascii.c" afterPath="$PROJECT_DIR$/libft/ft_isascii.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isdigit.c" afterPath="$PROJECT_DIR$/libft/ft_isdigit.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isprint.c" afterPath="$PROJECT_DIR$/libft/ft_isprint.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isspace.c" afterPath="$PROJECT_DIR$/libft/ft_isspace.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_itoa.c" afterPath="$PROJECT_DIR$/libft/ft_itoa.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_len_char.c" afterPath="$PROJECT_DIR$/libft/ft_len_char.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_len_int.c" afterPath="$PROJECT_DIR$/libft/ft_len_int.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstadd.c" afterPath="$PROJECT_DIR$/libft/ft_lstadd.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstdel.c" afterPath="$PROJECT_DIR$/libft/ft_lstdel.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstdelone.c" afterPath="$PROJECT_DIR$/libft/ft_lstdelone.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstiter.c" afterPath="$PROJECT_DIR$/libft/ft_lstiter.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstmap.c" afterPath="$PROJECT_DIR$/libft/ft_lstmap.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstnew.c" afterPath="$PROJECT_DIR$/libft/ft_lstnew.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_max.c" afterPath="$PROJECT_DIR$/libft/ft_max.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_max_int.c" afterPath="$PROJECT_DIR$/libft/ft_max_int.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memalloc.c" afterPath="$PROJECT_DIR$/libft/ft_memalloc.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memccpy.c" afterPath="$PROJECT_DIR$/libft/ft_memccpy.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memchr.c" afterPath="$PROJECT_DIR$/libft/ft_memchr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcmp.c" afterPath="$PROJECT_DIR$/libft/ft_memcmp.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcpy.c" afterPath="$PROJECT_DIR$/libft/ft_memcpy.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcpy_rev.c" afterPath="$PROJECT_DIR$/libft/ft_memcpy_rev.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memdel.c" afterPath="$PROJECT_DIR$/libft/ft_memdel.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memmove.c" afterPath="$PROJECT_DIR$/libft/ft_memmove.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memset.c" afterPath="$PROJECT_DIR$/libft/ft_memset.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_min_fild_width.c" afterPath="$PROJECT_DIR$/libft/ft_min_fild_width.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_null_format.c" afterPath="$PROJECT_DIR$/libft/ft_null_format.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_len.c" afterPath="$PROJECT_DIR$/libft/ft_num_len.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_strlen.c" afterPath="$PROJECT_DIR$/libft/ft_num_strlen.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_width.c" afterPath="$PROJECT_DIR$/libft/ft_num_width.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_octal.c" afterPath="$PROJECT_DIR$/libft/ft_octal.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_octal_long.c" afterPath="$PROJECT_DIR$/libft/ft_octal_long.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_parse.c" afterPath="$PROJECT_DIR$/libft/ft_parse.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_precision.c" afterPath="$PROJECT_DIR$/libft/ft_precision.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_print_format.c" afterPath="$PROJECT_DIR$/libft/ft_print_format.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_printf.c" afterPath="$PROJECT_DIR$/libft/ft_printf.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_printf.h" afterPath="$PROJECT_DIR$/libft/ft_printf.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_put_num_base.c" afterPath="$PROJECT_DIR$/libft/ft_put_num_base.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putchar.c" afterPath="$PROJECT_DIR$/libft/ft_putchar.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putchar_fd.c" afterPath="$PROJECT_DIR$/libft/ft_putchar_fd.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putendl.c" afterPath="$PROJECT_DIR$/libft/ft_putendl.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putendl_fd.c" afterPath="$PROJECT_DIR$/libft/ft_putendl_fd.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnbr.c" afterPath="$PROJECT_DIR$/libft/ft_putnbr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnbr_fd.c" afterPath="$PROJECT_DIR$/libft/ft_putnbr_fd.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnstr.c" afterPath="$PROJECT_DIR$/libft/ft_putnstr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putstr.c" afterPath="$PROJECT_DIR$/libft/ft_putstr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putstr_fd.c" afterPath="$PROJECT_DIR$/libft/ft_putstr_fd.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed.c" afterPath="$PROJECT_DIR$/libft/ft_signed.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed_int_decimal.c" afterPath="$PROJECT_DIR$/libft/ft_signed_int_decimal.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed_int_decimal_long.c" afterPath="$PROJECT_DIR$/libft/ft_signed_int_decimal_long.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_single_persent.c" afterPath="$PROJECT_DIR$/libft/ft_single_persent.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_size_spec.c" afterPath="$PROJECT_DIR$/libft/ft_size_spec.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcat.c" afterPath="$PROJECT_DIR$/libft/ft_strcat.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strchr.c" afterPath="$PROJECT_DIR$/libft/ft_strchr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strclr.c" afterPath="$PROJECT_DIR$/libft/ft_strclr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcmp.c" afterPath="$PROJECT_DIR$/libft/ft_strcmp.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcpy.c" afterPath="$PROJECT_DIR$/libft/ft_strcpy.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strdel.c" afterPath="$PROJECT_DIR$/libft/ft_strdel.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strdup.c" afterPath="$PROJECT_DIR$/libft/ft_strdup.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strequ.c" afterPath="$PROJECT_DIR$/libft/ft_strequ.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_string.c" afterPath="$PROJECT_DIR$/libft/ft_string.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_striter.c" afterPath="$PROJECT_DIR$/libft/ft_striter.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_striteri.c" afterPath="$PROJECT_DIR$/libft/ft_striteri.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strjoin.c" afterPath="$PROJECT_DIR$/libft/ft_strjoin.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strlcat.c" afterPath="$PROJECT_DIR$/libft/ft_strlcat.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strlen.c" afterPath="$PROJECT_DIR$/libft/ft_strlen.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strmap.c" afterPath="$PROJECT_DIR$/libft/ft_strmap.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strmapi.c" afterPath="$PROJECT_DIR$/libft/ft_strmapi.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncat.c" afterPath="$PROJECT_DIR$/libft/ft_strncat.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncmp.c" afterPath="$PROJECT_DIR$/libft/ft_strncmp.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncpy.c" afterPath="$PROJECT_DIR$/libft/ft_strncpy.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strndup.c" afterPath="$PROJECT_DIR$/libft/ft_strndup.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnequ.c" afterPath="$PROJECT_DIR$/libft/ft_strnequ.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnew.c" afterPath="$PROJECT_DIR$/libft/ft_strnew.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnjoin.c" afterPath="$PROJECT_DIR$/libft/ft_strnjoin.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnlen.c" afterPath="$PROJECT_DIR$/libft/ft_strnlen.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnstr.c" afterPath="$PROJECT_DIR$/libft/ft_strnstr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strrchr.c" afterPath="$PROJECT_DIR$/libft/ft_strrchr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strsplit.c" afterPath="$PROJECT_DIR$/libft/ft_strsplit.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strstr.c" afterPath="$PROJECT_DIR$/libft/ft_strstr.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strsub.c" afterPath="$PROJECT_DIR$/libft/ft_strsub.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strtrim.c" afterPath="$PROJECT_DIR$/libft/ft_strtrim.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_tolower.c" afterPath="$PROJECT_DIR$/libft/ft_tolower.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_toupper.c" afterPath="$PROJECT_DIR$/libft/ft_toupper.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned.c" afterPath="$PROJECT_DIR$/libft/ft_unsigned.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_decimal.c" afterPath="$PROJECT_DIR$/libft/ft_unsigned_decimal.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_decimal_long.c" afterPath="$PROJECT_DIR$/libft/ft_unsigned_decimal_long.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalx.c" afterPath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalx.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalxl.c" afterPath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalxl.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wcharacter.c" afterPath="$PROJECT_DIR$/libft/ft_wcharacter.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wcharlen.c" afterPath="$PROJECT_DIR$/libft/ft_wcharlen.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_width_padd.c" afterPath="$PROJECT_DIR$/libft/ft_width_padd.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wstring.c" afterPath="$PROJECT_DIR$/libft/ft_wstring.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/get_next_line.c" afterPath="$PROJECT_DIR$/libft/get_next_line.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/get_next_line.h" afterPath="$PROJECT_DIR$/libft/get_next_line.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/libft.h" afterPath="$PROJECT_DIR$/libft/libft.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/singned_size.c" afterPath="$PROJECT_DIR$/libft/singned_size.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/unsingned_size.c" afterPath="$PROJECT_DIR$/libft/unsingned_size.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op.c" afterPath="$PROJECT_DIR$/op.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op.h" afterPath="$PROJECT_DIR$/op.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/42.cor" afterPath="$PROJECT_DIR$/resources/corewar/champs/42.cor" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/42.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/42.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/Backward.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/Backward.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/Car.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/Car.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/Death.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/Death.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/Gagnant.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/Gagnant.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/Octobre_Rouge_V4.2.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/Octobre_Rouge_V4.2.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/Survivor.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/Survivor.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/Torpille.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/Torpille.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/barriere.cor" afterPath="$PROJECT_DIR$/resources/corewar/champs/barriere.cor" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/barriere.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/barriere.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/bguy/sam_2.0.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/bguy/sam_2.0.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/bjacob/doge.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/bjacob/doge.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/brandazz/Rainbow_dash.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/brandazz/Rainbow_dash.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/cdivry/youforkmytralala.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/cdivry/youforkmytralala.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/clafleur/big_feet.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/clafleur/big_feet.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/dcohen/loose.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/dcohen/loose.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ekocevar/mandragore.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ekocevar/mandragore.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/esusseli/gedeon.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/esusseli/gedeon.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/evlasova/terminator.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/evlasova/terminator.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/fcorre/ultimate-surrender.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/fcorre/ultimate-surrender.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gbir/_.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gbir/_.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gjestin/salamahenagalabadoun.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gjestin/salamahenagalabadoun.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gleger/Machine-gun.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gleger/Machine-gun.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gmange/corelol.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gmange/corelol.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gpetrov/MarineKing.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gpetrov/MarineKing.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gudepard/Kappa.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gudepard/Kappa.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/hmichals/Wall.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/hmichals/Wall.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/hmoutaou/Misaka_Mikoto.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/hmoutaou/Misaka_Mikoto.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/kelickel/Varimathras.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/kelickel/Varimathras.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/kmonrose/justin_bee.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/kmonrose/justin_bee.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ldesgoui/_honeybadger.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ldesgoui/_honeybadger.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/lseguin/skynet.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/lseguin/skynet.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/lsirigna/live.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/lsirigna/live.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/mbacoux/meowluigi.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/mbacoux/meowluigi.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/mconraux/dubo.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/mconraux/dubo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/rabid-on/jinx.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/rabid-on/jinx.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/results.txt" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/results.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/rmasse/THUNDER.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/rmasse/THUNDER.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/sbuono/Asombra.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/sbuono/Asombra.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/srabah-m/littlepuppy.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/srabah-m/littlepuppy.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/tdemay/champ.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/tdemay/champ.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/vrey/darksasuke.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/vrey/darksasuke.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ybouvet/casimir.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ybouvet/casimir.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/ex.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/ex.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/bee_gees.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/examples/bee_gees.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/bigzork.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/examples/bigzork.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/fluttershy.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/examples/fluttershy.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/helltrain.cor" afterPath="$PROJECT_DIR$/resources/corewar/champs/examples/helltrain.cor" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/helltrain.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/examples/helltrain.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/turtle.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/examples/turtle.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/zork.cor" afterPath="$PROJECT_DIR$/resources/corewar/champs/examples/zork.cor" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/zork.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/examples/zork.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/jumper.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/jumper.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/lde.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/lde.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/leeloo.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/leeloo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/mat.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/mat.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/maxidef.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/maxidef.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/mortel.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/mortel.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/new.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/new.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/sebc.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/sebc.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/slider2.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/slider2.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/tdc2.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/tdc2.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/tdc3.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/tdc3.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/tdc4.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/tdc4.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/corewar/champs/toto.s" afterPath="$PROJECT_DIR$/resources/corewar/champs/toto.s" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="213" lean-forward="false" selection-start-line="5" selection-start-column="213" selection-end-line="5" selection-end-column="213" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="corewar_valid.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/corewar_valid.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <folding>
+                <element signature="e#50#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/libft/Makefile" />
+        <option value="$PROJECT_DIR$/collision.c" />
+        <option value="$PROJECT_DIR$/ft_error.c" />
+        <option value="$PROJECT_DIR$/collision_and_sub.c" />
+        <option value="$PROJECT_DIR$/get_sizes.c" />
+        <option value="$PROJECT_DIR$/corewar.h" />
+        <option value="$PROJECT_DIR$/usage.c" />
+        <option value="$PROJECT_DIR$/ft_method copy.c" />
+        <option value="$PROJECT_DIR$/ft_method.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/ft_name_comment.c" />
+        <option value="$PROJECT_DIR$/asm.h" />
+        <option value="$PROJECT_DIR$/ft_valid_all.c" />
+        <option value="$PROJECT_DIR$/ft_valid_command.c" />
+        <option value="$PROJECT_DIR$/ft_add_command_corewar.c" />
+        <option value="$PROJECT_DIR$/ft_command.c" />
+        <option value="$PROJECT_DIR$/ft_strsplit_v2.c" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/hash.c" />
+        <option value="$PROJECT_DIR$/corewar_valid.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corewar2" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corewar2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="SwiftSettings" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.corewar2">
+    <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
+      <method />
+    </configuration>
+    <configuration default="true" type="FirefoxRemoteDebugType" factoryName="Firefox Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeWebKit" factoryName="NW.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="corewar2" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ReactNative" factoryName="React Native">
+      <node-interpreter value="project" />
+      <platform value="ANDROID" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="corewar2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="corewar2" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="corewar2" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="corewar2" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="corewar2" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="corewar2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="corewar2" TARGET_NAME="corewar2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="corewar2" RUN_TARGET_NAME="corewar2">
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.corewar2" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="652c81c2-3c76-448c-8bae-5df271e4307a" name="Default" comment="" />
+      <created>1503576251552</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1503576251552</updated>
+      <workItem from="1503576258269" duration="12032000" />
+      <workItem from="1503671251043" duration="68000" />
+      <workItem from="1503671353243" duration="9891000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="21991000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18228753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23795621" sideWeight="0.5031771" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28978103" sideWeight="0.49682286" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="1.0" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23795621" sideWeight="0.5031771" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28978103" sideWeight="0.49682286" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41021898" sideWeight="0.49841145" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18228753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.c</url>
+          <line>36</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="24" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corewar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_sizes.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="235" lean-forward="false" selection-start-line="40" selection-start-column="235" selection-end-line="40" selection-end-column="235" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corewar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_sizes.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="235" lean-forward="false" selection-start-line="40" selection-start-column="235" selection-end-line="40" selection-end-column="235" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="146" column="16" lean-forward="true" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/op.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_error.c" />
+    <entry file="file://$PROJECT_DIR$/sub.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_sizes.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_method copy.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="2" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_method.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_name_comment.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1137">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/op.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corewar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_valid_all.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_valid_command.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_add_command_corewar.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_command.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="60" lean-forward="false" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ft_strsplit_v2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="213" lean-forward="false" selection-start-line="5" selection-start-column="213" selection-end-line="5" selection-end-column="213" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corewar_valid.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#50#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

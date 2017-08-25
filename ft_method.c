@@ -1,0 +1,53 @@
+#include "corewar_valid.h"
+
+void				ft_hash_table(t_hash_table ***hash_table,
+					unsigned int **key, t_hash_table *tmp, int *i)
+{
+	unsigned int	j;
+	int				col;
+	t_hash_table	*head;
+
+	j = hash_key(tmp->lable);
+	if ((col = collision(*key, j)) == 0)
+	{
+		(*key)[*i] = j;
+		*key = realloc(*key, (sizeof(*key) * (*i + 2)));
+		(*hash_table)[*i] = tmp;
+		*hash_table = realloc(*hash_table, (sizeof(*hash_table) * (*i + 2)));
+		(*i)++;
+	}
+	else
+	{
+		head = *hash_table[col];
+		while ((*hash_table[col])->collision != NULL)
+			*hash_table[col] = (*hash_table[col])->collision;
+		(*hash_table[col])->collision = tmp;
+		*hash_table[col] = head;
+	}
+}
+
+void				ft_get_method(char ***text, t_hash_table ***hash_table,
+					unsigned int **key, int *i)
+{
+	char			**a;
+	t_hash_table	*tmp;
+
+	tmp = (t_hash_table*)malloc(sizeof(t_hash_table));
+	tmp->lable = ft_strndup(**text, ft_strclen(**text, LABEL_CHAR));
+	tmp->command = NULL;
+	tmp->collision = NULL;
+	**text = ft_strchr(**text, ':');
+	(**text)++;
+	while (**text != NULL && is_method(**text) != 1)
+	{
+		if (***text != '\0' && ***text != COMMENT_CHAR &&
+				***text != COMMENT_CHAR2 && ***text != '\n')
+		{
+			a = ft_strsplit_2args(**text, ' ', '\t');
+			if (a[0] && *a[0] != COMMENT_CHAR && *a[0] != COMMENT_CHAR2)
+				ft_add_command(&tmp->command, NULL, a);
+		}
+		(*text)++;
+	}
+	ft_hash_table(hash_table, key, tmp, i);
+}
