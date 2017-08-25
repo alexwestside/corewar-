@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/ft_name_comment.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/ft_name_comment.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/ft_strsplit_v2.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/ft_strsplit_v2.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/ft_valid_command.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/ft_valid_command.c.o"
+  "/nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_1.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/get_size_1.c.o"
+  "/nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_2.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/get_size_2.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/get_sizes.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/get_sizes.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/hash.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/hash.c.o"
   "/nfs/2016/o/orizhiy/CLionProjects/corewar2/main.c" "/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles/corewar2.dir/main.c.o"

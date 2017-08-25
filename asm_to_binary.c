@@ -92,7 +92,7 @@ void	ft_asm(t_corewar *corewar)
 	write(fd, &magic, sizeof(magic) + sizeof(unsigned int) - sizeof(magic));
 	write(fd, header->prog_name, (sizeof(*header->prog_name) * PROG_NAME_LENGTH
 	+ 1 + sizeof(unsigned int) - sizeof(*header->prog_name)));
-	get_prog_size(header, corewar, fd);
+	get_prog_size(header, corewar, fd, corewar->bot.command);
 	write(fd, header->comment, sizeof(*header->comment) * COMMENT_LENGTH
 	+ 1 + sizeof(unsigned int) - sizeof(*header->comment));
 	bot_code_to_binary(corewar, fd, 1);

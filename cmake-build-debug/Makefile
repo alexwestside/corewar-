@@ -258,6 +258,60 @@ ft_valid_command.c.s:
 	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/ft_valid_command.c.s
 .PHONY : ft_valid_command.c.s
 
+get_size_1.o: get_size_1.c.o
+
+.PHONY : get_size_1.o
+
+# target to build an object file
+get_size_1.c.o:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/get_size_1.c.o
+.PHONY : get_size_1.c.o
+
+get_size_1.i: get_size_1.c.i
+
+.PHONY : get_size_1.i
+
+# target to preprocess a source file
+get_size_1.c.i:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/get_size_1.c.i
+.PHONY : get_size_1.c.i
+
+get_size_1.s: get_size_1.c.s
+
+.PHONY : get_size_1.s
+
+# target to generate assembly for a file
+get_size_1.c.s:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/get_size_1.c.s
+.PHONY : get_size_1.c.s
+
+get_size_2.o: get_size_2.c.o
+
+.PHONY : get_size_2.o
+
+# target to build an object file
+get_size_2.c.o:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/get_size_2.c.o
+.PHONY : get_size_2.c.o
+
+get_size_2.i: get_size_2.c.i
+
+.PHONY : get_size_2.i
+
+# target to preprocess a source file
+get_size_2.c.i:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/get_size_2.c.i
+.PHONY : get_size_2.c.i
+
+get_size_2.s: get_size_2.c.s
+
+.PHONY : get_size_2.s
+
+# target to generate assembly for a file
+get_size_2.c.s:
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/get_size_2.c.s
+.PHONY : get_size_2.c.s
+
 get_sizes.o: get_sizes.c.o
 
 .PHONY : get_sizes.o
@@ -471,6 +525,12 @@ help:
 	@echo "... ft_valid_command.o"
 	@echo "... ft_valid_command.i"
 	@echo "... ft_valid_command.s"
+	@echo "... get_size_1.o"
+	@echo "... get_size_1.i"
+	@echo "... get_size_1.s"
+	@echo "... get_size_2.o"
+	@echo "... get_size_2.i"
+	@echo "... get_size_2.s"
 	@echo "... get_sizes.o"
 	@echo "... get_sizes.i"
 	@echo "... get_sizes.s"

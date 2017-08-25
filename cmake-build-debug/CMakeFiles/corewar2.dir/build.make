@@ -345,6 +345,54 @@ CMakeFiles/corewar2.dir/reg_dir_ind.c.o.provides: CMakeFiles/corewar2.dir/reg_di
 CMakeFiles/corewar2.dir/reg_dir_ind.c.o.provides.build: CMakeFiles/corewar2.dir/reg_dir_ind.c.o
 
 
+CMakeFiles/corewar2.dir/get_size_1.c.o: CMakeFiles/corewar2.dir/flags.make
+CMakeFiles/corewar2.dir/get_size_1.c.o: ../get_size_1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/corewar2.dir/get_size_1.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/get_size_1.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_1.c
+
+CMakeFiles/corewar2.dir/get_size_1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/corewar2.dir/get_size_1.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_1.c > CMakeFiles/corewar2.dir/get_size_1.c.i
+
+CMakeFiles/corewar2.dir/get_size_1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/corewar2.dir/get_size_1.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_1.c -o CMakeFiles/corewar2.dir/get_size_1.c.s
+
+CMakeFiles/corewar2.dir/get_size_1.c.o.requires:
+
+.PHONY : CMakeFiles/corewar2.dir/get_size_1.c.o.requires
+
+CMakeFiles/corewar2.dir/get_size_1.c.o.provides: CMakeFiles/corewar2.dir/get_size_1.c.o.requires
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/get_size_1.c.o.provides.build
+.PHONY : CMakeFiles/corewar2.dir/get_size_1.c.o.provides
+
+CMakeFiles/corewar2.dir/get_size_1.c.o.provides.build: CMakeFiles/corewar2.dir/get_size_1.c.o
+
+
+CMakeFiles/corewar2.dir/get_size_2.c.o: CMakeFiles/corewar2.dir/flags.make
+CMakeFiles/corewar2.dir/get_size_2.c.o: ../get_size_2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/corewar2.dir/get_size_2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/corewar2.dir/get_size_2.c.o   -c /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_2.c
+
+CMakeFiles/corewar2.dir/get_size_2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/corewar2.dir/get_size_2.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_2.c > CMakeFiles/corewar2.dir/get_size_2.c.i
+
+CMakeFiles/corewar2.dir/get_size_2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/corewar2.dir/get_size_2.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_2.c -o CMakeFiles/corewar2.dir/get_size_2.c.s
+
+CMakeFiles/corewar2.dir/get_size_2.c.o.requires:
+
+.PHONY : CMakeFiles/corewar2.dir/get_size_2.c.o.requires
+
+CMakeFiles/corewar2.dir/get_size_2.c.o.provides: CMakeFiles/corewar2.dir/get_size_2.c.o.requires
+	$(MAKE) -f CMakeFiles/corewar2.dir/build.make CMakeFiles/corewar2.dir/get_size_2.c.o.provides.build
+.PHONY : CMakeFiles/corewar2.dir/get_size_2.c.o.provides
+
+CMakeFiles/corewar2.dir/get_size_2.c.o.provides.build: CMakeFiles/corewar2.dir/get_size_2.c.o
+
+
 # Object files for target corewar2
 corewar2_OBJECTS = \
 "CMakeFiles/corewar2.dir/asm_to_binary.c.o" \
@@ -358,7 +406,9 @@ corewar2_OBJECTS = \
 "CMakeFiles/corewar2.dir/main.c.o" \
 "CMakeFiles/corewar2.dir/op.c.o" \
 "CMakeFiles/corewar2.dir/usage.c.o" \
-"CMakeFiles/corewar2.dir/reg_dir_ind.c.o"
+"CMakeFiles/corewar2.dir/reg_dir_ind.c.o" \
+"CMakeFiles/corewar2.dir/get_size_1.c.o" \
+"CMakeFiles/corewar2.dir/get_size_2.c.o"
 
 # External object files for target corewar2
 corewar2_EXTERNAL_OBJECTS =
@@ -375,10 +425,12 @@ corewar2: CMakeFiles/corewar2.dir/main.c.o
 corewar2: CMakeFiles/corewar2.dir/op.c.o
 corewar2: CMakeFiles/corewar2.dir/usage.c.o
 corewar2: CMakeFiles/corewar2.dir/reg_dir_ind.c.o
+corewar2: CMakeFiles/corewar2.dir/get_size_1.c.o
+corewar2: CMakeFiles/corewar2.dir/get_size_2.c.o
 corewar2: CMakeFiles/corewar2.dir/build.make
 corewar2: ../libft/libft.a
 corewar2: CMakeFiles/corewar2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable corewar2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/CLionProjects/corewar2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable corewar2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/corewar2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -398,6 +450,8 @@ CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/main.c.o.requires
 CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/op.c.o.requires
 CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/usage.c.o.requires
 CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/reg_dir_ind.c.o.requires
+CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/get_size_1.c.o.requires
+CMakeFiles/corewar2.dir/requires: CMakeFiles/corewar2.dir/get_size_2.c.o.requires
 
 .PHONY : CMakeFiles/corewar2.dir/requires
 

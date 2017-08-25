@@ -106,6 +106,12 @@
 		<Unit filename="/nfs/2016/o/orizhiy/CLionProjects/corewar2/ft_valid_command.c">
 			<Option target="corewar2"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_1.c">
+			<Option target="corewar2"/>
+		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/CLionProjects/corewar2/get_size_2.c">
+			<Option target="corewar2"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/CLionProjects/corewar2/get_sizes.c">
 			<Option target="corewar2"/>
 		</Unit>

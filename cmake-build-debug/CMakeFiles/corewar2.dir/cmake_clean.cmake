@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/corewar2.dir/op.c.o"
   "CMakeFiles/corewar2.dir/usage.c.o"
   "CMakeFiles/corewar2.dir/reg_dir_ind.c.o"
+  "CMakeFiles/corewar2.dir/get_size_1.c.o"
+  "CMakeFiles/corewar2.dir/get_size_2.c.o"
   "corewar2.pdb"
   "corewar2"
 )
