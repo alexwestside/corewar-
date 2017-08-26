@@ -39,7 +39,7 @@ void	check_is_champion(t_machine *vm, int fd, char *file_name)
 	while ((rd = read(fd, buff, SIZE_BUFF)) > 0)
 		sum += rd;
 	lseek(fd, 0, SEEK_SET);
-	if (sum < sizeof(header_t))
+	if (sum < sizeof(t_header))
 		error_exit(file_name, 1, vm);
 }
 

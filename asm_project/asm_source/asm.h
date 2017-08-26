@@ -8,9 +8,10 @@
 
 void			ft_asm(t_corewar *corewar);
 //void			get_prog_size(header_t *header, t_corewar *corewar, int fd)
-void	get_prog_size(header_t *header, t_corewar *corewar, int fd, t_command *command);
-void gps_1(header_t *header, t_command **h_command);
-void gps_2(header_t *header, t_command *command);
+void	get_prog_size(t_header *header, t_corewar *corewar, int fd, t_command
+*command);
+void gps_1(t_header *header, t_command **h_command);
+void gps_2(t_header *header, t_command *command);
 void			bot_code_to_binary(t_corewar *corewar, int fd, int current_line);
 void			args_to_bytes(t_command *command, int fd, t_corewar *corewar, int current_line);
 void			t_reg_to_byte(char *command_data, int fd);

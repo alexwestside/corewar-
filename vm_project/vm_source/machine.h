@@ -16,17 +16,47 @@
 # define PR_SIZE_ARENA 0x0040
 # define IND_SIZE 2
 # define REG_SIZE 1
-# define MAX_ARGS_N MAX_ARGS_NUMBER
+# define MAX_ARGS_N 4
 # define INT_MAX 2147483647
 # define MSLEEP(msec) usleep(msec * 1000000.0)
 # define SPACE 32
 # define ESC 27
+# define REG_CODE 1
+# define DIR_CODE 2
+# define IND_CODE 3
+# define MAX_ARGS_NUMBER MAX_ARGS_N
+# define MAX_PLAYERS 4
+# define MEM_SIZE 4096
+# define IDX_MOD 512
+# define CHAMP_MAX_SIZE 682
+# define REG_NUMBER 16
+# define CYCLE_TO_DIE 1536
+# define CYCLE_DELTA 50
+# define NBR_LIVE 21
+# define MAX_CHECKS 10
 # include <fcntl.h>
 # include <errno.h>
 # include <ncurses.h>
 # include "../../libft/libft.h"
 # include "../../libft/ft_printf.h"
-# include "./op.h"
+
+typedef char	t_arg_type;
+
+# define T_REG 1
+# define T_DIR 2
+# define T_IND 4
+
+# define PROG_NAME_LENGTH 128
+# define COMMENT_LENGTH 2048
+# define COREWAR_EXEC_MAGIC 0xea83f3
+
+typedef struct		s_header
+{
+	unsigned int	magic;
+	char			prog_name[PROG_NAME_LENGTH + 1];
+	unsigned int	prog_size;
+	char			comment[COMMENT_LENGTH + 1];
+}					t_header;
 
 enum	e_pl_color
 {

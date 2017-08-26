@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-void	get_prog_size(header_t *header, t_corewar *corewar,
+void	get_prog_size(t_header *header, t_corewar *corewar,
 int fd, t_command *command)
 {
 	t_command		*h_command;
@@ -42,7 +42,7 @@ corewar->bot.keys, command->method)->command;
 	write(fd, &header->prog_size, sizeof(header->prog_size));
 }
 
-void	gps_2(header_t *header, t_command *command)
+void	gps_2(t_header *header, t_command *command)
 {
 	header->prog_size++;
 	if (command->count_args > 1 && ft_strcmp(command->command_name, "aff"))
@@ -50,7 +50,7 @@ void	gps_2(header_t *header, t_command *command)
 	header->prog_size += get_size_args(command);
 }
 
-void	gps_1(header_t *header, t_command **h_command)
+void	gps_1(t_header *header, t_command **h_command)
 {
 	header->prog_size++;
 	if ((*h_command)->count_args > 1 &&

@@ -84,12 +84,12 @@ void	bot_code_to_binary(t_corewar *corewar, int fd, int current_line)
 
 void	ft_asm(t_corewar *corewar)
 {
-	header_t		*header;
+	t_header		*header;
 	char			*file_path;
 	int				fd;
 	unsigned int	magic;
 
-	header = (header_t *)malloc(sizeof(header_t));
+	header = (t_header *)malloc(sizeof(t_header));
 	header->magic = COREWAR_EXEC_MAGIC;
 	bzero(header->prog_name, header->prog_size);
 	bzero(header->comment, header->prog_size);
