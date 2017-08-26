@@ -19,9 +19,9 @@ size_t	get_t_dir_size(char *command_name)
 
 	i = -1;
 	while (++i < REG_NUMBER)
-		if (!ft_strcmp(command_name, op_tab[i].command_name))
+		if (!ft_strcmp(command_name, g_op_tab[i].command_name))
 			break ;
-	size = op_tab[i].cod_octal ? 2 : 4;
+	size = g_op_tab[i].cod_octal ? 2 : 4;
 	return (size);
 }
 
