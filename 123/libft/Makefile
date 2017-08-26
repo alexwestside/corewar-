@@ -142,7 +142,7 @@ $(NAME) : $(OBJ)
 		@echo "$$($(BYellow))LIBFT : $$($(END)) $$($(BLUE))Sources compiling...$$($(END))"
 		@ar -cru $(NAME) $(OBJ)
 		@ranlib $(NAME)
-		@echo "$$($(BYellow))LIBFT : $$($(END)) $$($(GREEN))is ALIVE!!!$$($(END))"
+		@echo "$$($(BYellow))LIBFT $$($(END)) $$($(GREEN))is ALIVE!!!$$($(END))"
 
 %.o: %.c libft.h
 		@$(G) $(CFLAGS) -c -o $@ $<
