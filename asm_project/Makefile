@@ -6,7 +6,7 @@
 #    By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/25 21:31:22 by orizhiy           #+#    #+#              #
-#    Updated: 2017/08/26 17:28:33 by orizhiy          ###   ########.fr        #
+#    Updated: 2017/08/26 20:46:27 by ayatsyny         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -52,7 +52,6 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "$$($(BIWhite))ASM : $$($(END)) $$($(BLUE))Sources compiling...$$($(END))"
-	@make -C ../libft/
 	@$(G) $(FLAGS) $(GCFLAGS) -o $@ $(OBJ) $(LIBFT)
 	@echo "$$($(BIWhite))ASM : $$($(END)) $$($(GREEN))Compile with SUCCESS!$$($(END))"
 	@mv asm ../
@@ -61,12 +60,10 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@$(G) $(FLAGS) $(GCFLAGS) -o $@ -c $<
 
 clean:
-	@make -C ../libft/ clean
 	@rm -f $(OBJ)
 	@echo "$$($(BIWhite))ASM : $$($(END)) $$($(RED))Objects removed...$$($(END))"
 
 fclean: clean
-	@make -C ../libft/ fclean
 	@rm -f $(NAME)
 	@echo "$$($(BIWhite))ASM :$$($(END)) $$($(RED))Binary removed...$$($(END))"
 
