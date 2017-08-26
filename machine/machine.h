@@ -6,7 +6,7 @@
 /*   By: ayatsyny <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/12 22:46:57 by ayatsyny          #+#    #+#             */
-/*   Updated: 2017/08/20 17:52:08 by ayatsyny         ###   ########.fr       */
+/*   Updated: 2017/08/26 11:51:25 by ayatsyny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,11 +163,11 @@ unsigned			move_pc(unsigned pc);
 int					is_number(char *s);
 int					read_vm(unsigned char *arena, int index);
 void				write_vm(t_machine *vm, t_fork *forks, int index,
-							 int var);
+					int var);
 int					get_arg(char bin_code, t_fork *fork, int arg,
-							   unsigned char *arena);
+					unsigned char *arena);
 int					get_arg_ni(char bin_code, t_fork *forks, int arg,
-								  unsigned char *arena);
+					unsigned char *arena);
 void				inheritance(t_fork *child, t_fork *father, int shift);
 
 /*

@@ -144,10 +144,10 @@ set(SOURCE_FILES
         machine/release_memory.c
         machine/run_op_cmd.c
         machine/tools.c
-        machine/usage.c
+        machine/get_flags.c
         machine/validate_data.c
         machine/work_vm.c
-        op.h)
+        op.h machine/err_exit.c machine/get_path_files.c machine/tools2.c machine/auxiliary_func.c)
 
 add_executable(corewar ${SOURCE_FILES})
 
