@@ -24,9 +24,9 @@ void	type_command(t_bot bot, t_command *command, int fd)
 	else
 		command_name = command->command_name;
 	while (++i < REG_NUMBER)
-		if (!ft_strcmp(command_name, op_tab[i].command_name))
+		if (!ft_strcmp(command_name, g_op_tab[i].command_name))
 			break ;
-	write(fd, &op_tab[i].opcode, sizeof(char));
+	write(fd, &g_op_tab[i].opcode, sizeof(char));
 }
 
 void	get_code_byte(t_command *h_command, int fd)

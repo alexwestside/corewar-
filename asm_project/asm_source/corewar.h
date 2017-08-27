@@ -16,18 +16,18 @@
 # include "../libft/libft.h"
 # include "../libft/get_next_line.h"
 # include "../libft/ft_printf.h"
-#include "./op.h"
+# include "./op.h"
 
 typedef struct			s_args
 {
-	int 				arg_type;
+	int					arg_type;
 	char				*data;
 }						t_args;
 
 typedef struct			s_command
 {
 	char				*method;
-	char 				*command_name;
+	char				*command_name;
 	t_args				arg[3];
 	int					count_args;
 	struct s_command	*next;
@@ -35,16 +35,16 @@ typedef struct			s_command
 
 typedef struct			s_hash_table
 {
-	char 				*lable;
+	char				*lable;
 	t_command			*command;
 	struct s_hash_table	*collision;
 }						t_hash_table;
 
 typedef struct			s_bot
 {
-	char 				*name;
-	char 				*comment;
-	t_hash_table 		**hash_table;
+	char				*name;
+	char				*comment;
+	t_hash_table		**hash_table;
 	unsigned int		*keys;
 	t_command			*command;
 }						t_bot;

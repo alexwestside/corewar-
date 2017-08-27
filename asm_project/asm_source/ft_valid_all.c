@@ -20,8 +20,8 @@ t_op			*find_t_op(char *str)
 	if (str)
 	{
 		while (++i < 16)
-			if (!ft_strcmp(op_tab[i].command_name, str))
-				return (&op_tab[i]);
+			if (!ft_strcmp(g_op_tab[i].command_name, str))
+				return (&g_op_tab[i]);
 	}
 	return (NULL);
 }

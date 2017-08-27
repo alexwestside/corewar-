@@ -9,15 +9,14 @@
 /*   Updated: 2017/08/26 17:07:10 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "corewar_valid.h"
 
-//#include <stdio.h>
+#include "corewar_valid.h"
 
 void	valid(char **text, t_corewar *corewar)
 {
 	char	*name;
 	char	*comment;
-	t_bot		bot;
+	t_bot	bot;
 
 	bot.command = NULL;
 	bot.hash_table = (t_hash_table **)malloc(sizeof(t_hash_table *));
@@ -28,14 +27,16 @@ void	valid(char **text, t_corewar *corewar)
 	corewar->bot.comment = comment;
 }
 
-char	**open_read(char *av) {
+char	**open_read(char *av)
+{
 	int		fd;
 	char	*str;
 	char	*s;
 
 	fd = open(av, O_RDONLY);
 	s = "";
-	while (get_next_line(fd, &str) != 0) {
+	while (get_next_line(fd, &str) != 0)
+	{
 		s = ft_strjoin(s, str);
 		s = ft_strjoin(s, "\n");
 	}
@@ -62,8 +63,7 @@ int main(int ac, char **av)
 }
 */
 
-
-int	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	char		**text;
 	t_corewar	corewar;
