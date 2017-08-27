@@ -6,7 +6,7 @@
 #    By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/25 21:31:22 by orizhiy           #+#    #+#              #
-#    Updated: 2017/08/26 20:46:27 by ayatsyny         ###   ########.fr        #
+#    Updated: 2017/08/27 10:56:23 by ayatsyny         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -48,6 +48,8 @@ GCFLAGS = -I./asm_source -I ../libft/
 
 LIBFT = ../libft/libft.a
 
+.PHONY: all clean fclean re rmsh
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -68,7 +70,6 @@ fclean: clean
 	@echo "$$($(BIWhite))ASM :$$($(END)) $$($(RED))Binary removed...$$($(END))"
 
 re: fclean all
-	@make -C ../libft/ re
 
 rmsh:
 		rm *~

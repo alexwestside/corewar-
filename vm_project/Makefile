@@ -6,7 +6,7 @@
 #    By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/26 17:32:15 by orizhiy           #+#    #+#              #
-#    Updated: 2017/08/26 17:32:40 by orizhiy          ###   ########.fr        #
+#    Updated: 2017/08/27 10:59:38 by ayatsyny         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -68,6 +68,8 @@ OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 GCFLAGS = -I./vm_source -I ../libft/
 
 LIBFT = ../libft/libft.a
+
+.PHONY: all clean fclean re rmsh
 
 $(NAME): $(OBJ)
 	@echo "$$($(BIWhite))VM: $$($(END)) $$($(BLUE))Sources compiling...$$($(END))"

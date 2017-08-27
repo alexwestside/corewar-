@@ -6,7 +6,7 @@
 #    By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/26 14:42:47 by orizhiy           #+#    #+#              #
-#    Updated: 2017/08/26 21:04:22 by ayatsyny         ###   ########.fr        #
+#    Updated: 2017/08/27 10:47:20 by ayatsyny         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -16,9 +16,11 @@ GREEN = echo "\033[0;32m"
 END = echo "\033[0m"
 BIWhite = echo "\033[1;97m"
 
-LIBFT = libft/
-ASM = asm_project/
-VM = vm_project/
+LIBFT = ./libft/
+ASM = ./asm_project/
+VM = ./vm_project/
+
+.PHONY: all clean fclean re
 
 all:
 	@make -C $(LIBFT)
