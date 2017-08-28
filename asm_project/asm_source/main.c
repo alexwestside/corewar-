@@ -48,14 +48,16 @@ int main(int ac, char **av)
 {
 	char *BOTS[] = {"zork", "bigzork", "bee_gees", "fluttershy", "helltrain", "turtle", NULL};
 	char **p = (char **) BOTS;
-	char *fpEXEMPES = "resources/corewar/champs/examples/";
+	char *fpEXEMPES = "resources/examples/";
 	char *_fpASM = "resources/exe/asm";
 	t_corewar corewar;
 
+	(void)ac;
+	(void)av;
 	while (*p)
 	{
 		valid(open_read(ft_strjoin("../", ft_strjoin(ft_strjoin(fpEXEMPES, *p), ".s"))), &corewar);
-		_asm(corewar);
+		ft_asm(&corewar);
 		system(ft_strjoin("../", ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin(_fpASM, " "), "../"), fpEXEMPES), *p), ".s")));
 		system(ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin("diff", " "), ft_strjoin("~/CLionProjects/corewar2/", ft_strjoin( ft_strjoin(fpEXEMPES, *p), ".cor"))), " "), ft_strjoin("~/CLionProjects/corewar2/", ft_strjoin(*p, ".cor"))));
 		p++;
@@ -73,3 +75,4 @@ int		main(int ac, char **av)
 	valid(text, &corewar);
 	ft_asm(&corewar);
 }
+

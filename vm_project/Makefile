@@ -72,9 +72,9 @@ LIBFT = ../libft/libft.a
 .PHONY: all clean fclean re rmsh
 
 $(NAME): $(OBJ)
-	@echo "$$($(BIWhite))VM: $$($(END)) $$($(BLUE))Sources compiling...$$($(END))"
+	@echo "$$($(BIWhite))VM -> $$($(END))$$($(BLUE))Sources compiling...$$($(END))"
 	@$(G) $(FLAGS) $(GCFLAGS) -o $@ $(OBJ) $(LIBFT) -lcurses
-	@echo "$$($(BIWhite))VM : $$($(END)) $$($(GREEN))Compile with SUCCESS!$$($(END))"
+	@echo "$$($(BIWhite))VM -> $$($(END))$$($(GREEN))Compile with SUCCESS!$$($(END))"
 	@mv corewar ../
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
@@ -82,11 +82,11 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 
 clean:
 	@rm -f $(OBJ)
-	@echo "$$($(BIWhite))VM : $$($(END)) $$($(RED))Objects removed...$$($(END))"
+	@echo "$$($(BIWhite))VM -> $$($(END))$$($(RED))Objects removed...$$($(END))"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$$($(BIWhite))VM :$$($(END)) $$($(RED))Binary removed...$$($(END))"
+	@echo "$$($(BIWhite))VM -> $$($(END))$$($(RED))Binary removed...$$($(END))"
 
 re: fclean all
 

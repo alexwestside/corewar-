@@ -53,9 +53,9 @@ LIBFT = ../libft/libft.a
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "$$($(BIWhite))ASM : $$($(END)) $$($(BLUE))Sources compiling...$$($(END))"
+	@echo "$$($(BIWhite))ASM -> $$($(END))$$($(BLUE))Sources compiling...$$($(END))"
 	@$(G) $(FLAGS) $(GCFLAGS) -o $@ $(OBJ) $(LIBFT)
-	@echo "$$($(BIWhite))ASM : $$($(END)) $$($(GREEN))Compile with SUCCESS!$$($(END))"
+	@echo "$$($(BIWhite))ASM -> $$($(END))$$($(GREEN))Compile with SUCCESS!$$($(END))"
 	@mv asm ../
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
@@ -63,11 +63,11 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 
 clean:
 	@rm -f $(OBJ)
-	@echo "$$($(BIWhite))ASM : $$($(END)) $$($(RED))Objects removed...$$($(END))"
+	@echo "$$($(BIWhite))ASM -> $$($(END))$$($(RED))Objects removed...$$($(END))"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$$($(BIWhite))ASM :$$($(END)) $$($(RED))Binary removed...$$($(END))"
+	@echo "$$($(BIWhite))ASM -> $$($(END))$$($(RED))Binary removed...$$($(END))"
 
 re: fclean all
 

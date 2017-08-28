@@ -27,15 +27,15 @@ all:
 	@make -C $(ASM)
 	@make -C $(VM)
 	@echo "$$($(GREEN))__________________________________________________________$$($(END))"
-	@echo "$$($(RED))COREWAR : $$($(END)) $$($(GREEN))BILD WITH SUCCESS!$$($(END))"
-	@echo "$$($(RED))COREWAR : $$($(END)) $$($(GREEN))GO HARD OR GO HOME!!!$$($(END))"
+	@echo "$$($(RED))COREWAR -> $$($(END))$$($(GREEN))BILD WITH SUCCESS!$$($(END))"
+	@echo "$$($(RED))COREWAR -> $$($(END))$$($(GREEN))GO HARD OR GO HOME!!!$$($(END))"
 	@echo "$$($(GREEN))__________________________________________________________$$($(END))"
 
 clean:
 	@make clean -C $(LIBFT)
 	@make clean -C $(ASM)
 	@make clean -C $(VM)
-	@echo "$$($(RED))COREWAR : $$($(END)) $$($(RED))Objects removed...$$($(END))"
+	@echo "$$($(RED))COREWAR -> $$($(END))$$($(RED))Objects removed...$$($(END))"
 
 fclean: clean
 	@make fclean -C $(LIBFT)
@@ -43,7 +43,7 @@ fclean: clean
 	@make fclean -C $(VM)
 	@rm -f ./asm
 	@rm -f ./corewar
-	@echo "$$($(RED))COREWAR :$$($(END)) $$($(RED))Binary removed...$$($(END))"
+	@echo "$$($(RED))COREWAR -> $$($(END))$$($(RED))is DEADMAN...$$($(END))"
 
 re: fclean all
 

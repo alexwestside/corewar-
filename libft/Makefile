@@ -139,24 +139,24 @@ DEL = rm -f
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-		@echo "$$($(BYellow))LIBFT : $$($(END)) $$($(BLUE))Sources compiling...$$($(END))"
+		@echo "$$($(BYellow))LIBFT -> $$($(END))$$($(BLUE))Sources compiling...$$($(END))"
 		@ar -cru $(NAME) $(OBJ)
 		@ranlib $(NAME)
-		@echo "$$($(BYellow))LIBFT : $$($(END)) $$($(GREEN))is ALIVE!!!$$($(END))"
+		@echo "$$($(BYellow))LIBFT -> $$($(END))$$($(GREEN))is ALIVE!!!$$($(END))"
 
 %.o: %.c libft.h
 		@$(G) $(CFLAGS) -c -o $@ $<
 
 clean:
 		@$(DEL) $(OBJ)
-		@echo "$$($(BYellow))LIBFT : $$($(END)) $$($(RED))objects is dead...$$($(RED))"
+		@echo "$$($(BYellow))LIBFT -> $$($(END))$$($(RED))objects is dead...$$($(RED))"
 
 fclean: clean
 		@$(DEL) $(NAME)
-		@echo "$$($(BYellow))LIBFT : $$($(END))$$($(RED))DESTROYED!!!$$($(RED))"
+		@echo "$$($(BYellow))LIBFT -> $$($(END))$$($(RED))DESTROYED!!!$$($(RED))"
 
 re: all
-		@echo "$$($(BYellow))LIBFT : $$($(END))$$($(RED))ALL DAMM FPS is DESTROYED!!!$$($(RED))"
+		@echo "$$($(BYellow))LIBFT -> $$($(END))$$($(RED))ALL DAMM FPS is DESTROYED!!!$$($(RED))"
 
 norm:
 		norminette $(SRC) $(HDR) | grep -B 1 "Error"

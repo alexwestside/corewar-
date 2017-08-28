@@ -1,3 +1,14 @@
+#******************************************************************************#
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2017/08/26 17:32:15 by orizhiy           #+#    #+#              #
+#    Updated: 2017/08/27 10:59:38 by ayatsyny         ###   ########.fr        #
+#                                                                              #
+#******************************************************************************#
 
 BLUE = echo "\033[0;36m"
 RED = echo "\033[0;31m"
@@ -58,21 +69,24 @@ GCFLAGS = -I./vm_source -I ../libft/
 
 LIBFT = ../libft/libft.a
 
+.PHONY: all clean fclean re rmsh
+
 $(NAME): $(OBJ)
-	@echo "$$($(BIWhite))VM: $$($(END)) $$($(BLUE))Sources compiling...$$($(END))"
+	@echo "$$($(BIWhite))VM -> $$($(END)) $$($(BLUE))Sources compiling...$$($(END))"
 	@$(G) $(FLAGS) $(GCFLAGS) -o $@ $(OBJ) $(LIBFT) -lcurses
-	@echo "$$($(BIWhite))VM : $$($(END)) $$($(GREEN))Compile with SUCCESS!$$($(END))"
+	@echo "$$($(BIWhite))VM -> $$($(END)) $$($(GREEN))Compile with SUCCESS!$$($(END))"
+	@mv corewar ../
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@$(G) $(FLAGS) $(GCFLAGS) -o $@ -c $<
 
 clean:
 	@rm -f $(OBJ)
-	@echo "$$($(BIWhite))VM : $$($(END)) $$($(RED))Objects removed...$$($(END))"
+	@echo "$$($(BIWhite))VM -> $$($(END)) $$($(RED))Objects removed...$$($(END))"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$$($(BIWhite))VM :$$($(END)) $$($(RED))Binary removed...$$($(END))"
+	@echo "$$($(BIWhite))VM -> $$($(END)) $$($(RED))Binary removed...$$($(END))"
 
 re: fclean all
 
