@@ -6,7 +6,7 @@
 /*   By: zaz <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2017/06/05 19:14:08 by orizhiy          ###   ########.fr       */
+/*   Updated: 2017/08/29 13:15:22 by ayatsyny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,5 @@ typedef struct		s_op
 extern t_op			g_op_tab[17];
 
 t_op				*init_op();
-
-//t_op init_op(t_op *op);
 
 #endif

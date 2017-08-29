@@ -6,7 +6,7 @@
 /*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/26 17:06:33 by orizhiy           #+#    #+#             */
-/*   Updated: 2017/08/26 17:07:10 by orizhiy          ###   ########.fr       */
+/*   Updated: 2017/08/29 13:16:35 by ayatsyny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,28 +43,6 @@ char	**open_read(char *av)
 	return (ft_strsplit(s, '\n'));
 }
 
-/*
-int main(int ac, char **av)
-{
-	char *BOTS[] = {"zork", "bigzork", "bee_gees", "fluttershy", "helltrain", "turtle", NULL};
-	char **p = (char **) BOTS;
-	char *fpEXEMPES = "resources/examples/";
-	char *_fpASM = "resources/exe/asm";
-	t_corewar corewar;
-
-	(void)ac;
-	(void)av;
-	while (*p)
-	{
-		valid(open_read(ft_strjoin("../", ft_strjoin(ft_strjoin(fpEXEMPES, *p), ".s"))), &corewar);
-		ft_asm(&corewar);
-		system(ft_strjoin("../", ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin(_fpASM, " "), "../"), fpEXEMPES), *p), ".s")));
-		system(ft_strjoin(ft_strjoin(ft_strjoin(ft_strjoin("diff", " "), ft_strjoin("~/CLionProjects/corewar2/", ft_strjoin( ft_strjoin(fpEXEMPES, *p), ".cor"))), " "), ft_strjoin("~/CLionProjects/corewar2/", ft_strjoin(*p, ".cor"))));
-		p++;
-	}
-}
-*/
-
 int		main(int ac, char **av)
 {
 	char		**text;
@@ -75,4 +53,3 @@ int		main(int ac, char **av)
 	valid(text, &corewar);
 	ft_asm(&corewar);
 }
-
