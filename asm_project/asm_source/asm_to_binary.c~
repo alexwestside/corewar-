@@ -6,7 +6,7 @@
 /*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/26 13:52:41 by orizhiy           #+#    #+#             */
-/*   Updated: 2017/08/29 19:12:57 by orizhiy          ###   ########.fr       */
+/*   Updated: 2017/08/29 18:27:55 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	bot_code_to_binary(t_corewar *corewar, int fd, int current_line)
 	}
 }
 
-void	ft_asm(t_corewar *corewar)
+void	ft_asm(t_corewar *corewar, char *av)
 {
 	t_header		*header;
 	char			*file_path;
@@ -108,5 +108,6 @@ void	ft_asm(t_corewar *corewar)
 	+ 1 + sizeof(unsigned int) - sizeof(*header->comment));
 	bot_code_to_binary(corewar, fd, 1);
 	close(fd);
-	ft_printf("Writing output program to %s", file_path);
+	(void)av;
+	//ft_printf("Writing output program to %s%s", av, file_path);
 }

@@ -1,5 +1,5 @@
-.name "GohomeGohard"
-.comment "GO HARD OR GO HOME"
+.name "GoHardOrGoHome"
+.comment "GO HARD OR GO HOME MOTHEFACKER!!!"
 
 l2:		st r1, 14
 		fork %-1024

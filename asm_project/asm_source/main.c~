@@ -6,7 +6,7 @@
 /*   By: orizhiy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/26 17:06:33 by orizhiy           #+#    #+#             */
-/*   Updated: 2017/08/29 19:12:21 by orizhiy          ###   ########.fr       */
+/*   Updated: 2017/08/29 18:26:01 by orizhiy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ int		main(int ac, char **av)
 	text = open_read(av[1]);
 	valid(text, &corewar);
 	ft_asm(&corewar, av[0]);
-	ft_printf("%s");
+	ft_printf("%s", av[0]);
 }

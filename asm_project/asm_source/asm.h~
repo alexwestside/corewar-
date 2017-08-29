@@ -6,7 +6,7 @@
 /*   By: mivanov <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/26 21:25:42 by mivanov           #+#    #+#             */
-/*   Updated: 2017/08/29 18:24:37 by orizhiy          ###   ########.fr       */
+/*   Updated: 2017/08/29 13:21:22 by ayatsyny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include "corewar.h"
 # include "corewar_valid.h"
 
-void			ft_asm(t_corewar *corewar, char *av);
+void			ft_asm(t_corewar *corewar);
 void			get_prog_size(t_header *header, t_corewar *corewar, int fd,
 		t_command *command);
 void			gps_1(t_header *header, t_command **h_command);
