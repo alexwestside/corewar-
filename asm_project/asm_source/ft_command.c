@@ -63,7 +63,6 @@ void				check_text_2(char ***text)
 unsigned int *ft_command(char **text, int i, t_bot *bot)
 {
 	char			**a;
-
 	while (*text)
 	{
 		if (**text == COMMENT_CHAR || **text == COMMENT_CHAR2 || !*text)
@@ -71,6 +70,8 @@ unsigned int *ft_command(char **text, int i, t_bot *bot)
 		else
 		{
 			check_text_2(&text);
+			if (ft_strstr(*text, NAME_CMD_STRING) || ft_strstr(*text, COMMENT_CMD_STRING))
+				break ;
 			if (is_method(*text) == 1)
 			{
 				ft_add_command(&bot->command, *text, NULL);

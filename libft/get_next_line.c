@@ -87,7 +87,10 @@ int				get_next_line(const int fd, char **line)
 		result++;
 	*line = ft_strndup(new_line->content, result);
 	if (((char *)new_line->content)[result] == '\n')
+	{
+		*line = ft_strjoin(*line, "\n");
 		result++;
+	}
 	s = new_line->content;
 	new_line->content = ft_strdup(new_line->content + result);
 	free(s);

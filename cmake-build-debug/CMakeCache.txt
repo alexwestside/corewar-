@@ -190,12 +190,6 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
 //Value Computed by CMake
-dasm_BINARY_DIR:STATIC=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug
-
-//Value Computed by CMake
-dasm_SOURCE_DIR:STATIC=/nfs/2016/m/maksenov/CLionProjects/new_asm
-
-//Value Computed by CMake
 new_asm_BINARY_DIR:STATIC=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug
 
 //Value Computed by CMake

@@ -55,25 +55,34 @@ unsigned int	*valid(char **text, t_corewar *corewar)
 	return (corewar->bot.keys);
 }
 
-char	**open_read(char *av)
+
+void open_read(char *av, char ***text)
 {
 	int		fd;
-	char	*str;
-	char	*s;
+	int 	i;
+	char **a;
 
+	i = 0;
 	fd = open(av, O_RDONLY);
-	s = "";
 	if (fd <= 0)
 	{
 		ft_printf("INVALID FILE");
 		exit(0);
 	}
-	while (get_next_line(fd, &str) != 0)
+	while (get_next_line(fd, &(*text)[i]))
 	{
-		s = ft_strjoin(s, str);
-		s = ft_strjoin(s, "\n");
+		if ((*text)[i][0]) {
+			(*text) = (char **) realloc((*text), sizeof(char *) * (i + 2));
+			i++;
+		}
 	}
-	return (ft_strsplit(s, '\n'));
+	(*text)[i] = NULL;
+	if (!ft_strchr((*text)[i - 1], '\n'))
+	{
+		a = ft_strsplit_2args((*text)[i-1], ' ', '\t');
+		if (a[0] && *(a[0]) != COMMENT_CHAR && *(a[0]) != COMMENT_CHAR2)
+			error("!!!");
+	}
 }
 
 int		main(int ac, char **av)
@@ -82,7 +91,19 @@ int		main(int ac, char **av)
 	t_corewar	corewar;
 
 	(void)ac;
-	text = open_read(av[1]);
+	text = (char **)malloc(sizeof(char *));
+	text[0] = NULL;
+	open_read(av[1], &text);
 	corewar.bot.keys = valid(text, &corewar);
 	ft_asm(&corewar);
 }
+
+//while (get_next_line(fd, &(bot)->info[i]))
+//{
+//if ((bot)->info[i][0])
+//{
+//(bot)->info = (char **) realloc((bot)->info, sizeof(char *) * (i + 2));
+//i++;
+//}
+//}
+//(bot)->info[i] = NULL;
