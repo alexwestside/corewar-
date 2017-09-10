@@ -39,7 +39,7 @@ int						ft_arg_type(char *str);
 char					**ft_strsplit_2args(char const *s, char c1, char c2);
 size_t					ft_strclen(char *str, char c);
 t_hash_table		*get_table(t_hash_table **hash_table,
-							   unsigned int *keys, char *method, char **checkdup, int flag);
+							   unsigned int *keys, char *method, t_corewar *corewar, int flag);
 unsigned int	*valid(char **text, t_corewar *corewar);
 char					*get_command_name(t_hash_table **hash_table,
 				unsigned int *keys, char *method);

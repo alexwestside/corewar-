@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/2016/m/maksenov/CLionProjects/new_asm
+CMAKE_SOURCE_DIR = /nfs/2016/o/orizhiy/corewar3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug
+CMAKE_BINARY_DIR = /nfs/2016/o/orizhiy/corewar3/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/new_asm.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/new_asm.dir/flags.make
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o: ../asm_project/asm_source/asm_to_binary.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/asm_to_binary.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/asm_to_binary.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/asm_to_binary.c > CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/asm_to_binary.c > CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/asm_to_binary.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/asm_to_binary.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o.provides.build: 
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o: ../asm_project/asm_source/ft_add_command_corewar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_add_command_corewar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_add_command_corewar.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_add_command_corewar.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_add_command_corewar.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_add_command_corewar.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_add_command_corewar.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o.provide
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o: ../asm_project/asm_source/ft_command.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_command.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_command.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_command.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_command.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_command.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_command.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o.provides.build: CMa
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o: ../asm_project/asm_source/ft_method.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_method.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_method.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_method.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_method.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_method.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_method.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o.provides.build: CMak
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o: ../asm_project/asm_source/ft_name_comment.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_name_comment.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_name_comment.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_name_comment.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_name_comment.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_name_comment.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_name_comment.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o.provides.build
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o: ../asm_project/asm_source/ft_strsplit_v2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_strsplit_v2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_strsplit_v2.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_strsplit_v2.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_strsplit_v2.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_strsplit_v2.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_strsplit_v2.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o.provides.build:
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o: ../asm_project/asm_source/ft_valid_all.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_valid_all.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_valid_all.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_valid_all.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_valid_all.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_valid_all.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_valid_all.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o.provides.build: C
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o: ../asm_project/asm_source/ft_valid_command.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_valid_command.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_valid_command.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_valid_command.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_valid_command.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_valid_command.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_valid_command.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o.provides.buil
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o: ../asm_project/asm_source/get_size_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_size_1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_size_1.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_size_1.c > CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_size_1.c > CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_size_1.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_size_1.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o.provides.build: CMa
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o: ../asm_project/asm_source/get_size_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_size_2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_size_2.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_size_2.c > CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_size_2.c > CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_size_2.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_size_2.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o.provides.build: CMa
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o: ../asm_project/asm_source/get_sizes.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_sizes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_sizes.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_sizes.c > CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_sizes.c > CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/get_sizes.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_sizes.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o.provides.build: CMak
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o: ../asm_project/asm_source/hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/hash.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/hash.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/hash.c > CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/hash.c > CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/hash.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/hash.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o.provides.build: CMakeFile
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o: ../asm_project/asm_source/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/main.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/main.c > CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/main.c > CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/main.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/main.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o.provides.build: CMakeFile
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../asm_project/asm_source/op.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/op.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/op.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/op.c > CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/op.c > CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/op.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/op.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o: ../asm_project/asm_source/reg_dir_ind.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/reg_dir_ind.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/reg_dir_ind.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/reg_dir_ind.c > CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/reg_dir_ind.c > CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/reg_dir_ind.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/reg_dir_ind.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o.provides.build: CM
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o: ../asm_project/asm_source/usage.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/usage.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/usage.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/usage.c > CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/usage.c > CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/usage.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/usage.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o.provides.build: CMakeFil
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o: CMakeFiles/new_asm.dir/flags.make
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o: ../asm_project/asm_source/ft_strsplit_v3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o   -c /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_strsplit_v3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o   -c /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_strsplit_v3.c
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_strsplit_v3.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_strsplit_v3.c > CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.i
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/maksenov/CLionProjects/new_asm/asm_project/asm_source/ft_strsplit_v3.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_strsplit_v3.c -o CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.s
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o.requires:
 
@@ -508,7 +508,7 @@ new_asm: CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o
 new_asm: CMakeFiles/new_asm.dir/build.make
 new_asm: ../libft/libft.a
 new_asm: CMakeFiles/new_asm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable new_asm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable new_asm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/new_asm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -541,6 +541,6 @@ CMakeFiles/new_asm.dir/clean:
 .PHONY : CMakeFiles/new_asm.dir/clean
 
 CMakeFiles/new_asm.dir/depend:
-	cd /nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nfs/2016/m/maksenov/CLionProjects/new_asm /nfs/2016/m/maksenov/CLionProjects/new_asm /nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug /nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug /nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles/new_asm.dir/DependInfo.cmake --color=$(COLOR)
+	cd /nfs/2016/o/orizhiy/corewar3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nfs/2016/o/orizhiy/corewar3 /nfs/2016/o/orizhiy/corewar3 /nfs/2016/o/orizhiy/corewar3/cmake-build-debug /nfs/2016/o/orizhiy/corewar3/cmake-build-debug /nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles/new_asm.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/new_asm.dir/depend
 

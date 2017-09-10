@@ -1,3 +1,3 @@
-/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles/edit_cache.dir
-/nfs/2016/m/maksenov/CLionProjects/new_asm/cmake-build-debug/CMakeFiles/new_asm.dir
+/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/CMakeFiles/new_asm.dir

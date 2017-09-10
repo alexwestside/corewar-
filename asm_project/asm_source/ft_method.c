@@ -20,7 +20,7 @@ unsigned int				**ft_hash_table(t_hash_table ***hash_table,
 	t_hash_table	*head;
 
 	j = hash_key(tmp->lable);
-	if ((col = collision(*key, j)) == 0)
+	if ((col = collision(*key, j)) == -1)
 	{
 		(*key)[*i] = j;
 		*key = realloc(*key, (sizeof(*key) * (*i + 2)));
