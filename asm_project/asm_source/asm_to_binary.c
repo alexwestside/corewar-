@@ -82,7 +82,7 @@ void	bot_code_to_binary(t_corewar *corewar, int fd, int current_line)
 	}
 }
 
-void	ft_asm(t_corewar *corewar)
+void	ft_asm(t_corewar *corewar, int ac, char **av)
 {
 	t_header		*header;
 	char			*file_path;
@@ -107,6 +107,6 @@ void	ft_asm(t_corewar *corewar)
 	write(fd, header->comment, sizeof(*header->comment) * COMMENT_LENGTH
 	+ 1 + sizeof(unsigned int) - sizeof(*header->comment));
 	bot_code_to_binary(corewar, fd, 1);
+	ft_printf("Writing output program to %s\n", ft_strjoin(ft_strjoin("./", ft_strsplit(av[ac - 1], '.')[0]), ".cor"));
 	close(fd);
-	ft_printf("Writing output program to %s\n", file_path);
 }

@@ -43,7 +43,7 @@ char				*get_command_name(t_hash_table **hash_table,
 	return (hash_table[i]->command->command_name);
 }
 
-void				add_checkdup(char *method, char **checkdup, int i)
+void				add_checkdup(char *method, char **checkdup)
 {
 	if (checkdup)
 	{
@@ -70,12 +70,12 @@ t_hash_table		*get_table(t_hash_table **hash_table,
 		if (*corewar->bot.checkdup && !ft_strcmp(corewar->bot.checkdup[j], method) && hash_table[i]->collision)
 		{
 			hash_table[i] = hash_table[i]->collision;
-			flag == 1 ? add_checkdup(method, corewar->bot.checkdup, i) : 0;
+			flag == 1 ? add_checkdup(method, corewar->bot.checkdup) : 0;
 			return (hash_table[i]);
 		}
 		j++;
 	}
-	flag == 1 && corewar ? add_checkdup(method, corewar->bot.checkdup, i) : 0;
+	flag == 1 && corewar ? add_checkdup(method, corewar->bot.checkdup) : 0;
 	return (keys[i] ? hash_table[i] : NULL);
 }
 

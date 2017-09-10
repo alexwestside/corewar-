@@ -81,8 +81,7 @@ int		main(int ac, char **av)
 	char		**text;
 	t_corewar	corewar;
 
-	(void)ac;
 	text = open_read(av[1]);
 	corewar.bot.keys = valid(text, &corewar);
-	ft_asm(&corewar);
+	ft_asm(&corewar, ac, av);
 }
