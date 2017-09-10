@@ -55,33 +55,63 @@ unsigned int	*valid(char **text, t_corewar *corewar)
 	return (corewar->bot.keys);
 }
 
-char	**open_read(char *av)
+void chek_new_line(char *av, int n)
 {
-	int		fd;
-	char	*str;
-	char	*s;
+	int fd;
+	char buff[1000];
+	int i = 0;
+	int k = 0;
+	int _n = 0;
 
 	fd = open(av, O_RDONLY);
-	s = "";
+	if (fd < 0 || read(fd, buff, 1000) < 0)
+		error("INVALID FILE");
+	while(buff[i])
+	{
+		if (buff[i] == '\n')
+		{
+			_n++;
+			k = i;
+		}
+		i++;
+	}
+	char *s = ft_strndup(buff + k, ft_strlen(buff) - k);
+	if (_n != n)
+		error("EOF - NO EMPTY LINE");
+	close(fd);
+}
+
+
+void		open_read(char *av, char ***bot_info)
+{
+	int		fd;
+	int i = 0;
+	int n = 0;
+
+	fd = open(av, O_RDONLY);
 	if (fd <= 0)
+		error("INVALID FILE");
+	while (get_next_line(fd, &(*bot_info)[i]))
 	{
-		ft_printf("INVALID FILE");
-		exit(0);
+		if ((*bot_info)[i][0]) {
+			(*bot_info) = (char **) realloc((*bot_info), sizeof(char *) * (i + 2));
+			i++;
+		}
+		n++;
 	}
-	while (get_next_line(fd, &str) != 0)
-	{
-		s = ft_strjoin(s, str);
-		s = ft_strjoin(s, "\n");
-	}
-	return (ft_strsplit(s, '\n'));
+	(*bot_info)[i] = NULL;
+	close(fd);
+	chek_new_line(av, n);
 }
 
 int		main(int ac, char **av)
 {
-	char		**text;
+	char		**bot_info;
 	t_corewar	corewar;
 
-	text = open_read(av[1]);
-	corewar.bot.keys = valid(text, &corewar);
+	bot_info = (char **)malloc(sizeof(char *));
+	bot_info[0] = NULL;
+	open_read(av[1], &bot_info);
+	corewar.bot.keys = valid(bot_info, &corewar);
 	ft_asm(&corewar, ac, av);
 }

@@ -25,7 +25,7 @@ typedef struct			s_hash_key
 int						is_method(char *str);
 int						is_comment(char *str);
 int						is_name(char *str);
-char					**open_read(char *av);
+void					open_read(char *av, char ***bot_info);
 void					ft_name_comment(char **name, char **comment,
 				char ***text);
 void					ft_add_command(t_command **command, char *name,
