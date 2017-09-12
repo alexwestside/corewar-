@@ -14,7 +14,7 @@
 
 void			copy_method(t_command *command, char ***checkdup)
 {
-	int 		i;
+	int		i;
 
 	i = 0;
 	while (command)
@@ -25,7 +25,7 @@ void			copy_method(t_command *command, char ***checkdup)
 	i++;
 	*checkdup = (char **)malloc(sizeof(char *) * (i));
 	(*checkdup)[i--] = NULL;
-	while(i--)
+	while (i--)
 		(*checkdup)[i] = "1";
 }
 
@@ -42,12 +42,12 @@ unsigned int	*valid(char **text, t_corewar *corewar)
 	copy_method(corewar->bot.command, &corewar->bot.checkdup);
 	if (ft_strlen(name) > PROG_NAME_LENGTH)
 	{
-		ft_printf("Length name should not be more %d characters!!!", PROG_NAME_LENGTH);
+		ft_printf("Length name more than %d characters!!!", PROG_NAME_LENGTH);
 		exit(0);
 	}
 	if (ft_strlen(comment) > COMMENT_LENGTH)
 	{
-		ft_printf("Length comment should not be more %d characters!!!", COMMENT_LENGTH);
+		ft_printf("Length comment more than %d characters!!!", COMMENT_LENGTH);
 		exit(0);
 	}
 	corewar->bot.comment = comment;
@@ -55,56 +55,60 @@ unsigned int	*valid(char **text, t_corewar *corewar)
 	return (corewar->bot.keys);
 }
 
-void chek_new_line(char *av, int n)
+void			chek_new_line(char *av, int fd, int i)
 {
-	int fd;
-	char buff[1000];
-	int i = 0;
-	int k = 0;
-	int _n = 0;
+	char	buff[1];
+	char	*str;
+	char	*p;
+	char	*s;
 
 	fd = open(av, O_RDONLY);
-	if (fd < 0 || read(fd, buff, 1000) < 0)
+	if (fd < 0)
 		error("INVALID FILE");
-	while(buff[i])
+	str = (char *)malloc(sizeof(char) * (1 + i));
+	while (1)
 	{
-		if (buff[i] == '\n')
-		{
-			_n++;
-			k = i;
-		}
+		if (read(fd, buff, 1) != 1)
+			break ;
+		str[i] = buff[0];
 		i++;
+		str = (char *)realloc(str, sizeof(char) * (1 + i));
 	}
-	char *s = ft_strndup(buff + k, ft_strlen(buff) - k);
-	if (_n != n)
-		error("EOF - NO EMPTY LINE");
-	close(fd);
+	p = ft_strrchr(str, '\n');
+	s = ft_strndup(p, ft_strlen(str) - (p - str));
+	i = 0;
+	while (s[++i])
+		if (s[i] != '#' && s[i] != ',' && s[i] != '\t'
+			&& s[i] != ' ' && s[i] != '\0')
+			error("INVALID FILE");
 }
 
-
-void		open_read(char *av, char ***bot_info)
+void			open_read(char *av, char ***bot_info)
 {
 	int		fd;
-	int i = 0;
-	int n = 0;
+	int		i;
+	int		n;
 
+	i = 0;
+	n = 0;
 	fd = open(av, O_RDONLY);
 	if (fd <= 0)
 		error("INVALID FILE");
 	while (get_next_line(fd, &(*bot_info)[i]))
 	{
-		if ((*bot_info)[i][0]) {
-			(*bot_info) = (char **) realloc((*bot_info), sizeof(char *) * (i + 2));
+		if ((*bot_info)[i][0])
+		{
+			(*bot_info) = (char **)realloc((*bot_info),
+											sizeof(char *) * (i + 2));
 			i++;
 		}
 		n++;
 	}
 	(*bot_info)[i] = NULL;
-	close(fd);
-	chek_new_line(av, n);
+	chek_new_line(av, 0, 0);
 }
 
-int		main(int ac, char **av)
+int				main(int ac, char **av)
 {
 	char		**bot_info;
 	t_corewar	corewar;
