@@ -78,9 +78,12 @@ void			chek_new_line(char *av, int fd, int i)
 	s = ft_strndup(p, ft_strlen(str) - (p - str));
 	i = 0;
 	while (s[++i])
-		if (s[i] != '#' && s[i] != ',' && s[i] != '\t'
-			&& s[i] != ' ' && s[i] != '\0')
+	{
+		if (s[i] == '#' || s[i] == ',')
+			break ;
+		if (s[i] != '#' && s[i] != ',' && s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
 			error("INVALID FILE");
+	}
 }
 
 void			open_read(char *av, char ***bot_info)
