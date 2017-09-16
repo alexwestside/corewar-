@@ -66,6 +66,9 @@ unsigned int *ft_command(char **text, int i, t_bot *bot)
 
 	while (*text)
 	{
+		if (ft_strstr(*text, NAME_CMD_STRING) || ft_strstr(*text, COMMENT_CMD_STRING))
+			if (strq(*text, NAME_CMD_STRING) == ft_strlen(NAME_CMD_STRING) || strq(*text, COMMENT_CMD_STRING) == ft_strlen(COMMENT_CMD_STRING))
+				break;
 		if (**text == COMMENT_CHAR || **text == COMMENT_CHAR2 || !*text)
 			text++;
 		else

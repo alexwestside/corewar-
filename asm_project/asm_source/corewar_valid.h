@@ -62,5 +62,5 @@ char					**ft_strsplit_3args(char const *s, char c1, char c2,
 char c3);
 void					valid_command(t_command *command,
 									  t_hash_table **hash_table, unsigned int *keys);
-
+int 		strq(char *s1, char *s2);
 #endif

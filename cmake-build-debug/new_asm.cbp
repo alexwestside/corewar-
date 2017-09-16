@@ -8,144 +8,144 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/nfs/2016/o/orizhiy/corewar3/cmake-build-debug"/>
+				<Option working_dir="/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/nfs/2016/o/orizhiy/corewar3/cmake-build-debug"/>
+				<Option working_dir="/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/nfs/2016/o/orizhiy/corewar3/cmake-build-debug"/>
+				<Option working_dir="/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="new_asm">
-				<Option output="/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/new_asm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/nfs/2016/o/orizhiy/corewar3/cmake-build-debug"/>
+				<Option output="/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/new_asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 new_asm"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 new_asm"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="new_asm/fast">
-				<Option output="/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/new_asm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/nfs/2016/o/orizhiy/corewar3/cmake-build-debug"/>
+				<Option output="/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/new_asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 new_asm/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/o/orizhiy/corewar3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 new_asm/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/maksenov/CLionProjects/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/asm.h">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/asm.h">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/asm_to_binary.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/asm_to_binary.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/corewar.h">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/corewar.h">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/corewar_valid.h">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/corewar_valid.h">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_add_command_corewar.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/ft_add_command_corewar.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_command.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/ft_command.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_method.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/ft_method.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_name_comment.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/ft_name_comment.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_strsplit_v2.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/ft_strsplit_v2.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_strsplit_v3.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/ft_strsplit_v3.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_valid_all.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/ft_valid_all.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/ft_valid_command.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/ft_valid_command.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_size_1.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/get_size_1.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_size_2.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/get_size_2.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/get_sizes.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/get_sizes.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/hash.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/hash.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/main.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/main.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/op.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/op.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/op.h">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/op.h">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/reg_dir_ind.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/reg_dir_ind.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/asm_project/asm_source/usage.c">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/asm_project/asm_source/usage.c">
 			<Option target="new_asm"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/corewar3/CMakeLists.txt">
+		<Unit filename="/nfs/2016/m/maksenov/CLionProjects/corewar/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -24,7 +24,7 @@ void			copy_method(t_command *command, char ***checkdup)
 	}
 	i++;
 	*checkdup = (char **)malloc(sizeof(char *) * (i));
-	(*checkdup)[i--] = NULL;
+	(*checkdup)[--i] = NULL;
 	while (i--)
 		(*checkdup)[i] = "1";
 }
@@ -62,6 +62,7 @@ void			chek_new_line(char *av, int fd, int i)
 	char	*p;
 	char	*s;
 
+	i = 0;
 	fd = open(av, O_RDONLY);
 	if (fd < 0)
 		error("INVALID FILE");
@@ -74,15 +75,16 @@ void			chek_new_line(char *av, int fd, int i)
 		i++;
 		str = (char *)realloc(str, sizeof(char) * (1 + i));
 	}
+	str[i] = '\0';
 	p = ft_strrchr(str, '\n');
 	s = ft_strndup(p, ft_strlen(str) - (p - str));
 	i = 0;
 	while (s[++i])
 	{
-		if (s[i] == '#' || s[i] == ',')
+		if (s[i] == COMMENT_CHAR || s[i] == COMMENT_CHAR2)
 			break ;
-		if (s[i] != '#' && s[i] != ',' && s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
-			error("INVALID FILE");
+		if (s[i] != COMMENT_CHAR && s[i] != COMMENT_CHAR2 && s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
+			error("INVALID FILE_1");
 	}
 }
 
@@ -90,24 +92,21 @@ void			open_read(char *av, char ***bot_info)
 {
 	int		fd;
 	int		i;
-	int		n;
 
 	i = 0;
-	n = 0;
 	fd = open(av, O_RDONLY);
 	if (fd <= 0)
-		error("INVALID FILE");
+		error("INVALID FILE_2");
 	while (get_next_line(fd, &(*bot_info)[i]))
 	{
-		if ((*bot_info)[i][0])
-		{
-			(*bot_info) = (char **)realloc((*bot_info),
+		if ((*bot_info)[i][0]) {
+			(*bot_info) = (char **) realloc((*bot_info),
 											sizeof(char *) * (i + 2));
 			i++;
 		}
-		n++;
 	}
 	(*bot_info)[i] = NULL;
+	close(fd);
 	chek_new_line(av, 0, 0);
 }
 
