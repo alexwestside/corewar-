@@ -71,7 +71,7 @@ int							swap_bytes(char *s, size_t size)
 			s[j + 1] = tmp;
 		}
 	}
-	return ((int)s);
+	return (*(int*)s);
 }
 
 void						error(char *str)

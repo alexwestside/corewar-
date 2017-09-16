@@ -23,6 +23,9 @@ void	error_exit(char *str, int code, t_machine *vm)
 	else if (code == 6)
 		ft_printf("ERROR: File %s has a code size that differ from what "
 		"its header says\n", str);
+	else if (code == 10)
+		ft_printf("ERROR: unrestricted champion number or already a "
+						  "champion with that number\n");
 	release_memory(vm);
 	exit(code);
 }

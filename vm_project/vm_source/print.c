@@ -58,7 +58,6 @@ void		is_winner(t_machine vm)
 	int won;
 
 	won = vm.players[vm.won_player].id;
-	won *= won < 0 ? -1 : 1;
 	ft_printf("Contestant %d, \"%s\", has won !\n", won,
 	vm.players[vm.won_player].prog_name);
 }
@@ -71,10 +70,7 @@ void		print_usage(void)
 	"(Default is to hide it)");
 	ft_putendl("    -n N      : sets the number of the player. "
 	"If non-existent, the player will have the next"
-	"\n\t\tavailable number in the order of the parameters (Default start: -1)."
-	" If there"
-	"\n\t\tis a given N or whether the number is zero, the player will be "
-	"given the smallest\n\t\tnegative number from the existing players");
+	"\n\t\tavailable number in the order of the parameters.");
 	ft_putendl("#### TEXT OUTPUT MODE #####################################"
 	"#########################################");
 	ft_putendl("    -dump N   : Dumps memory after N cycles then exits");

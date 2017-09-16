@@ -59,7 +59,7 @@ static void	print_static_players(t_machine vm)
 	attron(COLOR_PAIR(w_text) | A_BOLD);
 	while (++i < vm.count_players)
 	{
-		mvprintw(y, x, "Player %-2d :", vm.players[i].id);
+		mvprintw(y, x, "Player %-2d :", vm.players[i].id * (-1));
 		attron(COLOR_PAIR(green + i));
 		mvprintw(y, 212, "%.41s", vm.players[i].prog_name);
 		attroff(COLOR_PAIR(green + i));

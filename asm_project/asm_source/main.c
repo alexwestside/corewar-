@@ -121,4 +121,5 @@ int				main(int ac, char **av)
 	open_read(av[1], &bot_info);
 	corewar.bot.keys = valid(bot_info, &corewar);
 	ft_asm(&corewar, ac, av);
+	return (0);
 }

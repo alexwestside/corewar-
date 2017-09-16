@@ -29,26 +29,38 @@ static int	check_valid_is_file(char **str, int index, int len_str, int mod)
 **  num doesnt be 0
 */
 
+static void set_query_number(t_machine *vm, int index)
+{
+    int         j;
+    unsigned    i;
+
+    j = 1;
+    while (j <= (int)vm->count_players)
+    {
+        i = -1;
+        while (++i < vm->count_players && j <= (int)vm->count_players)
+            if (vm->players[i].id == j)
+                j++;
+            else
+            {
+                vm->players[index].id = j;
+                return ;
+            }
+    }
+}
+
 static void	set_number(t_machine *vm, int index, int num)
 {
-	int			min;
-	unsigned	i;
-	unsigned	j;
+    unsigned	i;
 
-	i = -1;
-	while (++i < vm->count_players)
-		if (vm->players[i].id == num)
-		{
-			j = -1;
-			min = INT_MAX;
-			while (++j < vm->count_players)
-				if (vm->players[j].id < min)
-					min = vm->players[j].id;
-			vm->players[index].id = min < 0 ? min - 1 : -1;
-			break ;
-		}
-	if (num && vm->players[index].id == 0)
-		vm->players[index].id = num;
+    i = -1;
+    if (num > (int)vm->count_players || num <= 0)
+        error_exit(NULL, 10, vm);
+    while (++i < vm->count_players)
+        if (vm->players[i].id == num)
+            error_exit(NULL, 10, vm);
+    if (num && vm->players[index].id == 0)
+        vm->players[index].id = num;
 }
 
 void		init_number_players(t_machine *vm, int argc, char **argv)
@@ -73,5 +85,5 @@ void		init_number_players(t_machine *vm, int argc, char **argv)
 		}
 		else if (check_valid_is_file(argv, i_arg, argc, 0))
 			if (j_players + 1 < vm->count_players)
-				set_number(vm, ++j_players, num);
+                set_query_number(vm, ++j_players);
 }
