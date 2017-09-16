@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/new_dasm.dir/main.c.o CMakeFiles/new_dasm.dir/op.c.o  -o new_dasm ../libft/libft.a 
