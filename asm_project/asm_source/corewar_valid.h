@@ -13,6 +13,10 @@
 #ifndef COREWAR_VALID_H
 # define COREWAR_VALID_H
 
+# define RED "\033[0;31m"
+# define GREEN "\033[0;32m"
+# define END "\033[0m"
+
 # include "corewar.h"
 # include "asm.h"
 

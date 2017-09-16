@@ -84,7 +84,7 @@ void			chek_new_line(char *av, int fd, int i)
 		if (s[i] == COMMENT_CHAR || s[i] == COMMENT_CHAR2)
 			break ;
 		if (s[i] != COMMENT_CHAR && s[i] != COMMENT_CHAR2 && s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
-			error("INVALID FILE_1");
+			error("Perhaps you forgot to end with a newline?");
 	}
 }
 
@@ -96,7 +96,7 @@ void			open_read(char *av, char ***bot_info)
 	i = 0;
 	fd = open(av, O_RDONLY);
 	if (fd <= 0)
-		error("INVALID FILE_2");
+		error("INVALID FILE");
 	while (get_next_line(fd, &(*bot_info)[i]))
 	{
 		if ((*bot_info)[i][0]) {

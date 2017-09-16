@@ -54,7 +54,7 @@ void				check_dir(char *str, t_hash_table **hash_table,
 			lexical_error(str++, 2);
 		tmp = get_table(hash_table, keys, s, NULL, 0);
 		if (tmp == NULL)
-			error("No such label");
+			error(ft_strjoin("No such label -- ", ft_strjoin(GREEN, ft_strjoin("\"", ft_strjoin(s, ft_strjoin("\"", END))))));
 	}
 	else
 	{
