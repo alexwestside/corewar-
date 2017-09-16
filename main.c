@@ -215,7 +215,7 @@ void		add_command_args(t_command **command, char ***a)
 	take_first_arg(command, a);
 }
 
-char 		*take_all(char **a, size_t size, t_command *command)
+void		take_all(char **a, size_t size, t_command *command, int fd)
 {
 	while (a && *a)
 	{
@@ -224,7 +224,6 @@ char 		*take_all(char **a, size_t size, t_command *command)
 		add_command_args(&command, &a);
 		a++;
 	}
-	return (NULL);
 }
 
 void		byte_pass(char ***a, int i)
@@ -235,17 +234,19 @@ void		byte_pass(char ***a, int i)
 
 void		create_file_name(char **a, size_t size, t_command *command)
 {
-	FILE	*fd;
+	int 	fd;
 	char 	*name;
+	char	*str;
 
 	name = take_name(&a);
-	fd = fopen(ft_strjoin(ft_strjoin("../", name), ".s1"), "w");
-	fprintf(fd, ft_strjoin(ft_strjoin(".name\t\t", ft_strjoin("\"", ft_strjoin(name, "\""))), "\n"));
+	fd = open(ft_strjoin(name, ".s"), O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+	str = ft_strjoin(ft_strjoin(".name\t\t", ft_strjoin("\"", ft_strjoin(name, "\""))), "\n");
+	write(fd, str, ft_strlen(str));
 	byte_pass(&a, sizeof(unsigned int));
-	fprintf(fd, ft_strjoin(ft_strjoin(".comment\t", ft_strjoin("\"", ft_strjoin(take_comment(&a), "\""))), "\n"));
-	fprintf(fd, "\n");
-	fprintf(fd, take_all(a, size, command));
-	fclose(fd);
+	str = ft_strjoin(ft_strjoin(".comment\t", ft_strjoin("\"", ft_strjoin(take_comment(&a), "\""))), "\n\n");
+	write(fd, str, ft_strlen(str));
+	take_all(a, size, command, fd);
+	close(fd);
 }
 
 void		read_file(FILE *fd_cor, char *fp, t_command *command)
@@ -278,7 +279,7 @@ int 	main(int ac, char **av)
 //	if (read(0, buff, 1) == 1)
 //		if (buff[0] != '1')
 //			exit(0);
-	char *fp = "/nfs/2016/m/maksenov/CLionProjects/new_dasm/zork.cor";
+	char *fp = "/nfs/2016/m/maksenov/CLionProjects/new_dasm/zor.cor";
 	fd_cor = fopen(fp, "r");
 	read_file(fd_cor, fp, command);
 	fclose(fd_cor);

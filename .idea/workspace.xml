@@ -12,91 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3d42335-dbb1-44c2-b166-164ff8db374b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/asm/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/champion/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/corewar.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/migrate_to_gitlab.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/workon.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/create_vm.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/machine.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/main.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/machine/validate_data.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/42.cor" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/42.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/Backward.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/Car.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/Death.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/Gagnant.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/Octobre_Rouge_V4.2.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/Survivor.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/Torpille.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/barriere.cor" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/barriere.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/bguy/sam_2.0.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/bjacob/doge.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/brandazz/Rainbow_dash.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/cdivry/youforkmytralala.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/clafleur/big_feet.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/dcohen/loose.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ekocevar/mandragore.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/esusseli/gedeon.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/evlasova/terminator.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/fcorre/ultimate-surrender.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gbir/_.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gjestin/salamahenagalabadoun.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gleger/Machine-gun.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gmange/corelol.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gpetrov/MarineKing.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/gudepard/Kappa.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/hmichals/Wall.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/hmoutaou/Misaka_Mikoto.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/kelickel/Varimathras.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/kmonrose/justin_bee.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ldesgoui/_honeybadger.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/lseguin/skynet.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/lsirigna/live.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/mbacoux/meowluigi.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/mconraux/dubo.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/rabid-on/jinx.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/rmasse/THUNDER.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/sbuono/Asombra.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/srabah-m/littlepuppy.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/tdemay/champ.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/vrey/darksasuke.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/championships/2014/ybouvet/casimir.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/ex.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/bee_gees.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/bigzork.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/fluttershy.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/helltrain.cor" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/helltrain.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/turtle.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/zork.cor" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/examples/zork.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/jumper.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/lde.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/leeloo.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/mat.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/maxidef.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/mortel.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/new.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/sebc.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/slider2.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/tdc2.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/tdc3.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/tdc4.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/champs/toto.s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/corewar/corewar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/exe/asm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/exe/corewar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zork.cor" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zork.s1" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_dasm.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_dasm.dir/main.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/new_dasm" afterPath="$PROJECT_DIR$/cmake-build-debug/new_dasm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op.c" afterPath="$PROJECT_DIR$/op.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op.h" afterPath="$PROJECT_DIR$/op.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -122,8 +43,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+            <state relative-caret-position="260">
+              <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,7 +81,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="2560" />
+    <option name="width" value="2131" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -188,6 +109,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="new_dasm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_dasm" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_dasm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmake-build-debug" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,18 +344,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505577600460</updated>
-      <workItem from="1505577603074" duration="1244000" />
+      <workItem from="1505577603074" duration="2164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1244000" />
+    <option name="totallyTimeSpent" value="2164000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="2131" height="1440" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.301101" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -429,7 +363,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40072992" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -452,15 +386,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.c</url>
-          <line>270</line>
+          <line>235</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.c</url>
-          <line>236</line>
-          <option name="timeStamp" value="1" />
+          <line>219</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -483,8 +418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
           <folding />
         </state>
       </provider>
