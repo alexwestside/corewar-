@@ -7,6 +7,6 @@ live:
         live     %1
         zjmp %:l2
 live:
-        live     %1
+        live     %1,
         and r1, %723453453, r1
         zjmp %:live

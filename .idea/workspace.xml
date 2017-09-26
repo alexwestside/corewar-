@@ -12,6 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b00bf769-9d66-47db-9a01-b1e702df23fc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.nfs.20051473.286c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/fafa1.cor" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fafa1.cor" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm" afterPath="$PROJECT_DIR$/asm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeDetermineCompilerABI_C.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeDetermineCompilerABI_CXX.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdC/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdC/a.out" />
@@ -35,6 +39,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/new_asm" afterPath="$PROJECT_DIR$/cmake-build-debug/new_asm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corewar" afterPath="$PROJECT_DIR$/corewar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/*ft_flag_char.o" afterPath="$PROJECT_DIR$/libft/*ft_flag_char.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/*ft_min_fild_width.o" afterPath="$PROJECT_DIR$/libft/*ft_min_fild_width.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/*ft_precision.o" afterPath="$PROJECT_DIR$/libft/*ft_precision.o" />
@@ -50,105 +55,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_count_words.o" afterPath="$PROJECT_DIR$/libft/ft_count_words.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_finder.o" afterPath="$PROJECT_DIR$/libft/ft_finder.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_int_min.o" afterPath="$PROJECT_DIR$/libft/ft_int_min.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isalnum.o" afterPath="$PROJECT_DIR$/libft/ft_isalnum.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isalpha.o" afterPath="$PROJECT_DIR$/libft/ft_isalpha.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isascii.o" afterPath="$PROJECT_DIR$/libft/ft_isascii.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isdigit.o" afterPath="$PROJECT_DIR$/libft/ft_isdigit.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isprint.o" afterPath="$PROJECT_DIR$/libft/ft_isprint.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isspace.o" afterPath="$PROJECT_DIR$/libft/ft_isspace.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_itoa.o" afterPath="$PROJECT_DIR$/libft/ft_itoa.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_len_char.o" afterPath="$PROJECT_DIR$/libft/ft_len_char.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_len_int.o" afterPath="$PROJECT_DIR$/libft/ft_len_int.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstadd.o" afterPath="$PROJECT_DIR$/libft/ft_lstadd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstdel.o" afterPath="$PROJECT_DIR$/libft/ft_lstdel.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstdelone.o" afterPath="$PROJECT_DIR$/libft/ft_lstdelone.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstiter.o" afterPath="$PROJECT_DIR$/libft/ft_lstiter.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstmap.o" afterPath="$PROJECT_DIR$/libft/ft_lstmap.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstnew.o" afterPath="$PROJECT_DIR$/libft/ft_lstnew.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_max.o" afterPath="$PROJECT_DIR$/libft/ft_max.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_max_int.o" afterPath="$PROJECT_DIR$/libft/ft_max_int.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memalloc.o" afterPath="$PROJECT_DIR$/libft/ft_memalloc.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memccpy.o" afterPath="$PROJECT_DIR$/libft/ft_memccpy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memchr.o" afterPath="$PROJECT_DIR$/libft/ft_memchr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcmp.o" afterPath="$PROJECT_DIR$/libft/ft_memcmp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcpy.o" afterPath="$PROJECT_DIR$/libft/ft_memcpy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcpy_rev.o" afterPath="$PROJECT_DIR$/libft/ft_memcpy_rev.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memdel.o" afterPath="$PROJECT_DIR$/libft/ft_memdel.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memmove.o" afterPath="$PROJECT_DIR$/libft/ft_memmove.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memset.o" afterPath="$PROJECT_DIR$/libft/ft_memset.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_null_format.o" afterPath="$PROJECT_DIR$/libft/ft_null_format.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_len.o" afterPath="$PROJECT_DIR$/libft/ft_num_len.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_strlen.o" afterPath="$PROJECT_DIR$/libft/ft_num_strlen.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_width.o" afterPath="$PROJECT_DIR$/libft/ft_num_width.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_octal.o" afterPath="$PROJECT_DIR$/libft/ft_octal.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_octal_long.o" afterPath="$PROJECT_DIR$/libft/ft_octal_long.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_parse.o" afterPath="$PROJECT_DIR$/libft/ft_parse.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_print_format.o" afterPath="$PROJECT_DIR$/libft/ft_print_format.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_printf.o" afterPath="$PROJECT_DIR$/libft/ft_printf.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_put_num_base.o" afterPath="$PROJECT_DIR$/libft/ft_put_num_base.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putchar.o" afterPath="$PROJECT_DIR$/libft/ft_putchar.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putchar_fd.o" afterPath="$PROJECT_DIR$/libft/ft_putchar_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putendl.o" afterPath="$PROJECT_DIR$/libft/ft_putendl.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putendl_fd.o" afterPath="$PROJECT_DIR$/libft/ft_putendl_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnbr.o" afterPath="$PROJECT_DIR$/libft/ft_putnbr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnbr_fd.o" afterPath="$PROJECT_DIR$/libft/ft_putnbr_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnstr.o" afterPath="$PROJECT_DIR$/libft/ft_putnstr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putstr.o" afterPath="$PROJECT_DIR$/libft/ft_putstr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putstr_fd.o" afterPath="$PROJECT_DIR$/libft/ft_putstr_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed.o" afterPath="$PROJECT_DIR$/libft/ft_signed.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed_int_decimal.o" afterPath="$PROJECT_DIR$/libft/ft_signed_int_decimal.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed_int_decimal_long.o" afterPath="$PROJECT_DIR$/libft/ft_signed_int_decimal_long.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_single_persent.o" afterPath="$PROJECT_DIR$/libft/ft_single_persent.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcat.o" afterPath="$PROJECT_DIR$/libft/ft_strcat.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strchr.o" afterPath="$PROJECT_DIR$/libft/ft_strchr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strclr.o" afterPath="$PROJECT_DIR$/libft/ft_strclr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcmp.o" afterPath="$PROJECT_DIR$/libft/ft_strcmp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcpy.o" afterPath="$PROJECT_DIR$/libft/ft_strcpy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strdel.o" afterPath="$PROJECT_DIR$/libft/ft_strdel.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strdup.o" afterPath="$PROJECT_DIR$/libft/ft_strdup.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strequ.o" afterPath="$PROJECT_DIR$/libft/ft_strequ.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_string.o" afterPath="$PROJECT_DIR$/libft/ft_string.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_striter.o" afterPath="$PROJECT_DIR$/libft/ft_striter.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_striteri.o" afterPath="$PROJECT_DIR$/libft/ft_striteri.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strjoin.o" afterPath="$PROJECT_DIR$/libft/ft_strjoin.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strlcat.o" afterPath="$PROJECT_DIR$/libft/ft_strlcat.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strlen.o" afterPath="$PROJECT_DIR$/libft/ft_strlen.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strmap.o" afterPath="$PROJECT_DIR$/libft/ft_strmap.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strmapi.o" afterPath="$PROJECT_DIR$/libft/ft_strmapi.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncat.o" afterPath="$PROJECT_DIR$/libft/ft_strncat.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncmp.o" afterPath="$PROJECT_DIR$/libft/ft_strncmp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncpy.o" afterPath="$PROJECT_DIR$/libft/ft_strncpy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnequ.o" afterPath="$PROJECT_DIR$/libft/ft_strnequ.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnew.o" afterPath="$PROJECT_DIR$/libft/ft_strnew.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnlen.o" afterPath="$PROJECT_DIR$/libft/ft_strnlen.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnstr.o" afterPath="$PROJECT_DIR$/libft/ft_strnstr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strrchr.o" afterPath="$PROJECT_DIR$/libft/ft_strrchr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strsplit.o" afterPath="$PROJECT_DIR$/libft/ft_strsplit.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strstr.o" afterPath="$PROJECT_DIR$/libft/ft_strstr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strsub.o" afterPath="$PROJECT_DIR$/libft/ft_strsub.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strtrim.o" afterPath="$PROJECT_DIR$/libft/ft_strtrim.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_tolower.o" afterPath="$PROJECT_DIR$/libft/ft_tolower.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_toupper.o" afterPath="$PROJECT_DIR$/libft/ft_toupper.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_decimal.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned_decimal.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_decimal_long.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned_decimal_long.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalx.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalx.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalxl.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalxl.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wcharacter.o" afterPath="$PROJECT_DIR$/libft/ft_wcharacter.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wcharlen.o" afterPath="$PROJECT_DIR$/libft/ft_wcharlen.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_width_padd.o" afterPath="$PROJECT_DIR$/libft/ft_width_padd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wstring.o" afterPath="$PROJECT_DIR$/libft/ft_wstring.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/get_next_line.o" afterPath="$PROJECT_DIR$/libft/get_next_line.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/libft.a" afterPath="$PROJECT_DIR$/libft/libft.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/singned_size.o" afterPath="$PROJECT_DIR$/libft/singned_size.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/unsingned_size.o" afterPath="$PROJECT_DIR$/libft/unsingned_size.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h" afterPath="$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_command.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_command.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_method.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_method.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/hash.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/hash.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/main.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot.cor" afterPath="$PROJECT_DIR$/bot.cor" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot.s" afterPath="$PROJECT_DIR$/bot.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeCCompiler.cmake" />
@@ -156,7 +65,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeSystem.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
@@ -166,8 +74,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/depend.internal" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/fafa.cor" afterPath="$PROJECT_DIR$/cmake-build-debug/fafa.cor" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/new_asm.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/new_asm.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/get_next_line.c" afterPath="$PROJECT_DIR$/libft/get_next_line.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fafa.cor" afterPath="$PROJECT_DIR$/fafa.cor" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -193,38 +102,48 @@
       <file leaf-file-name="ft_command.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="317">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bot.s" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ft_add_command_corewar.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_add_command_corewar.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ft_valid_command.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="632">
+              <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bot.s" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot.s">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="150">
+              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ft_method.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ft_method.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_next_line.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libft/get_next_line.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1135">
-              <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+            <state relative-caret-position="617">
+              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -243,11 +162,9 @@
       <file leaf-file-name="corewar_valid.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
+            <state relative-caret-position="767">
               <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-              <folding>
-                <element signature="e#942#963#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -255,8 +172,8 @@
       <file leaf-file-name="hash.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asm_project/asm_source/hash.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+            <state relative-caret-position="885">
+              <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -265,18 +182,8 @@
       <file leaf-file-name="asm_to_binary.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
+            <state relative-caret-position="990">
               <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ft_valid_all.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_valid_all.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -343,53 +250,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="corewar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_asm" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="corewar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_asm" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="corewar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asm_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_asm" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="corewar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asm_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asm_source" />
+              <option name="myItemId" value="cor_new" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -628,27 +489,27 @@
       <workItem from="1505044546754" duration="11883000" />
       <workItem from="1505236776818" duration="5149000" />
       <workItem from="1505573166431" duration="2384000" />
+      <workItem from="1506430844962" duration="1230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19416000" />
+    <option name="totallyTimeSpent" value="20646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25377283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25575852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5015886" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -679,38 +540,110 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c</url>
+          <line>66</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c</url>
-          <line>41</line>
-          <option name="timeStamp" value="54" />
+          <line>59</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c</url>
+          <line>71</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="55" />
+      <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="corewar-&gt;bot.checkdup[1]" language="ObjectiveC" />
-        <watch expression="corewar-&gt;bot.checkdup[2]" language="ObjectiveC" />
-        <watch expression="corewar-&gt;bot.checkdup[0]" language="ObjectiveC" />
-        <watch expression="corewar-&gt;bot.checkdup[3]" language="ObjectiveC" />
-        <watch expression="*text" language="ObjectiveC" />
-        <watch expression="av[1]" language="ObjectiveC" />
-        <watch expression="av[0]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[0]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[1]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[2]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[3]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[4]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[5]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[6]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[7]" language="ObjectiveC" />
-        <watch expression="(*bot_info)[i]" language="ObjectiveC" />
-        <watch expression="s[i]" language="ObjectiveC" />
-        <watch expression="str[i]" language="ObjectiveC" />
-        <watch expression="(*checkdup)[i]" language="ObjectiveC" />
+        <watch expression="**text" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/get_next_line.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zork.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/hash.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_valid_all.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/usage.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -723,9 +656,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="e#942#963#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,9 +758,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="e#942#963#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -847,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,21 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/get_next_line.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="e#942#962#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -921,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,15 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_add_command_corewar.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,7 +878,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libft/get_next_line.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1135">
+        <state relative-caret-position="1320">
           <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
           <folding />
         </state>
@@ -988,19 +892,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-          <folding>
-            <element signature="e#942#963#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
+        <state relative-caret-position="990">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
@@ -1008,8 +902,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/hash.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        <state relative-caret-position="885">
+          <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1022,26 +916,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c">
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="632">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot.s">
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="317">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_add_command_corewar.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        <state relative-caret-position="617">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="767">
+          <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>

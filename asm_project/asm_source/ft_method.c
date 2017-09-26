@@ -57,6 +57,23 @@ int 		strq(char *s2, char *s1)
 	return (i);
 }
 
+int 		count_sep(char *str, char **a, char s)
+{
+	int 	sep;
+	int 	arg;
+
+	sep = 0;
+	arg = 0;
+	while (*str)
+	{
+		*str == s ? sep++ : 0;
+		str++;
+	}
+	while (a[arg])
+		arg++;
+	return (sep == arg - 2 ? 1 : 0);
+}
+
 unsigned int **ft_get_method(char ***text, t_hash_table ***hash_table,
 					unsigned int **key, int *i)
 {
@@ -78,6 +95,8 @@ unsigned int **ft_get_method(char ***text, t_hash_table ***hash_table,
 				if (strq(**text, NAME_CMD_STRING) == ft_strlen(NAME_CMD_STRING) || strq(**text, COMMENT_CMD_STRING) == ft_strlen(COMMENT_CMD_STRING))
 					break;
 			a = ft_strsplit_3args(**text, ' ', '\t', SEPARATOR_CHAR);
+			if (!count_sep(**text, a, SEPARATOR_CHAR))
+				error("Syntax error!");
 			if (a[0] && *a[0] != COMMENT_CHAR && *a[0] != COMMENT_CHAR2)
 				ft_add_command(&tmp->command, NULL, a);
 		}
