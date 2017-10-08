@@ -11,166 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b00bf769-9d66-47db-9a01-b1e702df23fc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/asm_project/asm_source/.#corewar.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdC/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdCXX/a.out" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm" afterPath="$PROJECT_DIR$/asm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.o" afterPath="$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_command.o" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_command.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_method.o" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_method.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.o" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/hash.o" afterPath="$PROJECT_DIR$/asm_project/asm_source/hash.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/main.o" afterPath="$PROJECT_DIR$/asm_project/asm_source/main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/usage.o" afterPath="$PROJECT_DIR$/asm_project/asm_source/usage.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/new_asm" afterPath="$PROJECT_DIR$/cmake-build-debug/new_asm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corewar" afterPath="$PROJECT_DIR$/corewar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isalnum.o" afterPath="$PROJECT_DIR$/libft/ft_isalnum.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isalpha.o" afterPath="$PROJECT_DIR$/libft/ft_isalpha.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isascii.o" afterPath="$PROJECT_DIR$/libft/ft_isascii.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isdigit.o" afterPath="$PROJECT_DIR$/libft/ft_isdigit.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isprint.o" afterPath="$PROJECT_DIR$/libft/ft_isprint.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_isspace.o" afterPath="$PROJECT_DIR$/libft/ft_isspace.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_itoa.o" afterPath="$PROJECT_DIR$/libft/ft_itoa.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_len_char.o" afterPath="$PROJECT_DIR$/libft/ft_len_char.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_len_int.o" afterPath="$PROJECT_DIR$/libft/ft_len_int.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstadd.o" afterPath="$PROJECT_DIR$/libft/ft_lstadd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstdel.o" afterPath="$PROJECT_DIR$/libft/ft_lstdel.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstdelone.o" afterPath="$PROJECT_DIR$/libft/ft_lstdelone.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstiter.o" afterPath="$PROJECT_DIR$/libft/ft_lstiter.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstmap.o" afterPath="$PROJECT_DIR$/libft/ft_lstmap.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_lstnew.o" afterPath="$PROJECT_DIR$/libft/ft_lstnew.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_max.o" afterPath="$PROJECT_DIR$/libft/ft_max.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_max_int.o" afterPath="$PROJECT_DIR$/libft/ft_max_int.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memalloc.o" afterPath="$PROJECT_DIR$/libft/ft_memalloc.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memccpy.o" afterPath="$PROJECT_DIR$/libft/ft_memccpy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memchr.o" afterPath="$PROJECT_DIR$/libft/ft_memchr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcmp.o" afterPath="$PROJECT_DIR$/libft/ft_memcmp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcpy.o" afterPath="$PROJECT_DIR$/libft/ft_memcpy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memcpy_rev.o" afterPath="$PROJECT_DIR$/libft/ft_memcpy_rev.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memdel.o" afterPath="$PROJECT_DIR$/libft/ft_memdel.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memmove.o" afterPath="$PROJECT_DIR$/libft/ft_memmove.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_memset.o" afterPath="$PROJECT_DIR$/libft/ft_memset.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_null_format.o" afterPath="$PROJECT_DIR$/libft/ft_null_format.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_len.o" afterPath="$PROJECT_DIR$/libft/ft_num_len.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_strlen.o" afterPath="$PROJECT_DIR$/libft/ft_num_strlen.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_num_width.o" afterPath="$PROJECT_DIR$/libft/ft_num_width.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_octal.o" afterPath="$PROJECT_DIR$/libft/ft_octal.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_octal_long.o" afterPath="$PROJECT_DIR$/libft/ft_octal_long.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_parse.o" afterPath="$PROJECT_DIR$/libft/ft_parse.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_print_format.o" afterPath="$PROJECT_DIR$/libft/ft_print_format.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_printf.o" afterPath="$PROJECT_DIR$/libft/ft_printf.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_put_num_base.o" afterPath="$PROJECT_DIR$/libft/ft_put_num_base.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putchar.o" afterPath="$PROJECT_DIR$/libft/ft_putchar.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putchar_fd.o" afterPath="$PROJECT_DIR$/libft/ft_putchar_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putendl.o" afterPath="$PROJECT_DIR$/libft/ft_putendl.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putendl_fd.o" afterPath="$PROJECT_DIR$/libft/ft_putendl_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnbr.o" afterPath="$PROJECT_DIR$/libft/ft_putnbr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnbr_fd.o" afterPath="$PROJECT_DIR$/libft/ft_putnbr_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putnstr.o" afterPath="$PROJECT_DIR$/libft/ft_putnstr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putstr.o" afterPath="$PROJECT_DIR$/libft/ft_putstr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_putstr_fd.o" afterPath="$PROJECT_DIR$/libft/ft_putstr_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed.o" afterPath="$PROJECT_DIR$/libft/ft_signed.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed_int_decimal.o" afterPath="$PROJECT_DIR$/libft/ft_signed_int_decimal.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_signed_int_decimal_long.o" afterPath="$PROJECT_DIR$/libft/ft_signed_int_decimal_long.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_single_persent.o" afterPath="$PROJECT_DIR$/libft/ft_single_persent.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcat.o" afterPath="$PROJECT_DIR$/libft/ft_strcat.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strchr.o" afterPath="$PROJECT_DIR$/libft/ft_strchr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strclr.o" afterPath="$PROJECT_DIR$/libft/ft_strclr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcmp.o" afterPath="$PROJECT_DIR$/libft/ft_strcmp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strcpy.o" afterPath="$PROJECT_DIR$/libft/ft_strcpy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strdel.o" afterPath="$PROJECT_DIR$/libft/ft_strdel.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strdup.o" afterPath="$PROJECT_DIR$/libft/ft_strdup.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strequ.o" afterPath="$PROJECT_DIR$/libft/ft_strequ.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_string.o" afterPath="$PROJECT_DIR$/libft/ft_string.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_striter.o" afterPath="$PROJECT_DIR$/libft/ft_striter.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_striteri.o" afterPath="$PROJECT_DIR$/libft/ft_striteri.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strjoin.o" afterPath="$PROJECT_DIR$/libft/ft_strjoin.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strlcat.o" afterPath="$PROJECT_DIR$/libft/ft_strlcat.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strlen.o" afterPath="$PROJECT_DIR$/libft/ft_strlen.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strmap.o" afterPath="$PROJECT_DIR$/libft/ft_strmap.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strmapi.o" afterPath="$PROJECT_DIR$/libft/ft_strmapi.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncat.o" afterPath="$PROJECT_DIR$/libft/ft_strncat.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncmp.o" afterPath="$PROJECT_DIR$/libft/ft_strncmp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strncpy.o" afterPath="$PROJECT_DIR$/libft/ft_strncpy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnequ.o" afterPath="$PROJECT_DIR$/libft/ft_strnequ.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnew.o" afterPath="$PROJECT_DIR$/libft/ft_strnew.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnlen.o" afterPath="$PROJECT_DIR$/libft/ft_strnlen.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strnstr.o" afterPath="$PROJECT_DIR$/libft/ft_strnstr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strrchr.o" afterPath="$PROJECT_DIR$/libft/ft_strrchr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strsplit.o" afterPath="$PROJECT_DIR$/libft/ft_strsplit.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strstr.o" afterPath="$PROJECT_DIR$/libft/ft_strstr.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strsub.o" afterPath="$PROJECT_DIR$/libft/ft_strsub.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_strtrim.o" afterPath="$PROJECT_DIR$/libft/ft_strtrim.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_tolower.o" afterPath="$PROJECT_DIR$/libft/ft_tolower.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_toupper.o" afterPath="$PROJECT_DIR$/libft/ft_toupper.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_decimal.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned_decimal.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_decimal_long.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned_decimal_long.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalx.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalx.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalxl.o" afterPath="$PROJECT_DIR$/libft/ft_unsigned_hexadesimalxl.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wcharacter.o" afterPath="$PROJECT_DIR$/libft/ft_wcharacter.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wcharlen.o" afterPath="$PROJECT_DIR$/libft/ft_wcharlen.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_width_padd.o" afterPath="$PROJECT_DIR$/libft/ft_width_padd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/ft_wstring.o" afterPath="$PROJECT_DIR$/libft/ft_wstring.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/get_next_line.o" afterPath="$PROJECT_DIR$/libft/get_next_line.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/libft.a" afterPath="$PROJECT_DIR$/libft/libft.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/singned_size.o" afterPath="$PROJECT_DIR$/libft/singned_size.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libft/unsingned_size.o" afterPath="$PROJECT_DIR$/libft/unsingned_size.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/asm.h" afterPath="$PROJECT_DIR$/asm_project/asm_source/asm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h" afterPath="$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_command.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_command.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_method.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_method.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/get_size_1.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/get_size_1.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/get_sizes.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/get_sizes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/hash.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/hash.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/main.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/new_asm.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/new_asm.cbp" />
-    </list>
+    <list default="true" id="b00bf769-9d66-47db-9a01-b1e702df23fc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -185,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/asm_project/asm_source/main.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="532">
-              <caret line="82" column="5" lean-forward="true" selection-start-line="59" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+              <caret line="82" column="5" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -502,16 +343,15 @@
       <workItem from="1505236776818" duration="5149000" />
       <workItem from="1505573166431" duration="2384000" />
       <workItem from="1506430844962" duration="1230000" />
-      <workItem from="1507466450069" duration="5068000" />
+      <workItem from="1507466450069" duration="5144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25714000" />
+    <option name="totallyTimeSpent" value="25790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17196187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -521,7 +361,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36064374" sideWeight="0.49682286" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36064374" sideWeight="0.49682286" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39941478" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -957,7 +797,7 @@
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
-          <caret line="82" column="5" lean-forward="true" selection-start-line="59" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+          <caret line="82" column="5" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
           <folding />
         </state>
       </provider>
