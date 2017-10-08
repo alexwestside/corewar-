@@ -127,8 +127,15 @@ CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o: ../libft/ft_printf.h
 CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o: ../libft/get_next_line.h
 CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o: ../libft/libft.h
 
+CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../asm_project/asm_source/./op.h
+CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../asm_project/asm_source/asm.h
+CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../asm_project/asm_source/corewar.h
+CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../asm_project/asm_source/corewar_valid.h
 CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../asm_project/asm_source/op.c
 CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../asm_project/asm_source/op.h
+CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../libft/ft_printf.h
+CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../libft/get_next_line.h
+CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o: ../libft/libft.h
 
 CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o: ../asm_project/asm_source/./op.h
 CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o: ../asm_project/asm_source/asm.h

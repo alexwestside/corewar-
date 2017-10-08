@@ -22,7 +22,7 @@ size_t distance, t_command *command)
 		if (command->method)
 		{
 			hash_command = get_table(corewar->bot.hash_table,
-corewar->bot.keys, command->method, NULL, 0)->command;
+corewar->bot.keys, command->method, NULL)->command;//0
 			while (hash_command)
 			{
 				if (!(current_line - 1) || !current_line)

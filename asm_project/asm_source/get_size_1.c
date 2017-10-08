@@ -22,7 +22,7 @@ int fd, t_command *command)
 		if (!command->command_name)
 		{
 			h_command = get_table(corewar->bot.hash_table,
-			corewar->bot.keys, command->method, NULL, 0)->command;
+			corewar->bot.keys, command->method, NULL)->command;//0
 			while (h_command)
 			{
 				if (!h_command->command_name)

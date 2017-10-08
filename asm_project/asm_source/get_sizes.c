@@ -74,7 +74,7 @@ size_t	get_distance_to_method(char *command_name, t_corewar *corewar,
 		if (command->method)
 		{
 			hash = get_table(corewar->bot.hash_table, corewar->bot.keys,
-			command->method, NULL, 0);
+			command->method, NULL);//0
 			hash_command = hash->command;
 			while (hash_command)
 			{

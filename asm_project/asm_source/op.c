@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "op.h"
+#include "corewar_valid.h"
 
 t_op	g_op_tab[17] =
 {
@@ -38,3 +39,14 @@ t_op	g_op_tab[17] =
 	{"aff", 1, {{T_REG}}, 16, 2, "aff", 1, 0},
 	{0, 0, {{0}}, 0, 0, 0, 0, 0}
 };
+
+int					collision(unsigned int *keys, unsigned int key)
+{
+	int				i;
+
+	i = -1;
+	while (keys[++i] != 0)
+		if (keys[i] == key)
+			return (i);
+	return (-1);
+}

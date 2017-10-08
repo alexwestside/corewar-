@@ -49,8 +49,10 @@ size_t				ft_strclen(char *str, char c)
 	return (i);
 }
 
-void				check_text_2(char ***text)
+void				check_text_2(char ***text, t_bot **bot, int *i)
 {
+	char			**a;
+
 	if (***text == ' ' || ***text == '\t')
 	{
 		while (***text == ' ' || ***text == '\t')
@@ -58,34 +60,34 @@ void				check_text_2(char ***text)
 		if (!***text)
 			(*text)++;
 	}
+	if (is_method(**text) == 1)
+	{
+		ft_add_command(&(*bot)->command, **text, NULL);
+		(*bot)->keys = *ft_get_method(text, &(*bot)->hash_table,
+&(*bot)->keys, i);
+	}
+	else
+	{
+		a = ft_strsplit_3args(**text, ' ', '\t', SEPARATOR_CHAR);
+		ft_add_command(&(*bot)->command, NULL, a);
+		(*text)++;
+	}
 }
 
 unsigned int		*ft_command(char **text, int i, t_bot *bot)
 {
-	char	**a;
-
 	while (*text)
 	{
-		if (ft_strstr(*text, NAME_CMD_STRING) || ft_strstr(*text, COMMENT_CMD_STRING))
-			if ((size_t)strq(*text, NAME_CMD_STRING) == ft_strlen(NAME_CMD_STRING) || (size_t)strq(*text, COMMENT_CMD_STRING) == ft_strlen(COMMENT_CMD_STRING))
-				break;
+		if (ft_strstr(*text, NAME_CMD_STRING) || ft_strstr(*text,
+COMMENT_CMD_STRING))
+			if ((size_t)strq(*text, NAME_CMD_STRING) ==
+ft_strlen(NAME_CMD_STRING) || (size_t)strq(*text, COMMENT_CMD_STRING) ==
+ft_strlen(COMMENT_CMD_STRING))
+				break ;
 		if (**text == COMMENT_CHAR || **text == COMMENT_CHAR2 || !*text)
 			text++;
 		else
-		{
-			check_text_2(&text);
-			if (is_method(*text) == 1)
-			{
-				ft_add_command(&bot->command, *text, NULL);
-				bot->keys = *ft_get_method(&text, &bot->hash_table, &bot->keys, &i);
-			}
-			else
-			{
-				a = ft_strsplit_3args(*text, ' ', '\t', SEPARATOR_CHAR);
-				ft_add_command(&bot->command, NULL, a);
-				text++;
-			}
-		}
+			check_text_2(&text, &bot, &i);
 	}
 	bot->keys = ft_valid_command(bot->command, bot->hash_table, bot->keys);
 	return (bot->keys);

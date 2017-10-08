@@ -6,103 +6,105 @@
 
 #IncludeRegexTransform: 
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/./op.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/./op.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm.h
 corewar.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar.h
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm_to_binary.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm_to_binary.c
 asm.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar.h
 ../../libft/libft.h
-/nfs/2016/o/orizhiy/norm_corewar_new/libft/libft.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/libft/libft.h
 ../../libft/get_next_line.h
-/nfs/2016/o/orizhiy/norm_corewar_new/libft/get_next_line.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/libft/get_next_line.h
 ../../libft/ft_printf.h
-/nfs/2016/o/orizhiy/norm_corewar_new/libft/ft_printf.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/libft/ft_printf.h
 ./op.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/./op.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/./op.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 corewar.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar.h
 asm.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/ft_add_command_corewar.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/ft_add_command_corewar.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/ft_command.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/ft_command.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/ft_method.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/ft_method.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/ft_name_comment.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/ft_name_comment.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/ft_strsplit_v2.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/ft_strsplit_v2.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/ft_strsplit_v3.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/ft_strsplit_v3.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/ft_valid_all.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/ft_valid_all.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/ft_valid_command.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/ft_valid_command.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/get_size_1.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/get_size_1.c
 asm.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/get_size_2.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/get_size_2.c
 asm.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/get_sizes.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/get_sizes.c
 asm.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/hash.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/hash.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/main.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/main.c
 corewar_valid.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/op.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/op.c
 op.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/op.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/op.h
+corewar_valid.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/corewar_valid.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/op.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/op.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/reg_dir_ind.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/reg_dir_ind.c
 asm.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/usage.c
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/usage.c
 asm.h
-/nfs/2016/o/orizhiy/norm_corewar_new/asm_project/asm_source/asm.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/asm_project/asm_source/asm.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/libft/ft_printf.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/libft/ft_printf.h
 libft.h
-/nfs/2016/o/orizhiy/norm_corewar_new/libft/libft.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/libft/libft.h
 stddef.h
 -
 stdarg.h
@@ -120,7 +122,7 @@ inttypes.h
 sys/types.h
 -
 
-/nfs/2016/o/orizhiy/norm_corewar_new/libft/get_next_line.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/libft/get_next_line.h
 string.h
 -
 stdlib.h
@@ -132,9 +134,9 @@ fcntl.h
 stdio.h
 -
 libft.h
-/nfs/2016/o/orizhiy/norm_corewar_new/libft/libft.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/libft/libft.h
 
-/nfs/2016/o/orizhiy/norm_corewar_new/libft/libft.h
+/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/new_corewar/libft/libft.h
 stdlib.h
 -
 string.h

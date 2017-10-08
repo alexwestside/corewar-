@@ -12,7 +12,7 @@
 
 #include "corewar_valid.h"
 
-unsigned int				**ft_hash_table(t_hash_table ***hash_table,
+unsigned int		**ft_hash_table(t_hash_table ***hash_table,
 					unsigned int **key, t_hash_table *tmp, int *i)
 {
 	unsigned int	j;
@@ -39,9 +39,9 @@ unsigned int				**ft_hash_table(t_hash_table ***hash_table,
 	return (key);
 }
 
-int 		strq(char *s2, char *s1)
+int					strq(char *s2, char *s1)
 {
-	int 	i;
+	int				i;
 
 	i = 0;
 	while (s2 && *s2 && (*s2 == ' ' || *s2 == '\t'))
@@ -57,10 +57,10 @@ int 		strq(char *s2, char *s1)
 	return (i);
 }
 
-int 		count_sep(char *str, char **a, char s)
+int					count_sep(char *str, char **a, char s)
 {
-	int 	sep;
-	int 	arg;
+	int				sep;
+	int				arg;
 
 	sep = 0;
 	arg = 0;
@@ -74,10 +74,20 @@ int 		count_sep(char *str, char **a, char s)
 	return (sep == arg - 2 ? 1 : 0);
 }
 
-unsigned int **ft_get_method(char ***text, t_hash_table ***hash_table,
-					unsigned int **key, int *i)
+void				check_sep_char(char *text, t_command **tmp)
 {
 	char			**a;
+
+	a = ft_strsplit_3args(text, ' ', '\t', SEPARATOR_CHAR);
+	if (!count_sep(text, a, SEPARATOR_CHAR))
+		error("Syntax error!");
+	if (a[0] && *a[0] != COMMENT_CHAR && *a[0] != COMMENT_CHAR2)
+		ft_add_command(tmp, NULL, a);
+}
+
+unsigned int		**ft_get_method(char ***text, t_hash_table ***hash_table,
+					unsigned int **key, int *i)
+{
 	t_hash_table	*tmp;
 
 	tmp = (t_hash_table*)malloc(sizeof(t_hash_table));
@@ -91,14 +101,13 @@ unsigned int **ft_get_method(char ***text, t_hash_table ***hash_table,
 		if (***text != '\0' && ***text != COMMENT_CHAR &&
 				***text != COMMENT_CHAR2 && ***text != '\n')
 		{
-			if ((size_t)ft_strstr(**text, NAME_CMD_STRING) ||ft_strstr(**text, COMMENT_CMD_STRING))
-				if ((size_t)strq(**text, NAME_CMD_STRING) == ft_strlen(NAME_CMD_STRING) || (size_t)strq(**text, COMMENT_CMD_STRING) == ft_strlen(COMMENT_CMD_STRING))
-					break;
-			a = ft_strsplit_3args(**text, ' ', '\t', SEPARATOR_CHAR);
-			if (!count_sep(**text, a, SEPARATOR_CHAR))
-				error("Syntax error!");
-			if (a[0] && *a[0] != COMMENT_CHAR && *a[0] != COMMENT_CHAR2)
-				ft_add_command(&tmp->command, NULL, a);
+			if ((size_t)ft_strstr(**text, NAME_CMD_STRING) ||
+		ft_strstr(**text, COMMENT_CMD_STRING))
+				if ((size_t)strq(**text, NAME_CMD_STRING) ==
+ft_strlen(NAME_CMD_STRING) || (size_t)strq(**text, COMMENT_CMD_STRING) ==
+ft_strlen(COMMENT_CMD_STRING))
+					break ;
+			check_sep_char(**text, &tmp->command);
 		}
 		(*text)++;
 	}

@@ -65,7 +65,7 @@ void	bot_code_to_binary(t_corewar *corewar, int fd, int current_line)
 		if (command->method)
 		{
 			hash = get_table(corewar->bot.hash_table, corewar->bot.keys,
-			command->method, corewar, 1);
+			command->method, corewar);//1
 			h_command = hash->command;
 			run_throw_command(fd, h_command, corewar, &current_line);
 		}
@@ -82,7 +82,7 @@ void	bot_code_to_binary(t_corewar *corewar, int fd, int current_line)
 	}
 }
 
-void	ft_asm(t_corewar *corewar, int ac, char **av,unsigned int magic)
+void	ft_asm(t_corewar *corewar, int ac, char **av, unsigned int magic)
 {
 	t_header		*header;
 	char			*file_path;

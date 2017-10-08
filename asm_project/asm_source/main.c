@@ -78,7 +78,8 @@ void			check_new_line(int fd, int i, char *p, char *s)
 	{
 		if (s[i] == COMMENT_CHAR || s[i] == COMMENT_CHAR2)
 			break ;
-		if (s[i] != COMMENT_CHAR && s[i] != COMMENT_CHAR2 && s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
+		if (s[i] != COMMENT_CHAR && s[i] != COMMENT_CHAR2 &&
+s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
 			error("Perhaps you forgot to end with a newline?\n");
 	}
 }
@@ -97,7 +98,7 @@ void			open_read(char *av, char ***bot_info)
 	{
 		if ((*bot_info)[i][0])
 		{
-			(*bot_info) = (char **) realloc((*bot_info),
+			(*bot_info) = (char **)realloc((*bot_info),
 											sizeof(char *) * (i + 2));
 			i++;
 		}
