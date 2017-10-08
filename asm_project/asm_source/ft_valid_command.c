@@ -12,7 +12,7 @@
 
 #include "corewar_valid.h"
 
-void				check_args(t_args *args, char *str, int count)
+void			check_args(t_args *args, char *str, int count)
 {
 	int				i;
 
@@ -37,7 +37,7 @@ void				check_args(t_args *args, char *str, int count)
 		ft_strjoin(str, "\""))) : 0;
 }
 
-void				check_dir(char *str, t_hash_table **hash_table,
+void			check_dir(char *str, t_hash_table **hash_table,
 						unsigned int *keys)
 {
 	char			*s;
@@ -54,7 +54,8 @@ void				check_dir(char *str, t_hash_table **hash_table,
 			lexical_error(str++, 2);
 		tmp = get_table(hash_table, keys, s, NULL, 0);
 		if (tmp == NULL)
-			error(ft_strjoin("No such label -- ", ft_strjoin(GREEN, ft_strjoin("\"", ft_strjoin(s, ft_strjoin("\"", END))))));
+			error(ft_strjoin("No such label -- ",
+ft_strjoin(GREEN, ft_strjoin("\"", ft_strjoin(s, ft_strjoin("\"", END))))));
 	}
 	else
 	{
@@ -66,7 +67,7 @@ void				check_dir(char *str, t_hash_table **hash_table,
 	}
 }
 
-void				check_reg(char *str)
+void			check_reg(char *str)
 {
 	char			*s;
 	int				i;
@@ -91,7 +92,7 @@ void				check_reg(char *str)
 	}
 }
 
-void				check_ind(char *str)
+void			check_ind(char *str)
 {
 	if (*str && *str == '-')
 		str++;
@@ -105,7 +106,7 @@ void				check_ind(char *str)
 	}
 }
 
-unsigned int				*ft_valid_command(t_command *command,
+unsigned int	*ft_valid_command(t_command *command,
 						t_hash_table **hash_table, unsigned int *keys)
 {
 	t_command		*p;

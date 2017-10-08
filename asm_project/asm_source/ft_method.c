@@ -91,8 +91,8 @@ unsigned int **ft_get_method(char ***text, t_hash_table ***hash_table,
 		if (***text != '\0' && ***text != COMMENT_CHAR &&
 				***text != COMMENT_CHAR2 && ***text != '\n')
 		{
-			if (ft_strstr(**text, NAME_CMD_STRING) || ft_strstr(**text, COMMENT_CMD_STRING))
-				if (strq(**text, NAME_CMD_STRING) == ft_strlen(NAME_CMD_STRING) || strq(**text, COMMENT_CMD_STRING) == ft_strlen(COMMENT_CMD_STRING))
+			if ((size_t)ft_strstr(**text, NAME_CMD_STRING) ||ft_strstr(**text, COMMENT_CMD_STRING))
+				if ((size_t)strq(**text, NAME_CMD_STRING) == ft_strlen(NAME_CMD_STRING) || (size_t)strq(**text, COMMENT_CMD_STRING) == ft_strlen(COMMENT_CMD_STRING))
 					break;
 			a = ft_strsplit_3args(**text, ' ', '\t', SEPARATOR_CHAR);
 			if (!count_sep(**text, a, SEPARATOR_CHAR))

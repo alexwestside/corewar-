@@ -14,8 +14,8 @@
 
 int					is_method(char *str)
 {
-	int				i;
-	char			*s;
+	int		i;
+	char	*s;
 
 	s = str;
 	i = 0;
@@ -41,7 +41,7 @@ int					ft_arg_type(char *str)
 
 size_t				ft_strclen(char *str, char c)
 {
-	size_t			i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] && str[i] != c)
@@ -60,14 +60,14 @@ void				check_text_2(char ***text)
 	}
 }
 
-unsigned int *ft_command(char **text, int i, t_bot *bot)
+unsigned int		*ft_command(char **text, int i, t_bot *bot)
 {
-	char			**a;
+	char	**a;
 
 	while (*text)
 	{
 		if (ft_strstr(*text, NAME_CMD_STRING) || ft_strstr(*text, COMMENT_CMD_STRING))
-			if (strq(*text, NAME_CMD_STRING) == ft_strlen(NAME_CMD_STRING) || strq(*text, COMMENT_CMD_STRING) == ft_strlen(COMMENT_CMD_STRING))
+			if ((size_t)strq(*text, NAME_CMD_STRING) == ft_strlen(NAME_CMD_STRING) || (size_t)strq(*text, COMMENT_CMD_STRING) == ft_strlen(COMMENT_CMD_STRING))
 				break;
 		if (**text == COMMENT_CHAR || **text == COMMENT_CHAR2 || !*text)
 			text++;

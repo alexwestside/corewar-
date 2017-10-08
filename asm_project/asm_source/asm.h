@@ -15,7 +15,7 @@
 # include "corewar.h"
 # include "corewar_valid.h"
 
-void			ft_asm(t_corewar *corewar, int ac, char **av);
+void			ft_asm(t_corewar *corewar, int ac, char **av, unsigned int	magic);
 void			get_prog_size(t_header *header, t_corewar *corewar, int fd,
 		t_command *command);
 void			gps_1(t_header *header, t_command **h_command);
@@ -48,7 +48,6 @@ void			hex(int n, int fd);
 void			hex_magic(int n, int fd, char *str, size_t *i);
 unsigned int	reverse_magic(unsigned int magic);
 int				swap_bytes(char *s, size_t size);
-void			t_reg_to_byte(char *command_data, int fd);
 void			run_throw_command(int fd, t_command *h_command,
 				t_corewar *corewar, int *current_line);
 #endif

@@ -55,17 +55,12 @@ unsigned int	*valid(char **text, t_corewar *corewar)
 	return (corewar->bot.keys);
 }
 
-void			chek_new_line(char *av, int fd, int i)
+void			check_new_line(int fd, int i, char *p, char *s)
 {
 	char	buff[1];
 	char	*str;
-	char	*p;
-	char	*s;
 
 	i = 0;
-	fd = open(av, O_RDONLY);
-	if (fd < 0)
-		error("INVALID FILE");
 	str = (char *)malloc(sizeof(char) * (1 + i));
 	while (1)
 	{
@@ -84,13 +79,14 @@ void			chek_new_line(char *av, int fd, int i)
 		if (s[i] == COMMENT_CHAR || s[i] == COMMENT_CHAR2)
 			break ;
 		if (s[i] != COMMENT_CHAR && s[i] != COMMENT_CHAR2 && s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
-			error("Perhaps you forgot to end with a newline?");
+			error("Perhaps you forgot to end with a newline?\n");
 	}
 }
 
 void			open_read(char *av, char ***bot_info)
 {
 	int		fd;
+	int		fd2;
 	int		i;
 
 	i = 0;
@@ -99,7 +95,8 @@ void			open_read(char *av, char ***bot_info)
 		error("INVALID FILE");
 	while (get_next_line(fd, &(*bot_info)[i]))
 	{
-		if ((*bot_info)[i][0]) {
+		if ((*bot_info)[i][0])
+		{
 			(*bot_info) = (char **) realloc((*bot_info),
 											sizeof(char *) * (i + 2));
 			i++;
@@ -107,18 +104,23 @@ void			open_read(char *av, char ***bot_info)
 	}
 	(*bot_info)[i] = NULL;
 	close(fd);
-	chek_new_line(av, 0, 0);
+	fd2 = open(av, O_RDONLY);
+	if (fd < 0)
+		error("INVALID FILE");
+	check_new_line(fd2, 0, NULL, NULL);
 }
 
 int				main(int ac, char **av)
 {
-	char		**bot_info;
-	t_corewar	corewar;
+	char			**bot_info;
+	t_corewar		corewar;
+	unsigned int	magic;
 
+	magic = 0;
 	bot_info = (char **)malloc(sizeof(char *));
 	bot_info[0] = NULL;
 	open_read(av[1], &bot_info);
 	corewar.bot.keys = valid(bot_info, &corewar);
-	ft_asm(&corewar, ac, av);
+	ft_asm(&corewar, ac, av, magic);
 	return (0);
 }
