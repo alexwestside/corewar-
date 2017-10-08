@@ -80,7 +80,7 @@ void			check_new_line(int fd, int i, char *p, char *s)
 			break ;
 		if (s[i] != COMMENT_CHAR && s[i] != COMMENT_CHAR2 &&
 s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
-			error("Perhaps you forgot to end with a newline?\n");
+			error("Perhaps you forgot to end with a newline?");
 	}
 }
 
