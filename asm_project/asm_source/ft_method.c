@@ -70,7 +70,11 @@ int					count_sep(char *str, char **a, char s)
 		str++;
 	}
 	while (a[arg])
+	{
+		if (*a[arg] == COMMENT_CHAR || *a[arg] == COMMENT_CHAR2)
+			break ;
 		arg++;
+	}
 	return (sep == arg - 2 ? 1 : 0);
 }
 

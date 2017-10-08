@@ -90,8 +90,8 @@ void	ft_asm(t_corewar *corewar, int ac, char **av, unsigned int magic)
 
 	header = (t_header *)malloc(sizeof(t_header));
 	header->magic = COREWAR_EXEC_MAGIC;
-	bzero(header->prog_name, header->prog_size);
-	bzero(header->comment, header->prog_size);
+//	bzero(header->prog_name, header->prog_size);
+//	bzero(header->comment, header->prog_size);
 	ft_memcpy(header->prog_name, corewar->bot.name,
 	ft_strlen(corewar->bot.name));
 	ft_memcpy(header->comment, corewar->bot.comment,

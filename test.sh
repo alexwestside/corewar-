@@ -5,6 +5,7 @@ FILES=/nfs/2016/o/orizhiy/norm_corewar_new/test_bot/*
 PATH_TO_ASM=/nfs/2016/o/orizhiy/norm_corewar_new/
 cor=".cor"
 s=".s"
+do=false
 
 make
 for f in $FILES
@@ -12,11 +13,22 @@ do
 #    echo $(basename ${f%.*})${s}
     echo "Processing $f file..."
     echo "ASMM:          "
+    if ./asm ${f} | grep -q "Writing"; then
+        ${do}=true
+    fi
     ./asm ${f}
+#    ./asm ${f}
     echo "ASM_ORIGIN:    "
+#    ./exe/./asm ${f}
+    if ./exe/./asm ${f} | grep -q "Writing"; then
+        ${do}=true
+#        echo "matched"
+    fi
     ./exe/./asm ${f}
-    diff ./test_bot/$(basename ${f%.*})${cor} $(basename ${f%.*})${cor}
-     echo "____________________________________________________________________________________________________________________________"
+    if ${do} = true; then
+        diff ./test_bot/$(basename ${f%.*})${cor} $(basename ${f%.*})${cor}
+    fi
+    echo "____________________________________________________________________________________________________________________________"
 done
 for f in $FILES
 do
