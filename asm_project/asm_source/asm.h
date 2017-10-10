@@ -15,8 +15,7 @@
 # include "corewar.h"
 # include "corewar_valid.h"
 
-void			ft_asm(t_corewar *corewar, int ac, char **av,
-unsigned int magic);
+void			ft_asm(t_corewar *corewar, unsigned int magic);
 void			get_prog_size(t_header *header, t_corewar *corewar, int fd,
 		t_command *command);
 void			gps_1(t_header *header, t_command **h_command);

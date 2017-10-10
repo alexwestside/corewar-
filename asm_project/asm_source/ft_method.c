@@ -66,6 +66,8 @@ int					count_sep(char *str, char **a, char s)
 	arg = 0;
 	while (*str)
 	{
+		if (*str == COMMENT_CHAR || *str == COMMENT_CHAR2)
+			break ;
 		*str == s ? sep++ : 0;
 		str++;
 	}
@@ -83,10 +85,13 @@ void				check_sep_char(char *text, t_command **tmp)
 	char			**a;
 
 	a = ft_strsplit_3args(text, ' ', '\t', SEPARATOR_CHAR);
-	if (!count_sep(text, a, SEPARATOR_CHAR))
-		error("Syntax error!");
-	if (a[0] && *a[0] != COMMENT_CHAR && *a[0] != COMMENT_CHAR2)
-		ft_add_command(tmp, NULL, a);
+	if (*a)
+	{
+		if (!count_sep(text, a, SEPARATOR_CHAR))
+			error("Syntax error!");
+		if (a[0] && *a[0] != COMMENT_CHAR && *a[0] != COMMENT_CHAR2)
+			ft_add_command(tmp, NULL, a);
+	}
 }
 
 unsigned int		**ft_get_method(char ***text, t_hash_table ***hash_table,

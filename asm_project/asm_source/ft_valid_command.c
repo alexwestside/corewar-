@@ -113,7 +113,7 @@ unsigned int	*ft_valid_command(t_command *command,
 
 	while (command != NULL)
 	{
-		if (command->method != NULL)
+		if (command->method)
 		{
 			valid_name_method(command->method);
 			p = get_table_command(hash_table, keys, command->method);

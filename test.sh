@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 
-FILES=/nfs/2016/o/orizhiy/norm_corewar_new/test_bot/*
-PATH_TO_ASM=/nfs/2016/o/orizhiy/norm_corewar_new/
+FILES=/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/M_N_COR/test_bot/*
+PATH_TO_ASM=/nfs/2016/m/maksenov/CLionProjects/my_new_corewar/M_N_COR/
 cor=".cor"
 s=".s"
 do=false

@@ -53,6 +53,7 @@ typedef struct			s_bot
 typedef struct			s_corewar
 {
 	t_bot				bot;
+	char 				*name;
 }						t_corewar;
 
 #endif

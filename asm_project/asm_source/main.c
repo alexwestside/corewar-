@@ -116,31 +116,22 @@ int				main(int ac, char **av)
 	char			**bot_info;
 	t_corewar		corewar;
 	unsigned int	magic;
+	size_t 			len;
 	char			*p;
 
 	magic = 0;
-	if (av[ac - 1])
-	{
-		p = av[ac - 1];
-		while(1)
-		{
-			!*p ? error("Invalid file!!!") : 0;
-			if (*p == '.')
-			{
-				if (*(p + 1) == 's' && !(*(p + 2)))
-					break ;
-				else
-					error("Invalid file!!!");
-			}
-			p++;
-		}
-	}
-	else
+	p = av[ac - 1];
+	while (*p && ft_strchr(p, '/'))
+		p++;
+	corewar.name = p;
+	len = ft_strlen(p);
+	if (len < 3 || p[len - 1] != 's' || p[len - 2] != '.')
 		error("Invalid file!!!");
+	corewar.name = ft_strndup(corewar.name, (ft_strlen(corewar.name) - 2));
 	bot_info = (char **)malloc(sizeof(char *));
 	bot_info[0] = NULL;
 	open_read(av[ac - 1], &bot_info);
 	corewar.bot.keys = valid(bot_info, &corewar);
-	ft_asm(&corewar, ac, av, magic);
+	ft_asm(&corewar, magic);
 	return (0);
 }
