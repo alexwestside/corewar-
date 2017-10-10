@@ -77,7 +77,7 @@ int					count_sep(char *str, char **a, char s)
 			break ;
 		arg++;
 	}
-	return (sep == arg - 2 ? 1 : 0);
+	return ((sep == arg - 2 || !arg) ? 1 : 0);
 }
 
 void				check_sep_char(char *text, t_command **tmp)

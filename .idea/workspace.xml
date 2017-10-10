@@ -12,53 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b00bf769-9d66-47db-9a01-b1e702df23fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_bot/test17.s" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fafa1.cor" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stayin' alive.cor" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/asm_to_binary.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_add_command_corewar.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_command.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_method.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_name_comment.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v2.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_strsplit_v3.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_all.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/ft_valid_command.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_1.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_size_2.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/get_sizes.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/hash.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/main.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/op.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/reg_dir_ind.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/asm_project/asm_source/usage.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/new_asm" afterPath="$PROJECT_DIR$/cmake-build-debug/new_asm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ERROR" afterPath="$PROJECT_DIR$/ERROR" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/asm.h" afterPath="$PROJECT_DIR$/asm_project/asm_source/asm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/corewar.h" afterPath="$PROJECT_DIR$/asm_project/asm_source/corewar.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_add_command_corewar.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_add_command_corewar.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_method.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_method.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/main.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/new_asm.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/new_asm.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/new_asm.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/zork.cor" afterPath="$PROJECT_DIR$/cmake-build-debug/zork.cor" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.sh" afterPath="$PROJECT_DIR$/test.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asm_project/asm_source/ft_name_comment.c" afterPath="$PROJECT_DIR$/asm_project/asm_source/ft_name_comment.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_bot/test2.s" afterPath="$PROJECT_DIR$/test_bot/test2.s" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,41 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="asm.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/asm.h">
+      <file leaf-file-name="asm_to_binary.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="128" column="33" lean-forward="false" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Octobre_Rouge_V4.2.s" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_bot/Octobre_Rouge_V4.2.s">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1437">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="438">
+              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,18 +40,48 @@
       <file leaf-file-name="ERROR" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ERROR">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="9" />
+            <state relative-caret-position="15">
+              <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Car.s" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_bot/Car.s">
+      <file leaf-file-name="mortel.s" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_bot/mortel.s">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maxidef.s" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_bot/maxidef.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toto.s" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_bot/toto.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jumper.s" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_bot/jumper.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -140,31 +97,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ft_method.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c">
+      <file leaf-file-name="ft_name_comment.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_name_comment.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="1050">
+              <caret line="122" column="68" lean-forward="false" selection-start-line="122" selection-start-column="68" selection-end-line="122" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="corewar.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/corewar.h">
+      <file leaf-file-name="ft_command.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="300">
+              <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="corewar_valid.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/corewar_valid.h">
+      <file leaf-file-name="op.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asm_project/asm_source/op.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="45" column="68" lean-forward="false" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+            <state relative-caret-position="261">
+              <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -197,7 +154,6 @@
         <option value="$PROJECT_DIR$/asm_project/asm_source/get_sizes.c" />
         <option value="$PROJECT_DIR$/asm_project/asm_source/hash.c" />
         <option value="$PROJECT_DIR$/test_bot/test17.s" />
-        <option value="$PROJECT_DIR$/asm_project/asm_source/ft_command.c" />
         <option value="$PROJECT_DIR$/asm_project/asm_source/ft_valid_all.c" />
         <option value="$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c" />
         <option value="$PROJECT_DIR$/asm_project/asm_source/ft_add_command_corewar.c" />
@@ -207,6 +163,10 @@
         <option value="$PROJECT_DIR$/test.sh" />
         <option value="$PROJECT_DIR$/asm_project/asm_source/main.c" />
         <option value="$PROJECT_DIR$/asm_project/asm_source/ft_method.c" />
+        <option value="$PROJECT_DIR$/test_bot/jumper.s" />
+        <option value="$PROJECT_DIR$/test_bot/test2.s" />
+        <option value="$PROJECT_DIR$/asm_project/asm_source/ft_command.c" />
+        <option value="$PROJECT_DIR$/asm_project/asm_source/ft_name_comment.c" />
         <option value="$PROJECT_DIR$/ERROR" />
       </list>
     </option>
@@ -478,7 +438,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration name="new_asm" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../test_bot/jumper.s" PASS_PARENT_ENVS_2="true" PROJECT_NAME="new_asm" TARGET_NAME="new_asm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="new_asm" RUN_TARGET_NAME="new_asm">
+    <configuration name="new_asm" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../test_bot/maxidef.s" PASS_PARENT_ENVS_2="true" PROJECT_NAME="new_asm" TARGET_NAME="new_asm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="new_asm" RUN_TARGET_NAME="new_asm">
       <envs />
     </configuration>
     <list size="2">
@@ -503,12 +463,12 @@
       <workItem from="1507466450069" duration="5144000" />
       <workItem from="1507472043002" duration="3010000" />
       <workItem from="1507477821464" duration="3000000" />
-      <workItem from="1507650998488" duration="5914000" />
+      <workItem from="1507650998488" duration="6664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37714000" />
+    <option name="totallyTimeSpent" value="38464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -518,7 +478,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32639405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36064374" sideWeight="0.5031771" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32639405" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32639405" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35092938" sideWeight="0.49682286" order="7" side_tool="false" content_ui="tabs" />
@@ -580,12 +540,12 @@
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c</url>
-          <line>84</line>
-          <option name="timeStamp" value="86" />
+          <url>file://$PROJECT_DIR$/asm_project/asm_source/ft_name_comment.c</url>
+          <line>113</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="87" />
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -594,46 +554,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_valid_command.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_valid_all.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bot.s" />
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_add_command_corewar.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -728,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/op.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/libft.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -816,14 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_bot/toto.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -872,26 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_add_command_corewar.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="710">
           <caret line="87" column="28" lean-forward="false" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -920,34 +809,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_bot/Car.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
           <caret line="128" column="33" lean-forward="false" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/usage.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/corewar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -960,18 +825,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/corewar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_bot/Car.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_method.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state relative-caret-position="588">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_bot/test2.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_bot/toto.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_bot/maxidef.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/usage.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/op.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_bot/mortel.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/asm_to_binary.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_bot/jumper.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_command.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asm_project/asm_source/ft_name_comment.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="122" column="68" lean-forward="false" selection-start-line="122" selection-start-column="68" selection-end-line="122" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ERROR">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="9" />
+        <state relative-caret-position="15">
+          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="10" />
           <folding />
         </state>
       </provider>
