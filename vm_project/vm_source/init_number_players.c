@@ -12,17 +12,18 @@
 
 #include "machine.h"
 
-static int	check_valid_is_file(char **str, int index, int len_str, int mod)
+static int	check_valid_is_file(char *file_name)
 {
 	int fd;
 
-	index += mod == 1 ? 1 : 0;
-	if (index >= len_str)
-		return (0);
-	fd = open(str[index], O_RDONLY);
+    fd = open(file_name, O_RDONLY);
 	if (fd == -1 || read(fd, 0, 0) == -1)
-		return (0);
-	return (1);
+    {
+        fd != -1 ? close(fd) : 0;
+        return (0);
+    }
+    close(fd);
+    return (1);
 }
 
 /*
@@ -65,25 +66,25 @@ static void	set_number(t_machine *vm, int index, int num)
 
 void		init_number_players(t_machine *vm, int argc, char **argv)
 {
-	int			num;
 	int			i_arg;
 	unsigned	j_players;
 
-	num = 0;
 	i_arg = 0;
 	j_players = -1;
 	while (++i_arg < argc)
 		if (!ft_strcmp(argv[i_arg], "-n"))
 		{
-			if (i_arg + 1 < argc && is_number(argv[++i_arg]) &&
-				check_valid_is_file(argv, i_arg, argc, 1))
+			if (i_arg + 1 < argc && is_number(argv[i_arg + 1]) &&
+                i_arg + 2 < argc && check_valid_is_file(argv[i_arg + 2]))
 			{
-				num = ft_atoi(argv[i_arg]);
 				if (j_players + 1 < vm->count_players)
-					set_number(vm, ++j_players, num);
+					set_number(vm, ++j_players, ft_atoi(argv[i_arg + 1]));
+                i_arg += 2;
 			}
+            else
+                error_exit(NULL, 10, vm);
 		}
-		else if (check_valid_is_file(argv, i_arg, argc, 0))
+		else if (check_valid_is_file(argv[i_arg]))
 			if (j_players + 1 < vm->count_players)
                 set_query_number(vm, ++j_players);
 }
