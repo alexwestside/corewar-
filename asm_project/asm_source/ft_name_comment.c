@@ -112,7 +112,7 @@ void		ft_name_comment(char **name, char **comment, char ***text)
 {
 	*name = NULL;
 	*comment = NULL;
-	while (**text && !is_method(**text))
+	while (**text)
 	{
 		if (is_name(**text) == 1)
 			ft_name(name, text, "", ft_strchr(**text, '"'));
@@ -120,7 +120,7 @@ void		ft_name_comment(char **name, char **comment, char ***text)
 			ft_comment(comment, text, "", ft_strchr(**text, '"'));
 		else if (***text != COMMENT_CHAR && ***text != COMMENT_CHAR2)
 			error("Syntax error");
-		if (*name != NULL && *comment != NULL)
+		if ((*name != NULL && *comment != NULL) || is_method(**text))
 		{
 			(*text)++;
 			break ;

@@ -25,7 +25,7 @@ void	error_exit(char *str, int code, t_machine *vm)
 		"its header says\n", str);
 	else if (code == 10)
 		ft_printf("ERROR: unrestricted champion number or already a "
-						  "champion with that number\n");
+				"champion with that number\n");
 	release_memory(vm);
 	exit(code);
 }

@@ -54,28 +54,29 @@ void				add_checkdup(char *method, char **checkdup)
 }
 
 t_hash_table		*get_table(t_hash_table **hash_table,
-						unsigned int *keys, char *method, t_corewar *corewar, int flag)
+unsigned int *keys, char *method, t_corewar *corewar)
 {
 	unsigned int	key;
 	int				i;
-	int 			j;
+	int				j;
 
 	j = 0;
-	key = hash_key(method);
 	i = 0;
+	key = hash_key(method);
 	while (keys[i] && keys[i] != key)
 		i++;
 	while (corewar && corewar->bot.checkdup && corewar->bot.checkdup[j])
 	{
-		if (*corewar->bot.checkdup && !ft_strcmp(corewar->bot.checkdup[j], method) && hash_table[i]->collision)
+		if (corewar->bot.checkdup[j] && !ft_strcmp(corewar->bot.checkdup[j],
+			method) && hash_table[i]->collision)
 		{
 			hash_table[i] = hash_table[i]->collision;
-			flag == 1 ? add_checkdup(method, corewar->bot.checkdup) : 0;
+			add_checkdup(method, corewar->bot.checkdup);
 			return (hash_table[i]);
 		}
 		j++;
 	}
-	flag == 1 && corewar ? add_checkdup(method, corewar->bot.checkdup) : 0;
+	corewar ? add_checkdup(method, corewar->bot.checkdup) : 0;
 	return (keys[i] ? hash_table[i] : NULL);
 }
 
@@ -90,15 +91,4 @@ t_command			*get_table_command(t_hash_table **hash_table,
 	while (keys[i] && keys[i] != key)
 		i++;
 	return (keys[i] ? hash_table[i]->command : NULL);
-}
-
-int					collision(unsigned int *keys, unsigned int key)
-{
-	int				i;
-
-	i = -1;
-	while (keys[++i] != 0)
-		if (keys[i] == key)
-			return (i);
-	return (-1);
 }

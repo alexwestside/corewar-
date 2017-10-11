@@ -24,7 +24,7 @@ void			copy_method(t_command *command, char ***checkdup)
 	}
 	i++;
 	*checkdup = (char **)malloc(sizeof(char *) * (i));
-	(*checkdup)[i--] = NULL;
+	(*checkdup)[--i] = NULL;
 	while (i--)
 		(*checkdup)[i] = "1";
 }
@@ -55,16 +55,12 @@ unsigned int	*valid(char **text, t_corewar *corewar)
 	return (corewar->bot.keys);
 }
 
-void			chek_new_line(char *av, int fd, int i)
+void			check_new_line(int fd, int i, char *p, char *s)
 {
 	char	buff[1];
 	char	*str;
-	char	*p;
-	char	*s;
 
-	fd = open(av, O_RDONLY);
-	if (fd < 0)
-		error("INVALID FILE");
+	i = 0;
 	str = (char *)malloc(sizeof(char) * (1 + i));
 	while (1)
 	{
@@ -74,26 +70,27 @@ void			chek_new_line(char *av, int fd, int i)
 		i++;
 		str = (char *)realloc(str, sizeof(char) * (1 + i));
 	}
+	str[i] = '\0';
 	p = ft_strrchr(str, '\n');
 	s = ft_strndup(p, ft_strlen(str) - (p - str));
 	i = 0;
 	while (s[++i])
 	{
-		if (s[i] == '#' || s[i] == ',')
+		if (s[i] == COMMENT_CHAR || s[i] == COMMENT_CHAR2)
 			break ;
-		if (s[i] != '#' && s[i] != ',' && s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
-			error("INVALID FILE");
+		if (s[i] != COMMENT_CHAR && s[i] != COMMENT_CHAR2 &&
+s[i] != '\t' && s[i] != ' ' && s[i] != '\0')
+			error("Perhaps you forgot to end with a newline?");
 	}
 }
 
 void			open_read(char *av, char ***bot_info)
 {
 	int		fd;
+	int		fd2;
 	int		i;
-	int		n;
 
 	i = 0;
-	n = 0;
 	fd = open(av, O_RDONLY);
 	if (fd <= 0)
 		error("INVALID FILE");
@@ -105,21 +102,36 @@ void			open_read(char *av, char ***bot_info)
 											sizeof(char *) * (i + 2));
 			i++;
 		}
-		n++;
 	}
 	(*bot_info)[i] = NULL;
-	chek_new_line(av, 0, 0);
+	close(fd);
+	fd2 = open(av, O_RDONLY);
+	if (fd < 0)
+		error("INVALID FILE");
+	check_new_line(fd2, 0, NULL, NULL);
 }
 
 int				main(int ac, char **av)
 {
-	char		**bot_info;
-	t_corewar	corewar;
+	char			**bot_info;
+	t_corewar		corewar;
+	unsigned int	magic;
+	size_t			len;
+	char			*p;
 
+	magic = 0;
+	p = av[ac - 1];
+	while (*p && ft_strchr(p, '/'))
+		p++;
+	corewar.name = p;
+	len = ft_strlen(p);
+	if (len < 3 || p[len - 1] != 's' || p[len - 2] != '.')
+		error(len < 3 ? "INVALID FILE" : "FILE MUST BE END WITH \".s\"");
+	corewar.name = ft_strndup(corewar.name, (ft_strlen(corewar.name) - 2));
 	bot_info = (char **)malloc(sizeof(char *));
 	bot_info[0] = NULL;
-	open_read(av[1], &bot_info);
+	open_read(av[ac - 1], &bot_info);
 	corewar.bot.keys = valid(bot_info, &corewar);
-	ft_asm(&corewar, ac, av);
+	ft_asm(&corewar, magic);
 	return (0);
 }

@@ -76,6 +76,6 @@ int							swap_bytes(char *s, size_t size)
 
 void						error(char *str)
 {
-	ft_printf("%s", str);
+	ft_printf("%s%s%s\n", RED, str, END);
 	exit(0);
 }

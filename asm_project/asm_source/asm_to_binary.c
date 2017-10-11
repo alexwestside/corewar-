@@ -65,7 +65,7 @@ void	bot_code_to_binary(t_corewar *corewar, int fd, int current_line)
 		if (command->method)
 		{
 			hash = get_table(corewar->bot.hash_table, corewar->bot.keys,
-			command->method, corewar, 1);
+			command->method, corewar);
 			h_command = hash->command;
 			run_throw_command(fd, h_command, corewar, &current_line);
 		}
@@ -82,22 +82,19 @@ void	bot_code_to_binary(t_corewar *corewar, int fd, int current_line)
 	}
 }
 
-void	ft_asm(t_corewar *corewar, int ac, char **av)
+void	ft_asm(t_corewar *corewar, unsigned int magic)
 {
 	t_header		*header;
 	char			*file_path;
 	int				fd;
-	unsigned int	magic;
 
 	header = (t_header *)malloc(sizeof(t_header));
 	header->magic = COREWAR_EXEC_MAGIC;
-	bzero(header->prog_name, header->prog_size);
-	bzero(header->comment, header->prog_size);
 	ft_memcpy(header->prog_name, corewar->bot.name,
 	ft_strlen(corewar->bot.name));
 	ft_memcpy(header->comment, corewar->bot.comment,
 	ft_strlen(corewar->bot.comment));
-	file_path = ft_strjoin("./", ft_strjoin(header->prog_name, ".cor"));
+	file_path = ft_strjoin("./", ft_strjoin(corewar->name, ".cor"));
 	fd = open(file_path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 	magic = reverse_magic(header->magic);
 	write(fd, &magic, sizeof(magic) + sizeof(unsigned int) - sizeof(magic));
@@ -107,6 +104,6 @@ void	ft_asm(t_corewar *corewar, int ac, char **av)
 	write(fd, header->comment, sizeof(*header->comment) * COMMENT_LENGTH
 	+ 1 + sizeof(unsigned int) - sizeof(*header->comment));
 	bot_code_to_binary(corewar, fd, 1);
-	ft_printf("Writing output program to %s\n", ft_strjoin(ft_strjoin("./", ft_strsplit(av[ac - 1], '.')[0]), ".cor"));
+	ft_printf("Writing output program to %s\n", file_path);
 	close(fd);
 }

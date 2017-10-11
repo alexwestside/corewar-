@@ -77,9 +77,7 @@ void				ft_add_command(t_command **command, char *name, char **a)
 	t_command		*head;
 
 	tmp = (t_command *)malloc(sizeof(t_command));
-	tmp->next = NULL;
-	tmp->method = NULL;
-	tmp->command_name = NULL;
+	right_arg(&tmp);
 	if (name != NULL)
 		tmp->method = ft_strndup(name, ft_strclen(name, LABEL_CHAR));
 	else
