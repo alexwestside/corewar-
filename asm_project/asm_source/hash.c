@@ -58,7 +58,7 @@ unsigned int *keys, char *method, t_corewar *corewar)
 {
 	unsigned int	key;
 	int				i;
-	int 			j;
+	int				j;
 
 	j = 0;
 	i = 0;
@@ -71,12 +71,12 @@ unsigned int *keys, char *method, t_corewar *corewar)
 			method) && hash_table[i]->collision)
 		{
 			hash_table[i] = hash_table[i]->collision;
-			/*flag == 1 ?*/add_checkdup(method, corewar->bot.checkdup);// : 0;
+			add_checkdup(method, corewar->bot.checkdup);
 			return (hash_table[i]);
 		}
 		j++;
 	}
-	/*flag == 1 ?*/corewar ? add_checkdup(method, corewar->bot.checkdup) : 0;
+	corewar ? add_checkdup(method, corewar->bot.checkdup) : 0;
 	return (keys[i] ? hash_table[i] : NULL);
 }
 

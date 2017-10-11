@@ -116,7 +116,7 @@ int				main(int ac, char **av)
 	char			**bot_info;
 	t_corewar		corewar;
 	unsigned int	magic;
-	size_t 			len;
+	size_t			len;
 	char			*p;
 
 	magic = 0;
@@ -126,7 +126,7 @@ int				main(int ac, char **av)
 	corewar.name = p;
 	len = ft_strlen(p);
 	if (len < 3 || p[len - 1] != 's' || p[len - 2] != '.')
-		error("Invalid file!!!");
+		error(len < 3 ? "INVALID FILE" : "FILE MUST BE END WITH \".s\"");
 	corewar.name = ft_strndup(corewar.name, (ft_strlen(corewar.name) - 2));
 	bot_info = (char **)malloc(sizeof(char *));
 	bot_info[0] = NULL;

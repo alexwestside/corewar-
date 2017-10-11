@@ -50,3 +50,17 @@ int					collision(unsigned int *keys, unsigned int key)
 			return (i);
 	return (-1);
 }
+
+void				right_arg(t_command **tmp)
+{
+	(*tmp)->next = NULL;
+	(*tmp)->method = NULL;
+	(*tmp)->command_name = NULL;
+	(*tmp)->arg[0].data = NULL;
+	(*tmp)->arg[1].data = NULL;
+	(*tmp)->arg[2].data = NULL;
+	(*tmp)->arg[0].arg_type = 0;
+	(*tmp)->arg[1].arg_type = 0;
+	(*tmp)->arg[2].arg_type = 0;
+	(*tmp)->count_args = 0;
+}

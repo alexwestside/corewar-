@@ -68,4 +68,5 @@ void					valid_command(t_command *command,
 				t_hash_table **hash_table, unsigned int *keys);
 int						strq(char *s1, char *s2);
 void					check_new_line(int fd, int i, char *p, char *s);
+void					right_arg(t_command **tmp);
 #endif
